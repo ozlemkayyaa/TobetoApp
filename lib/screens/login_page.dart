@@ -76,7 +76,7 @@ class _LoginPageState extends State<LoginPage> {
                     const SizedBox(height: 32.0),
                     SizedBox(
                       width: double.infinity,
-                      child: LoginButtonMethod(),
+                      child: loginButtonMethod(),
                     ),
                     TextButton(
                       onPressed: () {},
@@ -95,7 +95,7 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
-  ElevatedButton LoginButtonMethod() {
+  ElevatedButton loginButtonMethod() {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
         backgroundColor:
