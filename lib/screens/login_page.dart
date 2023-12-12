@@ -58,7 +58,7 @@ class _LoginPageState extends State<LoginPage> {
                         prefixIcon: Icon(Icons.person_2_outlined),
                       ),
                     ),
-                    const SizedBox(height: 16.0),
+                    SizedBox(height: 16.0),
                     TextField(
                       controller: _passwordController,
                       obscureText: true,
