@@ -1,16 +1,9 @@
-# tobeto
+# TobetoApp
 
-A new Flutter project.
+TobetoAPP 'İstanbul Kodluyor' projesi kapsamında Özlem Kaya ve Yahya Kemal Sarıöz tarafından geliştirilmiştir.
+Bu projede 12.12.2023 tarihinde yapılanlar aşağıda listelenmektedir.
+Proje Kurulumu
+Kullanılan Temel Renk Paleti
+Kullanılan Fontlar
+Login Sayfası
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.

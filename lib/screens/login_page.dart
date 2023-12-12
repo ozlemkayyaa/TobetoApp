@@ -48,29 +48,26 @@ class _LoginPageState extends State<LoginPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Image.asset('assets/images/tobeto.jpg'),
-                    //Row(
-                    //children: [
-                    //const Icon(Icons.person),
-                    //const SizedBox(width: 8.0),
-                    OutlinedButton(
-                      onPressed: () {},
-                      child: TextField(
-                        controller: _usernameController,
-                        decoration: const InputDecoration(
-                          hintText: 'Kullanıcı Kodu',
-                          border: InputBorder.none,
-                        ),
+                    TextField(
+                      controller: _usernameController,
+                      decoration: const InputDecoration(
+                        enabledBorder: OutlineInputBorder(),
+                        disabledBorder: OutlineInputBorder(),
+                        hintText: 'Kullanıcı Kodu',
+                        border: OutlineInputBorder(),
+                        prefixIcon: Icon(Icons.person_2_outlined),
                       ),
                     ),
-                    //],
-                    //),
                     const SizedBox(height: 16.0),
-                    OutlinedButton(
-                      onPressed: () {},
-                      child: TextField(
-                        controller: _passwordController,
-                        obscureText: true,
-                        decoration: const InputDecoration(labelText: 'Parola'),
+                    TextField(
+                      controller: _passwordController,
+                      obscureText: true,
+                      decoration: const InputDecoration(
+                        labelText: 'Parola',
+                        enabledBorder: OutlineInputBorder(),
+                        disabledBorder: OutlineInputBorder(),
+                        border: OutlineInputBorder(),
+                        prefixIcon: Icon(Icons.lock_outline),
                       ),
                     ),
                     const SizedBox(height: 32.0),
