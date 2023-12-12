@@ -29,7 +29,7 @@ class _LoginPageState extends State<LoginPage> {
             left: 40.0,
             right: 40.0,
             child: Container(
-              padding: EdgeInsets.all(16.0),
+              padding: const EdgeInsets.all(16.0),
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(8.0),
@@ -48,22 +48,22 @@ class _LoginPageState extends State<LoginPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Image.asset('assets/images/tobeto.jpg'),
-                    Row(
-                      children: [
-                        const Icon(Icons.person),
-                        const SizedBox(width: 8.0),
-                        OutlinedButton(
-                          onPressed: () {},
-                          child: TextField(
-                            controller: _usernameController,
-                            decoration: const InputDecoration(
-                              hintText: 'Kullanıcı Kodu',
-                              border: InputBorder.none,
-                            ),
-                          ),
+                    //Row(
+                    //children: [
+                    //const Icon(Icons.person),
+                    //const SizedBox(width: 8.0),
+                    OutlinedButton(
+                      onPressed: () {},
+                      child: TextField(
+                        controller: _usernameController,
+                        decoration: const InputDecoration(
+                          hintText: 'Kullanıcı Kodu',
+                          border: InputBorder.none,
                         ),
-                      ],
+                      ),
                     ),
+                    //],
+                    //),
                     const SizedBox(height: 16.0),
                     OutlinedButton(
                       onPressed: () {},
