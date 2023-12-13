@@ -17,6 +17,5 @@ TOBETO Mobil Uygulama Projesi, kullanıcılara çeşitli eğitimlere kolay eriş
 
 # İlerleme
 (12.12.2023)
-![loginsayfası](https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/f47a28d4-360a-48b6-a35c-a8b2a1843a76){width=200px}
-![basarili](https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/49582525-7f5d-4265-8140-e929dbefeebd){width=200px}
-![basarisiz](https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/f3f2c727-6465-4eb7-bfa0-7b6d2dfbea7c){width=200px}
+
+
