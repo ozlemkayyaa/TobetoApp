@@ -6,7 +6,6 @@ Bu depo, eğitim platformu olan TOBETO için özel olarak tasarlanmış bir mobi
 - [Yahya Kemal Sarıöz](https://github.com/YahyaKemalSarioz)
 
 # Proje Detayları
-
 TOBETO Mobil Uygulama Projesi, kullanıcılara çeşitli eğitimlere kolay erişim, interaktif video derslere katılım ve TOBETO'nun sunduğu diğer özelliklere anında bağlantı sağlayacak. Uygulama, kullanıcı dostu bir arayüzle tasarlanacak ve aşağıdaki özelliklere odaklanacaktır:
 
 1. Kapsamlı Eğitim Katalogu: Kullanıcılar, geniş bir eğitim kataloguna göz atabilecek ve kategorilere, zorluk seviyelerine veya konulara göre filtreleme yapabilecekler.
@@ -17,6 +16,6 @@ TOBETO Mobil Uygulama Projesi, kullanıcılara çeşitli eğitimlere kolay eriş
 
 # İlerleme
 (12.12.2023)
-![loginsayfası](https://github.com/ozlemkayyaa/TobetoApp/blob/main/assets/126676960/loginsayfası.png)
-![başarılı](https://github.com/ozlemkayyaa/TobetoApp/blob/main/assets/126676960/basarili.png)
-![başarısız](https://github.com/ozlemkayyaa/TobetoApp/blob/main/assets/126676960/basarisiz.png)
+![loginsayfası](https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/d092da59-f6b8-4a6d-836f-ea4d8cad254c)
+![basarili](https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/afaacfc2-4c62-4557-91ea-34533b4015d4)
+![basarisiz](https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/67ce73ca-06ad-4e66-9ead-e9084cde5c67)
