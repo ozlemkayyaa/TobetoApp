@@ -2,8 +2,8 @@
 Bu depo, eğitim platformu olan TOBETO için özel olarak tasarlanmış bir mobil uygulama geliştirme amacıyla oluşturulmuştur. Proje, TOBETO'nun mevcut web sitesini örnek alarak kullanıcıların eğitimlere daha erilişebilir ve kullanıcı dostu bir mobil uygulama geliştirmeyi hedeflemektedir. Flutter kullanılarak geliştirilecek olan uygulama, modern ve etkileşimli bir kullanıcı deneyimi sunacak.
 
 # Ekip Üyeleri
-- [@ozlemkayyaa](https://github.com/ozlemkayyaa)
-- [@YahyaKemalSarioz](https://github.com/YahyaKemalSarioz)
+- [Özlem Kaya](https://github.com/ozlemkayyaa)
+- [Yahya Kemal Sarıöz](https://github.com/YahyaKemalSarioz)
 
 # Proje Detayları
 
