@@ -1,5 +1,5 @@
 # TOBETO Mobil Uygulama Projesi
-Bu depo, eğitim platformu olan TOBETO için özel olarak tasarlanmış bir mobil uygulama geliştirme amacıyla oluşturulmuştur. Proje, TOBETO'nun mevcut web sitesini örnek alarak kullanıcıların eğitimlere daha erilişebilir ve kullanıcı dostu bir mobil uygulama geliştirmeyi hedeflemektedir. Flutter kullanılarak geliştirilecek olan uygulama, modern ve etkileşimli bir kullanıcı deneyimi sunacak.
+Bu depo, eğitim platformu olan TOBETO için özel olarak tasarlanmış bir mobil uygulama geliştirme amacıyla oluşturulmuştur. Proje, TOBETO'nun mevcut web sitesini örnek alarak kullanıcıların eğitimlere erilişebilir kullanıcı dostu bir mobil uygulama geliştirmeyi hedeflemektedir. Flutter kullanılarak geliştirilecek olan uygulama, modern ve etkileşimli bir kullanıcı deneyimi sunacak.
 
 ## Ekip Üyeleri
 
