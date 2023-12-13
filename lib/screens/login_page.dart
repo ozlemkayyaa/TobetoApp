@@ -4,7 +4,7 @@ import 'package:tobeto/widget/login_button.dart';
 import 'package:tobeto/widget/login_form_widget.dart';
 
 class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
+  const LoginPage({super.key});
 
   @override
   _LoginPageState createState() => _LoginPageState();
@@ -30,15 +30,15 @@ class _LoginPageState extends State<LoginPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Padding(
-              padding: const EdgeInsets.all(40),
+              padding: const EdgeInsets.all(40.0),
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   color: Colors.white,
                 ),
-                padding: const EdgeInsets.all(20),
+                padding: const EdgeInsets.all(28.0),
                 width: double.infinity,
-                height: 370, // Beyaz kutunun boyutu
+                height: 380, // Beyaz kutunun boyutu
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -47,7 +47,7 @@ class _LoginPageState extends State<LoginPage> {
                       logoImage,
                       width: 150,
                     ),
-                    const SizedBox(height: 15),
+                    const SizedBox(height: 15.0),
 
                     //Login -> Kullanıcı Kodu ve Parola bu widget'ın içinde tutulur.
                     const LoginFormWidget(),

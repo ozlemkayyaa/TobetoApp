@@ -38,17 +38,17 @@ class _LoginFormWidgetState extends State<LoginFormWidget> {
     return Container(
       decoration: BoxDecoration(
         border: Border.all(color: Colors.black.withOpacity(0.3)),
-        borderRadius: BorderRadius.circular(8),
+        borderRadius: BorderRadius.circular(8.0),
       ),
       height: 40,
       child: Row(
         children: [
-          const SizedBox(width: 8.0),
+          const SizedBox(width: 5.0),
           Icon(
             icon,
             color: Colors.black87,
           ),
-          const SizedBox(width: 8.0),
+          const SizedBox(width: 5.0),
 
           // Kullanıcı Kodu bölümü
           Expanded(
@@ -58,7 +58,7 @@ class _LoginFormWidgetState extends State<LoginFormWidget> {
                 hintText: userCodeHint,
                 border: InputBorder.none,
                 hintStyle: TextStyle(
-                  color: Colors.black.withOpacity(0.4),
+                  color: Colors.black.withOpacity(0.5),
                 ),
               ),
             ),
@@ -83,7 +83,7 @@ class _LoginFormWidgetState extends State<LoginFormWidget> {
             Icons.lock_outline,
             color: Colors.black87,
           ),
-          const SizedBox(width: 5),
+          const SizedBox(width: 5.0),
 
           //Parola bölümü
           Expanded(
@@ -93,7 +93,7 @@ class _LoginFormWidgetState extends State<LoginFormWidget> {
               decoration: InputDecoration(
                 hintText: userPasswordHint,
                 border: InputBorder.none,
-                hintStyle: TextStyle(color: Colors.black.withOpacity(0.4)),
+                hintStyle: TextStyle(color: Colors.black.withOpacity(0.5)),
               ),
             ),
           ),

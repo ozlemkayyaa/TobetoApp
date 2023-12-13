@@ -6,17 +6,17 @@ class LoginButton extends StatelessWidget {
   final TextEditingController passwordController;
 
   const LoginButton({
-    Key? key,
+    super.key,
     required this.usernameController,
     required this.passwordController,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
     // Giriş Butonu çağırıldı.
     return Column(
       children: [
-        const SizedBox(height: 20.0),
+        const SizedBox(height: 15.0),
         SizedBox(
           width: double.infinity,
           child: _buildLoginButton(context),
@@ -37,7 +37,7 @@ class LoginButton extends StatelessWidget {
           },
           child: const Text(
             passwordForgot,
-            style: TextStyle(color: Colors.blue),
+            style: TextStyle(color: Colors.blue, fontWeight: FontWeight.w600),
           ),
         ),
       ],
@@ -56,7 +56,8 @@ class LoginButton extends StatelessWidget {
         ),
       ),
       onPressed: () => _handleLogin(context),
-      child: const Text(loginButton, style: TextStyle(color: Colors.white)),
+      child: const Text(loginButton,
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.w900)),
     );
   }
 
