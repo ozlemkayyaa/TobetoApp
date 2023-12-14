@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 class AppTheme {
   // Light Tema
   static final ThemeData lightTheme = ThemeData(
-      textTheme: GoogleFonts.ralewayTextTheme(),
+      textTheme: GoogleFonts.robotoFlexTextTheme(),
       brightness: Brightness.light,
       colorScheme: const ColorScheme.light(
         background: Colors.white,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tobeto/constants/text_const.dart';
+import 'package:tobeto/screens/home_screen.dart';
 
 class LoginButton extends StatelessWidget {
   final TextEditingController usernameController;
@@ -13,7 +14,7 @@ class LoginButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Giriş Butonu çağırıldı.
+    // Giriş Butonu Çağırıldı
     return Column(
       children: [
         const SizedBox(height: 15.0),
@@ -30,7 +31,7 @@ class LoginButton extends StatelessWidget {
           margin: const EdgeInsets.symmetric(vertical: 20),
         ),
 
-        // Parolamı Unuttum bölümü
+        // Parolamı Unuttum Bölümü
         TextButton(
           onPressed: () {
             // TODO: Parolamı unuttum işlevi buraya gelecek
@@ -44,7 +45,7 @@ class LoginButton extends StatelessWidget {
     );
   }
 
-// Giriş Butonu
+  // Giriş Butonu
   ElevatedButton _buildLoginButton(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
@@ -56,42 +57,19 @@ class LoginButton extends StatelessWidget {
         ),
       ),
       onPressed: () => _handleLogin(context),
-      child: const Text(loginButton,
-          style: TextStyle(color: Colors.white, fontWeight: FontWeight.w900)),
+      child: const Text(
+        loginButton,
+        style: TextStyle(color: Colors.white, fontWeight: FontWeight.w900),
+      ),
     );
   }
 
-  Future<void> _handleLogin(BuildContext context) async {
-    // Kullanıcı adı ve şifre kontrolü
-    if (usernameController.text == 'kullanici' &&
-        passwordController.text == 'sifre') {
-      // Giriş başarılı
-      _showDialog(context, succesfulLogin, succesfulMessage);
-    } else {
-      // Giriş başarısız
-      _showDialog(context, failedLogin, failedMessage);
-    }
-  }
-
-// Başarılı veya başarısız giriş yazısının çıkması
-  Future<void> _showDialog(
-      BuildContext context, String title, String content) async {
-    return showDialog<void>(
-      context: context,
-      builder: (BuildContext context) {
-        return AlertDialog(
-          title: Text(title),
-          content: Text(content),
-          actions: [
-            TextButton(
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-              child: const Text(failedButton),
-            ),
-          ],
-        );
-      },
+// Giriş Butonuna Tıklandığında HomeScreen sayfasına gider.
+  void _handleLogin(BuildContext context) {
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (context) => const HomeScreen()),
+      // TODO: Kullanıcının doğru giriş yapıp yapmadığını kontrol et
     );
   }
 }

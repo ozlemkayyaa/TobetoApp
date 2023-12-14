@@ -9,8 +9,7 @@ import 'package:tobeto/screens/reviews_screen.dart';
 import 'package:tobeto/screens/tobeto_screen.dart';
 
 class DrawerWidget extends StatelessWidget {
-  DrawerWidget({Key? key}) : super(key: key);
-  final _key = GlobalKey();
+  const DrawerWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +18,6 @@ class DrawerWidget extends StatelessWidget {
         padding: EdgeInsets.zero,
         children: <Widget>[
           DrawerHeader(
-            key: _key,
             decoration: const BoxDecoration(
               color: Colors.white,
             ),
