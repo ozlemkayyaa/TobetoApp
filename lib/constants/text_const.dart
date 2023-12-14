@@ -10,14 +10,14 @@ const succesfulLogin = 'Başarılı';
 const succesfulMessage = ' Giriş başarıyla gerçekleşti.';
 
 // Drawer Text
-const homePage = 'Anasayfa';
+const String homePage = 'Anasayfa';
 const reviews = 'Değerlendirmeler';
 const profile = 'Profilim';
 const cataloge = 'Katalog';
 const calendar = 'Takvim';
 const tobeto = 'Tobeto';
-
-const year = '@2023';
+const year = '2022 Tobeto';
+const profileName = 'Ava Taylor';
 
 // Images
 const logoImage = 'assets/images/tobeto.jpg';
