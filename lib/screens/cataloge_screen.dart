@@ -7,15 +7,18 @@ class CatalogeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Cataloge Screen',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Cataloge Screen'),
+    return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context);
+          },
         ),
-        body: const Center(
-          child: Text('Cataloge Screen'),
-        ),
+        title: const Text('Cataloge Screen'),
+      ),
+      body: const Center(
+        child: Text('Cataloge Screen Body'),
       ),
     );
   }

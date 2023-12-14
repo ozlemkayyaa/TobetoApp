@@ -7,15 +7,18 @@ class TobetoScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Tobeto Screen',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Tobeto Screen'),
+    return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context);
+          },
         ),
-        body: const Center(
-          child: Text('Tobeto Screen'),
-        ),
+        title: const Text('Tobeto Screen'),
+      ),
+      body: const Center(
+        child: Text('Tobeto Body'),
       ),
     );
   }

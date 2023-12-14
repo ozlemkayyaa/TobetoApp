@@ -7,15 +7,18 @@ class CalendarScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Calendar Screen',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Calendar Screen'),
+    return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context);
+          },
         ),
-        body: const Center(
-          child: Text('Calendar Screen'),
-        ),
+        title: const Text('Calendar Screen'),
+      ),
+      body: const Center(
+        child: Text('Calendar Screen Body'),
       ),
     );
   }

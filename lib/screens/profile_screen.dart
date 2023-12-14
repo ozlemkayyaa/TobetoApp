@@ -7,15 +7,18 @@ class ProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Profile Screen',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Profile Screen'),
+    return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context);
+          },
         ),
-        body: const Center(
-          child: Text('Profile Screen'),
-        ),
+        title: const Text('Profile Screen'),
+      ),
+      body: const Center(
+        child: Text('Profile Screen Body'),
       ),
     );
   }

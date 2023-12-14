@@ -7,15 +7,18 @@ class ReviewsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Reviews Screen',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Reviews Screen'),
+    return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context);
+          },
         ),
-        body: const Center(
-          child: Text('Reviews Screen'),
-        ),
+        title: const Text('Reviews Screen'),
+      ),
+      body: const Center(
+        child: Text('Reviews Body'),
       ),
     );
   }
