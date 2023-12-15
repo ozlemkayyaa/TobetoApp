@@ -20,5 +20,6 @@ const year = '2022 Tobeto';
 const profileName = 'Ava Taylor';
 
 // Images
-const logoImage = 'assets/images/tobeto.jpg';
+const lightLogoImage = 'assets/images/tobeto.jpg';
+const darkLogoImage = 'assets/images/darktobeto.jpg';
 const backgroundgImage = 'assets/images/highResCover.png';

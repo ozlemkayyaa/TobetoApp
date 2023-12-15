@@ -18,7 +18,9 @@ class TobetoScreen extends StatelessWidget {
         // ),
         title: const Text('Tobeto Screen'),
       ),
-      drawer: const DrawerWidget(),
+      drawer: DrawerWidget(
+        isDarkMode: true,
+      ),
       body: const Center(
         child: Text('Tobeto Body'),
       ),

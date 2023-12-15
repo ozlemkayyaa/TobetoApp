@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: AppTheme.lightTheme.copyWith(useMaterial3: true),
+      themeMode: ThemeMode.light,
       darkTheme: AppTheme.darkTheme.copyWith(useMaterial3: true),
       home: const LoginScreen(),
       debugShowCheckedModeBanner: false,

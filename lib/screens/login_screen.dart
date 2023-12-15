@@ -11,12 +11,20 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  late Color backgroundColor;
+  late String logoImage;
   bool isPasswordShown = true;
   final TextEditingController _usernameController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
+    ThemeData theme = Theme.of(context);
+    backgroundColor =
+        theme.brightness == Brightness.light ? Colors.white : Colors.black;
+    logoImage =
+        theme.brightness == Brightness.light ? lightLogoImage : darkLogoImage;
+
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(
@@ -34,7 +42,7 @@ class _LoginScreenState extends State<LoginScreen> {
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: Colors.white,
+                  color: backgroundColor,
                 ),
                 padding: const EdgeInsets.all(28.0),
                 width: double.infinity,

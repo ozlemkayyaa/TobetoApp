@@ -12,7 +12,9 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Home Screen'),
       ),
-      drawer: const DrawerWidget(),
+      drawer: DrawerWidget(
+        isDarkMode: false,
+      ),
       body: const Center(
         child: Text('Home Screen Body'),
       ),
