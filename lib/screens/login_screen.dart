@@ -55,7 +55,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       logoImage,
                       width: 150,
                     ),
-                    const SizedBox(height: 15.0),
+                    const SizedBox(height: 30.0),
 
                     //Login -> Kullanıcı Kodu ve Parola bu widget'ın içinde tutulur.
                     const LoginFormWidget(),

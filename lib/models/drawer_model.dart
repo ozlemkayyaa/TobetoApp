@@ -15,6 +15,8 @@ class DrawerModel extends StatelessWidget {
   Widget build(BuildContext context) {
     late String logoImage;
     final Color textColor;
+    final Color iconColor;
+
     final ThemeData theme = Theme.of(context);
     logoImage = Theme.of(context).brightness == Brightness.light
         ? lightLogoImage
@@ -22,6 +24,9 @@ class DrawerModel extends StatelessWidget {
     textColor = Theme.of(context).brightness == Brightness.light
         ? Colors.black
         : Colors.white;
+    iconColor = Theme.of(context).brightness == Brightness.light
+        ? Colors.black45
+        : Colors.white38;
 
     return Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -128,7 +133,7 @@ class DrawerModel extends StatelessWidget {
                 ListTileModel(
                     title: tobeto,
                     icon: Icons.home_outlined,
-                    iconColor: Colors.black45,
+                    iconColor: iconColor,
                     onTap: () {
                       Navigator.push(
                           context,
@@ -152,9 +157,9 @@ class DrawerModel extends StatelessWidget {
                                 profileName,
                                 style: TextStyle(color: textColor),
                               ),
-                              const Icon(
+                              Icon(
                                 Icons.account_circle_outlined,
-                                color: Colors.black45,
+                                color: iconColor,
                                 size: 30.0,
                               ),
                             ]))),
@@ -163,7 +168,7 @@ class DrawerModel extends StatelessWidget {
                 ListTileModel(
                   title: year,
                   icon: Icons.copyright_outlined,
-                  iconColor: Colors.black45,
+                  iconColor: iconColor,
                   iconSize: 15.0,
                   onTap: () {},
                 ),
