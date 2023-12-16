@@ -128,6 +128,7 @@ class DrawerModel extends StatelessWidget {
                 ListTileModel(
                     title: tobeto,
                     icon: Icons.home_outlined,
+                    iconColor: Colors.black45,
                     onTap: () {
                       Navigator.push(
                           context,
@@ -151,10 +152,10 @@ class DrawerModel extends StatelessWidget {
                                 profileName,
                                 style: TextStyle(color: textColor),
                               ),
-                              Icon(
+                              const Icon(
                                 Icons.account_circle_outlined,
-                                color: theme.iconTheme.color,
-                                size: theme.iconTheme.size,
+                                color: Colors.black45,
+                                size: 30.0,
                               ),
                             ]))),
 
@@ -162,6 +163,8 @@ class DrawerModel extends StatelessWidget {
                 ListTileModel(
                   title: year,
                   icon: Icons.copyright_outlined,
+                  iconColor: Colors.black45,
+                  iconSize: 15.0,
                   onTap: () {},
                 ),
               ]))

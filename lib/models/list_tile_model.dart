@@ -4,17 +4,15 @@ class ListTileModel extends StatelessWidget {
   final String title;
   final VoidCallback onTap;
   final IconData? icon;
-  // final Color? iconColor;
+  final Color? iconColor;
   final double? iconSize;
-  // final Widget? customWidget;
 
   const ListTileModel({
     required this.title,
     required this.onTap,
     this.icon,
-    // this.iconColor,
+    this.iconColor,
     this.iconSize,
-    // this.customWidget,
     super.key,
   });
 
@@ -37,7 +35,7 @@ class ListTileModel extends StatelessWidget {
           if (icon != null)
             Icon(
               icon,
-              color: theme.iconTheme.color,
+              color: iconColor,
               size: iconSize,
             ),
         ],
