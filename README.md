@@ -19,7 +19,9 @@ TOBETO Mobil Uygulama Projesi, kullanıcılara çeşitli eğitimlere kolay eriş
 
 ## İlerleme
 
-(12.12.2023)
-![loginsayfası](https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/d092da59-f6b8-4a6d-836f-ea4d8cad254c)
-![basarili](https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/afaacfc2-4c62-4557-91ea-34533b4015d4)
-![basarisiz](https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/67ce73ca-06ad-4e66-9ead-e9084cde5c67)
+![darkLogin](https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/b55b5b3f-ff28-4f8b-8651-948d60ce2d82)
+![darkHomeScreen](https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/9b0bd27e-7be1-4071-b7f0-b3316b7ffa80)
+![darkDrawer](https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/667a6878-3895-47a0-ad2e-c6dc32d31eb6)
+![lightLogin](https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/06595419-fb6a-462c-ad1a-e2e9019f3cdc)
+![lightHomeScreen](https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/d45ca562-3c97-442a-9ba4-f72dc0764232)
+![lightDrawer](https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/3343c26f-7b45-4733-b36e-d1b63eb24046)
