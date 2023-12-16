@@ -22,7 +22,7 @@ class DrawerModel extends StatelessWidget {
         ? lightLogoImage
         : darkLogoImage;
     textColor = Theme.of(context).brightness == Brightness.light
-        ? Colors.black
+        ? Colors.black54
         : Colors.white;
     iconColor = Theme.of(context).brightness == Brightness.light
         ? Colors.black45
