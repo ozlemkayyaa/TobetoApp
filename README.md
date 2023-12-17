@@ -19,12 +19,14 @@ TOBETO Mobil Uygulama Projesi, kullanıcılara çeşitli eğitimlere kolay eriş
 
 ## İlerleme
 
-<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/06595419-fb6a-462c-ad1a-e2e9019f3cdc" alt="alt text" width="150" height="300">
-<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/3343c26f-7b45-4733-b36e-d1b63eb24046" alt="alt text" width="150" height="300">
-<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/d45ca562-3c97-442a-9ba4-f72dc0764232" alt="alt text" width="150" height="300">
-<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/b55b5b3f-ff28-4f8b-8651-948d60ce2d82" alt="alt text" width="150" height="300">
-<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/667a6878-3895-47a0-ad2e-c6dc32d31eb6" alt="alt text" width="150" height="300">
-<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/9b0bd27e-7be1-4071-b7f0-b3316b7ffa80" alt="alt text" width="150" height="300">
+1. Hafta
+<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/06595419-fb6a-462c-ad1a-e2e9019f3cdc" alt="alt text" width="100" height="200">
+<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/3343c26f-7b45-4733-b36e-d1b63eb24046" alt="alt text" width="100" height="200">
+<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/d45ca562-3c97-442a-9ba4-f72dc0764232" alt="alt text" width="100" height="200">
+<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/b55b5b3f-ff28-4f8b-8651-948d60ce2d82" alt="alt text" width="100" height="200">
+<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/667a6878-3895-47a0-ad2e-c6dc32d31eb6" alt="alt text" width="100" height="200">
+<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/9b0bd27e-7be1-4071-b7f0-b3316b7ffa80" alt="alt text" width="100" height="200">
+<hr>
 
 
 
