@@ -4,7 +4,7 @@ import 'package:tobeto/screens/login/login_screen.dart';
 import 'package:tobeto/widget/drawer_widget.dart';
 
 class SignUpScreen extends StatefulWidget {
-  const SignUpScreen({Key? key}) : super(key: key);
+  const SignUpScreen({super.key});
 
   @override
   _SignUpScreenState createState() => _SignUpScreenState();

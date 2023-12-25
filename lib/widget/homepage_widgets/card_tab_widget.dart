@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:tobeto/constants/text_const.dart';
 
-class CardTabWidget extends StatelessWidget {
+class CardTabWidget extends StatefulWidget {
   const CardTabWidget({
     super.key,
   });
 
+  @override
+  _CardTabWidgetState createState() => _CardTabWidgetState();
+}
+
+class _CardTabWidgetState extends State<CardTabWidget> {
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -36,14 +41,13 @@ class CardTabWidget extends StatelessWidget {
             ),
             Image.asset(isImage, width: 250),
             const TabBar(
-              isScrollable: true, // Kaydırılabilir
-              // başlangıç kısmına geçmesini sağlıyor
+              isScrollable: true,
               tabAlignment: TabAlignment.start,
               tabs: [
-                Tab(text: 'Başvurularım'),
-                Tab(text: 'Eğitimlerim'),
-                Tab(text: 'Duyuru ve Haberlerim'),
-                Tab(text: 'Anketlerim'),
+                Tab(text: applications),
+                Tab(text: trainings),
+                Tab(text: news),
+                Tab(text: polls),
               ],
             ),
           ],

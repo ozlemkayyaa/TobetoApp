@@ -50,6 +50,12 @@ const passwordReset = 'Şifre Sıfırlama';
 const resetPassword = 'Şifre sıfırlama linki için e-posta adresinizi giriniz';
 const sendButton = 'Gönder';
 
+// Card Tab
+const applications = 'Başvurularım';
+const trainings = 'Eğitimlerim';
+const news = 'Duyuru ve Haberlerim';
+const polls = 'Anketlerim';
+
 // ExampleCard
 const exam = 'Sınavlarım';
 const examEveryone = 'Herkes için Kodlama 2A Değerlendirme Sınavı';

@@ -3,7 +3,7 @@ import 'package:tobeto/constants/text_const.dart';
 import 'package:tobeto/widget/drawer_widget.dart';
 
 class ForgotPasswordScreen extends StatefulWidget {
-  const ForgotPasswordScreen({Key? key}) : super(key: key);
+  const ForgotPasswordScreen({super.key});
 
   @override
   _ForgotPasswordScreenState createState() => _ForgotPasswordScreenState();

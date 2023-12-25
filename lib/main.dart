@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tobeto/screens/home_screen.dart';
 import 'package:tobeto/screens/login/login_screen.dart';
 import 'package:tobeto/themes/app_theme.dart';
 
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
       theme: AppTheme.lightTheme,
       themeMode: ThemeMode.light,
       darkTheme: AppTheme.darkTheme,
-      home: const LoginScreen(),
+      home: const HomeScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
