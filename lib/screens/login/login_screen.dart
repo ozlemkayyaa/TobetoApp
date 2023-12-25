@@ -46,7 +46,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 padding: const EdgeInsets.all(28.0),
                 width: double.infinity,
-                height: 380, // Beyaz kutunun boyutu
+                height: 370, // Beyaz kutunun boyutu
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [

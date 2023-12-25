@@ -18,7 +18,7 @@ class CatalogeScreen extends StatelessWidget {
         // ),
         title: const Text('Cataloge Screen'),
       ),
-      drawer: DrawerWidget(
+      drawer: const DrawerWidget(
         isDarkMode: true,
       ),
       body: const Center(

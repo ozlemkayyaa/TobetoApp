@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:tobeto/constants/text_const.dart';
 import 'package:tobeto/screens/home_screen.dart';
+import 'package:tobeto/screens/login/forgot_password_screen.dart';
+import 'package:tobeto/screens/login/sign_up_screen.dart';
 
 class LoginButton extends StatelessWidget {
   final TextEditingController usernameController;
@@ -17,29 +19,46 @@ class LoginButton extends StatelessWidget {
     // Giriş Butonu Çağırıldı
     return Column(
       children: [
-        const SizedBox(height: 15.0),
+        const SizedBox(height: 10.0),
         SizedBox(
           width: double.infinity,
           child: _buildLoginButton(context),
         ),
 
-        // Çizgi
-        Container(
-          width: double.infinity,
-          height: 0.5,
-          color: Colors.grey,
-          margin: const EdgeInsets.symmetric(vertical: 20),
-        ),
-
-        // Parolamı Unuttum Bölümü
+        // Şifremi Unuttum Bölümü
         TextButton(
           onPressed: () {
-            // TODO: Parolamı unuttum işlevi buraya gelecek
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => const ForgotPasswordScreen()),
+            );
           },
           child: const Text(
             passwordForgot,
             style: TextStyle(color: Colors.blue, fontWeight: FontWeight.w600),
           ),
+        ),
+
+        // Kayıt Ol Butonu ve yanındaki  yazı
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text(registerText),
+            TextButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const SignUpScreen()),
+                );
+              },
+              child: const Text(
+                registerButton,
+                style:
+                    TextStyle(color: Colors.blue, fontWeight: FontWeight.w600),
+              ),
+            ),
+          ],
         ),
       ],
     );
