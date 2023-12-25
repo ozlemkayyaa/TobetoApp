@@ -28,6 +28,11 @@ TOBETO Mobil Uygulama Projesi, kullanıcılara çeşitli eğitimlere kolay eriş
 <img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/9b0bd27e-7be1-4071-b7f0-b3316b7ffa80" alt="alt text" width="100" height="200">
 <hr>
 
+2. Hafta
+<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/203b58bc-391d-4668-889e-05acb79a3a68" alt="alt text" width="100" height="200">
+<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/1c8ceb3f-949f-476a-aa31-1870de0d6383" alt="alt text" width="100" height="200">
+
+
 
 
 
