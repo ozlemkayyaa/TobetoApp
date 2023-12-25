@@ -9,7 +9,7 @@ import 'package:tobeto/screens/reviews_screen.dart';
 import 'package:tobeto/screens/tobeto_screen.dart';
 
 class DrawerModel extends StatelessWidget {
-  const DrawerModel({Key? key}) : super(key: key);
+  const DrawerModel({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -24,7 +24,7 @@ class _LoginFormWidgetState extends State<LoginFormWidget> {
         _buildTextField(
           icon: Icons.person_outline_outlined,
           controller: _usernameController,
-          hintText: userCodeHint,
+          hintText: userEmail,
           isDarkMode: isDarkMode,
         ),
         const SizedBox(height: 15.0),
@@ -102,7 +102,7 @@ class _LoginFormWidgetState extends State<LoginFormWidget> {
                 color: Colors.black,
               ),
               decoration: InputDecoration(
-                hintText: userPasswordHint,
+                hintText: userPassword,
                 border: InputBorder.none,
                 hintStyle: TextStyle(
                   color: Colors.black.withOpacity(0.5),

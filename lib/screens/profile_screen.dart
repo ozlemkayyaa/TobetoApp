@@ -18,7 +18,7 @@ class ProfileScreen extends StatelessWidget {
         // ),
         title: const Text('Profile Screen'),
       ),
-      drawer: DrawerWidget(
+      drawer: const DrawerWidget(
         isDarkMode: true,
       ),
       body: const Center(

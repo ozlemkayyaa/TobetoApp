@@ -18,7 +18,7 @@ class ReviewsScreen extends StatelessWidget {
         // ),
         title: const Text('Reviews Screen'),
       ),
-      drawer: DrawerWidget(
+      drawer: const DrawerWidget(
         isDarkMode: true,
       ),
       body: const Center(
