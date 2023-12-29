@@ -20,54 +20,56 @@ class HomeScreen extends StatelessWidget {
     bool isDarkMode = theme.brightness == Brightness.dark;
     //var size = MediaQuery.of(context).size;
 
-    return Scaffold(
-      appBar: AppBar(
-        title: Row(mainAxisAlignment: MainAxisAlignment.start, children: [
-          Image.asset(isDarkMode ? darkLogoImage : lightLogoImage,
-              fit: BoxFit.contain, height: 32),
-        ]),
-      ),
-      endDrawer: const DrawerWidget(
-        isDarkMode: false,
-      ),
-      body: const SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            // En baştaki TOBETO Renkli yazısı
-            HomepageRichText(),
-            Padding(
-              padding: EdgeInsets.only(left: 25.0, right: 25.0, bottom: 25.0),
-              child: Text(
-                introduction,
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black,
-                  fontSize: 20,
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          title: Row(mainAxisAlignment: MainAxisAlignment.start, children: [
+            Image.asset(isDarkMode ? darkLogoImage : lightLogoImage,
+                fit: BoxFit.contain, height: 32),
+          ]),
+        ),
+        endDrawer: const DrawerWidget(
+          isDarkMode: false,
+        ),
+        body: const SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              // En baştaki TOBETO Renkli yazısı
+              HomepageRichText(),
+              Padding(
+                padding: EdgeInsets.only(left: 25.0, right: 25.0, bottom: 25.0),
+                child: Text(
+                  introduction,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                    fontSize: 20,
+                  ),
+                  textAlign: TextAlign.center,
                 ),
-                textAlign: TextAlign.center,
               ),
-            ),
 
-            // İstnabul Kodluyor resmi, yazı, ve sekme geçişleri
-            CardTabWidget(),
-            Padding(padding: EdgeInsets.all(5.0)),
+              // İstnabul Kodluyor resmi, yazı, ve sekme geçişleri
+              CardTabWidget(),
+              Padding(padding: EdgeInsets.all(5.0)),
 
-            // Sınavlarım Kartı
-            CardExamWidget(),
+              // Sınavlarım Kartı
+              CardExamWidget(),
 
-            //Profilini Oluştur Kutucuğu
-            ProfileContainerWidget(),
+              //Profilini Oluştur Kutucuğu
+              ProfileContainerWidget(),
 
-            // Kendini Değerlendir Kutucuğu
-            YourselfContainerWidget(),
+              // Kendini Değerlendir Kutucuğu
+              YourselfContainerWidget(),
 
-            // Öğrenmeye Başla kutucuğu
-            LearningContainerWidget(),
+              // Öğrenmeye Başla kutucuğu
+              LearningContainerWidget(),
 
-            //En alttaki BottomBar tasarımı, tobeto img ve bize ulaşın butonu
-            BottomWidget(),
-          ],
+              //En alttaki BottomBar tasarımı, tobeto img ve bize ulaşın butonu
+              BottomWidget(),
+            ],
+          ),
         ),
       ),
     );
