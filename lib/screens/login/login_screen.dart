@@ -31,7 +31,7 @@ class _LoginScreenState extends State<LoginScreen> {
           image: DecorationImage(
             // Arka plan resmi eklendi
             image: AssetImage(backgroundgImage),
-            fit: BoxFit.fill,
+            fit: BoxFit.cover,
           ),
         ),
         child: Column(

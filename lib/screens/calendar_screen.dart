@@ -19,7 +19,7 @@ class CalendarScreen extends StatelessWidget {
         title: const Text('Calendar Screen'),
       ),
       drawer: const DrawerWidget(
-        isDarkMode: true,
+        isDarkMode: false,
       ),
       body: const Center(
         child: Text('Calendar Screen Body'),
