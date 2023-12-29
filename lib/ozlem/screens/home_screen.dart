@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:tobeto/constants/text_const.dart';
-import 'package:tobeto/widget/drawer_widget.dart';
-import 'package:tobeto/widget/homepage_widgets/bottom_widget.dart';
-import 'package:tobeto/widget/homepage_widgets/card_exam_widget.dart';
-import 'package:tobeto/widget/homepage_widgets/card_tab_widget.dart';
-import 'package:tobeto/widget/homepage_widgets/homepage_richtext_widget.dart';
-import 'package:tobeto/widget/homepage_widgets/learning_container_widget.dart';
-import 'package:tobeto/widget/homepage_widgets/profile_container_widget.dart';
-import 'package:tobeto/widget/homepage_widgets/yourself_container_widget.dart';
+import 'package:tobeto/ozlem/constants/text_const.dart';
+import 'package:tobeto/ozlem/widget/drawer_widget.dart';
+import 'package:tobeto/ozlem/widget/homepage_widgets/bottom_widget.dart';
+import 'package:tobeto/ozlem/widget/homepage_widgets/card_exam_widget.dart';
+import 'package:tobeto/ozlem/widget/homepage_widgets/card_tab_widget.dart';
+import 'package:tobeto/ozlem/widget/homepage_widgets/homepage_richtext_widget.dart';
+import 'package:tobeto/ozlem/widget/homepage_widgets/learning_container_widget.dart';
+import 'package:tobeto/ozlem/widget/homepage_widgets/profile_container_widget.dart';
+import 'package:tobeto/ozlem/widget/homepage_widgets/yourself_container_widget.dart';
 
 void main() => runApp(const MaterialApp());
 

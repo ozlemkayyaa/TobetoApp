@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:tobeto/constants/text_const.dart';
-import 'package:tobeto/screens/home_screen.dart';
-import 'package:tobeto/screens/login/forgot_password_screen.dart';
-import 'package:tobeto/screens/login/sign_up_screen.dart';
+import 'package:tobeto/ozlem/constants/text_const.dart';
+import 'package:tobeto/ozlem/screens/home_screen.dart';
+import 'package:tobeto/ozlem/screens/login/forgot_password_screen.dart';
+import 'package:tobeto/ozlem/screens/login/sign_up_screen.dart';
 
 class LoginButton extends StatelessWidget {
   final TextEditingController usernameController;

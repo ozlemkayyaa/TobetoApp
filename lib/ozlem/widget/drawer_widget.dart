@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:tobeto/models/drawer_model.dart';
-import 'package:tobeto/themes/app_theme.dart';
+import 'package:tobeto/ozlem/models/drawer_model.dart';
+import 'package:tobeto/ozlem/themes/app_theme.dart';
 
 class DrawerWidget extends StatelessWidget {
   const DrawerWidget({

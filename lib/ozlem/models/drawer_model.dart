@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:tobeto/constants/text_const.dart';
-import 'package:tobeto/models/list_tile_model.dart';
-import 'package:tobeto/screens/calendar_screen.dart';
-import 'package:tobeto/screens/cataloge_screen.dart';
-import 'package:tobeto/screens/home_screen.dart';
-import 'package:tobeto/screens/profile_screen.dart';
-import 'package:tobeto/screens/reviews_screen.dart';
-import 'package:tobeto/screens/tobeto_screen.dart';
+import 'package:tobeto/ozlem/constants/text_const.dart';
+import 'package:tobeto/ozlem/models/list_tile_model.dart';
+import 'package:tobeto/ozlem/screens/calendar_screen.dart';
+import 'package:tobeto/ozlem/screens/cataloge_screen.dart';
+import 'package:tobeto/ozlem/screens/home_screen.dart';
+import 'package:tobeto/ozlem/screens/profile_screen.dart';
+import 'package:tobeto/ozlem/screens/reviews_screen.dart';
+import 'package:tobeto/ozlem/screens/tobeto_screen.dart';
 
 class DrawerModel extends StatelessWidget {
   const DrawerModel({super.key});

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:tobeto/widget/drawer_widget.dart';
+import 'package:tobeto/ozlem/widget/drawer_widget.dart';
 
 void main() => runApp(const MaterialApp());
 
-class TobetoScreen extends StatelessWidget {
-  const TobetoScreen({super.key});
+class CatalogeScreen extends StatelessWidget {
+  const CatalogeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,13 +16,13 @@ class TobetoScreen extends StatelessWidget {
         //     Navigator.pop(context);
         //   },
         // ),
-        title: const Text('Tobeto Screen'),
+        title: const Text('Cataloge Screen'),
       ),
       drawer: const DrawerWidget(
         isDarkMode: false,
       ),
       body: const Center(
-        child: Text('Tobeto Body'),
+        child: Text('Cataloge Screen Body'),
       ),
     );
   }

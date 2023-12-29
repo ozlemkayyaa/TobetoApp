@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:tobeto/constants/text_const.dart';
+import 'package:tobeto/ozlem/constants/text_const.dart';
 
-class ProfileContainerWidget extends StatelessWidget {
-  const ProfileContainerWidget({
+class YourselfContainerWidget extends StatelessWidget {
+  const YourselfContainerWidget({
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(10.0),
-
-      // Profilini oluştur kutucuğu
+      padding: const EdgeInsets.all(8.0),
       child: Container(
         height: 150,
         width: 350,
@@ -26,8 +24,8 @@ class ProfileContainerWidget extends StatelessWidget {
             begin: Alignment.topRight,
             end: Alignment.bottomLeft,
             colors: [
-              Color.fromARGB(255, 29, 11, 140),
-              Color.fromARGB(255, 178, 155, 246)
+              Color.fromARGB(255, 14, 11, 147),
+              Color.fromARGB(255, 89, 171, 198)
             ],
           ),
         ),
@@ -36,7 +34,7 @@ class ProfileContainerWidget extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text(
-              createProfile,
+              yourself,
               style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:tobeto/widget/drawer_widget.dart';
+import 'package:tobeto/ozlem/widget/drawer_widget.dart';
 
 void main() => runApp(const MaterialApp());
 
-class ReviewsScreen extends StatelessWidget {
-  const ReviewsScreen({super.key});
+class ProfileScreen extends StatelessWidget {
+  const ProfileScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,13 +16,13 @@ class ReviewsScreen extends StatelessWidget {
         //     Navigator.pop(context);
         //   },
         // ),
-        title: const Text('Reviews Screen'),
+        title: const Text('Profile Screen'),
       ),
       drawer: const DrawerWidget(
         isDarkMode: false,
       ),
       body: const Center(
-        child: Text('Reviews Body'),
+        child: Text('Profile Screen Body'),
       ),
     );
   }

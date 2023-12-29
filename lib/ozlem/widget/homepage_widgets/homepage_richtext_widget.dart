@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tobeto/constants/text_const.dart';
+import 'package:tobeto/ozlem/constants/text_const.dart';
 
 class HomepageRichText extends StatelessWidget {
   const HomepageRichText({

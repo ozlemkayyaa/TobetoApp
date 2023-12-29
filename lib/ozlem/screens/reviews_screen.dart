@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:tobeto/widget/drawer_widget.dart';
+import 'package:tobeto/ozlem/widget/drawer_widget.dart';
 
 void main() => runApp(const MaterialApp());
 
-class CalendarScreen extends StatelessWidget {
-  const CalendarScreen({super.key});
+class ReviewsScreen extends StatelessWidget {
+  const ReviewsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,13 +16,13 @@ class CalendarScreen extends StatelessWidget {
         //     Navigator.pop(context);
         //   },
         // ),
-        title: const Text('Calendar Screen'),
+        title: const Text('Reviews Screen'),
       ),
       drawer: const DrawerWidget(
         isDarkMode: false,
       ),
       body: const Center(
-        child: Text('Calendar Screen Body'),
+        child: Text('Reviews Body'),
       ),
     );
   }

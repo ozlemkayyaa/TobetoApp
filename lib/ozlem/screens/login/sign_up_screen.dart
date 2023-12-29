@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:tobeto/constants/text_const.dart';
-import 'package:tobeto/screens/login/login_screen.dart';
-import 'package:tobeto/widget/drawer_widget.dart';
+import 'package:tobeto/ozlem/constants/text_const.dart';
+import 'package:tobeto/ozlem/screens/login/login_screen.dart';
+import 'package:tobeto/ozlem/widget/drawer_widget.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
