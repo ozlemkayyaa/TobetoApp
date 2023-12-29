@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tobeto/ozlem/screens/home_screen.dart';
+//import 'package:tobeto/ozlem/screens/home_screen.dart';
 import 'package:tobeto/ozlem/screens/login/login_screen.dart';
 import 'package:tobeto/ozlem/themes/app_theme.dart';
 
