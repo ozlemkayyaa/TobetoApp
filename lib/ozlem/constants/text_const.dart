@@ -50,7 +50,7 @@ const passwordReset = 'Şifre Sıfırlama';
 const resetPassword = 'Şifre sıfırlama linki için e-posta adresinizi giriniz';
 const sendButton = 'Gönder';
 
-// Card Tab
+// TabBar
 const applications = 'Başvurularım';
 const trainings = 'Eğitimlerim';
 const news = 'Duyuru ve Haberlerim';
