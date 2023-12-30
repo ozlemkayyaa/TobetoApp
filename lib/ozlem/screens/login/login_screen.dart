@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tobeto/ozlem/constants/text_const.dart';
 import 'package:tobeto/ozlem/widget/login_button.dart';
 import 'package:tobeto/ozlem/widget/login_form_widget.dart';
+import 'package:tobeto/utils/constants/image_strings.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -22,8 +23,9 @@ class _LoginScreenState extends State<LoginScreen> {
     ThemeData theme = Theme.of(context);
     backgroundColor =
         theme.brightness == Brightness.light ? Colors.white : Colors.black;
-    logoImage =
-        theme.brightness == Brightness.light ? lightLogoImage : darkLogoImage;
+    logoImage = theme.brightness == Brightness.light
+        ? TImages.lightAppLogo
+        : TImages.darkAppLogo;
 
     return Scaffold(
       body: Container(
