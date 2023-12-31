@@ -1,4 +1,16 @@
 class TTexts {
+  // OnBoarding
+  static const String onboardingTitle1 = "TOBETO'ya Hoş Geldin!";
+  static const String onboardingTitle2 = "Kişisel Eğitim, Kişisel Başarı";
+  static const String onboardingTitle3 = "Geleceği Kodlamak Sizin Elinizde!";
+
+  static const String onboardingSubTitle1 =
+      "TOBETO ile yazılım dünyasına heyecanlı bir adım atın! Uzman kadromuzla, en güncel teknolojileri keşfedin ve kariyerinizi hızla yükseltin.";
+  static const String onboardingSubTitle2 =
+      "TOBETO'da her öğrenci özeldir! Uzman eğitmenlerimizden eğitim alarak, hedeflerinize giden yolda size özel bilgi ve beceriler kazandırıyoruz.";
+  static const String onboardingSubTitle3 =
+      "TOBETO'da ileri düzey yazılım eğitimleri ve gerçek projelerle kariyerinizi şekillendirin. Hayalinizdeki kariyere bir adım daha yaklaşın, sizi bekliyoruz!";
+
   // Login Text
   static const String userEmail = 'E-Posta';
   static const String userPassword = 'Şifre';

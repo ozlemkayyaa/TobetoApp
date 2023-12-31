@@ -29,13 +29,13 @@ class _LoginScreenState extends State<LoginScreen> {
 
     return Scaffold(
       body: Container(
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-            // Arka plan resmi eklendi
-            image: AssetImage(backgroundgImage),
-            fit: BoxFit.cover,
-          ),
-        ),
+        // decoration: const BoxDecoration(
+        //   image: DecorationImage(
+        //     // Arka plan resmi eklendi
+        //     image: AssetImage(backgroundgImage),
+        //     fit: BoxFit.cover,
+        //   ),
+        // ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

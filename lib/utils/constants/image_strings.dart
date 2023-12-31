@@ -21,5 +21,9 @@ class TImages {
   static const String duyuru = "assets/images/duyuru.png";
   static const String sinav = "assets/images/sınavlar.png";
   static const String notFound = "assets/images/videoNotFound.jpg";
-  static const String welcome = "assets/images/welcome.png";
+
+  // OnBoarding
+  static const String coding = "assets/images/onboarding/coding.png";
+  static const String personal = "assets/images/onboarding/personal.png";
+  static const String welcome = "assets/images/onboarding/welcome.png";
 }

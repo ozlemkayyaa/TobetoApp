@@ -20,7 +20,7 @@ class SplashScreen extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: isDarkMode(context)
+            image: THelperFunctions.isDarkMode(context)
                 ? const AssetImage(TImages.tLogoWhite)
                 : const AssetImage(TImages.tLogoMor),
           ),
