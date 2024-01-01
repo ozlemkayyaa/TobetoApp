@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:tobeto/ozlem/screens/login/login_screen.dart';
+import 'package:tobeto/features/authentication/screens/login/login_screen.dart';
 import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/device/device_utility.dart';

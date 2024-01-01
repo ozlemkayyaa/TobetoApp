@@ -4,10 +4,12 @@ class TImages {
   static const String darkAppLogo = "assets/logos/darkLogo.jpg";
   static const String tLogoMor = "assets/logos/TLogoMor.png";
   static const String tLogoWhite = "assets/logos/TLogoWhite.png";
+  static const String yuvarlakLogo = "assets/logos/yuvarlakLogo.png";
 
   // Social Logos
   static const String google = "assets/logos/googleLogo.png";
   static const String apple = "assets/logos/appleLogo.png";
+  static const String appleWhite = "assets/logos/appleWhite.png";
 
   // Other Images
   static const String background = "assets/images/background.png";

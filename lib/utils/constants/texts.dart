@@ -12,9 +12,10 @@ class TTexts {
       "TOBETO'da ileri düzey yazılım eğitimleri ve gerçek projelerle kariyerinizi şekillendirin. Hayalinizdeki kariyere bir adım daha yaklaşın, sizi bekliyoruz!";
 
   // Login Text
-  static const String userEmail = 'E-Posta';
+  static const String userEmail = 'E-Mail';
   static const String userPassword = 'Şifre';
   static const String passwordForgot = 'Şifremi Unuttum';
+  static const String rememeberMe = 'Beni Hatırla';
   static const String loginButton = 'Giriş Yap';
   static const String failedLogin = 'Başarısız';
   static const String failedMessage = 'Kullanıcı Kodu veya Parola hatalı';
@@ -23,6 +24,10 @@ class TTexts {
   static const String succesfulMessage = ' Giriş başarıyla gerçekleşti.';
   static const String registerText = 'Henüz üye değil misin?';
   static const String registerButton = 'Kayıt Ol';
+  static const String loginTitle = 'Hoşgeldiniz,';
+  static const String loginSubTitle =
+      'Bilgiye açılan kapıyı aralayın.TOBETO ile yeni bilgiler öğrenin ve kariyerinizi zirveye taşıyın.';
+  static const String orSign = 'Veya Şununla Oturum Açın';
 
   // Sign Up
   static const String name = 'Ad*';
