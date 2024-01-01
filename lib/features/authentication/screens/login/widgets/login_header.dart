@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:tobeto/utils/constants/image_strings.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
+import 'package:tobeto/utils/helpers/helper_functions.dart';
 
 class LoginHeader extends StatelessWidget {
   const LoginHeader({
     super.key,
-    required this.dark,
   });
-
-  final bool dark;
 
   @override
   Widget build(BuildContext context) {
+    final dark = THelperFunctions.isDarkMode(context);
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [

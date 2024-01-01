@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:tobeto/utils/constants/colors.dart';
+import 'package:tobeto/utils/helpers/helper_functions.dart';
 
-class LoginDivider extends StatelessWidget {
-  const LoginDivider({
+class FormDivider extends StatelessWidget {
+  const FormDivider({
     super.key,
-    required this.dark,
     required this.dividerText,
   });
 
-  final bool dark;
   final String dividerText;
 
   @override
   Widget build(BuildContext context) {
+    final dark = THelperFunctions.isDarkMode(context);
+
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [

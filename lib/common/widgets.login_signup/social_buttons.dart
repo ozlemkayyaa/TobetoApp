@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/image_strings.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
+import 'package:tobeto/utils/helpers/helper_functions.dart';
 
-class LoginSocialButtons extends StatelessWidget {
-  const LoginSocialButtons({
+class SocialButtons extends StatelessWidget {
+  const SocialButtons({
     super.key,
-    required this.dark,
   });
-
-  final bool dark;
 
   @override
   Widget build(BuildContext context) {
+    final dark = THelperFunctions.isDarkMode(context);
+
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [

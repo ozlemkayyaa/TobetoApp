@@ -27,16 +27,21 @@ class TTexts {
   static const String loginTitle = 'Hoşgeldiniz,';
   static const String loginSubTitle =
       'TOBETO ile yeni bilgiler öğrenin ve kariyerinizi zirveye taşıyın.';
-  static const String orSign = 'Veya Şununla Oturum Açın';
+  static const String orSign = 'Veya Bunlarla Oturum Açın';
 
   // Sign Up
-  static const String name = 'Ad*';
-  static const String surname = 'Soyad*';
-  static const String email = 'E-Posta*';
-  static const String password = 'Şifre*';
-  static const String passwordAgain = 'Şifre Tekrar*';
-  static const String signUp = 'Hemen Kayıt Ol';
-  static const String account = 'Zaten bir hesabın var mı?';
+  static const String signName = 'Ad';
+  static const String signSurname = 'Soyad';
+  static const String signEmail = 'E-Mail';
+  static const String signPassword = 'Şifre';
+  static const String signPasswordAgain = 'Şifre Tekrar';
+  static const String signPhoneNumber = 'Telefon Numarası';
+  static const String signUp = 'Hesabınızı Oluşturalım';
+  static const String agree = ' kabul ediyorum';
+  static const String orsignUp = 'Veya Bunlarla Kaydolun';
+  static const String privacy = 'Gizlilik Politikasını';
+  static const String termsOfUse = 'Kullanım Koşullarını';
+  static const String andSign = ' ve ';
 
   // Forgot Password
   static const String passwordReset = 'Şifre Sıfırlama';
