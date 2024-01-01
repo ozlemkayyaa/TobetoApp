@@ -25,7 +25,7 @@ class LoginScreen extends StatelessWidget {
               LoginHeader(dark: dark),
 
               // Form
-              LoginForm(dark: dark),
+              const LoginForm(),
 
               // Divider
               LoginDivider(dark: dark, dividerText: TTexts.orSign),
