@@ -26,7 +26,7 @@ class TTexts {
   static const String registerButton = 'Kayıt Ol';
   static const String loginTitle = 'Hoşgeldiniz,';
   static const String loginSubTitle =
-      'Bilgiye açılan kapıyı aralayın.TOBETO ile yeni bilgiler öğrenin ve kariyerinizi zirveye taşıyın.';
+      'TOBETO ile yeni bilgiler öğrenin ve kariyerinizi zirveye taşıyın.';
   static const String orSign = 'Veya Şununla Oturum Açın';
 
   // Sign Up
