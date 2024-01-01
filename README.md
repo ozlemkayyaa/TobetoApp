@@ -19,18 +19,16 @@ TOBETO Mobil Uygulama Projesi, kullanıcılara çeşitli eğitimlere kolay eriş
 
 ## İlerleme
 
-Onboarding Light/Dark
+Onboarding and Login Screen Light/Dark Mode
 
 <img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/9eb44f60-e23a-4c50-94b1-af0295b98718" alt="alt text" width="100" height="200">
 <img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/cdf325de-abe7-49a0-be72-0b1f7d15ae89" alt="alt text" width="100" height="200">
 <img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/0fffd863-d721-48ef-b28d-8810840802c1" alt="alt text" width="100" height="200">
-<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/aa30f62d-028a-4ba8-9d43-a77a8669b1a2" alt="alt text" width="100" height="200">
-<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/d7e4afd7-ea84-47c4-9038-0be57e76698d" alt="alt text" width="100" height="200">
-<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/8e9f78cd-9e95-4ab1-8feb-873ee2d884e1" alt="alt text" width="100" height="200">
-
-
-
-
+<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/5c4871dd-eba0-4c56-85bb-25a2e04dbddb" alt="alt text" width="100" height="200">
+<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/d8aecc9a-7f81-4615-957b-1b469f5d6847" alt="alt text" width="100" height="200">
+<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/3f7e4220-33b5-44f9-abf1-ad831c3a372e" alt="alt text" width="100" height="200">
+<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/f354eddd-2487-426a-9783-751e4c724568" alt="alt text" width="100" height="200">
+<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/fb15f84f-7b97-4b1e-b450-9bc5bb9a4aae" alt="alt text" width="100" height="200">
 
 <hr>
 
