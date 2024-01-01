@@ -19,21 +19,24 @@ TOBETO Mobil Uygulama Projesi, kullanıcılara çeşitli eğitimlere kolay eriş
 
 ## İlerleme
 
-1. Hafta
-<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/06595419-fb6a-462c-ad1a-e2e9019f3cdc" alt="alt text" width="100" height="200">
-<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/3343c26f-7b45-4733-b36e-d1b63eb24046" alt="alt text" width="100" height="200">
-<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/d45ca562-3c97-442a-9ba4-f72dc0764232" alt="alt text" width="100" height="200">
-<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/b55b5b3f-ff28-4f8b-8651-948d60ce2d82" alt="alt text" width="100" height="200">
-<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/667a6878-3895-47a0-ad2e-c6dc32d31eb6" alt="alt text" width="100" height="200">
-<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/9b0bd27e-7be1-4071-b7f0-b3316b7ffa80" alt="alt text" width="100" height="200">
+Onboarding Light/Dark
+
+<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/9eb44f60-e23a-4c50-94b1-af0295b98718" alt="alt text" width="100" height="200">
+<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/cdf325de-abe7-49a0-be72-0b1f7d15ae89" alt="alt text" width="100" height="200">
+<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/0fffd863-d721-48ef-b28d-8810840802c1" alt="alt text" width="100" height="200">
+<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/aa30f62d-028a-4ba8-9d43-a77a8669b1a2" alt="alt text" width="100" height="200">
+<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/d7e4afd7-ea84-47c4-9038-0be57e76698d" alt="alt text" width="100" height="200">
+<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/8e9f78cd-9e95-4ab1-8feb-873ee2d884e1" alt="alt text" width="100" height="200">
+
+
+
+
+
 <hr>
 
 2. Hafta
 <img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/203b58bc-391d-4668-889e-05acb79a3a68" alt="alt text" width="100" height="200">
 <img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/1c8ceb3f-949f-476a-aa31-1870de0d6383" alt="alt text" width="100" height="200">
-
-
-
 
 
 
