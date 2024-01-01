@@ -33,7 +33,7 @@ class OnBoardingSkip extends StatelessWidget {
                 curve: Curves.ease);
           }
         },
-        child: const Text("Skip", style: TextStyle(color: TColors.primary)),
+        child: const Text("Skip"),
       ),
     );
   }
