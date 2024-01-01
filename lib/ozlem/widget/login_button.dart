@@ -88,7 +88,6 @@ class LoginButton extends StatelessWidget {
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(builder: (context) => const HomeScreen()),
-      // TODO: Kullanıcının doğru giriş yapıp yapmadığını kontrol et
     );
   }
 }
