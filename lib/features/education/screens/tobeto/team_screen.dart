@@ -3,8 +3,8 @@ import 'package:tobeto/features/education/screens/home/widgets/drawer_widget.dar
 import 'package:tobeto/utils/constants/image_strings.dart';
 import 'package:tobeto/utils/helpers/helper_functions.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class TeamScreen extends StatelessWidget {
+  const TeamScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

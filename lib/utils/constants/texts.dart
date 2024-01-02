@@ -70,13 +70,11 @@ class TTexts {
   static const String continueSignUp = "Devam Et";
 
   // Drawer Text
-  static const String homePage = 'Anasayfa';
-  static const String reviews = 'Değerlendirmeler';
-  static const String profile = 'Profilim';
-  static const String cataloge = 'Katalog';
-  static const String calendar = 'Takvim';
-  static const String tobeto = 'Tobeto';
-  static const String year = '2024 Tobeto';
+  static const String us = 'Biz Kimiz?';
+  static const String team = 'Ekibimiz';
+  static const String istanbulKodluyor = 'İstanbul Kodluyor';
+  static const String contactUs = 'İletişim';
+  static const String year = '2024 TOBETO';
   static const String profileName = 'Özlem Kaya';
 
   // HomePage Text
@@ -105,7 +103,4 @@ class TTexts {
   static const String yourself = 'Kendini değerlendir';
   static const String startLearning = 'öğrenmeye başla';
   static const String start = 'Başla';
-
-  // BottomBar HOMEPAGE
-  static const String contactUs = 'Bize Ulaşın';
 }

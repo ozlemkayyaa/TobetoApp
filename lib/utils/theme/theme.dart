@@ -3,6 +3,7 @@ import 'package:tobeto/utils/theme/custom_themes/appbar_theme.dart';
 import 'package:tobeto/utils/theme/custom_themes/bottom_sheet_theme.dart';
 import 'package:tobeto/utils/theme/custom_themes/checkbox_theme.dart';
 import 'package:tobeto/utils/theme/custom_themes/chip_theme.dart';
+import 'package:tobeto/utils/theme/custom_themes/drawer_theme.dart';
 import 'package:tobeto/utils/theme/custom_themes/elevated_button_theme.dart';
 import 'package:tobeto/utils/theme/custom_themes/outlined_button_theme.dart';
 import 'package:tobeto/utils/theme/custom_themes/text_field_theme.dart';
@@ -25,6 +26,7 @@ class TobetoAppTheme {
     elevatedButtonTheme: TElevatedButtonTheme.lightElevatedButtonTheme,
     outlinedButtonTheme: TOutlineButtonTheme.lightOutlinedButtonTheme,
     inputDecorationTheme: TTextFormFieldTheme.lightInputDecorationTheme,
+    drawerTheme: TDrawerTheme.lightDrawerTheme,
   );
 
   static ThemeData darkTheme = ThemeData(
@@ -41,5 +43,6 @@ class TobetoAppTheme {
     elevatedButtonTheme: TElevatedButtonTheme.darkElevatedButtonTheme,
     outlinedButtonTheme: TOutlineButtonTheme.darkOutlinedButtonTheme,
     inputDecorationTheme: TTextFormFieldTheme.darkInputDecorationTheme,
+    drawerTheme: TDrawerTheme.darkDrawerTheme,
   );
 }
