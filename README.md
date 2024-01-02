@@ -25,7 +25,6 @@ Onboarding, Login, Register, Verify Email, Forgot Password and Reset Password Sc
 <img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/38a9bb37-8718-49d1-a0f5-637ae8b00936" alt="alt text" width="100" height="200">
 <img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/7ac4c96f-c14b-45e6-985a-eb2f85296a86" alt="alt text" width="100" height="200">
 <img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/d29d8220-0899-4e59-9c28-60f1b63634dc" alt="alt text" width="100" height="200">
-
 <img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/d8aecc9a-7f81-4615-957b-1b469f5d6847" alt="alt text" width="100" height="200">
 <img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/3f7e4220-33b5-44f9-abf1-ad831c3a372e" alt="alt text" width="100" height="200">
 <img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/f354eddd-2487-426a-9783-751e4c724568" alt="alt text" width="100" height="200">
