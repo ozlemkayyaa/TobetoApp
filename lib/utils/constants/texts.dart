@@ -55,18 +55,15 @@ class TTexts {
   static const String dialogTitle = "Kayıt oluşturmak için gerekli sözleşmeler";
   static const String dialogSubTitle = "Kişisel verileriniz ";
   static const String lightText = "Aydınlatma Metni";
-  static const String dialogSubTitleContinue = " kapsamında";
-  static const String dialogSubCont = "işlenmektedir.";
+  static const String dialogSubTitleContinue = " kapsamında\nişlenmektedir.";
   static const String openText = 'Açık Rıza Metni';
   static const String openTextContinue = '\'ni okudum anladım.*';
   static const String termsOfUse = 'Üyelik Sözleşmesi ve Kullanım Koşulları';
-  static const String read = '\'nı okudum';
+  static const String read = '\'nı okudum\nve anladım.*';
   static const String understand = " ve anladım.*";
 
   static const String contact =
-      "İletişim bilgilerim üzerinden pazarlama ve tanıtım ";
-  static const String contactGoal =
-      "amaçlı irtibata geçilmesini kabul ediyorum.";
+      "İletişim bilgilerim üzerinden pazarlama ve tanıtım \namaçlı irtibata geçilmesini kabul ediyorum.";
   static const String emailcontact = "E-posta gönderim izni.*";
   static const String callcontact = "Arama izni.*";
   static const String close = "Kapat";

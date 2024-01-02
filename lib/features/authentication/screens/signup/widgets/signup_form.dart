@@ -54,14 +54,14 @@ class _SignupFormState extends State<SignupForm> {
           ),
           const SizedBox(height: TSizes.spaceBtwInputFields),
 
-          // Phone Number
-          // TextFormField(
-          //   decoration: const InputDecoration(
-          //     labelText: TTexts.signPhoneNumber,
-          //     prefixIcon: Icon(Iconsax.call),
-          //   ),
-          // ),
-          // const SizedBox(height: TSizes.spaceBtwInputFields),
+          //Phone Number
+          TextFormField(
+            decoration: const InputDecoration(
+              labelText: TTexts.signPhoneNumber,
+              prefixIcon: Icon(Iconsax.call),
+            ),
+          ),
+          const SizedBox(height: TSizes.spaceBtwInputFields),
 
           // Password
           TextFormField(
@@ -120,7 +120,7 @@ class _SignupFormState extends State<SignupForm> {
                         builder: (BuildContext context) {
                           return const Dialog(
                             child:
-                                SizedBox(height: 450, child: TermsCheckbox()),
+                                SizedBox(height: 410, child: TermsCheckbox()),
                           );
                         });
                   },
