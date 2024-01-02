@@ -41,10 +41,8 @@ Onboarding, Login, Register, Verify Email, Forgot Password and Reset Password Sc
 
 Anasayfa
 
-<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/203b58bc-391d-4668-889e-05acb79a3a68" alt="alt text" width="100" height="200">
-<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/1c8ceb3f-949f-476a-aa31-1870de0d6383" alt="alt text" width="100" height="200">
-
-
+<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/3e0974ec-8376-4c9f-b4fb-813b8c817dc6" alt="alt text" width="100" height="200">
+<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/4ff1d565-3415-47b4-b83f-37eab6401991" alt="alt text" width="100" height="200">
 
 
 
