@@ -28,4 +28,9 @@ class TImages {
   static const String coding = "assets/images/onboarding/coding.png";
   static const String personal = "assets/images/onboarding/personal.png";
   static const String welcome = "assets/images/onboarding/welcome.png";
+
+  // Verify and Reset
+  static const String resetPassword = "assets/images/auth/resetPassword.png";
+  static const String verifySucess = "assets/images/auth/verifySucess.png";
+  static const String done = "assets/images/auth/done.png";
 }

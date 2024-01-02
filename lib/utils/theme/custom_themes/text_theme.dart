@@ -66,7 +66,7 @@ class TTextTheme {
     bodySmall: const TextStyle().copyWith(
         fontSize: 14.0,
         fontWeight: FontWeight.w500,
-        color: Colors.black.withOpacity(0.5)),
+        color: Colors.white.withOpacity(0.5)),
 
     // 2 tür LabelText (Etiket Yazısı)
     labelLarge: const TextStyle().copyWith(

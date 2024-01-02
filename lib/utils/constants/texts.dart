@@ -12,7 +12,7 @@ class TTexts {
       "TOBETO'da ileri düzey yazılım eğitimleri ve gerçek projelerle kariyerinizi şekillendirin. Hayalinizdeki kariyere bir adım daha yaklaşın, sizi bekliyoruz!";
 
   // Login Text
-  static const String userEmail = 'E-Mail';
+  static const String userEmail = 'E-Posta';
   static const String userPassword = 'Şifre';
   static const String passwordForgot = 'Şifremi Unuttum';
   static const String rememeberMe = 'Beni Hatırla';
@@ -22,7 +22,6 @@ class TTexts {
   static const String failedButton = 'Tamam';
   static const String succesfulLogin = 'Başarılı';
   static const String succesfulMessage = ' Giriş başarıyla gerçekleşti.';
-  static const String registerText = 'Henüz üye değil misin?';
   static const String registerButton = 'Kayıt Ol';
   static const String loginTitle = 'Hoşgeldiniz,';
   static const String loginSubTitle =
@@ -32,22 +31,46 @@ class TTexts {
   // Sign Up
   static const String signName = 'Ad';
   static const String signSurname = 'Soyad';
-  static const String signEmail = 'E-Mail';
+  static const String signEmail = 'E-Posta';
   static const String signPassword = 'Şifre';
   static const String signPasswordAgain = 'Şifre Tekrar';
   static const String signPhoneNumber = 'Telefon Numarası';
   static const String signUp = 'Hesabınızı Oluşturalım';
-  static const String agree = ' kabul ediyorum';
   static const String orsignUp = 'Veya Bunlarla Kaydolun';
-  static const String privacy = 'Gizlilik Politikasını';
-  static const String termsOfUse = 'Kullanım Koşullarını';
   static const String andSign = ' ve ';
+  static const String registerText = 'Zaten bir hesabın var mı?';
 
-  // Forgot Password
-  static const String passwordReset = 'Şifre Sıfırlama';
-  static const String resetPassword =
+  // Verify Email and Reset Password
+  static const String passwordResetTitle = 'Şifre Sıfırlama E-Maili gönder';
+  static const String passwordResetText =
       'Şifre sıfırlama linki için e-posta adresinizi giriniz';
   static const String sendButton = 'Gönder';
+  static const String verifyEmailTitle = 'E-posta adresinizi doğrulayın';
+  static const String verifySucessSubTitle =
+      'Tobeto Platform\'a kaydınız başarıyla gerçekleşti. Giriş yapabilmek için e-posta adresinize iletilen doğrulama linkine tıklayarak hesabınızı aktifleştirin. ';
+  static const String activation =
+      "Aktivasyon işlemi başarıyla gerçekleşmiştir";
+
+  // Show Dialog
+  static const String dialogTitle = "Kayıt oluşturmak için gerekli sözleşmeler";
+  static const String dialogSubTitle = "Kişisel verileriniz ";
+  static const String lightText = "Aydınlatma Metni";
+  static const String dialogSubTitleContinue = " kapsamında";
+  static const String dialogSubCont = "işlenmektedir.";
+  static const String openText = 'Açık Rıza Metni';
+  static const String openTextContinue = '\'ni okudum anladım.*';
+  static const String termsOfUse = 'Üyelik Sözleşmesi ve Kullanım Koşulları';
+  static const String read = '\'nı okudum';
+  static const String understand = " ve anladım.*";
+
+  static const String contact =
+      "İletişim bilgilerim üzerinden pazarlama ve tanıtım ";
+  static const String contactGoal =
+      "amaçlı irtibata geçilmesini kabul ediyorum.";
+  static const String emailcontact = "E-posta gönderim izni.*";
+  static const String callcontact = "Arama izni.*";
+  static const String close = "Kapat";
+  static const String continueSignUp = "Devam Et";
 
   // Drawer Text
   static const String homePage = 'Anasayfa';

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tobeto/common/widgets.login_signup/form_divider.dart';
-import 'package:tobeto/common/widgets.login_signup/social_buttons.dart';
+import 'package:tobeto/common/styles/widgets/login_signup/form_divider.dart';
+import 'package:tobeto/common/styles/widgets/login_signup/social_buttons.dart';
 import 'package:tobeto/features/authentication/screens/signup/widgets/signup_form.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';

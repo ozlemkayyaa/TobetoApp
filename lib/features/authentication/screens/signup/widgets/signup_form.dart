@@ -1,14 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:tobeto/features/authentication/screens/login/login_screen.dart';
+import 'package:tobeto/features/authentication/screens/signup/verify_email_screen.dart';
 import 'package:tobeto/features/authentication/screens/signup/widgets/terms_checkbox.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
+import 'package:tobeto/utils/helpers/helper_functions.dart';
 
-class SignupForm extends StatelessWidget {
+class SignupForm extends StatefulWidget {
   const SignupForm({
     super.key,
   });
 
+  @override
+  State<SignupForm> createState() => _SignupFormState();
+}
+
+class _SignupFormState extends State<SignupForm> {
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -49,13 +57,13 @@ class SignupForm extends StatelessWidget {
           const SizedBox(height: TSizes.spaceBtwInputFields),
 
           // Phone Number
-          TextFormField(
-            decoration: const InputDecoration(
-              labelText: TTexts.signPhoneNumber,
-              prefixIcon: Icon(Iconsax.call),
-            ),
-          ),
-          const SizedBox(height: TSizes.spaceBtwInputFields),
+          // TextFormField(
+          //   decoration: const InputDecoration(
+          //     labelText: TTexts.signPhoneNumber,
+          //     prefixIcon: Icon(Iconsax.call),
+          //   ),
+          // ),
+          // const SizedBox(height: TSizes.spaceBtwInputFields),
 
           // Password
           TextFormField(
@@ -80,14 +88,45 @@ class SignupForm extends StatelessWidget {
           const SizedBox(height: TSizes.spaceBtwSections),
 
           // Terms and Conditions Checkbox
-          const TermsCheckbox(),
-          const SizedBox(height: TSizes.spaceBtwSections),
+
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                TTexts.registerText,
+                style: Theme.of(context).textTheme.bodySmall,
+              ),
+              TextButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const LoginScreen()),
+                    );
+                  },
+                  child: Text(
+                    TTexts.loginButton,
+                    style: Theme.of(context).textTheme.bodyLarge,
+                  ))
+            ],
+          ),
+          const SizedBox(height: TSizes.spaceBtwItems),
 
           // Sign Up Button
           SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                  onPressed: () {}, child: const Text(TTexts.registerButton))),
+                  onPressed: () {
+                    showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return const Dialog(
+                            child:
+                                SizedBox(height: 450, child: TermsCheckbox()),
+                          );
+                        });
+                  },
+                  child: const Text(TTexts.registerButton))),
         ],
       ),
     );
