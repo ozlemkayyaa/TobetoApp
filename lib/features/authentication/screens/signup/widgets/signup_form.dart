@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:tobeto/features/authentication/screens/login/login_screen.dart';
-import 'package:tobeto/features/authentication/screens/signup/verify_email_screen.dart';
 import 'package:tobeto/features/authentication/screens/signup/widgets/terms_checkbox.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
-import 'package:tobeto/utils/helpers/helper_functions.dart';
 
 class SignupForm extends StatefulWidget {
   const SignupForm({
