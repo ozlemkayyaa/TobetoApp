@@ -33,4 +33,5 @@ class TImages {
   static const String resetPassword = "assets/images/auth/resetPassword.png";
   static const String verifySucess = "assets/images/auth/verifySucess.png";
   static const String done = "assets/images/auth/done.png";
+  static const String email = "assets/images/auth/email.png";
 }

@@ -6,6 +6,8 @@ import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
 import 'package:tobeto/utils/helpers/helper_functions.dart';
 
+/* Bu sayfa mail onaylama linkine tıklandıktan sonra gözüken sayfadır, ondan dolayı herhangi bir yere bağlamadım. 
+   Onaylandı yazısından sonra Giriş yap butonuna tıklanınca login sayfasına gider. */
 class SuccessScreen extends StatelessWidget {
   const SuccessScreen({super.key});
 

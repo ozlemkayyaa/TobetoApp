@@ -41,9 +41,11 @@ class TTexts {
   static const String registerText = 'Zaten bir hesabın var mı?';
 
   // Verify Email and Reset Password
-  static const String passwordResetTitle = 'Şifre Sıfırlama E-Maili gönder';
+  static const String passwordResetTitle = 'Şifre Sıfırlama';
   static const String passwordResetText =
       'Şifre sıfırlama linki için e-posta adresinizi giriniz';
+  static const String resetEmail =
+      "Sifre sıfırlama linkini e-posta adresinize gönderdik. Lütfen gelen kutunuzu kontrol edin.";
   static const String sendButton = 'Gönder';
   static const String verifyEmailTitle = 'E-posta adresinizi doğrulayın';
   static const String verifySucessSubTitle =
@@ -60,8 +62,6 @@ class TTexts {
   static const String openTextContinue = '\'ni okudum anladım.*';
   static const String termsOfUse = 'Üyelik Sözleşmesi ve Kullanım Koşulları';
   static const String read = '\'nı okudum\nve anladım.*';
-  static const String understand = " ve anladım.*";
-
   static const String contact =
       "İletişim bilgilerim üzerinden pazarlama ve tanıtım \namaçlı irtibata geçilmesini kabul ediyorum.";
   static const String emailcontact = "E-posta gönderim izni.*";

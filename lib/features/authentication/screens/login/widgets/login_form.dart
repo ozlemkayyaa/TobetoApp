@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:tobeto/features/authentication/screens/password/forgot_password.dart';
 import 'package:tobeto/features/authentication/screens/signup/signup_screen.dart';
+import 'package:tobeto/features/education/screens/home/home_screen.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
 
@@ -49,7 +51,13 @@ class LoginForm extends StatelessWidget {
 
                 // Forgot Password
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ForgotPassword()),
+                    );
+                  },
                   child: const Text(TTexts.passwordForgot),
                 ),
               ],
@@ -60,7 +68,12 @@ class LoginForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const HomeScreen()),
+                  );
+                },
                 child: const Text(TTexts.loginButton),
               ),
             ),

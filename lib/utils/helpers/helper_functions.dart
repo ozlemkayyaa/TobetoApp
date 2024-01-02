@@ -20,7 +20,7 @@ class THelperFunctions {
           actions: [
             TextButton(
               onPressed: () => Navigator.of(context).pop(),
-              child: const Text('OK'),
+              child: const Text('Tamam'),
             ), // TextButton
           ],
         ); // AlertDialog
