@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tobeto/utils/constants/colors.dart';
 
 class TChipTheme {
   TChipTheme._();
@@ -7,7 +8,7 @@ class TChipTheme {
   static ChipThemeData lightChipTheme = ChipThemeData(
     disabledColor: Colors.grey.withOpacity(0.4),
     labelStyle: const TextStyle(color: Colors.black),
-    selectedColor: Colors.purple,
+    selectedColor: TColors.buttonPrimary,
     padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 12.0),
     checkmarkColor: Colors.white,
   );
@@ -16,7 +17,7 @@ class TChipTheme {
   static ChipThemeData darkChipTheme = const ChipThemeData(
     disabledColor: Colors.grey,
     labelStyle: TextStyle(color: Colors.white),
-    selectedColor: Colors.purple,
+    selectedColor: TColors.buttonPrimary,
     padding: EdgeInsets.symmetric(horizontal: 12.0, vertical: 12.0),
     checkmarkColor: Colors.white,
   );

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tobeto/utils/theme/custom_themes/appbar_theme.dart';
+import 'package:tobeto/utils/theme/custom_themes/bottom_navigation_theme.dart';
 import 'package:tobeto/utils/theme/custom_themes/bottom_sheet_theme.dart';
 import 'package:tobeto/utils/theme/custom_themes/checkbox_theme.dart';
 import 'package:tobeto/utils/theme/custom_themes/chip_theme.dart';
@@ -27,6 +28,7 @@ class TobetoAppTheme {
     outlinedButtonTheme: TOutlineButtonTheme.lightOutlinedButtonTheme,
     inputDecorationTheme: TTextFormFieldTheme.lightInputDecorationTheme,
     drawerTheme: TDrawerTheme.lightDrawerTheme,
+    bottomNavigationBarTheme: TBottomNavigationTheme.lightBottomNavigationTheme,
   );
 
   static ThemeData darkTheme = ThemeData(
@@ -44,5 +46,6 @@ class TobetoAppTheme {
     outlinedButtonTheme: TOutlineButtonTheme.darkOutlinedButtonTheme,
     inputDecorationTheme: TTextFormFieldTheme.darkInputDecorationTheme,
     drawerTheme: TDrawerTheme.darkDrawerTheme,
+    bottomNavigationBarTheme: TBottomNavigationTheme.darkBottomNavigationTheme,
   );
 }

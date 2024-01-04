@@ -69,6 +69,13 @@ class TTexts {
   static const String close = "Kapat";
   static const String continueSignUp = "Devam Et";
 
+  // Bottom Navigation Bar
+  static const String calendar = "Takvim";
+  static const String test = "Test";
+  static const String home = "Anasayfa";
+  static const String cataloge = "Katalog";
+  static const String profile = "Profil";
+
   // Drawer Text
   static const String us = 'Biz Kimiz?';
   static const String team = 'Ekibimiz';
