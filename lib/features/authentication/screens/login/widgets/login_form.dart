@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:tobeto/features/authentication/screens/password/forgot_password.dart';
 import 'package:tobeto/features/authentication/screens/signup/signup_screen.dart';
-import 'package:tobeto/features/education/screens/home/home_screen.dart';
 import 'package:tobeto/navigation_menu.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
