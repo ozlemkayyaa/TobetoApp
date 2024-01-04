@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:tobeto/utils/constants/texts.dart';
 import 'package:tobeto/features/education/screens/home/home_screen.dart';
-import 'package:tobeto/features/education/screens/testing/test_screen.dart';
+import 'package:tobeto/features/education/screens/test/test_screen.dart';
 import 'package:tobeto/features/education/screens/profile/profile_screen.dart';
 import 'package:tobeto/features/education/screens/calendar/calendar_screen.dart';
 import 'package:tobeto/features/education/screens/cataloge/cataloge_screen.dart';
@@ -37,6 +37,7 @@ class _NavigationMenuState extends State<NavigationMenu> {
             _selectedIndex = index;
           });
         },
+        type: BottomNavigationBarType.fixed,
         items: const [
           BottomNavigationBarItem(
               icon: Icon(Iconsax.home_2), label: TTexts.home),

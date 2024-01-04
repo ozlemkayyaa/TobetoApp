@@ -5,6 +5,8 @@ class TImages {
   static const String tLogoMor = "assets/logos/TLogoMor.png";
   static const String tLogoWhite = "assets/logos/TLogoWhite.png";
   static const String yuvarlakLogo = "assets/logos/yuvarlakLogo.png";
+  static const String appBarLogo = "assets/logos/appBarLogo.png";
+  static const String appBarDarkLogo = "assets/logos/appBarDarkLogo.png";
 
   // Social Logos
   static const String google = "assets/logos/googleLogo.png";
