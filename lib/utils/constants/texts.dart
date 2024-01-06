@@ -86,7 +86,8 @@ class TTexts {
 
   // HomePage Text
   static const String tobetoPurple = 'TOBETO';
-  static const String welcome = '\'ya hoş geldin Özlem';
+  static const String welcome = '\'ya hoş geldin ';
+  static const String user = "Özlem,";
   static const String introduction =
       'Yeni nesil öğrenme deneyimi ile Tobeto kariyer yolculuğunda senin yanında!';
   static const String freeEducation =
@@ -106,8 +107,8 @@ class TTexts {
   static const String time = ' 45 Dakika';
 
   // Three Container
-  static const String createProfile = 'Profilini oluştur';
-  static const String yourself = 'Kendini değerlendir';
-  static const String startLearning = 'öğrenmeye başla';
+  static const String createProfile = 'Profilini Oluştur';
+  static const String yourself = 'Kendini Değerlendir';
+  static const String startLearning = 'Öğrenmeye Başla';
   static const String start = 'Başla';
 }

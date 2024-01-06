@@ -9,17 +9,12 @@ class TColors {
   static const Color accent = Color(0xF0FFC107);
 
   // Gradient Colors
-  static const Gradient linearGradient = LinearGradient(
-      begin: Alignment(0.0, 0.0),
-      end: Alignment(0.707, -0.707),
-      colors: [
-        Color(0xFF1D0B8C),
-        Color(0xFFB29BF6),
-        Color(0xFF0E0B93),
-        Color(0xFF59ABC6),
-        Color(0xFF3C0B8C),
-        Color(0xFFD89DF8),
-      ]);
+  static const Color profile1 = Color(0xFF1D0B8C);
+  static const Color profile2 = Color(0xFFB29BF6);
+  static const Color yourself1 = Color(0xFF0E0B93);
+  static const Color yourself2 = Color(0xFF59ABC6);
+  static const Color learning1 = Color(0xFF3C0B8C);
+  static const Color learning2 = Color(0xFFD89DF8);
 
   // Text Colors
   static const Color textPrimary = Colors.black;
