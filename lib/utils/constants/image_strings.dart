@@ -15,8 +15,8 @@ class TImages {
 
   // Other Images
   static const String background = "assets/images/background.png";
-  static const String istanbulBlack = "assets/images/istanbulBlack.jpg";
-  static const String istanbulWhite = "assets/images/istanbulWhite.jpg";
+  static const String istanbulBlack = "assets/images/istanbulBlack.png";
+  static const String istanbulWhite = "assets/images/istanbulWhite.png";
   static const String istKod = "assets/images/istkod.png";
   static const String isImage = "assets/images/is.png";
 
@@ -25,6 +25,7 @@ class TImages {
   static const String duyuru = "assets/images/duyuru.png";
   static const String sinav = "assets/images/sınavlar.png";
   static const String notFound = "assets/images/videoNotFound.jpg";
+  static const String ecmelHoca = "assets/images/ecmelHoca.jpg";
 
   // OnBoarding
   static const String coding = "assets/images/onboarding/coding.png";

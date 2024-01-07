@@ -99,16 +99,44 @@ class TTexts {
   static const String news = 'Duyuru ve Haberlerim';
   static const String polls = 'Anketlerim';
 
-  // ExameCard
-  static const String exam = 'Sınavlarım';
-  static const String examEveryone =
-      'Herkes için Kodlama 2A Değerlendirme Sınavı';
-  static const String everyone = 'Herkes İçin Kodlama - 2A';
-  static const String time = ' 45 Dakika';
-
   // Three Container
   static const String createProfile = 'Profilini Oluştur';
   static const String yourself = 'Kendini Değerlendir';
   static const String startLearning = 'Öğrenmeye Başla';
   static const String start = 'Başla';
+
+  // Başvurularım
+  static const String istCod = "İstanbul Kodluyor\nBilgilendirme";
+  static const String formDone = "İstanbul Kodluyor Başvuru Formu onaylandı.";
+  static const String documentDone =
+      "İstanbul Kodluyor Belge Yükleme Formu \nonaylandı.";
+  static const String done = "Kabul Edildi";
+  static const String notDone = "Değerlendirmede";
+
+  // Eğitimlerim
+  static const String ecmel = "Dr. Ecmel Ayral'dan Hoşgeldin Mesajı";
+  static const String ecmelDate = "21 Eylül 2023 15:20";
+  static const String goEducation = "Eğitime Git";
+  static const String howEducation = "Eğitimlere Nasıl Katılırım?\n";
+  static const String howEducationDate = "8 Eylül 2023 17:06";
+
+  // Sınavlarım
+  static const String exam = "Sınavlarım";
+  static const String examEveryone =
+      'Herkes için Kodlama 2A Değerlendirme Sınavı';
+  static const String everyone = 'Herkes İçin Kodlama - 2A';
+  static const String time = ' 45 Dakika';
+
+  // Duyuru ve Haberlerim
+  static const String announce = "Duyuru";
+  static const String announce1 = "11 Ocak Kampüs Buluşması";
+  static const String announce2 = "30 Ocak Online Hoşgeldin Buluşması - 5";
+  static const String announce3 = "Yeni Grupların Discord'a Katılımı";
+  static const String date1 = "06.01.2024";
+  static const String date2 = "03.01.2024";
+  static const String date3 = "07.12.2023";
+  static const String continueRead = "Devamını Oku";
+
+  // Anketlerim
+  static const String anket = "Atanmış herhangi bir anketiniz bulunmamaktadır.";
 }

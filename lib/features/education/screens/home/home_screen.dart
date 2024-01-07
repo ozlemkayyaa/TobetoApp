@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:tobeto/features/education/screens/home/widgets/container_istkod_widget.dart';
 import 'package:tobeto/features/education/screens/home/widgets/container_style_widget.dart';
 import 'package:tobeto/features/education/screens/home/widgets/drawer_widget.dart';
 import 'package:tobeto/features/education/screens/home/widgets/tabbar_view_widget.dart';
@@ -33,7 +34,7 @@ class HomeScreen extends StatelessWidget {
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const SizedBox(height: TSizes.spaceBtwItems),
+            const SizedBox(height: TSizes.defaultSpace),
             Padding(
               padding: const EdgeInsets.only(left: TSizes.sm),
               child: Text.rich(
@@ -55,40 +56,44 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: TSizes.spaceBtwItems),
+            const SizedBox(height: TSizes.defaultSpace),
 
             // İkinci Text
             Padding(
-              padding: const EdgeInsets.only(left: TSizes.sm),
+              padding: const EdgeInsets.only(left: TSizes.xs),
               child: Text(
                 TTexts.introduction,
-                style: Theme.of(context).textTheme.titleLarge,
+                style: Theme.of(context).textTheme.headlineSmall,
                 textAlign: TextAlign.center,
               ),
             ),
             const SizedBox(height: TSizes.defaultSpace),
 
-            // İstanbul kodluyor ve profilimi oluştur yazıları,  yana kaymalı
+            // Profilimi oluştur yazıları,  yana kaymalı
             const SingleChildScrollView(
               scrollDirection: Axis.horizontal,
-              child: Row(
-                children: [
-                  ContainerStyleWidget(
-                      gradientStartColor: TColors.profile1,
-                      gradientEndColor: TColors.profile2,
-                      buttonText: TTexts.start,
-                      containerTitle: TTexts.createProfile),
-                  ContainerStyleWidget(
-                      gradientStartColor: TColors.yourself1,
-                      gradientEndColor: TColors.yourself2,
-                      buttonText: TTexts.start,
-                      containerTitle: TTexts.yourself),
-                  ContainerStyleWidget(
-                      gradientStartColor: TColors.learning1,
-                      gradientEndColor: TColors.learning2,
-                      buttonText: TTexts.start,
-                      containerTitle: TTexts.startLearning),
-                ],
+              child: Padding(
+                padding: EdgeInsets.only(left: TSizes.sm),
+                child: Row(
+                  children: [
+                    ContainerIstkodWidget(),
+                    ContainerStyleWidget(
+                        gradientStartColor: TColors.profile1,
+                        gradientEndColor: TColors.profile2,
+                        buttonText: TTexts.start,
+                        containerTitle: TTexts.createProfile),
+                    ContainerStyleWidget(
+                        gradientStartColor: TColors.yourself1,
+                        gradientEndColor: TColors.yourself2,
+                        buttonText: TTexts.start,
+                        containerTitle: TTexts.yourself),
+                    ContainerStyleWidget(
+                        gradientStartColor: TColors.learning1,
+                        gradientEndColor: TColors.learning2,
+                        buttonText: TTexts.start,
+                        containerTitle: TTexts.startLearning),
+                  ],
+                ),
               ),
             ),
 

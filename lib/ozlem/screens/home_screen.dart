@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tobeto/ozlem/constants/text_const.dart';
 import 'package:tobeto/ozlem/widget/drawer_widget.dart';
 import 'package:tobeto/ozlem/widget/homepage_widgets/bottom_widget.dart';
-import 'package:tobeto/ozlem/widget/homepage_widgets/card_exam_widget.dart';
+import 'package:tobeto/features/education/screens/home/widgets/tabbar_widgets/exam_widget.dart';
 import 'package:tobeto/ozlem/widget/homepage_widgets/card_tab_widget.dart';
 import 'package:tobeto/ozlem/widget/homepage_widgets/homepage_richtext_widget.dart';
 import 'package:tobeto/ozlem/widget/homepage_widgets/learning_container_widget.dart';
@@ -55,7 +55,7 @@ class HomeScreen extends StatelessWidget {
               Padding(padding: EdgeInsets.all(5.0)),
 
               // Sınavlarım Kartı
-              CardExamWidget(),
+              //CardExamWidget(),
 
               //Profilini Oluştur Kutucuğu
               ProfileContainerWidget(),
