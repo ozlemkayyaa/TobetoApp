@@ -92,6 +92,8 @@ class TTexts {
       'Yeni nesil öğrenme deneyimi ile Tobeto kariyer yolculuğunda senin yanında!';
   static const String freeEducation =
       'Ücretsiz eğitimlerle, geleceğin mesleklerinde sen de yerini al.';
+  static const String work = "Aradığın \"İş\" Burada";
+  static const String more = "Daha Fazla Göster";
 
   // TabBar
   static const String applications = 'Başvurularım';

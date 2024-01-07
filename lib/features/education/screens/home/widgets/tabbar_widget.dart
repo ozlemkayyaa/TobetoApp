@@ -16,12 +16,22 @@ class TabBarWidget extends StatelessWidget {
       labelColor: THelperFunctions.isDarkMode(context)
           ? TColors.white
           : TColors.primary,
-      tabs: const [
-        Tab(child: Text(TTexts.applications)),
-        Tab(child: Text(TTexts.trainings)),
-        Tab(child: Text(TTexts.exam)),
-        Tab(child: Text(TTexts.news)),
-        Tab(child: Text(TTexts.polls)),
+      tabs: [
+        Tab(
+            child: Text(TTexts.applications,
+                style: Theme.of(context).textTheme.titleLarge)),
+        Tab(
+            child: Text(TTexts.trainings,
+                style: Theme.of(context).textTheme.titleLarge)),
+        Tab(
+            child: Text(TTexts.exam,
+                style: Theme.of(context).textTheme.titleLarge)),
+        Tab(
+            child: Text(TTexts.news,
+                style: Theme.of(context).textTheme.titleLarge)),
+        Tab(
+            child: Text(TTexts.polls,
+                style: Theme.of(context).textTheme.titleLarge)),
       ],
     );
   }

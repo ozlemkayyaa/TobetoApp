@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:iconsax/iconsax.dart';
+import 'package:tobeto/features/education/screens/course/course_screen.dart';
 import 'package:tobeto/features/education/screens/home/widgets/tabbar_widgets/application_widget.dart';
 import 'package:tobeto/features/education/screens/home/widgets/tabbar_widgets/exam_widget.dart';
 import 'package:tobeto/features/education/screens/home/widgets/tabbar_widgets/education_widget.dart';
 import 'package:tobeto/features/education/screens/home/widgets/tabbar_widgets/news_widget.dart';
+import 'package:tobeto/features/education/screens/news/news_screen.dart';
 import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/image_strings.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
@@ -19,10 +22,10 @@ class TabBarViewWidget extends StatelessWidget {
       child: TabBarView(children: [
         // Başvurularım butonunun altındaki Cardlar
         const Padding(
-          padding: EdgeInsets.all(TSizes.defaultSpace),
+          padding: EdgeInsets.all(TSizes.spaceBtwItems),
           child: SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
+            scrollDirection: Axis.vertical,
+            child: Column(
               children: [
                 ApplicationWidget(
                     colors: TColors.secondary, accepted: TTexts.done),
@@ -35,21 +38,39 @@ class TabBarViewWidget extends StatelessWidget {
         ),
 
         // Eğitimlerim butonunun altındaki Cardlar
-        const Padding(
-          padding: EdgeInsets.all(TSizes.spaceBtwItems),
+        Padding(
+          padding: const EdgeInsets.all(TSizes.spaceBtwItems),
           child: SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
               children: [
-                EducationWidget(
+                const EducationWidget(
                     image: TImages.ecmelHoca,
                     title: TTexts.ecmel,
                     date: TTexts.ecmelDate),
-                SizedBox(width: TSizes.defaultSpace),
-                EducationWidget(
+                const SizedBox(width: TSizes.spaceBtwItems),
+                const EducationWidget(
                     image: TImages.istKod,
                     title: TTexts.howEducation,
                     date: TTexts.howEducationDate),
+                const SizedBox(width: TSizes.spaceBtwItems),
+                const SizedBox(height: TSizes.defaultSpace),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    IconButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const CourseScreen()),
+                          );
+                        },
+                        icon: const Icon(Iconsax.arrow_circle_right)),
+                    Text(TTexts.more,
+                        style: Theme.of(context).textTheme.bodyLarge)
+                  ],
+                ),
               ],
             ),
           ),
@@ -58,46 +79,71 @@ class TabBarViewWidget extends StatelessWidget {
         // Sınavlarım butonunun altındaki Cardlar
         const Padding(
           padding: EdgeInsets.all(TSizes.spaceBtwItems),
-          child: SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              children: [
-                ExamWidget(
-                    examTitle: TTexts.examEveryone,
-                    classTitle: TTexts.everyone,
-                    examTime: TTexts.time),
-                SizedBox(width: TSizes.defaultSpace),
-                ExamWidget(
-                    examTitle: TTexts.examEveryone,
-                    classTitle: TTexts.everyone,
-                    examTime: TTexts.time),
-                SizedBox(width: TSizes.defaultSpace),
-                ExamWidget(
-                    examTitle: TTexts.examEveryone,
-                    classTitle: TTexts.everyone,
-                    examTime: TTexts.time),
-              ],
-            ),
+          child: Column(
+            children: [
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    ExamWidget(
+                        examTitle: TTexts.examEveryone,
+                        classTitle: TTexts.everyone,
+                        examTime: TTexts.time),
+                    SizedBox(width: TSizes.defaultSpace),
+                    ExamWidget(
+                        examTitle: TTexts.examEveryone,
+                        classTitle: TTexts.everyone,
+                        examTime: TTexts.time),
+                    SizedBox(width: TSizes.defaultSpace),
+                    ExamWidget(
+                        examTitle: TTexts.examEveryone,
+                        classTitle: TTexts.everyone,
+                        examTime: TTexts.time),
+                  ],
+                ),
+              ),
+            ],
           ),
         ),
 
         // Duyuru ve Haberlerim altındaki Cardlar
-        const Padding(
-          padding: EdgeInsets.all(TSizes.defaultSpace),
-          child: SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              children: [
-                NewsWidget(
-                    announcement: TTexts.announce1, dateTime: TTexts.date1),
-                SizedBox(width: TSizes.defaultSpace),
-                NewsWidget(
-                    announcement: TTexts.announce2, dateTime: TTexts.date2),
-                SizedBox(width: TSizes.defaultSpace),
-                NewsWidget(
-                    announcement: TTexts.announce3, dateTime: TTexts.date3),
-              ],
-            ),
+        Padding(
+          padding: const EdgeInsets.all(TSizes.spaceBtwItems),
+          child: Column(
+            children: [
+              const SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    NewsWidget(
+                        announcement: TTexts.announce1, dateTime: TTexts.date1),
+                    SizedBox(width: TSizes.defaultSpace),
+                    NewsWidget(
+                        announcement: TTexts.announce2, dateTime: TTexts.date2),
+                    SizedBox(width: TSizes.defaultSpace),
+                    NewsWidget(
+                        announcement: TTexts.announce3, dateTime: TTexts.date3),
+                  ],
+                ),
+              ),
+              const SizedBox(height: TSizes.defaultSpace),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  IconButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const NewsScreen()),
+                        );
+                      },
+                      icon: const Icon(Iconsax.arrow_circle_right)),
+                  Text(TTexts.more,
+                      style: Theme.of(context).textTheme.bodyLarge)
+                ],
+              ),
+            ],
           ),
         ),
 
@@ -108,7 +154,7 @@ class TabBarViewWidget extends StatelessWidget {
             children: [
               const Image(
                 image: AssetImage(TImages.anket),
-                height: 200,
+                height: 250,
               ),
               const SizedBox(height: TSizes.defaultSpace),
               Text(TTexts.anket,

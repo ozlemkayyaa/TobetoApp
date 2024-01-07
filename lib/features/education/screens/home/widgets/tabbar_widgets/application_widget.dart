@@ -27,7 +27,7 @@ class ApplicationWidget extends StatelessWidget {
             height: 150,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(TSizes.buttonRadius),
-              color: dark ? TColors.darkContainer : TColors.lightGrey,
+              color: dark ? TColors.darkContainer : TColors.lightContainer,
               border: Border(
                 left: BorderSide(
                   color: colors, // Sol kenar rengi
@@ -54,7 +54,7 @@ class ApplicationWidget extends StatelessWidget {
                           // Kabul edildi /  Değerlendirmede bu yazının bulunnduğu kutu
                           Padding(
                             padding: const EdgeInsets.only(
-                                left: TSizes.appBarHeight),
+                                left: TSizes.defaultSpace + 18),
                             child: Container(
                               height: MediaQuery.of(context).size.height * 0.04,
                               width: MediaQuery.of(context).size.width * 0.36,

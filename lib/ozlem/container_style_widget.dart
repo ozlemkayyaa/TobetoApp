@@ -66,3 +66,27 @@ class ContainerStyleWidget extends StatelessWidget {
     );
   }
 }
+
+/* Bunları tasarladım ama kullanmadım, bu kod homapage sayfasında aradığın iş burada yazısı yerine yazıldı,
+bu yazıyı yazmayıp hazıladığım containerları kullanıcaktım.
+Buradaki kodda profilini oluştur, kendini değerlerdir gibi container widgetlar bulunmakta,
+bu widgetların yönelndirildiği sayfalar bottom barda verildiği için bu widgetları anasayfadan kaldırdım, 
+ama sayfa olarak uygulama içinde mevcutlar.
+
+                  ContainerIstkodWidget(),
+                  ContainerStyleWidget(
+                      gradientStartColor: TColors.profile1,
+                      gradientEndColor: TColors.profile2,
+                      buttonText: TTexts.start,
+                      containerTitle: TTexts.createProfile),
+                  ContainerStyleWidget(
+                      gradientStartColor: TColors.yourself1,
+                      gradientEndColor: TColors.yourself2,
+                      buttonText: TTexts.start,
+                      containerTitle: TTexts.yourself),
+                  ContainerStyleWidget(
+                      gradientStartColor: TColors.learning1,
+                      gradientEndColor: TColors.learning2,
+                      buttonText: TTexts.start,
+                      containerTitle: TTexts.startLearning),
+                  */

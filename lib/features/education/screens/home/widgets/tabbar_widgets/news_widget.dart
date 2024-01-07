@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
+import 'package:tobeto/utils/helpers/helper_functions.dart';
 
 class NewsWidget extends StatelessWidget {
   const NewsWidget({
@@ -15,6 +16,8 @@ class NewsWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final dark = THelperFunctions.isDarkMode(context);
+
     return Column(
       children: [
         Card(
@@ -23,7 +26,7 @@ class NewsWidget extends StatelessWidget {
             height: 148,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(TSizes.buttonRadius),
-              color: TColors.lightGrey,
+              color: dark ? TColors.darkContainer : TColors.lightContainer,
               border: const Border(
                 left: BorderSide(
                   color: TColors.secondary,

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:tobeto/features/education/screens/home/widgets/container_istkod_widget.dart';
-import 'package:tobeto/features/education/screens/home/widgets/container_style_widget.dart';
 import 'package:tobeto/features/education/screens/home/widgets/drawer_widget.dart';
 import 'package:tobeto/features/education/screens/home/widgets/tabbar_view_widget.dart';
 import 'package:tobeto/features/education/screens/home/widgets/tabbar_widget.dart';
@@ -9,12 +7,15 @@ import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/image_strings.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
+import 'package:tobeto/utils/helpers/helper_functions.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final dark = THelperFunctions.isDarkMode(context);
+
     return DefaultTabController(
       length: 5,
       child: Scaffold(
@@ -70,34 +71,24 @@ class HomeScreen extends StatelessWidget {
             const SizedBox(height: TSizes.defaultSpace),
 
             // Profilimi oluştur yazıları,  yana kaymalı
-            const SingleChildScrollView(
+            SingleChildScrollView(
               scrollDirection: Axis.horizontal,
-              child: Padding(
-                padding: EdgeInsets.only(left: TSizes.sm),
-                child: Row(
-                  children: [
-                    ContainerIstkodWidget(),
-                    ContainerStyleWidget(
-                        gradientStartColor: TColors.profile1,
-                        gradientEndColor: TColors.profile2,
-                        buttonText: TTexts.start,
-                        containerTitle: TTexts.createProfile),
-                    ContainerStyleWidget(
-                        gradientStartColor: TColors.yourself1,
-                        gradientEndColor: TColors.yourself2,
-                        buttonText: TTexts.start,
-                        containerTitle: TTexts.yourself),
-                    ContainerStyleWidget(
-                        gradientStartColor: TColors.learning1,
-                        gradientEndColor: TColors.learning2,
-                        buttonText: TTexts.start,
-                        containerTitle: TTexts.startLearning),
-                  ],
-                ),
+              child: Column(
+                children: [
+                  Image(
+                    image: AssetImage(
+                        dark ? TImages.istanbulWhite : TImages.istanbulBlack),
+                    width: 200,
+                  ),
+                  // Ardığın is burada yazısı
+                  const SizedBox(height: TSizes.defaultSpace),
+                  Text(TTexts.work,
+                      style: Theme.of(context).textTheme.headlineMedium),
+                ],
               ),
             ),
 
-            const SizedBox(height: TSizes.defaultSpace),
+            const SizedBox(height: TSizes.md),
 
             const TabBarWidget(),
 
