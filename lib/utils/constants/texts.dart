@@ -141,4 +141,7 @@ class TTexts {
 
   // Anketlerim
   static const String anket = "Atanmış herhangi bir anketiniz bulunmamaktadır.";
+  static const String allLesson = "Tüm Eğitimlerim";
+  static const String continueLesson = "Devam Ettiklerim";
+  static const String doneLesson = "Tamamladıklarım";
 }

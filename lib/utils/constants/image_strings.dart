@@ -37,4 +37,7 @@ class TImages {
   static const String verifySucess = "assets/images/auth/verifySucess.png";
   static const String done = "assets/images/auth/done.png";
   static const String email = "assets/images/auth/email.png";
+
+  // Course Screen
+  static const String education = "assets/images/eğitimlerim.png";
 }
