@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tobeto/features/education/screens/tobeto/code_screen.dart';
+import 'package:tobeto/features/education/screens/istanbulKodluyor/code_screen.dart';
 import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/image_strings.dart';
 import 'package:tobeto/utils/constants/sizes.dart';

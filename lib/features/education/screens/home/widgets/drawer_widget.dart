@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:tobeto/features/education/screens/tobeto/code_screen.dart';
-import 'package:tobeto/features/education/screens/tobeto/contact_screen.dart';
-import 'package:tobeto/features/education/screens/tobeto/team_screen.dart';
-import 'package:tobeto/features/education/screens/tobeto/we_screen.dart';
+import 'package:tobeto/features/education/screens/istanbulKodluyor/code_screen.dart';
+import 'package:tobeto/features/education/screens/contact/contact_screen.dart';
+import 'package:tobeto/features/education/screens/team/team_screen.dart';
+import 'package:tobeto/features/education/screens/we/we_screen.dart';
 import 'package:tobeto/navigation_menu.dart';
 import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/image_strings.dart';

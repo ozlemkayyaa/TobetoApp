@@ -153,13 +153,13 @@ class TTexts {
   static const String information = "İletişim Bilgileri";
   static const String companyName = "TOBETO";
   static const String company =
-      "Avez Elektronik İletişim Eğitim Danışmanlığı Ticaret Anonim Şirketi";
+      "Avez Elektronik İletişim Eğitim \nDanışmanlığı Ticaret Anonim Şirketi";
   static const String tax = "Beykoz";
   static const String taxNo = "1050250859";
   static const String tel = "(0216) 331 48 00";
   static const String ePosta = "info@tobeto.com";
   static const String adress =
-      "Kavacık, Rüzgarlıbahçe Mah. Çampınarı Sok. No:4 \nSmart Plaza B Blok Kat:3 34805, Beykoz/İstanbul";
+      "Kavacık, Rüzgarlıbahçe Mah. Çampınarı Sok. \nNo:4 Smart Plaza B Blok Kat:3 34805, \nBeykoz/İstanbul";
   static const String telIstCod = "(0216) 969 22 40";
   static const String ePostaIstCod = "istanbulkodluyor@tobeto.com";
   static const String contactForm = "İletişim Formu";
@@ -169,4 +169,12 @@ class TTexts {
   static const String message = "Mesajınız";
   static const String messageButton = "Mesaj Bırakın";
   static const String submit = "Gönder";
+  static const String ad = "Firma Adı:";
+  static const String unvan = "Firma \nUnvan:";
+  static const String daire = "Vergi \nDairesi:";
+  static const String no = "Vergi No:";
+  static const String telefon = "Telefon:";
+  static const String adres = "Adres:";
+  static const String forIstCod = "İstanbul Kodluyor";
+  static const String posta = "E-Posta:";
 }
