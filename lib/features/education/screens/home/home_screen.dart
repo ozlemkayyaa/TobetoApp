@@ -68,7 +68,7 @@ class HomeScreen extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
             ),
-            const SizedBox(height: TSizes.defaultSpace),
+            const SizedBox(height: TSizes.spaceBtwItems),
 
             // Profilimi oluştur yazıları,  yana kaymalı
             SingleChildScrollView(
@@ -78,17 +78,17 @@ class HomeScreen extends StatelessWidget {
                   Image(
                     image: AssetImage(
                         dark ? TImages.istanbulWhite : TImages.istanbulBlack),
-                    width: 200,
+                    width: 170,
                   ),
                   // Ardığın is burada yazısı
-                  const SizedBox(height: TSizes.defaultSpace),
+                  const SizedBox(height: TSizes.lg),
                   Text(TTexts.work,
                       style: Theme.of(context).textTheme.headlineMedium),
                 ],
               ),
             ),
 
-            const SizedBox(height: TSizes.md),
+            const SizedBox(height: TSizes.sm),
 
             const TabBarWidget(),
 

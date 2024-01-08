@@ -22,7 +22,7 @@ class EducationWidget extends StatelessWidget {
 
     return Card(
       child: Container(
-        width: 240,
+        width: 350,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(TSizes.buttonRadius),
           color: dark ? TColors.darkContainer : TColors.lightContainer,
@@ -37,7 +37,7 @@ class EducationWidget extends StatelessWidget {
                 image: AssetImage(image),
                 fit: BoxFit.fill,
                 width: double.infinity,
-                height: 150,
+                height: 242,
               ),
               const SizedBox(height: TSizes.sm),
 

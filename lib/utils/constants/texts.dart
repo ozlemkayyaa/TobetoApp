@@ -98,14 +98,9 @@ class TTexts {
   // TabBar
   static const String applications = 'Başvurularım';
   static const String trainings = 'Eğitimlerim';
+  static const String exam = "Sınavlarım";
   static const String news = 'Duyuru ve Haberlerim';
   static const String polls = 'Anketlerim';
-
-  // Three Container
-  static const String createProfile = 'Profilini Oluştur';
-  static const String yourself = 'Kendini Değerlendir';
-  static const String startLearning = 'Öğrenmeye Başla';
-  static const String start = 'Başla';
 
   // Başvurularım
   static const String istCod = "İstanbul Kodluyor\nBilgilendirme";
@@ -119,11 +114,10 @@ class TTexts {
   static const String ecmel = "Dr. Ecmel Ayral'dan Hoşgeldin Mesajı";
   static const String ecmelDate = "21 Eylül 2023 15:20";
   static const String goEducation = "Eğitime Git";
-  static const String howEducation = "Eğitimlere Nasıl Katılırım?\n";
+  static const String howEducation = "Eğitimlere Nasıl Katılırım?";
   static const String howEducationDate = "8 Eylül 2023 17:06";
 
   // Sınavlarım
-  static const String exam = "Sınavlarım";
   static const String examEveryone =
       'Herkes için Kodlama 2A Değerlendirme Sınavı';
   static const String everyone = 'Herkes İçin Kodlama - 2A';
@@ -144,4 +138,35 @@ class TTexts {
   static const String allLesson = "Tüm Eğitimlerim";
   static const String continueLesson = "Devam Ettiklerim";
   static const String doneLesson = "Tamamladıklarım";
+
+  // Course Screen
+  static const String searchButton = "Arama";
+  static const String choise = "Kurum Seçiniz";
+  static const String az = "Adına Göre (A-Z)";
+
+  // News Screen
+  static const String organization = "Organizasyon";
+  static const String type = "Tür";
+  static const String sort = "Sıralama";
+
+  // Contact Screen
+  static const String information = "İletişim Bilgileri";
+  static const String companyName = "TOBETO";
+  static const String company =
+      "Avez Elektronik İletişim Eğitim Danışmanlığı Ticaret Anonim Şirketi";
+  static const String tax = "Beykoz";
+  static const String taxNo = "1050250859";
+  static const String tel = "(0216) 331 48 00";
+  static const String ePosta = "info@tobeto.com";
+  static const String adress =
+      "Kavacık, Rüzgarlıbahçe Mah. Çampınarı Sok. No:4 \nSmart Plaza B Blok Kat:3 34805, Beykoz/İstanbul";
+  static const String telIstCod = "(0216) 969 22 40";
+  static const String ePostaIstCod = "istanbulkodluyor@tobeto.com";
+  static const String contactForm = "İletişim Formu";
+  static const String formAlert =
+      "Yukarıdaki form ile toplanan kişisel verileriniz Enocta tarafından talebinize dair işlemlerin yerine getirilmesi ve paylaşmış olduğunuz iletişim adresi üzerinden tanıtım, bülten ve pazarlama içerikleri gönderilmesi amacıyla Aydınlatma Metni çerçevesinde işlenebilecektir.";
+  static const String eMail = "E-Mail";
+  static const String message = "Mesajınız";
+  static const String messageButton = "Mesaj Bırakın";
+  static const String submit = "Gönder";
 }

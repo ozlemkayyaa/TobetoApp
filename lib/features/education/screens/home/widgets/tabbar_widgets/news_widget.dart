@@ -22,7 +22,7 @@ class NewsWidget extends StatelessWidget {
       children: [
         Card(
           child: Container(
-            width: 370,
+            width: 390,
             height: 148,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(TSizes.buttonRadius),

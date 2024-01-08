@@ -23,7 +23,6 @@ class ApplicationWidget extends StatelessWidget {
       children: [
         Card(
           child: Container(
-            width: 370,
             height: 150,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(TSizes.buttonRadius),
@@ -54,7 +53,7 @@ class ApplicationWidget extends StatelessWidget {
                           // Kabul edildi /  Değerlendirmede bu yazının bulunnduğu kutu
                           Padding(
                             padding: const EdgeInsets.only(
-                                left: TSizes.defaultSpace + 18),
+                                left: TSizes.appBarHeight + 18),
                             child: Container(
                               height: MediaQuery.of(context).size.height * 0.04,
                               width: MediaQuery.of(context).size.width * 0.36,

@@ -22,14 +22,14 @@ class TabBarViewWidget extends StatelessWidget {
       child: TabBarView(children: [
         // Başvurularım butonunun altındaki Cardlar
         const Padding(
-          padding: EdgeInsets.all(TSizes.spaceBtwItems),
+          padding: EdgeInsets.all(TSizes.sm),
           child: SingleChildScrollView(
             scrollDirection: Axis.vertical,
             child: Column(
               children: [
                 ApplicationWidget(
                     colors: TColors.secondary, accepted: TTexts.done),
-                SizedBox(width: TSizes.defaultSpace),
+                SizedBox(height: TSizes.sm),
                 ApplicationWidget(
                     colors: TColors.accent, accepted: TTexts.notDone),
               ],
@@ -39,7 +39,7 @@ class TabBarViewWidget extends StatelessWidget {
 
         // Eğitimlerim butonunun altındaki Cardlar
         Padding(
-          padding: const EdgeInsets.all(TSizes.spaceBtwItems),
+          padding: const EdgeInsets.all(TSizes.sm),
           child: SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
@@ -154,9 +154,9 @@ class TabBarViewWidget extends StatelessWidget {
             children: [
               const Image(
                 image: AssetImage(TImages.anket),
-                height: 250,
+                height: 270,
               ),
-              const SizedBox(height: TSizes.defaultSpace),
+              const SizedBox(height: TSizes.defaultSpace + 5),
               Text(TTexts.anket,
                   style: Theme.of(context).textTheme.titleMedium),
             ],
