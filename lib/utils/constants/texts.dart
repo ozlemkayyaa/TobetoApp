@@ -164,7 +164,8 @@ class TTexts {
   static const String ePostaIstCod = "istanbulkodluyor@tobeto.com";
   static const String contactForm = "İletişim Formu";
   static const String formAlert =
-      "Yukarıdaki form ile toplanan kişisel verileriniz Enocta tarafından talebinize dair işlemlerin yerine getirilmesi ve paylaşmış olduğunuz iletişim adresi üzerinden tanıtım, bülten ve pazarlama içerikleri gönderilmesi amacıyla Aydınlatma Metni çerçevesinde işlenebilecektir.";
+      "Yukarıdaki form ile toplanan kişisel verileriniz Enocta tarafından talebinize dair işlemlerin yerine getirilmesi ve paylaşmış olduğunuz iletişim adresi üzerinden tanıtım, bülten ve pazarlama içerikleri gönderilmesi amacıyla";
+  static const String alertContinue = " çerçevesinde işlenebilecektir.";
   static const String eMail = "E-Mail";
   static const String message = "Mesajınız";
   static const String messageButton = "Mesaj Bırakın";
@@ -177,4 +178,33 @@ class TTexts {
   static const String adres = "Adres:";
   static const String forIstCod = "İstanbul Kodluyor";
   static const String posta = "E-Posta:";
+  static const String name = "Adınız Soyadınız";
+
+  // Ekibmiz
+  static const String danisma = "Danışma Kurulu";
+  static const String elif = "Elif Kılıç Tuğkan";
+  static const String elifTitle = "Kurucu Direktör";
+  static const String kader = "Kader Yavuz";
+  static const String kaderTitle = "Eğitim ve Proje Koordinatörü";
+  static const String pelin = "Pelin Batır";
+  static const String pelinTitle = "İş Geliştirme Yöneticisi";
+  static const String gurkan = "Gürkan İlişen";
+  static const String gurkanTitle =
+      "Eğitim Teknolojileri ve Platform Sorumlusu";
+  static const String ismail = "İsmail Erden";
+  static const String ismailTitle = "Yazılım Geliştirme Müdürü";
+  static const String ahmet = "Ahmet Selim Ergin";
+  static const String ahmetTitle = "Yazılım Geliştirici";
+  static const String dogu = "Doğukan Bektaş";
+  static const String doguTitle = "Yazılım Geliştirici";
+  static const String ahmetHancer = "Ahmet Hançer";
+  static const String ahmetHancerTitle = "Enocta CEO";
+  static const String ecmelHoca = "Dr. Ecmel Ayral";
+  static const String ecmelHocaTitle = "Unlearn Academy Kurucu";
+  static const String cem = "Cem Atacık";
+  static const String cemTitle = "Kampüs365 & Perculus CEO";
+  static const String mehmet = "Mehmet Gürsoy";
+  static const String mehmetTitle = "Ledd Kurucu";
+  static const String alp = "Alpaslan Gürsoy";
+  static const String alpTitle = "Lidya Ventures Yönetim Kurulu Üyesi";
 }

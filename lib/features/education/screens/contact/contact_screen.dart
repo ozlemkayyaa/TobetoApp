@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:tobeto/features/education/screens/contact/message_form.dart';
+import 'package:tobeto/features/education/screens/contact/message_screen.dart';
 import 'package:tobeto/features/education/screens/contact/widgets/divider_widget.dart';
 import 'package:tobeto/features/education/screens/home/widgets/drawer_widget.dart';
 import 'package:tobeto/utils/constants/image_strings.dart';
@@ -191,7 +193,14 @@ class ContactScreen extends StatelessWidget {
               SizedBox(
                 width: 300,
                 child: ElevatedButton(
-                    onPressed: () {}, child: const Text(TTexts.messageButton)),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const MessageScreen()),
+                      );
+                    },
+                    child: const Text(TTexts.messageButton)),
               )
             ],
           ),
