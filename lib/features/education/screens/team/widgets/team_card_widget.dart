@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
+import 'package:tobeto/utils/helpers/helper_functions.dart';
 
 class TeamCardWidget extends StatelessWidget {
   const TeamCardWidget(
@@ -15,13 +16,15 @@ class TeamCardWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final dark = THelperFunctions.isDarkMode(context);
+
     return SizedBox(
       width: 180,
       height: 220,
       child: Card(
         elevation: 3,
-        color: TColors.white,
-        surfaceTintColor: TColors.white,
+        color: dark ? TColors.dark : TColors.white,
+        surfaceTintColor: dark ? TColors.dark : TColors.white,
         child: Column(
           children: [
             Image(

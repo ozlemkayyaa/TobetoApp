@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
-import 'package:tobeto/features/education/screens/home/widgets/drawer_widget.dart';
-import 'package:tobeto/utils/constants/image_strings.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
 
