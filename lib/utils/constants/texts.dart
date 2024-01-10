@@ -207,4 +207,14 @@ class TTexts {
   static const String mehmetTitle = "Ledd Kurucu";
   static const String alp = "Alpaslan Gürsoy";
   static const String alpTitle = "Lidya Ventures Yönetim Kurulu Üyesi";
+
+  // Profile
+  static const String one = "Kişisel Bilgilerim";
+  static const String two = "Deneyimlerim";
+  static const String three = "Eğitim Hayatım";
+  static const String four = "Yetkinliklerim";
+  static const String five = "Sertifikalarım";
+  static const String six = "Medya Hesaplarım";
+  static const String seven = "Yabancı Dillerim";
+  static const String eight = "Ayarlar";
 }

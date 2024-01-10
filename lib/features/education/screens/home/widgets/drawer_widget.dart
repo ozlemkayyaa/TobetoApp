@@ -1,10 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:tobeto/features/education/screens/istanbulKodluyor/code_screen.dart';
 import 'package:tobeto/features/education/screens/contact/contact_screen.dart';
 import 'package:tobeto/features/education/screens/team/team_screen.dart';
-import 'package:tobeto/features/education/screens/we/we_screen.dart';
 import 'package:tobeto/navigation_menu.dart';
 import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/image_strings.dart';
@@ -74,31 +72,6 @@ class DrawerWidget extends StatelessWidget {
                                 builder: (context) => const NavigationMenu(),
                               ));
                         })),
-                // Biz Kimiz?
-                SizedBox(
-                    height: TSizes.spaceBtwSections + 10,
-                    child: ListTile(
-                        title: Row(
-                          children: [
-                            const Icon(CupertinoIcons.question_square),
-                            Padding(
-                              padding: const EdgeInsets.only(
-                                  left: TSizes.defaultSpace / 4),
-                              child: Text(
-                                TTexts.us,
-                                style:
-                                    Theme.of(context).textTheme.headlineSmall,
-                              ),
-                            ),
-                          ],
-                        ),
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const WeScreen(),
-                              ));
-                        })),
 
                 // Ekibimiz
                 SizedBox(
@@ -123,32 +96,6 @@ class DrawerWidget extends StatelessWidget {
                               context,
                               MaterialPageRoute(
                                 builder: (context) => const TeamScreen(),
-                              ));
-                        })),
-
-                // İstanbul Kodluyor
-                SizedBox(
-                    height: TSizes.spaceBtwSections + 10,
-                    child: ListTile(
-                        title: Row(
-                          children: [
-                            const Icon(Iconsax.code),
-                            Padding(
-                              padding: const EdgeInsets.only(
-                                  left: TSizes.defaultSpace / 4),
-                              child: Text(
-                                TTexts.istanbulKodluyor,
-                                style:
-                                    Theme.of(context).textTheme.headlineSmall,
-                              ),
-                            ),
-                          ],
-                        ),
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const CodeScreen(),
                               ));
                         })),
 

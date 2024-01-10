@@ -18,7 +18,7 @@ class TImages {
   static const String istanbulBlack = "assets/images/istanbulBlack.png";
   static const String istanbulWhite = "assets/images/istanbulWhite.png";
   static const String istKod = "assets/images/istkod.png";
-  static const String isImage = "assets/images/is.png";
+  static const String isImage = "assets/images/is.PNG";
 
   // TabBar
   static const String anket = "assets/images/anket.png";
@@ -57,4 +57,8 @@ class TImages {
   static const String cemHoca = "assets/images/cem-atacik.png";
   static const String mehmetHoca = "assets/images/mehmet-gursoy.png";
   static const String alpHoca = "assets/images/alparslan.png";
+
+  // İstanbul Kodluyor
+
+  static const String tam = "assets/images/istanbulTam.PNG";
 }
