@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tobeto/features/other/screens/profile/profile_screen.dart';
+import 'package:tobeto/features/other/screens/home/home_screen.dart';
 import 'package:tobeto/utils/theme/theme.dart';
 
 Future main() async {
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       // system sayesinde telefonun moduna göre tema değişiyor.
       themeMode: ThemeMode.system,
       darkTheme: TobetoAppTheme.darkTheme,
-      home: const ProfileScreen(),
+      home: const HomeScreen(),
       debugShowCheckedModeBanner: false,
     );
   }

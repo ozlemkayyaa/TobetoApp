@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:tobeto/features/authentication/screens/password/forgot_password.dart';
@@ -21,7 +22,7 @@ class LoginForm extends StatelessWidget {
             // Email
             TextFormField(
               decoration: const InputDecoration(
-                prefixIcon: Icon(Iconsax.direct_right),
+                prefixIcon: Icon(CupertinoIcons.mail),
                 labelText: TTexts.userEmail,
               ),
             ),

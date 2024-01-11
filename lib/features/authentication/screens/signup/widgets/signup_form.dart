@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:tobeto/features/authentication/screens/login/login_screen.dart';
@@ -49,7 +50,7 @@ class _SignupFormState extends State<SignupForm> {
           TextFormField(
             decoration: const InputDecoration(
               labelText: TTexts.signEmail,
-              prefixIcon: Icon(Iconsax.direct),
+              prefixIcon: Icon(CupertinoIcons.mail),
             ),
           ),
           const SizedBox(height: TSizes.spaceBtwInputFields),

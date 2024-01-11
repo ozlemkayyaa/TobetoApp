@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
@@ -45,20 +46,22 @@ class OneForm extends StatelessWidget {
               children: [
                 Expanded(
                   child: TextFormField(
+                    keyboardType: TextInputType.phone,
                     expands: false,
                     decoration: const InputDecoration(
-                      labelText: TTexts.signName,
-                      prefixIcon: Icon(Iconsax.user),
+                      labelText: TTexts.signPhoneNumber,
+                      prefixIcon: Icon(Iconsax.call),
                     ),
                   ),
                 ),
                 const SizedBox(width: TSizes.spaceBtwInputFields),
                 Expanded(
                   child: TextFormField(
+                    keyboardType: TextInputType.datetime,
                     expands: false,
                     decoration: const InputDecoration(
-                      labelText: TTexts.signSurname,
-                      prefixIcon: Icon(Iconsax.user),
+                      labelText: TTexts.birthdate,
+                      prefixIcon: Icon(Iconsax.calendar),
                     ),
                   ),
                 ),
@@ -69,20 +72,22 @@ class OneForm extends StatelessWidget {
               children: [
                 Expanded(
                   child: TextFormField(
+                    keyboardType: TextInputType.number,
                     expands: false,
                     decoration: const InputDecoration(
-                      labelText: TTexts.signName,
-                      prefixIcon: Icon(Iconsax.user),
+                      labelText: TTexts.tc,
+                      prefixIcon: Icon(Iconsax.personalcard),
                     ),
                   ),
                 ),
                 const SizedBox(width: TSizes.spaceBtwInputFields),
                 Expanded(
                   child: TextFormField(
+                    keyboardType: TextInputType.emailAddress,
                     expands: false,
                     decoration: const InputDecoration(
-                      labelText: TTexts.signSurname,
-                      prefixIcon: Icon(Iconsax.user),
+                      labelText: TTexts.signEmail,
+                      prefixIcon: Icon(CupertinoIcons.mail),
                     ),
                   ),
                 ),
@@ -93,8 +98,7 @@ class OneForm extends StatelessWidget {
             // E-Mail
             TextFormField(
               decoration: const InputDecoration(
-                labelText: TTexts.signEmail,
-                prefixIcon: Icon(Iconsax.direct),
+                labelText: TTexts.country,
               ),
             ),
             const SizedBox(height: TSizes.spaceBtwInputFields),
@@ -104,8 +108,7 @@ class OneForm extends StatelessWidget {
                   child: TextFormField(
                     expands: false,
                     decoration: const InputDecoration(
-                      labelText: TTexts.signName,
-                      prefixIcon: Icon(Iconsax.user),
+                      labelText: TTexts.city,
                     ),
                   ),
                 ),
@@ -114,8 +117,7 @@ class OneForm extends StatelessWidget {
                   child: TextFormField(
                     expands: false,
                     decoration: const InputDecoration(
-                      labelText: TTexts.signSurname,
-                      prefixIcon: Icon(Iconsax.user),
+                      labelText: TTexts.ilce,
                     ),
                   ),
                 ),
@@ -125,21 +127,21 @@ class OneForm extends StatelessWidget {
             TextFormField(
               maxLines: 3,
               decoration: const InputDecoration(
-                labelText: TTexts.message,
+                labelText: TTexts.street,
               ),
             ),
             const SizedBox(height: TSizes.spaceBtwInputFields),
             TextFormField(
               maxLines: 3,
               decoration: const InputDecoration(
-                labelText: TTexts.message,
+                labelText: TTexts.me,
               ),
             ),
             const SizedBox(height: TSizes.spaceBtwInputFields),
             SizedBox(
-              width: 300,
+              width: double.infinity,
               child: ElevatedButton(
-                  onPressed: () {}, child: const Text(TTexts.submit)),
+                  onPressed: () {}, child: const Text(TTexts.save)),
             )
           ],
         ),

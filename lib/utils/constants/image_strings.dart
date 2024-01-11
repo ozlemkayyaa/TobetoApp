@@ -58,7 +58,6 @@ class TImages {
   static const String mehmetHoca = "assets/images/mehmet-gursoy.png";
   static const String alpHoca = "assets/images/alparslan.png";
 
-  // İstanbul Kodluyor
-
-  static const String tam = "assets/images/istanbulTam.PNG";
+  // Profile
+  static const String profileImage = "assets/images/user.png";
 }

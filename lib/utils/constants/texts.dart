@@ -34,7 +34,7 @@ class TTexts {
   static const String signEmail = 'E-Posta';
   static const String signPassword = 'Şifre';
   static const String signPasswordAgain = 'Şifre Tekrar';
-  static const String signPhoneNumber = 'Telefon Numarası';
+  static const String signPhoneNumber = 'Telefon';
   static const String signUp = 'Hesabınızı Oluşturalım';
   static const String orsignUp = 'Veya Bunlarla Kaydolun';
   static const String andSign = ' ve ';
@@ -217,4 +217,53 @@ class TTexts {
   static const String six = "Medya Hesaplarım";
   static const String seven = "Yabancı Dillerim";
   static const String eight = "Ayarlar";
+
+  // Kişisel Bilgilerim
+  static const String birthdate = "Doğum Tarihi";
+  static const String tc = "TC";
+  static const String country = "Ülke";
+  static const String city = "İl";
+  static const String ilce = "İlçe";
+  static const String street = "Mahalle/Sokak";
+  static const String me = "Hakkımda";
+  static const String save = "Kaydet";
+
+  // Deneyimlerim
+  static const String companyNames = "Kurum Adı";
+  static const String position = "Pozisyon";
+  static const String sector = "Sektör";
+  static const String startYear = "İş Başlangıcı";
+  static const String finalyear = "İş Bitişi";
+  static const String workContinue = "Çalışmaya Devam Ediyorum";
+  static const String explainJob = "İş Açıklaması";
+  static const String citySelect = "Şehir";
+
+  // Eğitim Hayatım
+  static const String level = "Eğitim Durumu";
+  static const String university = "Üniversite";
+  static const String faculty = "Bölüm";
+  static const String graduationYear = "Mezuniyet Yılı";
+  static const String firstYear = "Başlangıç Yılı";
+  static const String continueLearn = "Devam Ediyorum";
+
+  // Ayarlar
+  static const String old = "Eski Şifre";
+  static const String newPassword = "Yeni Şifre";
+  static const String newAgain = "Yeni Şifre Tekrar";
+  static const String changePassword = "Şifre Değiştir";
+  static const String end = "Üyeliği Sonlandır";
+
+  //Profile Screen
+  static const String nameSurname = "Ad Soyad";
+  static const String student = "Özlem Kaya";
+  static const String studentBirthdate = "01.01.1980";
+  static const String postaAdress = "E-Posta Adresi";
+  static const String studentEMail = "ozlem@deneme.com";
+  static const String phoneNumber = "Telefon Numarası";
+  static const String studentTelephoneNumber = "+905324678558";
+
+  // Hakkımda
+  static const String aboutMe = "Hakkımda";
+  static const String about =
+      "Ben Özlem Kaya. 25 yaşındayım. Kariyerime bilişim sektöründe devam etmekteyim.";
 }

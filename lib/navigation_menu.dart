@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:tobeto/features/other/screens/profile/profile_screen.dart';
 import 'package:tobeto/utils/constants/texts.dart';
 import 'package:tobeto/features/other/screens/home/home_screen.dart';
 import 'package:tobeto/features/other/screens/test/test_screen.dart';
-import 'package:tobeto/features/other/screens/profile/profile_screen.dart';
 import 'package:tobeto/features/other/screens/calendar/calendar_screen.dart';
 import 'package:tobeto/features/other/screens/cataloge/cataloge_screen.dart';
 
