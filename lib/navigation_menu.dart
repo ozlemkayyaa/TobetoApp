@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:tobeto/utils/constants/texts.dart';
-import 'package:tobeto/features/education/screens/home/home_screen.dart';
-import 'package:tobeto/features/education/screens/test/test_screen.dart';
-import 'package:tobeto/features/education/screens/profile/profile_screen.dart';
-import 'package:tobeto/features/education/screens/calendar/calendar_screen.dart';
-import 'package:tobeto/features/education/screens/cataloge/cataloge_screen.dart';
+import 'package:tobeto/features/other/screens/home/home_screen.dart';
+import 'package:tobeto/features/other/screens/test/test_screen.dart';
+import 'package:tobeto/features/other/screens/profile/profile_screen.dart';
+import 'package:tobeto/features/other/screens/calendar/calendar_screen.dart';
+import 'package:tobeto/features/other/screens/cataloge/cataloge_screen.dart';
 
 class NavigationMenu extends StatefulWidget {
   const NavigationMenu({super.key});
