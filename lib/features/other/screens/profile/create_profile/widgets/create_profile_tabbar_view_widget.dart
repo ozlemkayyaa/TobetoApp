@@ -5,6 +5,8 @@ import 'package:tobeto/features/other/screens/profile/create_profile/widgets/for
 import 'package:tobeto/features/other/screens/profile/create_profile/widgets/form/two_form.dart';
 import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/image_strings.dart';
+import 'package:tobeto/utils/constants/sizes.dart';
+import 'package:tobeto/utils/helpers/helper_functions.dart';
 
 class ProfileTabBarViewWidget extends StatelessWidget {
   const ProfileTabBarViewWidget({
@@ -13,9 +15,11 @@ class ProfileTabBarViewWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Expanded(
+    final dark = THelperFunctions.isDarkMode(context);
+
+    return Expanded(
       child: Padding(
-        padding: EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(TSizes.sm),
         child: TabBarView(
           children: [
             SingleChildScrollView(
@@ -24,16 +28,17 @@ class ProfileTabBarViewWidget extends StatelessWidget {
                 children: [
                   CircleAvatar(
                     radius: 50,
-                    backgroundColor: TColors.grey,
-                    backgroundImage: AssetImage(TImages.profileImage),
+                    backgroundColor:
+                        dark ? TColors.darkGrey : TColors.lightGrey,
+                    backgroundImage: const AssetImage(TImages.profileImage),
                   ),
-                  OneForm(),
+                  const OneForm(),
                 ],
               ),
             ),
-            TwoForm(),
-            ThreeForm(),
-            FourForm(),
+            const TwoForm(),
+            const ThreeForm(),
+            const FourForm(),
           ],
         ),
       ),

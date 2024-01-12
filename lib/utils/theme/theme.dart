@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/theme/custom_themes/appbar_theme.dart';
 import 'package:tobeto/utils/theme/custom_themes/bottom_navigation_theme.dart';
 import 'package:tobeto/utils/theme/custom_themes/bottom_sheet_theme.dart';
@@ -29,6 +30,7 @@ class TobetoAppTheme {
     inputDecorationTheme: TTextFormFieldTheme.lightInputDecorationTheme,
     drawerTheme: TDrawerTheme.lightDrawerTheme,
     bottomNavigationBarTheme: TBottomNavigationTheme.lightBottomNavigationTheme,
+    buttonTheme: const ButtonThemeData(buttonColor: TColors.lightGrey),
   );
 
   static ThemeData darkTheme = ThemeData(
@@ -47,5 +49,6 @@ class TobetoAppTheme {
     inputDecorationTheme: TTextFormFieldTheme.darkInputDecorationTheme,
     drawerTheme: TDrawerTheme.darkDrawerTheme,
     bottomNavigationBarTheme: TBottomNavigationTheme.darkBottomNavigationTheme,
+    buttonTheme: const ButtonThemeData(buttonColor: TColors.darkGrey),
   );
 }

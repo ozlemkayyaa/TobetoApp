@@ -9,6 +9,8 @@ class TColors {
   static const Color accent = Color(0xF0FFC107);
   static const Color istCode = Color.fromARGB(255, 30, 15, 65);
   static const Color green = Color.fromARGB(240, 0, 210, 155);
+  static const Color blue = Color.fromARGB(153, 206, 211, 236);
+  static const Color red = Color.fromARGB(240, 255, 199, 191);
 
   // Gradient Colors
   static const Color profile1 = Color(0xFF1D0B8C);

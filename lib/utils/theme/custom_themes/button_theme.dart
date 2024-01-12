@@ -6,10 +6,10 @@ class ButtonStyles {
   static ButtonStyle elevatedButtonStyle() {
     return ElevatedButton.styleFrom(
       elevation: 10,
-      backgroundColor: TColors.white,
+      backgroundColor: const Color.fromARGB(255, 188, 185, 185),
       padding: const EdgeInsets.symmetric(vertical: TSizes.iconXs),
       side: const BorderSide(
-        color: TColors.white,
+        color: TColors.grey,
       ),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(TSizes.defaultSpace),

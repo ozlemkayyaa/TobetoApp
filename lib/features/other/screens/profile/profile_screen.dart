@@ -8,12 +8,15 @@ import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/image_strings.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
+import 'package:tobeto/utils/helpers/helper_functions.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final dark = THelperFunctions.isDarkMode(context);
+
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: true,
@@ -40,8 +43,10 @@ class ProfileScreen extends StatelessWidget {
                 children: [
                   Card(
                     elevation: 5,
-                    color: TColors.white,
-                    surfaceTintColor: TColors.white,
+                    color:
+                        dark ? TColors.darkContainer : TColors.lightContainer,
+                    surfaceTintColor:
+                        dark ? TColors.darkContainer : TColors.lightContainer,
                     child: Padding(
                       padding: const EdgeInsets.all(TSizes.spaceBtwItems),
                       child: Column(
@@ -60,10 +65,12 @@ class ProfileScreen extends StatelessWidget {
                               icon: const Icon(Iconsax.edit),
                             ),
                           ),
-                          const CircleAvatar(
+                          CircleAvatar(
                             radius: 50,
-                            backgroundColor: TColors.grey,
-                            backgroundImage: AssetImage(TImages.profileImage),
+                            backgroundColor:
+                                dark ? TColors.darkGrey : TColors.lightGrey,
+                            backgroundImage:
+                                const AssetImage(TImages.profileImage),
                           ),
                           const SizedBox(height: TSizes.defaultSpace),
                           Row(
@@ -193,8 +200,12 @@ class ProfileScreen extends StatelessWidget {
                     child: SizedBox(
                       height: 150,
                       child: Card(
-                        surfaceTintColor: TColors.white,
-                        color: TColors.white,
+                        surfaceTintColor: dark
+                            ? TColors.darkContainer
+                            : TColors.lightContainer,
+                        color: dark
+                            ? TColors.darkContainer
+                            : TColors.lightContainer,
                         elevation: 5,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,

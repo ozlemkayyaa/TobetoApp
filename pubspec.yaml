@@ -30,6 +30,7 @@ dependencies:
   get_storage: ^2.1.1
   flutter_svg: ^2.0.9
   smooth_page_indicator: ^1.1.0
+  syncfusion_flutter_calendar: ^21.2.3
 
   # Product Specific
 

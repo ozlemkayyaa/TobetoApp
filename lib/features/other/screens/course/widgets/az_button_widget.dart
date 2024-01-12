@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
 
@@ -21,7 +22,10 @@ class AZButtonWidget extends StatelessWidget {
           style: styleFrom,
           child: Text(
             TTexts.az,
-            style: Theme.of(context).textTheme.titleMedium,
+            style: Theme.of(context)
+                .textTheme
+                .titleMedium!
+                .apply(color: TColors.black),
             textAlign: TextAlign.start,
           ),
         ),

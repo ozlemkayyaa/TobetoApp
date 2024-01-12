@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 
 class TabButtonWidget extends StatelessWidget {
@@ -32,7 +33,10 @@ class TabButtonWidget extends StatelessWidget {
               children: [
                 Text(
                   buttonName,
-                  style: Theme.of(context).textTheme.titleMedium,
+                  style: Theme.of(context)
+                      .textTheme
+                      .titleMedium!
+                      .apply(color: TColors.black),
                 ),
                 Icon(
                   icon,

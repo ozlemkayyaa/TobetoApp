@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 
 class ChoiseButtonWidget extends StatelessWidget {
@@ -22,7 +23,10 @@ class ChoiseButtonWidget extends StatelessWidget {
           style: styleFrom,
           child: Text(
             buttonName,
-            style: Theme.of(context).textTheme.titleMedium,
+            style: Theme.of(context)
+                .textTheme
+                .titleMedium!
+                .apply(color: TColors.black),
             textAlign: TextAlign.start,
           ),
         ),
