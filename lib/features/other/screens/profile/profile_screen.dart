@@ -37,7 +37,7 @@ class ProfileScreen extends StatelessWidget {
           padding: const EdgeInsets.all(8.0),
           child: Center(
             child: SizedBox(
-              width: 350,
+              width: 375,
               //height: 700,
               child: Column(
                 children: [
@@ -211,8 +211,8 @@ class ProfileScreen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Padding(
-                              padding:
-                                  const EdgeInsets.only(top: 8.0, left: 8.0),
+                              padding: const EdgeInsets.only(
+                                  top: TSizes.md, left: TSizes.md),
                               child: Text(TTexts.aboutMe,
                                   style: Theme.of(context)
                                       .textTheme
@@ -220,7 +220,7 @@ class ProfileScreen extends StatelessWidget {
                             ),
                             const DividerWidget(),
                             Padding(
-                              padding: const EdgeInsets.all(TSizes.sm),
+                              padding: const EdgeInsets.all(TSizes.md),
                               child: Text(TTexts.about,
                                   style: Theme.of(context).textTheme.bodyLarge),
                             ),

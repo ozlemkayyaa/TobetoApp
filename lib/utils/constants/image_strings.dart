@@ -60,4 +60,9 @@ class TImages {
 
   // Profile
   static const String profileImage = "assets/images/user.png";
+
+  // Catalog
+  static const String startLearn = "assets/images/ogrenmeyebasla.png";
+  static const String lesson1 = "assets/images/catalog1.jpg";
+  static const String lesson2 = "assets/images/catalog2.jpg";
 }
