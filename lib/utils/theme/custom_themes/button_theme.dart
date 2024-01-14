@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 
 class ButtonStyles {
