@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tobeto/features/other/screens/course/training/go_training.dart';
+import 'package:tobeto/features/authentication/screens/login/login_screen.dart';
+//import 'package:tobeto/features/other/screens/course/training/go_training.dart';
 import 'package:tobeto/utils/theme/theme.dart';
 
 Future main() async {
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
       // system sayesinde telefonun moduna göre tema değişiyor.
       themeMode: ThemeMode.system,
       darkTheme: TobetoAppTheme.darkTheme,
-      home: const GoTraining(),
+      home: const LoginScreen(),
       debugShowCheckedModeBanner: false,
     );
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:tobeto/features/other/screens/course/training/go_training.dart';
 import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
@@ -22,7 +23,12 @@ class TrainingsWidget extends StatelessWidget {
     final dark = THelperFunctions.isDarkMode(context);
 
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const GoTraining()),
+        );
+      },
       child: Card(
         child: Container(
           width: 360,
