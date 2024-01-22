@@ -6,7 +6,6 @@ import 'package:tobeto/features/other/screens/course/widgets/course_tabbar_widge
 import 'package:tobeto/features/other/screens/course/widgets/couse_tabbar_view_widget.dart';
 import 'package:tobeto/features/other/screens/course/widgets/search_button_widget.dart';
 import 'package:tobeto/features/other/screens/home/widgets/drawer_widget.dart';
-import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/image_strings.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
