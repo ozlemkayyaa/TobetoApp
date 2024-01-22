@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 
 class ButtonStyles {
-  static ButtonStyle elevatedButtonStyle() {
+  static ButtonStyle customButtonStyle(bool dark, BuildContext context) {
     return ElevatedButton.styleFrom(
-      elevation: 5,
-      backgroundColor: const Color.fromARGB(255, 188, 185, 185),
+      backgroundColor: dark ? TColors.darkGrey : TColors.grey,
       padding: const EdgeInsets.symmetric(vertical: TSizes.iconXs),
-      side: const BorderSide(
-        color: Color.fromARGB(255, 188, 185, 185),
-      ),
+      side: BorderSide(color: dark ? TColors.darkGrey : TColors.grey),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(TSizes.defaultSpace),
       ),

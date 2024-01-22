@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
+import 'package:tobeto/utils/helpers/helper_functions.dart';
 
 class TestWidget extends StatelessWidget {
   const TestWidget({
@@ -15,13 +16,14 @@ class TestWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final dark = THelperFunctions.isDarkMode(context);
     return Container(
       height: 60,
       decoration: BoxDecoration(
           gradient: const LinearGradient(
               colors: [TColors.profile2, TColors.profile1]),
           borderRadius: BorderRadius.circular(30),
-          border: Border.all(color: TColors.grey)),
+          border: Border.all(color: dark ? TColors.black : TColors.white)),
       child: Row(
         children: [
           const Padding(
@@ -53,7 +55,6 @@ class TestWidget extends StatelessWidget {
                   style: ElevatedButton.styleFrom(
                     padding: const EdgeInsets.all(5),
                     backgroundColor: TColors.white,
-                    foregroundColor: TColors.white,
                     side: const BorderSide(color: TColors.white),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(TSizes.appBarHeight),
@@ -61,7 +62,10 @@ class TestWidget extends StatelessWidget {
                   ),
                   child: Text(
                     "Başla",
-                    style: Theme.of(context).textTheme.titleMedium,
+                    style: Theme.of(context)
+                        .textTheme
+                        .titleMedium!
+                        .apply(color: dark ? TColors.black : TColors.black),
                   ),
                 ),
               ),

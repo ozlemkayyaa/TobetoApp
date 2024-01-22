@@ -23,7 +23,7 @@ class NewsWidget extends StatelessWidget {
         Card(
           child: Container(
             width: 390,
-            height: 148,
+            height: 151,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(TSizes.buttonRadius),
               color: dark ? TColors.darkContainer : TColors.lightContainer,
@@ -47,14 +47,14 @@ class NewsWidget extends StatelessWidget {
                         TTexts.announce,
                         style: Theme.of(context)
                             .textTheme
-                            .labelMedium!
+                            .bodySmall!
                             .apply(color: TColors.secondary),
                       ),
                       Text(
                         TTexts.istanbulKodluyor,
                         style: Theme.of(context)
                             .textTheme
-                            .labelMedium!
+                            .bodySmall!
                             .apply(color: TColors.secondary),
                       )
                     ],
@@ -68,7 +68,7 @@ class NewsWidget extends StatelessWidget {
                     children: [
                       Text(
                         dateTime,
-                        style: Theme.of(context).textTheme.labelMedium,
+                        style: Theme.of(context).textTheme.labelLarge,
                       ),
                       TextButton(
                         onPressed: () {
@@ -76,7 +76,7 @@ class NewsWidget extends StatelessWidget {
                         },
                         child: Text(
                           TTexts.continueRead,
-                          style: Theme.of(context).textTheme.labelMedium,
+                          style: Theme.of(context).textTheme.labelLarge,
                         ),
                       ),
                     ],

@@ -10,7 +10,6 @@ import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/image_strings.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
-import 'package:tobeto/utils/theme/custom_themes/button_theme.dart';
 
 class CourseScreen extends StatelessWidget {
   const CourseScreen({super.key});
@@ -33,33 +32,30 @@ class CourseScreen extends StatelessWidget {
           ],
         ),
         drawer: const DrawerWidget(),
-        body: Column(
+        body: const Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const Image(
+            Image(
               image: AssetImage(TImages.education),
             ),
 
             // Arama
             TabButtonWidget(
-              iconColor: TColors.black,
               icon: Icons.search,
               buttonName: TTexts.searchButton,
-              styleFrom: ButtonStyles.elevatedButtonStyle(),
             ),
 
             // Kurum Seçiniz
             ChoiseButtonWidget(
-              styleFrom: ButtonStyles.elevatedButtonStyle(),
               buttonName: TTexts.choise,
             ),
 
             // Adına Göre
-            AZButtonWidget(styleFrom: ButtonStyles.elevatedButtonStyle()),
+            AZButtonWidget(),
 
-            const CourseTabBarWidget(),
+            CourseTabBarWidget(),
 
-            const CourseTabBarViewWidget(),
+            CourseTabBarViewWidget(),
           ],
         ),
       ),
