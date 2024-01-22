@@ -9,6 +9,7 @@ import 'package:tobeto/features/other/screens/cataloge/widgets/tarining_widget.d
 import 'package:tobeto/features/other/screens/home/widgets/drawer_widget.dart';
 import 'package:tobeto/utils/constants/image_strings.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
+import 'package:tobeto/utils/constants/texts.dart';
 
 class CatalogeScreen extends StatefulWidget {
   const CatalogeScreen({super.key});
@@ -77,7 +78,7 @@ class _CatalogeScreenState extends State<CatalogeScreen> {
                               onPressed: () {
                                 buildFilterShowDialog(context);
                               },
-                              child: const Text("Filtrele")),
+                              child: const Text(TTexts.filter)),
                         ),
                       ),
 

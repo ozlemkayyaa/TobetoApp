@@ -17,7 +17,7 @@ class ThreeForm extends StatelessWidget {
           TextFormField(
             expands: false,
             decoration: const InputDecoration(
-              labelText: TTexts.level,
+              labelText: TTexts.grade,
             ),
           ),
           const SizedBox(height: TSizes.spaceBtwInputFields),

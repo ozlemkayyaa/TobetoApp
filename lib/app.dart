@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tobeto/features/other/screens/course/go_training.dart';
+import 'package:tobeto/features/other/screens/course/training/go_training.dart';
 import 'package:tobeto/utils/theme/theme.dart';
 
 Future main() async {

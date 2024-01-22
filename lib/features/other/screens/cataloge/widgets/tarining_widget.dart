@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
+import 'package:tobeto/utils/constants/texts.dart';
 import 'package:tobeto/utils/helpers/helper_functions.dart';
 
 class TrainingsWidget extends StatelessWidget {
@@ -46,7 +47,7 @@ class TrainingsWidget extends StatelessWidget {
                 Row(
                   children: [
                     const Icon(Iconsax.user),
-                    const Text(" Gürkan İlişen "),
+                    const Text(TTexts.teacher),
                     const Icon(Iconsax.clock),
                     Text(time),
                   ],

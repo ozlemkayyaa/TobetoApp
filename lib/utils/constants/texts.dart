@@ -239,7 +239,7 @@ class TTexts {
   static const String citySelect = "Şehir";
 
   // Eğitim Hayatım
-  static const String level = "Eğitim Durumu";
+  static const String grade = "Eğitim Durumu";
   static const String university = "Üniversite";
   static const String faculty = "Bölüm";
   static const String graduationYear = "Mezuniyet Yılı";
@@ -266,4 +266,40 @@ class TTexts {
   static const String aboutMe = "Hakkımda";
   static const String about =
       "Ben Özlem Kaya. 25 yaşındayım. Kariyerime bilişim sektöründe devam etmekteyim.";
+
+  // Training
+  static const String teacher = " Gürkan İlişen ";
+
+  //  CATALOG - Filter Dialog
+  static const String filter = "Filtrele";
+  static const String special = "Bana Özel";
+  static const String category = "Kategori";
+  static const String lessons = "Eğitimler";
+  static const String level = "Seviye";
+  static const String subject = "Konu";
+  static const String software = "Yazılım Dili";
+  static const String instructor = "Eğitmen";
+  static const String situation = "Durum";
+
+  // GO TRAINING
+  static const String about2 = "Hakkında";
+  static const String contents = "İçerik";
+  static const String notStart = "Başlamadın";
+  static const String video = "Video - ";
+  static const String detail = "DETAY";
+  static const String lets = "Hadi hemen başlayalım!";
+
+  static const String title1 =
+      "Dinle, Anla, İfade Et: Etkili İletişim Gelişim Yolculuğuna Hoşgeldin";
+  static const String title2 = "İletişimin Temelleri ve İletişim Tipleri";
+  static const String title3 = "İletişim Engelleri Sizi Engellemesin";
+  static const String title4 = "İletişimde Sorun Çıkartmanın Garantili Yolları";
+  static const String title5 =
+      "İletişimde Sorun Çıkartmanın Garantili Yolları: Dinleme Azabı";
+  static const String title6 =
+      "İletişimde Sorun Çıkartmanın Garantili Yolları: Uyumun Gereksizliği";
+  static const String title7 =
+      "İletişimde Sorun Çıkartmanın Garantili Yolları: Sorgu Hakimliği";
+  static const String title8 =
+      "İletişimde Sorun Çıkartmanın Garantili Yolları: Susma İşkencesi";
 }
