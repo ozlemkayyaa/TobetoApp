@@ -65,4 +65,14 @@ class TImages {
   static const String startLearn = "assets/images/ogrenmeyebasla.png";
   static const String lesson1 = "assets/images/catalog1.jpg";
   static const String lesson2 = "assets/images/catalog2.jpg";
+
+  // Go Training
+  static const String e1 = "assets/images/e1.PNG";
+  static const String e2 = "assets/images/e2.PNG";
+  static const String e3 = "assets/images/e3.PNG";
+  static const String e4 = "assets/images/e4.PNG";
+  static const String e5 = "assets/images/e5.PNG";
+  static const String e6 = "assets/images/e6.PNG";
+  static const String e7 = "assets/images/e7.PNG";
+  static const String e8 = "assets/images/e8.PNG";
 }
