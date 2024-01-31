@@ -13,6 +13,7 @@ class AboutWidget extends StatelessWidget {
   final String? video;
   final String? eEgitim;
   final String ureticiFirma;
+  final String explain;
 
   const AboutWidget({
     super.key,
@@ -27,6 +28,7 @@ class AboutWidget extends StatelessWidget {
     this.video,
     this.eEgitim,
     required this.ureticiFirma,
+    required this.explain,
   });
 
   @override
@@ -82,7 +84,7 @@ class AboutWidget extends StatelessWidget {
             padding:
                 const EdgeInsets.only(left: 8.0, right: 8, top: 4, bottom: 4),
             child: Text(
-              "Etkili İletişim Gelişim Yolculuğu'nun amacı günümüzün en önemli konularından biri olan temel iletişim ve etkili iletişim becerileri konularında çalışan yetkinliğinin artmasını sağlamaktır.",
+              explain,
               style: Theme.of(context).textTheme.bodySmall,
             ),
           ),

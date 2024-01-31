@@ -3,6 +3,7 @@ import 'package:tobeto/features/screens/training/data/go_training_data.dart';
 import 'package:tobeto/features/screens/training/models/go_training_model.dart';
 import 'package:tobeto/features/screens/training/widget/about_widget.dart';
 import 'package:tobeto/features/screens/training/widget/go_training_widget.dart';
+import 'package:tobeto/utils/constants/texts.dart';
 
 class GoTrainingTabBarViewWidget extends StatefulWidget {
   const GoTrainingTabBarViewWidget({
@@ -52,17 +53,19 @@ class _GoTrainingTabBarViewWidgetState
 
           // Hakkında
           const AboutWidget(
-              baslangic: '15 EYL 2022 10:00',
-              bitis: 'Bu eğitimi istediğin zaman alabilirsin',
-              tahminiSure: "3 sa 49 dk",
-              egitimTuru: "Eğitim",
-              kategori: "Kişisel Mükemmellik",
-              seviye: "İleri",
-              icerik: "20",
-              ureticiFirma: "Enocta",
-              eEgitim: "5",
-              gorev: "5",
-              video: "10"),
+            baslangic: '15 EYL 2022 10:00',
+            bitis: 'Bu eğitimi istediğin zaman alabilirsin',
+            tahminiSure: "3 sa 49 dk",
+            egitimTuru: "Eğitim",
+            kategori: "Kişisel Mükemmellik",
+            seviye: "İleri",
+            icerik: "20",
+            ureticiFirma: "Enocta",
+            eEgitim: "5",
+            gorev: "5",
+            video: "10",
+            explain: TTexts.explain1,
+          ),
         ],
       ),
     );

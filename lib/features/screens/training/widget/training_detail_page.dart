@@ -30,7 +30,13 @@ class TrainingDetailPage extends StatelessWidget {
         ],
       ),
       drawer: const DrawerWidget(),
-      body: DetailWidget(lessonData: lessonData),
+      body: DetailWidget(
+        lessonData: lessonData,
+        category: "Kişisel Mükemmellik",
+        content: "Konu Uzmanı Videosu",
+        factory: "Enocta",
+        language: "Türkçe",
+      ),
     );
   }
 }

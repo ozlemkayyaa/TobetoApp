@@ -302,4 +302,43 @@ class TTexts {
       "İletişimde Sorun Çıkartmanın Garantili Yolları: Sorgu Hakimliği";
   static const String title8 =
       "İletişimde Sorun Çıkartmanın Garantili Yolları: Susma İşkencesi";
+
+  // KATALOG - HAKKINDA
+
+  static const String explain1 =
+      "Etkili İletişim Gelişim Yolculuğu'nun amacı günümüzün en önemli konularından biri olan temel iletişim ve etkili iletişim becerileri konularında çalışan yetkinliğinin artmasını sağlamaktır.";
+
+  // KATALOG - DETAY
+  static const String go = "EĞİTİME GİT";
+  static const String content1 =
+      "Merhaba, Dinle, Anla, İfade Et: Etkili İletişim Gelişim Yolculuğuna hoş geldin! Bu gelişim yolculuğunun amacı, günümüzün en önemli konularından olan temel iletişim, etkili dinleme, empatik iletişim kavramlarına bir göz atmaktır.";
+  static const String content2 =
+      "Bu eğitimde, yaşamın her alanında büyük öneme sahip olan iletişim sanatı ile ilgili tüm temel kavramlar Türk insanının özel iletişim stilleri ile bütünleştirilerek örnek olaylar ve videolar ile incelenmektedir.";
+  static const String content3 =
+      "Bu eğitimde, iletişimde sorun yaşamamıza neden olan temel konular, bunları aşmamız için yapılması gerekenler ile çatışma çıktığı noktada bu durumu gidermenin yolları ile ilgili bilgi verilmektedir.";
+  static const String content4 =
+      "İletişimde garantili sorun çıkarmanın yollarının ne anlama geldiğinin anlatıldığı bu eğitimde aslında ters psikoloji uygulanmaktadır. Bununla birlikte ters psikolojinin ne olduğuna kısaca değinilmiştir. Sağlıklı bir iletişim kurmak için doğru sorular sormanın ve etkin dinlemenin öneminden, önemsenmenin yarattığı etkiden, soru ve sorgu arasındaki önemli detaydan, imalı iletişimin yaratacağı sorunlardan ve korkularımızdan bahsedilmiştir.";
+  static const String content5 =
+      "İletişimde dinlemenin önemini, iyi bir dinleyici olmanın püf noktalarını ters yönden bakarak vurgulayan videomuz, dinlememenin karşımızdakine neler hissettirdiğini ve iletişime nasıl zarar verdiğini açıklıyor.";
+  static const String content6 =
+      "Videomuz iletişimde uyum konusunu, aynı dilden konuşmayı, ortak bir noktada buluşmaya çalışmayı ters psikoloji ile açıklarken örnekler ve ipuçları da veriyor.";
+  static const String content7 =
+      "Videomuz iletişimde sorun çıkarma yöntemlerden biri olan soru sormak ve beklentimizi teyit edene kadar sorgulamak üzerine örneklemeler ile bu davranışların iletişimde nasıl sorun çıkarıldığını açıklıyor.";
+  static const String content8 =
+      "İletişimde sorun çıkarmada en garantili yöntemlerden biri olan susma işkencesi ve sonra söyle yöntemini kullanarak iletişimi nasıl bozabileceğimizi izlemek ister misiniz? Videomuz bunu örneklendiriyor.";
+  static const String interest1 = "Empati, Açık İletişim, Dinleme, Anlama";
+  static const String interest2 =
+      "İletişim, Etkili İletişim, Beden Dili, Temel İletişim Becerileri, İletişim tarzı, İletişimin temelleri, İletişim tipleri";
+  static const String interest3 =
+      "İletişim, Etkili İletişim, Çatışma Yönetimi, Temel İletişim Becerileri, İletişim Engelleri, İletişim Çatışmaları, İyi Dinleyici Olmak";
+  static const String interest4 =
+      "Kişisel, Aile Akademisi, Alp Beyce, Atwiser, Wiser, Atwiser Yaşama Dair, Ahmet Hançer, İletişimde Sorun Çıkartmanın Garantili Yolları, İletişimde Ustalık";
+  static const String interest5 =
+      "Kişisel, Aile Akademisi, Alp Beyce, Atwiser, Wiser, Atwiser Yaşama Dair, İletişimde Sorun Çıkartmanın Garantili Yolları, İletişimde Ustalık, İletişimde Sorun Çıkartmanın Garantili Yolları - Dinleme Azabı";
+  static const String interest6 =
+      "Kişisel, Aile Akademisi, Alp Beyce, Atwiser, Wiser, Atwiser Yaşama Dair, İletişimde Sorun Çıkartmanın Garantili Yolları, İletişimde Ustalık, İletişimde Sorun Çıkartmanın Garantili Yolları - Uyumun Gereksizliği";
+  static const String interest7 =
+      "Kişisel, Aile Akademisi, Alp Beyce, Atwiser, Wiser, Atwiser Yaşama Dair, İletişimde Sorun Çıkartmanın Garantili Yolları, İletişimde Ustalık, İletişimde Sorun Çıkartmanın Garantili Yolları - Sorgu Hakimliği";
+  static const String interest8 =
+      "Kişisel, Aile Akademisi, Alp Beyce, Atwiser, Wiser, Atwiser Yaşama Dair, İletişimde Sorun Çıkartmanın Garantili Yolları, İletişimde Ustalık, İletişimde Sorun Çıkartmanın Garantili Yolları - Susma İşkencesi";
 }
