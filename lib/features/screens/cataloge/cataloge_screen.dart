@@ -86,6 +86,7 @@ class _CatalogeScreenState extends State<CatalogeScreen> {
                       Column(
                         children: visibleTrainings.map((training) {
                           return TrainingsWidget(
+                            trainingPage: training.trainingPage,
                             title: training.title,
                             time: training.time,
                             image: training.image,

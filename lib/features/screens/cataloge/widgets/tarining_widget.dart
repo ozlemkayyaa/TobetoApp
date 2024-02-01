@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:tobeto/features/screens/training/go_training.dart';
 import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
@@ -12,11 +11,13 @@ class TrainingsWidget extends StatelessWidget {
     required this.title,
     required this.time,
     required this.image,
+    required this.trainingPage,
   });
 
   final String title;
   final String time;
   final String image;
+  final Widget trainingPage;
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +27,7 @@ class TrainingsWidget extends StatelessWidget {
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => const GoTraining()),
+          MaterialPageRoute(builder: (context) => trainingPage),
         );
       },
       child: Card(

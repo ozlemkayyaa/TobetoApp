@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tobeto/features/screens/training/models/go_training_model.dart';
+import 'package:tobeto/features/screens/cataloge/training/models/go_training_model.dart';
 import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
