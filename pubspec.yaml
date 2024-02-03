@@ -33,6 +33,7 @@ dependencies:
   syncfusion_flutter_calendar: ^21.2.3
   percent_indicator: ^4.2.3
   firebase_core: ^2.25.3
+  firebase_auth: ^4.17.3
 
   # Product Specific
 
