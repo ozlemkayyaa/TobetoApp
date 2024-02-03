@@ -12,7 +12,7 @@ TOBETO Mobil Uygulama Projesi, kullanıcılara çeşitli eğitimlere kolay eriş
 
 ## İlerleme
 
-Onboarding, Login, Register, Verify Email, Forgot Password and Reset Password Screen (Light/Dark Mode)
+LIGHT MODE
 
 <img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/9eb44f60-e23a-4c50-94b1-af0295b98718" alt="alt text" width="100" height="200">
 <img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/cdf325de-abe7-49a0-be72-0b1f7d15ae89" alt="alt text" width="100" height="200">
@@ -25,22 +25,6 @@ Onboarding, Login, Register, Verify Email, Forgot Password and Reset Password Sc
 <img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/38a9bb37-8718-49d1-a0f5-637ae8b00936" alt="alt text" width="100" height="200">
 <img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/7ac4c96f-c14b-45e6-985a-eb2f85296a86" alt="alt text" width="100" height="200">
 <img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/d29d8220-0899-4e59-9c28-60f1b63634dc" alt="alt text" width="100" height="200">
-<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/d8aecc9a-7f81-4615-957b-1b469f5d6847" alt="alt text" width="100" height="200">
-<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/3f7e4220-33b5-44f9-abf1-ad831c3a372e" alt="alt text" width="100" height="200">
-<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/f354eddd-2487-426a-9783-751e4c724568" alt="alt text" width="100" height="200">
-<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/cc786c60-1cf6-4b17-9a5a-f2bee933bd90e" alt="alt text" width="100" height="200">
-<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/942c155b-c177-4882-b660-8b7069210443" alt="alt text" width="100" height="200">
-<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/6b795d2b-c055-4fb5-830b-3e940f740966" alt="alt text" width="100" height="200">
-<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/92bf7105-86fe-4f82-97d5-bda8152715b3" alt="alt text" width="100" height="200">
-<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/0d4c3014-281f-4d51-a446-a5660a19dcc9" alt="alt text" width="100" height="200">
-<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/51e44425-7128-425f-bac9-aad75cc48437" alt="alt text" width="100" height="200">
-<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/3b86b713-376a-4017-83de-57d1169427a0" alt="alt text" width="100" height="200">
-<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/4f4ea220-f64d-4255-a6eb-a5dc94d9cde5" alt="alt text" width="100" height="200">
-
-<hr>
-
-Other Screens (Light/Dark Mode)
-
 <img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/8dab4452-20af-4265-a947-bd46608af2cc" alt="alt text" width="100" height="200">
 <img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/4e077d1b-ae31-4287-a3de-8653032dd8d2" alt="alt text" width="100" height="200">
 <img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/1359b722-cb5c-4873-8fd3-019099270ba9" alt="alt text" width="100" height="200">
@@ -63,6 +47,22 @@ Other Screens (Light/Dark Mode)
 <img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/f2803a52-a8a4-4133-a450-778ad21d093e" alt="alt text" width="100" height="200">
 <img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/e3e1fc3d-3038-4b2a-a4f8-41a204ded549" alt="alt text" width="100" height="200">
 <img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/7f1f619b-6499-4049-86b2-3607f5f86655" alt="alt text" width="100" height="200">
+
+<hr>
+
+DARK MODE
+
+<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/d8aecc9a-7f81-4615-957b-1b469f5d6847" alt="alt text" width="100" height="200">
+<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/3f7e4220-33b5-44f9-abf1-ad831c3a372e" alt="alt text" width="100" height="200">
+<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/f354eddd-2487-426a-9783-751e4c724568" alt="alt text" width="100" height="200">
+<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/cc786c60-1cf6-4b17-9a5a-f2bee933bd90e" alt="alt text" width="100" height="200">
+<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/942c155b-c177-4882-b660-8b7069210443" alt="alt text" width="100" height="200">
+<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/6b795d2b-c055-4fb5-830b-3e940f740966" alt="alt text" width="100" height="200">
+<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/92bf7105-86fe-4f82-97d5-bda8152715b3" alt="alt text" width="100" height="200">
+<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/0d4c3014-281f-4d51-a446-a5660a19dcc9" alt="alt text" width="100" height="200">
+<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/51e44425-7128-425f-bac9-aad75cc48437" alt="alt text" width="100" height="200">
+<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/3b86b713-376a-4017-83de-57d1169427a0" alt="alt text" width="100" height="200">
+<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/4f4ea220-f64d-4255-a6eb-a5dc94d9cde5" alt="alt text" width="100" height="200">
 <img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/55af72c9-5b74-4dbe-9208-cfc20615f41b" alt="alt text" width="100" height="200">
 <img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/873c0020-f98c-484b-91eb-2e3c40901ada" alt="alt text" width="100" height="200">
 <img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/9039beba-8ae0-4ac7-bc7b-1c85e714555b" alt="alt text" width="100" height="200">
