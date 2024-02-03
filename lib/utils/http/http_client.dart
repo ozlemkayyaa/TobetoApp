@@ -1,1 +1,0 @@
-// HTTP kısımlarına geldiğinde buraları doldurursun.
