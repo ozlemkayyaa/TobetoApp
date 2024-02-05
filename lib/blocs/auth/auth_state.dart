@@ -4,6 +4,14 @@ abstract class AuthState {}
 
 class Initial extends AuthState {}
 
-class NotAuthenticated extends AuthState {}
+class NotAuthenticated extends AuthState {
+  String? errorMessage;
 
-class Authenticated extends AuthState {}
+  NotAuthenticated({this.errorMessage});
+}
+
+class Authenticated extends AuthState {
+  User? user;
+
+  Authenticated({this.user});
+}
