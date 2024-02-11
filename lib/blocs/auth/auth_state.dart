@@ -15,3 +15,9 @@ class Authenticated extends AuthState {
 
   Authenticated({this.user});
 }
+
+class RememberMeState extends AuthState {
+  final bool rememberMe;
+
+  RememberMeState({required this.rememberMe});
+}

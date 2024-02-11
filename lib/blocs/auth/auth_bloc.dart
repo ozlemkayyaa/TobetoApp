@@ -59,5 +59,9 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         print('Çıkış yaparken bir hata oluştu: $e');
       }
     });
+
+    on<RememberMeChanged>((event, emit) {
+      emit(RememberMeState(rememberMe: event.rememberMe));
+    });
   }
 }

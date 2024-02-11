@@ -50,8 +50,8 @@ class LoginForm extends StatelessWidget {
             // Remember Me and Forgot Password
             BlocBuilder<AuthBloc, AuthState>(
               builder: (context, state) {
-                // State'e göre hatırla beni seçeneğini etkinleştir veya devre dışı bırak
-                final bool rememberMeEnabled = state is! Authenticated;
+                final bool rememberMeEnabled =
+                    state is RememberMeState ? state.rememberMe : false;
                 return Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -61,12 +61,8 @@ class LoginForm extends StatelessWidget {
                         Checkbox(
                           value: rememberMeEnabled,
                           onChanged: (value) {
-                            // Hatırla beni seçeneği değiştiğinde AuthBloc'a bildir
-                            if (value != null) {
-                              context
-                                  .read<AuthBloc>()
-                                  .add(RememberMeChanged(rememberMe: value));
-                            }
+                            context.read<AuthBloc>().add(
+                                RememberMeChanged(rememberMe: value ?? false));
                           },
                         ),
                         const Text(TTexts.rememeberMe),
