@@ -83,6 +83,7 @@ class TTexts {
   static const String contactUs = 'İletişim';
   static const String year = '2024 TOBETO';
   static const String profileName = 'Özlem Kaya';
+  static const String logout = "Çıkış Yap";
 
   // HomePage Text
   static const String tobetoPurple = 'TOBETO';

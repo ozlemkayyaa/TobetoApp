@@ -31,17 +31,17 @@ class LoginScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     // Logo, Title, SubTitle
-                    LoginHeader(),
+                    const LoginHeader(),
 
                     // Form
                     LoginForm(),
 
                     // Divider
-                    FormDivider(dividerText: TTexts.orSign),
-                    SizedBox(height: TSizes.spaceBtwSections),
+                    const FormDivider(dividerText: TTexts.orSign),
+                    const SizedBox(height: TSizes.spaceBtwSections),
 
                     // Footer
-                    SocialButtons(),
+                    const SocialButtons(),
                   ],
                 ),
               ),

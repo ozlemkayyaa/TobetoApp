@@ -50,7 +50,14 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     });
 
     on<Logout>((event, emit) async {
-      await _firebaseAuth.signOut();
+      try {
+        await _firebaseAuth.signOut();
+        emit(
+            NotAuthenticated()); // Kullanıcı çıkış yaptığında AuthState'i güncelleyin
+      } catch (e) {
+        // Çıkış yaparken bir hata oluştu
+        print('Çıkış yaparken bir hata oluştu: $e');
+      }
     });
   }
 }

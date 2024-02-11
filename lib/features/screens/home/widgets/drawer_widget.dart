@@ -1,6 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:tobeto/blocs/auth/auth_bloc.dart';
+import 'package:tobeto/blocs/auth/auth_event.dart';
 import 'package:tobeto/features/screens/contact/contact_screen.dart';
 import 'package:tobeto/features/screens/team/team_screen.dart';
 import 'package:tobeto/navigation_menu.dart';
@@ -164,6 +167,27 @@ class DrawerWidget extends StatelessWidget {
                       ),
                     ],
                   ),
+                ),
+
+                // Çıkış Yap Butonu
+                ListTile(
+                  title: Row(
+                    children: [
+                      const Icon(Iconsax.logout),
+                      Padding(
+                        padding: const EdgeInsets.only(
+                            left: TSizes.defaultSpace / 4),
+                        child: Text(
+                          TTexts.logout,
+                          style: Theme.of(context).textTheme.headlineSmall,
+                        ),
+                      ),
+                    ],
+                  ),
+                  onTap: () {
+                    BlocProvider.of<AuthBloc>(context).add(Logout());
+                    Navigator.pop(context);
+                  },
                 ),
               ],
             ),

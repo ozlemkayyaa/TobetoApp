@@ -7,7 +7,6 @@ import 'package:tobeto/blocs/auth/auth_event.dart';
 import 'package:tobeto/blocs/auth/auth_state.dart';
 import 'package:tobeto/features/authentication/screens/password/forgot_password.dart';
 import 'package:tobeto/features/authentication/screens/signup/signup_screen.dart';
-import 'package:tobeto/navigation_menu.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
 
