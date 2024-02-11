@@ -25,3 +25,9 @@ class Register extends AuthEvent {
 }
 
 class Logout extends AuthEvent {}
+
+class RememberMeChanged extends AuthEvent {
+  final bool rememberMe;
+
+  RememberMeChanged({required this.rememberMe});
+}

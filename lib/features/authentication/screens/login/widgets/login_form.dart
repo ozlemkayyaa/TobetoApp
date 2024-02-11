@@ -1,14 +1,22 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart'; // BlocProvider eklemeyi unutmayın
 import 'package:iconsax/iconsax.dart';
+import 'package:tobeto/blocs/auth/auth_bloc.dart'; // AuthBloc'u import edin
+import 'package:tobeto/blocs/auth/auth_event.dart';
+import 'package:tobeto/blocs/auth/auth_state.dart';
 import 'package:tobeto/features/authentication/screens/password/forgot_password.dart';
 import 'package:tobeto/features/authentication/screens/signup/signup_screen.dart';
 import 'package:tobeto/navigation_menu.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
 
+@override
 class LoginForm extends StatelessWidget {
-  const LoginForm({
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+
+  LoginForm({
     super.key,
   });
 
@@ -21,6 +29,7 @@ class LoginForm extends StatelessWidget {
           children: [
             // Email
             TextFormField(
+              controller: emailController, // Email denetleyicisi
               decoration: const InputDecoration(
                 prefixIcon: Icon(CupertinoIcons.mail),
                 labelText: TTexts.userEmail,
@@ -30,6 +39,7 @@ class LoginForm extends StatelessWidget {
 
             // Password
             TextFormField(
+              controller: passwordController, // Şifre denetleyicisi
               decoration: const InputDecoration(
                 prefixIcon: Icon(Iconsax.lock),
                 labelText: TTexts.userPassword,
@@ -39,45 +49,64 @@ class LoginForm extends StatelessWidget {
             const SizedBox(height: TSizes.spaceBtwInputFields / 2),
 
             // Remember Me and Forgot Password
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                // Remember Me
-                Row(
+            BlocBuilder<AuthBloc, AuthState>(
+              builder: (context, state) {
+                // State'e göre hatırla beni seçeneğini etkinleştir veya devre dışı bırak
+                final bool rememberMeEnabled = state is! Authenticated;
+                return Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Checkbox(value: true, onChanged: (value) {}),
-                    const Text(TTexts.rememeberMe),
-                  ],
-                ),
+                    // Remember Me
+                    Row(
+                      children: [
+                        Checkbox(
+                          value: rememberMeEnabled,
+                          onChanged: (value) {
+                            // Hatırla beni seçeneği değiştiğinde AuthBloc'a bildir
+                            if (value != null) {
+                              context
+                                  .read<AuthBloc>()
+                                  .add(RememberMeChanged(rememberMe: value));
+                            }
+                          },
+                        ),
+                        const Text(TTexts.rememeberMe),
+                      ],
+                    ),
 
-                // Forgot Password
-                TextButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const ForgotPassword()),
-                    );
-                  },
-                  child: const Text(TTexts.passwordForgot),
-                ),
-              ],
+                    // Forgot Password
+                    TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const ForgotPassword()),
+                        );
+                      },
+                      child: const Text(TTexts.passwordForgot),
+                    ),
+                  ],
+                );
+              },
             ),
             const SizedBox(height: TSizes.spaceBtwSections),
 
             // Login Button
-            SizedBox(
-              width: double.infinity,
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const NavigationMenu()),
-                  );
-                },
-                child: const Text(TTexts.loginButton),
-              ),
+            BlocBuilder<AuthBloc, AuthState>(
+              builder: (context, state) {
+                return SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      // Giriş butonu tıklandığında AuthBloc'a giriş olayını ilet
+                      context.read<AuthBloc>().add(Login(
+                          email: emailController.text,
+                          password: passwordController.text));
+                    },
+                    child: const Text(TTexts.loginButton),
+                  ),
+                );
+              },
             ),
             const SizedBox(height: TSizes.spaceBtwItems),
 
