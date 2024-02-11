@@ -14,8 +14,10 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         super(Initial()) {
     _firebaseAuth.authStateChanges().listen((user) {
       if (user != null) {
+        // ignore: invalid_use_of_visible_for_testing_member
         emit(Authenticated(user: user));
       } else {
+        // ignore: invalid_use_of_visible_for_testing_member
         emit(NotAuthenticated());
       }
     });
@@ -46,7 +48,8 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
           'registerDate': DateTime.now(),
           'phone': event.phone
         });
-      } on FirebaseAuthException catch (e) {}
+        // ignore: empty_catches
+      } on FirebaseAuthException {}
     });
 
     on<Logout>((event, emit) async {
@@ -56,6 +59,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
             NotAuthenticated()); // Kullanıcı çıkış yaptığında AuthState'i güncelleyin
       } catch (e) {
         // Çıkış yaparken bir hata oluştu
+        // ignore: avoid_print
         print('Çıkış yaparken bir hata oluştu: $e');
       }
     });
