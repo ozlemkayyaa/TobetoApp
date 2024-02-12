@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:tobeto/features/authentication/screens/signup/verify_email_screen.dart';
+import 'package:tobeto/features/authentication/screens/signup/successful.dart';
 import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
@@ -198,8 +198,7 @@ class TermsCheckbox extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                      builder: (context) => const VerifyEmailScreen()),
+                  MaterialPageRoute(builder: (context) => const Successful()),
                 );
               },
               child: const Text(TTexts.continueSignUp),

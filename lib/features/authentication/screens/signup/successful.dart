@@ -6,8 +6,8 @@ import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
 import 'package:tobeto/utils/helpers/helper_functions.dart';
 
-class VerifyEmailScreen extends StatelessWidget {
-  const VerifyEmailScreen({super.key});
+class Successful extends StatelessWidget {
+  const Successful({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -61,7 +61,7 @@ class VerifyEmailScreen extends StatelessWidget {
                           builder: (context) => const LoginScreen()),
                     );
                   },
-                  child: const Text(TTexts.loginButton),
+                  child: const Text(TTexts.continueSignUp),
                 ),
               ),
             ],
