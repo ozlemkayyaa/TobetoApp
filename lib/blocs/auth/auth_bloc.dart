@@ -48,8 +48,14 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
           'registerDate': DateTime.now(),
           'phone': event.phone
         });
-        // ignore: empty_catches
-      } on FirebaseAuthException {}
+        emit(Authenticated(user: userCredential.user));
+      } on FirebaseAuthException catch (e) {
+        emit(NotAuthenticated(errorMessage: e.message));
+      } catch (e) {
+        // Firestore'a yazma hatası
+        emit(NotAuthenticated(
+            errorMessage: "Kullanıcı kaydedilemedi. Lütfen tekrar deneyin."));
+      }
     });
 
     on<Logout>((event, emit) async {

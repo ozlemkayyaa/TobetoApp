@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tobeto/features/screens/course/course_screen.dart';
 import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
@@ -52,7 +53,13 @@ class EducationWidget extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const CourseScreen()),
+                    );
+                  },
                   style: ElevatedButton.styleFrom(
                       backgroundColor: dark ? TColors.darkGrey : TColors.grey,
                       padding:

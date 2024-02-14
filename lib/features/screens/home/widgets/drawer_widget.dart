@@ -26,7 +26,6 @@ class DrawerWidget extends StatelessWidget {
         children: [
           // Drawer Header
           Padding(
-            //padding: const EdgeInsets.fromLTRB(15.0, 50.0, 10.0, 5.0),
             padding: const EdgeInsets.only(
                 top: TSizes.defaultSpace, left: TSizes.defaultSpace),
             child: Row(
@@ -37,11 +36,6 @@ class DrawerWidget extends StatelessWidget {
                     width: 150, // Resmin genişliği
                     height: 80, // Resmin yüksekliği
                   ),
-                  IconButton(
-                      icon: const Icon(Icons.close),
-                      onPressed: () {
-                        Navigator.of(context).pop();
-                      }),
                 ]),
           ),
 
@@ -104,7 +98,7 @@ class DrawerWidget extends StatelessWidget {
 
                 // İletişim
                 SizedBox(
-                    height: TSizes.spaceBtwSections,
+                    height: TSizes.spaceBtwSections + 10,
                     child: ListTile(
                         title: Row(
                           children: [
@@ -126,6 +120,29 @@ class DrawerWidget extends StatelessWidget {
                               MaterialPageRoute(
                                 builder: (context) => const ContactScreen(),
                               ));
+                        })),
+
+                // Çıkış Yap Butonu
+                SizedBox(
+                    height: TSizes.spaceBtwSections,
+                    child: ListTile(
+                        title: Row(
+                          children: [
+                            const Icon(Iconsax.logout),
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                  left: TSizes.defaultSpace / 4),
+                              child: Text(
+                                TTexts.logout,
+                                style:
+                                    Theme.of(context).textTheme.headlineSmall,
+                              ),
+                            ),
+                          ],
+                        ),
+                        onTap: () {
+                          BlocProvider.of<AuthBloc>(context).add(Logout());
+                          Navigator.pop(context);
                         })),
 
                 // Profil Kısmı
@@ -167,27 +184,6 @@ class DrawerWidget extends StatelessWidget {
                       ),
                     ],
                   ),
-                ),
-
-                // Çıkış Yap Butonu
-                ListTile(
-                  title: Row(
-                    children: [
-                      const Icon(Iconsax.logout),
-                      Padding(
-                        padding: const EdgeInsets.only(
-                            left: TSizes.defaultSpace / 4),
-                        child: Text(
-                          TTexts.logout,
-                          style: Theme.of(context).textTheme.headlineSmall,
-                        ),
-                      ),
-                    ],
-                  ),
-                  onTap: () {
-                    BlocProvider.of<AuthBloc>(context).add(Logout());
-                    Navigator.pop(context);
-                  },
                 ),
               ],
             ),

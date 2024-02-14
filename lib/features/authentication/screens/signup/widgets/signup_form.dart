@@ -1,30 +1,38 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:tobeto/blocs/auth/auth_bloc.dart';
+import 'package:tobeto/blocs/auth/auth_event.dart';
+import 'package:tobeto/blocs/auth/auth_state.dart';
 import 'package:tobeto/features/authentication/screens/login/login_screen.dart';
-import 'package:tobeto/features/authentication/screens/signup/widgets/terms_checkbox.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
+import 'package:tobeto/utils/validators/validation.dart';
 
-class SignupForm extends StatefulWidget {
-  const SignupForm({
+class SignupForm extends StatelessWidget {
+  final TextEditingController nameController = TextEditingController();
+  final TextEditingController surnameController = TextEditingController();
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+  final TextEditingController confirmPasswordController =
+      TextEditingController();
+  final TextEditingController phoneController = TextEditingController();
+  SignupForm({
     super.key,
   });
 
-  @override
-  State<SignupForm> createState() => _SignupFormState();
-}
-
-class _SignupFormState extends State<SignupForm> {
   @override
   Widget build(BuildContext context) {
     return Form(
       child: Column(
         children: [
+          // Ad
           Row(
             children: [
               Expanded(
                 child: TextFormField(
+                  controller: nameController,
                   expands: false,
                   decoration: const InputDecoration(
                     labelText: TTexts.signName,
@@ -32,9 +40,11 @@ class _SignupFormState extends State<SignupForm> {
                   ),
                 ),
               ),
+              // Soyad
               const SizedBox(width: TSizes.spaceBtwInputFields),
               Expanded(
                 child: TextFormField(
+                  controller: surnameController,
                   expands: false,
                   decoration: const InputDecoration(
                     labelText: TTexts.signSurname,
@@ -48,6 +58,7 @@ class _SignupFormState extends State<SignupForm> {
 
           // E-Mail
           TextFormField(
+            controller: emailController,
             decoration: const InputDecoration(
               labelText: TTexts.signEmail,
               prefixIcon: Icon(CupertinoIcons.mail),
@@ -57,6 +68,7 @@ class _SignupFormState extends State<SignupForm> {
 
           //Phone Number
           TextFormField(
+            controller: phoneController,
             decoration: const InputDecoration(
               labelText: TTexts.signPhoneNumber,
               prefixIcon: Icon(Iconsax.call),
@@ -66,6 +78,7 @@ class _SignupFormState extends State<SignupForm> {
 
           // Password
           TextFormField(
+            controller: passwordController,
             obscureText: true,
             decoration: const InputDecoration(
               labelText: TTexts.signPassword,
@@ -77,6 +90,7 @@ class _SignupFormState extends State<SignupForm> {
 
           // Password Again
           TextFormField(
+            controller: confirmPasswordController,
             obscureText: true,
             decoration: const InputDecoration(
               labelText: TTexts.signPasswordAgain,
@@ -86,7 +100,7 @@ class _SignupFormState extends State<SignupForm> {
           ),
           const SizedBox(height: TSizes.spaceBtwSections),
 
-          // Terms and Conditions Checkbox
+          // Terms and Conditions
 
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -112,20 +126,24 @@ class _SignupFormState extends State<SignupForm> {
           const SizedBox(height: TSizes.spaceBtwItems),
 
           // Sign Up Button
-          SizedBox(
-              width: double.infinity,
-              child: ElevatedButton(
-                  onPressed: () {
-                    showDialog(
-                        context: context,
-                        builder: (BuildContext context) {
-                          return const Dialog(
-                            child:
-                                SizedBox(height: 410, child: TermsCheckbox()),
-                          );
-                        });
-                  },
-                  child: const Text(TTexts.registerButton))),
+          BlocBuilder<AuthBloc, AuthState>(
+            builder: (context, state) {
+              return SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                    onPressed: () {
+                      context.read<AuthBloc>().add(Register(
+                          name: nameController.text,
+                          surname: surnameController.text,
+                          email: emailController.text,
+                          phone: phoneController.text,
+                          password: passwordController.text,
+                          confirmPassword: confirmPasswordController.text));
+                    },
+                    child: const Text(TTexts.registerButton)),
+              );
+            },
+          ),
         ],
       ),
     );
