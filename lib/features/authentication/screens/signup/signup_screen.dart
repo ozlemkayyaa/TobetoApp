@@ -4,18 +4,21 @@ import 'package:tobeto/blocs/auth/auth_bloc.dart';
 import 'package:tobeto/blocs/auth/auth_state.dart';
 import 'package:tobeto/features/authentication/models/login_signup/form_divider.dart';
 import 'package:tobeto/features/authentication/models/login_signup/social_buttons.dart';
+import 'package:tobeto/features/authentication/screens/login/widgets/login_header.dart';
 import 'package:tobeto/features/authentication/screens/signup/widgets/signup_form.dart';
 import 'package:tobeto/navigation_menu.dart';
+import 'package:tobeto/utils/constants/image_strings.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
+import 'package:tobeto/utils/helpers/helper_functions.dart';
 
 class SignupScreen extends StatelessWidget {
   const SignupScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final dark = THelperFunctions.isDarkMode(context);
     return Scaffold(
-      appBar: AppBar(),
       body: BlocBuilder<AuthBloc, AuthState>(
         builder: (context, state) {
           // State'e göre işlem yap
@@ -30,6 +33,12 @@ class SignupScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    Image(
+                      height: 120,
+                      width: 270,
+                      image: AssetImage(
+                          dark ? TImages.darkAppLogo : TImages.lightAppLogo),
+                    ),
                     // Title
                     Text(TTexts.signUp,
                         style: Theme.of(context).textTheme.headlineMedium),
