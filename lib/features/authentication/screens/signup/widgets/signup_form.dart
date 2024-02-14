@@ -8,7 +8,6 @@ import 'package:tobeto/blocs/auth/auth_state.dart';
 import 'package:tobeto/features/authentication/screens/login/login_screen.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
-import 'package:tobeto/utils/validators/validation.dart';
 
 class SignupForm extends StatelessWidget {
   final TextEditingController nameController = TextEditingController();
