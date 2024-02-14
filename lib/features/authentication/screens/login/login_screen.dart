@@ -12,6 +12,7 @@ import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
 
 class LoginScreen extends StatelessWidget {
+  // ignore: use_key_in_widget_constructors
   const LoginScreen({Key? key});
 
   @override

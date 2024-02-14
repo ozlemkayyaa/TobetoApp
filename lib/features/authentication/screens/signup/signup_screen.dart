@@ -4,7 +4,6 @@ import 'package:tobeto/blocs/auth/auth_bloc.dart';
 import 'package:tobeto/blocs/auth/auth_state.dart';
 import 'package:tobeto/features/authentication/models/login_signup/form_divider.dart';
 import 'package:tobeto/features/authentication/models/login_signup/social_buttons.dart';
-import 'package:tobeto/features/authentication/screens/login/widgets/login_header.dart';
 import 'package:tobeto/features/authentication/screens/signup/widgets/signup_form.dart';
 import 'package:tobeto/navigation_menu.dart';
 import 'package:tobeto/utils/constants/image_strings.dart';
