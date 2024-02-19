@@ -88,7 +88,7 @@ class TTexts {
   // HomePage Text
   static const String tobetoPurple = 'TOBETO';
   static const String welcome = '\'ya hoş geldin ';
-  static const String user = "Özlem,";
+  static const String user = "";
   static const String introduction =
       'Yeni nesil öğrenme deneyimi ile Tobeto kariyer yolculuğunda senin yanında!';
   static const String freeEducation =

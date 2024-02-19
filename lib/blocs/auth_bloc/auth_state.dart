@@ -12,8 +12,9 @@ class NotAuthenticated extends AuthState {
 
 class Authenticated extends AuthState {
   User? user;
+  String? userName; // Kullanıcı adını tutmak için
 
-  Authenticated({this.user});
+  Authenticated({this.user, this.userName});
 }
 
 class RememberMeState extends AuthState {

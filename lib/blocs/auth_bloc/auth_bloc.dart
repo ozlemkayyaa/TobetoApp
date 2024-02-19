@@ -27,8 +27,18 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       try {
         UserCredential userCredential =
             await _firebaseAuth.signInWithEmailAndPassword(
-                email: event.email, password: event.password);
-        emit(Authenticated(user: userCredential.user));
+          email: event.email,
+          password: event.password,
+        );
+
+        // Kayıtlı Kullanıcı Giriş Yapınca Adı Ekranda Gözükür (Firestore'dan veri okunur)
+        final userDoc = await _firebaseFirestore
+            .collection(Collections.USERS)
+            .doc(userCredential.user!.uid)
+            .get();
+
+        final userName = userDoc.data()?['name'];
+        emit(Authenticated(user: userCredential.user, userName: userName));
       } on FirebaseAuthException catch (e) {
         emit(NotAuthenticated(errorMessage: e.message));
       }
@@ -49,7 +59,15 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
           'registerDate': DateTime.now(),
           'phone': event.phone
         });
-        emit(Authenticated(user: userCredential.user));
+
+        // Kayıt Olduktan Sonra Kişinin Adı Ekranda Gözükür (Firestore'dan veri okunur)
+        final userDoc = await _firebaseFirestore
+            .collection(Collections.USERS)
+            .doc(userCredential.user!.uid)
+            .get();
+
+        final userName = userDoc.data()?['name'];
+        emit(Authenticated(user: userCredential.user, userName: userName));
       } on FirebaseAuthException catch (e) {
         emit(NotAuthenticated(errorMessage: e.message));
       } catch (e) {
