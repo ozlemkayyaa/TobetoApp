@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:tobeto/blocs/auth/auth_bloc.dart';
-import 'package:tobeto/features/authentication/screens/login/login_screen.dart';
+import 'package:tobeto/blocs/auth_bloc/auth_bloc.dart';
+import 'package:tobeto/screens/authentication/screens/login/login_screen.dart';
 import 'package:tobeto/utils/theme/theme.dart';
 
 Future initialization(BuildContext? context) async {
