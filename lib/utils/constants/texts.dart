@@ -47,9 +47,9 @@ class TTexts {
   static const String resetEmail =
       "Sifre sıfırlama linkini e-posta adresinize gönderdik. Lütfen gelen kutunuzu kontrol edin.";
   static const String sendButton = 'Gönder';
-  static const String verifyEmailTitle = 'E-posta adresinizi doğrulayın';
+  static const String verifyEmailTitle = "TOBETO'ya Hoş Geldin!";
   static const String verifySucessSubTitle =
-      'Tobeto Platform\'a kaydınız başarıyla gerçekleşti. Giriş yapabilmek için e-posta adresinize iletilen doğrulama linkine tıklayarak hesabınızı aktifleştirin. ';
+      "Tobeto Platform'a kaydınız başarıyla gerçekleşti. Platform'da sana atanan eğitimleri görebilir, kendini geliştirebilir ve test edebilirsin.";
   static const String activation =
       "Aktivasyon işlemi başarıyla gerçekleşmiştir";
 
@@ -83,6 +83,7 @@ class TTexts {
   static const String contactUs = 'İletişim';
   static const String year = '2024 TOBETO';
   static const String profileName = 'Özlem Kaya';
+  static const String logout = "Çıkış Yap";
 
   // HomePage Text
   static const String tobetoPurple = 'TOBETO';

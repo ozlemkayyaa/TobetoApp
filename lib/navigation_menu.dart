@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:tobeto/features/screens/profile/profile_screen.dart';
+import 'package:tobeto/screens/profile/profile_screen.dart';
 import 'package:tobeto/utils/constants/texts.dart';
-import 'package:tobeto/features/screens/home/home_screen.dart';
-import 'package:tobeto/features/screens/test/test_screen.dart';
-import 'package:tobeto/features/screens/calendar/calendar_screen.dart';
-import 'package:tobeto/features/screens/cataloge/cataloge_screen.dart';
+import 'package:tobeto/screens/home/home_screen.dart';
+import 'package:tobeto/screens/exam/exam_screen.dart';
+import 'package:tobeto/screens/calendar/calendar_screen.dart';
+import 'package:tobeto/screens/catalog/cataloge_screen.dart';
 
 class NavigationMenu extends StatefulWidget {
   const NavigationMenu({super.key});
@@ -19,7 +19,7 @@ class _NavigationMenuState extends State<NavigationMenu> {
 
   final List<Widget> _pages = [
     const HomeScreen(),
-    const TestScreen(),
+    const ExamScreen(),
     const CatalogeScreen(),
     const CalendarScreen(),
     const ProfileScreen()

@@ -34,6 +34,8 @@ dependencies:
   percent_indicator: ^4.2.3
   firebase_core: ^2.25.3
   firebase_auth: ^4.17.3
+  cloud_firestore: ^4.15.4
+  firebase_storage: ^11.6.5
 
   # Product Specific
 

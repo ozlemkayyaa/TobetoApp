@@ -21,9 +21,9 @@ class THelperFunctions {
             TextButton(
               onPressed: () => Navigator.of(context).pop(),
               child: const Text('Tamam'),
-            ), // TextButton
+            ),
           ],
-        ); // AlertDialog
+        );
       },
     );
   }
