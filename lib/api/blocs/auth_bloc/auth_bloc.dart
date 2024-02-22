@@ -72,6 +72,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     try {
       await _authRepository.logoutUser();
     } catch (e) {
+      // ignore: avoid_print
       print(e);
     }
   }

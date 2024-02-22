@@ -132,7 +132,7 @@ class HomeScreen extends StatelessWidget {
                         ),
                         const Icon(
                           Icons.emoji_emotions,
-                          color: Colors.yellow,
+                          color: TColors.primary,
                           size: 30,
                         ),
                       ],
