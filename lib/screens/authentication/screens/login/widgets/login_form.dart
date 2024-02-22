@@ -2,9 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart'; // BlocProvider eklemeyi unutmayın
 import 'package:iconsax/iconsax.dart';
-import 'package:tobeto/blocs/auth_bloc/auth_bloc.dart'; // AuthBloc'u import edin
-import 'package:tobeto/blocs/auth_bloc/auth_event.dart';
-import 'package:tobeto/blocs/auth_bloc/auth_state.dart';
+import 'package:tobeto/api/blocs/auth_bloc/auth_bloc.dart'; // AuthBloc'u import edin
+import 'package:tobeto/api/blocs/auth_bloc/auth_event.dart';
+import 'package:tobeto/api/blocs/auth_bloc/auth_state.dart';
 import 'package:tobeto/screens/authentication/screens/password/forgot_password.dart';
 import 'package:tobeto/screens/authentication/screens/signup/signup_screen.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
@@ -50,25 +50,9 @@ class LoginForm extends StatelessWidget {
             // Remember Me and Forgot Password
             BlocBuilder<AuthBloc, AuthState>(
               builder: (context, state) {
-                final bool rememberMeEnabled =
-                    state is RememberMeState ? state.rememberMe : false;
                 return Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    // Remember Me
-                    Row(
-                      children: [
-                        Checkbox(
-                          value: rememberMeEnabled,
-                          onChanged: (value) {
-                            context.read<AuthBloc>().add(
-                                RememberMeChanged(rememberMe: value ?? false));
-                          },
-                        ),
-                        const Text(TTexts.rememeberMe),
-                      ],
-                    ),
-
                     // Forgot Password
                     TextButton(
                       onPressed: () {
@@ -94,7 +78,7 @@ class LoginForm extends StatelessWidget {
                   child: ElevatedButton(
                     onPressed: () {
                       // Giriş butonu tıklandığında AuthBloc'a giriş olayını ilet
-                      context.read<AuthBloc>().add(Login(
+                      context.read<AuthBloc>().add(LoginEvent(
                           email: emailController.text,
                           password: passwordController.text));
                     },

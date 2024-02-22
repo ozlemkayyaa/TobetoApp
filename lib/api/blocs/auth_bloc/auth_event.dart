@@ -1,20 +1,20 @@
 abstract class AuthEvent {}
 
-class Login extends AuthEvent {
+class LoginEvent extends AuthEvent {
   String email;
   String password;
 
-  Login({required this.email, required this.password});
+  LoginEvent({required this.email, required this.password});
 }
 
-class Register extends AuthEvent {
+class RegisterEvent extends AuthEvent {
   String name;
   String surname;
   String email;
   String phone;
   String password;
   String confirmPassword;
-  Register({
+  RegisterEvent({
     required this.name,
     required this.surname,
     required this.email,
@@ -24,10 +24,4 @@ class Register extends AuthEvent {
   });
 }
 
-class Logout extends AuthEvent {}
-
-class RememberMeChanged extends AuthEvent {
-  final bool rememberMe;
-
-  RememberMeChanged({required this.rememberMe});
-}
+class LogoutEvent extends AuthEvent {}

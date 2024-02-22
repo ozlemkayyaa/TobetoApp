@@ -2,7 +2,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 
 abstract class AuthState {}
 
-class Initial extends AuthState {}
+class AuthInitial extends AuthState {}
+
+class AuthLoading extends AuthState {}
 
 class NotAuthenticated extends AuthState {
   String? errorMessage;
@@ -15,10 +17,4 @@ class Authenticated extends AuthState {
   String? userName; // Kullanıcı adını tutmak için
 
   Authenticated({this.user, this.userName});
-}
-
-class RememberMeState extends AuthState {
-  final bool rememberMe;
-
-  RememberMeState({required this.rememberMe});
 }

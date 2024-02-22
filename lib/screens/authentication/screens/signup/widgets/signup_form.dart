@@ -2,9 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:tobeto/blocs/auth_bloc/auth_bloc.dart';
-import 'package:tobeto/blocs/auth_bloc/auth_event.dart';
-import 'package:tobeto/blocs/auth_bloc/auth_state.dart';
+import 'package:tobeto/api/blocs/auth_bloc/auth_bloc.dart';
+import 'package:tobeto/api/blocs/auth_bloc/auth_event.dart';
+import 'package:tobeto/api/blocs/auth_bloc/auth_state.dart';
 import 'package:tobeto/screens/authentication/screens/login/login_screen.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
@@ -131,7 +131,7 @@ class SignupForm extends StatelessWidget {
                 width: double.infinity,
                 child: ElevatedButton(
                     onPressed: () {
-                      context.read<AuthBloc>().add(Register(
+                      context.read<AuthBloc>().add(RegisterEvent(
                           name: nameController.text,
                           surname: surnameController.text,
                           email: emailController.text,

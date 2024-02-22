@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:tobeto/blocs/auth_bloc/auth_bloc.dart';
-import 'package:tobeto/blocs/auth_bloc/auth_event.dart';
+import 'package:tobeto/api/blocs/auth_bloc/auth_bloc.dart';
+import 'package:tobeto/api/blocs/auth_bloc/auth_event.dart';
 import 'package:tobeto/screens/contact/contact_screen.dart';
 import 'package:tobeto/screens/team/team_screen.dart';
 import 'package:tobeto/navigation_menu.dart';
@@ -141,7 +141,7 @@ class DrawerWidget extends StatelessWidget {
                           ],
                         ),
                         onTap: () {
-                          BlocProvider.of<AuthBloc>(context).add(Logout());
+                          BlocProvider.of<AuthBloc>(context).add(LogoutEvent());
                           Navigator.pop(context);
                         })),
 

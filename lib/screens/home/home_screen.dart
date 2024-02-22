@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:tobeto/blocs/auth_bloc/auth_bloc.dart';
-import 'package:tobeto/blocs/auth_bloc/auth_state.dart';
+import 'package:tobeto/api/blocs/auth_bloc/auth_bloc.dart';
+import 'package:tobeto/api/blocs/auth_bloc/auth_state.dart';
 import 'package:tobeto/screens/home/widgets/drawer_widget.dart';
 import 'package:tobeto/screens/home/widgets/tabbar_view_widget.dart';
 import 'package:tobeto/screens/home/widgets/tabbar_widget.dart';

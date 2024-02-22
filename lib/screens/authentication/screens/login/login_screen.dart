@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:tobeto/blocs/auth_bloc/auth_bloc.dart';
-import 'package:tobeto/blocs/auth_bloc/auth_state.dart';
+import 'package:tobeto/api/blocs/auth_bloc/auth_bloc.dart';
+import 'package:tobeto/api/blocs/auth_bloc/auth_state.dart';
 import 'package:tobeto/screens/authentication/models/spacing_styles.dart';
 import 'package:tobeto/screens/authentication/models/login_signup/form_divider.dart';
 import 'package:tobeto/screens/authentication/models/login_signup/social_buttons.dart';
