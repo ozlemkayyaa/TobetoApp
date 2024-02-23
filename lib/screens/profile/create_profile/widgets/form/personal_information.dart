@@ -4,8 +4,8 @@ import 'package:iconsax/iconsax.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
 
-class OneForm extends StatelessWidget {
-  const OneForm({
+class PersonalInformation extends StatelessWidget {
+  const PersonalInformation({
     super.key,
   });
 

@@ -255,11 +255,15 @@ class TTexts {
   static const String end = "Üyeliği Sonlandır";
 
   //Profile Screen
-  static const String nameSurname = "Ad Soyad";
+  static const String skills = "Yetkinlikler";
+  static const String job = "Mobile Developer";
+  static const String profileInformation = "Profil Bilgileri";
   static const String student = "Özlem Kaya";
+  static const String education = "Eğitim Durumu";
+  static const String licanseDegree = "Lisans Derecesi";
   static const String studentBirthdate = "01.01.1980";
   static const String postaAdress = "E-Posta Adresi";
-  static const String studentEMail = "ozlem@deneme.com";
+  static const String studentEMail = "ozlem@gmail.com";
   static const String phoneNumber = "Telefon Numarası";
   static const String studentTelephoneNumber = "+905324678558";
 
@@ -283,7 +287,7 @@ class TTexts {
   static const String situation = "Durum";
 
   // GO TRAINING
-  static const String about2 = "Hakkında";
+  static const String about2 = "Hakkımda";
   static const String contents = "İçerik";
   static const String notStart = "Başlamadın";
   static const String video = "Video - ";

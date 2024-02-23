@@ -4,8 +4,8 @@ import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
 
-class FourForm extends StatelessWidget {
-  const FourForm({
+class Settings extends StatelessWidget {
+  const Settings({
     super.key,
   });
 

@@ -45,10 +45,9 @@ class ProfileAvatar extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(TTexts.student,
-                      style: Theme.of(context).textTheme.headlineSmall),
+                      style: Theme.of(context).textTheme.headlineMedium),
                 ),
-                Text("Mobile Developer",
-                    style: Theme.of(context).textTheme.bodySmall),
+                Text(TTexts.job, style: Theme.of(context).textTheme.bodyLarge),
                 const SizedBox(height: TSizes.sm),
                 const Row(
                   children: [

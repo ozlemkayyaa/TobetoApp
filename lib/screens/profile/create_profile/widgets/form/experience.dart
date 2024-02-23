@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
 
-class TwoForm extends StatelessWidget {
-  const TwoForm({
+class Experience extends StatelessWidget {
+  const Experience({
     super.key,
   });
 

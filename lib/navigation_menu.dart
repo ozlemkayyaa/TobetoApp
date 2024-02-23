@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:tobeto/screens/profile_yeni/profile_screen.dart';
+import 'package:tobeto/screens/profile/profile_screen.dart';
 import 'package:tobeto/utils/constants/texts.dart';
 import 'package:tobeto/screens/home/home_screen.dart';
 import 'package:tobeto/screens/exam/exam_screen.dart';

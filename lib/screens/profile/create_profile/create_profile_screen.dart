@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:tobeto/screens/home/widgets/drawer_widget.dart';
 import 'package:tobeto/screens/profile/create_profile/widgets/create_profile_tabbar_view_widget.dart';
 import 'package:tobeto/screens/profile/create_profile/widgets/create_profile_tabbar_widget.dart';
 import 'package:tobeto/utils/constants/image_strings.dart';
@@ -26,7 +25,6 @@ class CreateProfileScreen extends StatelessWidget {
             )
           ],
         ),
-        drawer: const DrawerWidget(),
         body: const Column(
           children: [
             ProfileTabBarWidget(),

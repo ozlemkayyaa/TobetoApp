@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:tobeto/screens/profile/create_profile/widgets/form/four_form.dart';
-import 'package:tobeto/screens/profile/create_profile/widgets/form/one_form.dart';
-import 'package:tobeto/screens/profile/create_profile/widgets/form/three_form.dart';
-import 'package:tobeto/screens/profile/create_profile/widgets/form/two_form.dart';
+import 'package:tobeto/screens/profile/create_profile/widgets/form/settings.dart';
+import 'package:tobeto/screens/profile/create_profile/widgets/form/personal_information.dart';
+import 'package:tobeto/screens/profile/create_profile/widgets/form/education_life.dart';
+import 'package:tobeto/screens/profile/create_profile/widgets/form/experience.dart';
 import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/image_strings.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
@@ -32,13 +32,13 @@ class ProfileTabBarViewWidget extends StatelessWidget {
                         dark ? TColors.darkGrey : TColors.lightGrey,
                     backgroundImage: const AssetImage(TImages.profileImage),
                   ),
-                  const OneForm(),
+                  const PersonalInformation(),
                 ],
               ),
             ),
-            const TwoForm(),
-            const ThreeForm(),
-            const FourForm(),
+            const Experience(),
+            const EducationLife(),
+            const Settings(),
           ],
         ),
       ),

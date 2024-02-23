@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
 
-class ThreeForm extends StatelessWidget {
-  const ThreeForm({
+class EducationLife extends StatelessWidget {
+  const EducationLife({
     super.key,
   });
 
