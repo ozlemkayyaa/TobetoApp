@@ -12,6 +12,9 @@ class TImages {
   static const String google = "assets/logos/googleLogo.png";
   static const String apple = "assets/logos/appleLogo.png";
   static const String appleWhite = "assets/logos/appleWhite.png";
+  static const String instagram = "assets/images/instagram.png";
+  static const String linkedin = "assets/images/linkedin.png";
+  static const String github = "assets/images/github.png";
 
   // Other Images
   static const String background = "assets/images/background.png";
