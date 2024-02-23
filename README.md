@@ -37,7 +37,7 @@ LIGHT MODE
 <img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/3e3d9622-4386-418f-b3bb-ff994af5b697" alt="alt text" width="100" height="200">
 <img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/bea658be-27c4-42c3-b825-513a71ac3f10" alt="alt text" width="100" height="200">
 <img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/9c93a65a-857d-4ec8-aca8-c8933561c755" alt="alt text" width="100" height="200">
-<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/a8ab0af5-da7e-4550-a344-8c15234e34d1" alt="alt text" width="100" height="200">
+<img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/bb7c63cf-33d1-4f69-a7ff-f55d757ab283" alt="alt text" width="100" height="200">
 <img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/2d686b99-29b4-46f3-b194-057df0ea28f7"alt="alt text" width="100" height="200">
 <img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/969b800d-836d-4980-a843-34f19c16c6fd" alt="alt text" width="100" height="200">
 <img src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/457b1397-f197-4f8f-9452-b87de21ebf4b" alt="alt text" width="100" height="200">
