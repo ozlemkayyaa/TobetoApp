@@ -16,7 +16,7 @@ class UserRepository {
   }
 
   // Read => Firestore da veri getirme
-  Future fetchUser(UserModel userModel) async {
+  Future fetchCurrentUser(UserModel userModel) async {
     final CollectionReference users =
         _firebaseFirestore.collection(Collections.USERS);
     userModel.userId = _firebaseAuth.currentUser!.uid;

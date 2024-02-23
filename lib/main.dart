@@ -2,7 +2,9 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tobeto/api/blocs/auth_bloc/auth_bloc.dart';
+import 'package:tobeto/api/blocs/profile_bloc/profile_bloc.dart';
 import 'package:tobeto/api/repositories/auth_repo.dart';
+import 'package:tobeto/api/repositories/storage_repo.dart';
 import 'package:tobeto/api/repositories/user_repo.dart';
 import 'package:tobeto/firebase_options.dart';
 import 'package:tobeto/screens/start/start_page.dart';
@@ -15,6 +17,9 @@ void main() async {
     providers: [
       BlocProvider<AuthBloc>(
         create: (context) => AuthBloc(AuthRepository(), UserRepository()),
+      ),
+      BlocProvider<ProfileBloc>(
+        create: (context) => ProfileBloc(UserRepository(), StorageRepository()),
       ),
     ],
     child: MaterialApp(
