@@ -4,17 +4,16 @@ import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/image_strings.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
+import 'package:tobeto/utils/helpers/helper_functions.dart';
 
 class ProfileAvatar extends StatelessWidget {
   const ProfileAvatar({
     super.key,
-    required this.dark,
   });
-
-  final bool dark;
 
   @override
   Widget build(BuildContext context) {
+    final dark = THelperFunctions.isDarkMode(context);
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Card(

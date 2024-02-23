@@ -31,7 +31,36 @@ class ProfileScreen extends StatelessWidget {
       drawer: const DrawerWidget(),
       body: Column(
         children: [
-          ProfileAvatar(dark: dark),
+          const ProfileAvatar(),
+          Column(
+            children: [
+              Row(
+                children: [
+                  const Card(
+                    child: Padding(
+                      padding: EdgeInsets.all(TSizes.xs),
+                      child: Icon(
+                        Iconsax.user,
+                        size: 40,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: TSizes.spaceBtwItems),
+                  Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(right: 28.0),
+                        child: Text(TTexts.nameSurname,
+                            style: Theme.of(context).textTheme.labelMedium),
+                      ),
+                      Text(TTexts.student,
+                          style: Theme.of(context).textTheme.titleLarge),
+                    ],
+                  ),
+                ],
+              ),
+            ],
+          ),
         ],
       ),
     );
