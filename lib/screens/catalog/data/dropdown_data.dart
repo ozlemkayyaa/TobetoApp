@@ -132,4 +132,34 @@ class DropdownData {
       DropdownItem("Devam Eden Eğitimler")
     ];
   }
+
+  static List<DropdownItem> getSkills() {
+    return [
+      DropdownItem("C#"),
+      DropdownItem("SQL"),
+      DropdownItem("Muhasebe"),
+      DropdownItem("JavaScript"),
+      DropdownItem("Aktif Öğrenme"),
+      DropdownItem("Aktif Dinleme"),
+      DropdownItem("Uyum Sağlama"),
+      DropdownItem("Yönetim ve İdare"),
+      DropdownItem("Reklam"),
+      DropdownItem("Algoritmalar"),
+      DropdownItem("Android (İşletim Sistemi)"),
+      DropdownItem("Apache Ambari"),
+      DropdownItem("Uygulama Mağazası (IOS)"),
+      DropdownItem("Apple Sağlık Kiti"),
+      DropdownItem("Apple IOS"),
+      DropdownItem("Apple XCode"),
+      DropdownItem("Uygulamalı Makine Öğrenimi"),
+      DropdownItem("Back End"),
+      DropdownItem("Büyük Veri"),
+      DropdownItem("Blok Zinciri"),
+      DropdownItem("Bootstarp (Front-End Framework)"),
+      DropdownItem("Marka Yönetimi"),
+      DropdownItem("İletişim"),
+      DropdownItem("Pazarlama"),
+      DropdownItem("Building and Construction"),
+    ];
+  }
 }

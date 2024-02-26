@@ -20,16 +20,28 @@ class ProfileTabBarWidget extends StatelessWidget {
             : TColors.primary,
         tabs: [
           Tab(
-              child: Text(TTexts.one,
+              child: Text(TTexts.personalInfo,
                   style: Theme.of(context).textTheme.titleLarge)),
           Tab(
-              child: Text(TTexts.two,
+              child: Text(TTexts.experience,
                   style: Theme.of(context).textTheme.titleLarge)),
           Tab(
-              child: Text(TTexts.three,
+              child: Text(TTexts.educationLife,
                   style: Theme.of(context).textTheme.titleLarge)),
           Tab(
-              child: Text(TTexts.eight,
+              child: Text(TTexts.skill,
+                  style: Theme.of(context).textTheme.titleLarge)),
+          Tab(
+              child: Text(TTexts.certificate,
+                  style: Theme.of(context).textTheme.titleLarge)),
+          Tab(
+              child: Text(TTexts.socialMedia,
+                  style: Theme.of(context).textTheme.titleLarge)),
+          Tab(
+              child: Text(TTexts.language,
+                  style: Theme.of(context).textTheme.titleLarge)),
+          Tab(
+              child: Text(TTexts.settings,
                   style: Theme.of(context).textTheme.titleLarge)),
         ]);
   }

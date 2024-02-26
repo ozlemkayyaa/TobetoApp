@@ -210,14 +210,14 @@ class TTexts {
   static const String alpTitle = "Lidya Ventures Yönetim Kurulu Üyesi";
 
   // Profile
-  static const String one = "Kişisel Bilgilerim";
-  static const String two = "Deneyimlerim";
-  static const String three = "Eğitim Hayatım";
-  static const String four = "Yetkinliklerim";
-  static const String five = "Sertifikalarım";
-  static const String six = "Medya Hesaplarım";
-  static const String seven = "Yabancı Dillerim";
-  static const String eight = "Ayarlar";
+  static const String personalInfo = "Kişisel Bilgilerim";
+  static const String experience = "Deneyimlerim";
+  static const String educationLife = "Eğitim Hayatım";
+  static const String skill = "Yetkinliklerim";
+  static const String certificate = "Sertifikalarım";
+  static const String socialMedia = "Medya Hesaplarım";
+  static const String language = "Yabancı Dillerim";
+  static const String settings = "Ayarlar";
 
   // Kişisel Bilgilerim
   static const String birthdate = "Doğum Tarihi";
