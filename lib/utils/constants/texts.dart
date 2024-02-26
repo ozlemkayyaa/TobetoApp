@@ -346,4 +346,17 @@ class TTexts {
       "Kişisel, Aile Akademisi, Alp Beyce, Atwiser, Wiser, Atwiser Yaşama Dair, İletişimde Sorun Çıkartmanın Garantili Yolları, İletişimde Ustalık, İletişimde Sorun Çıkartmanın Garantili Yolları - Sorgu Hakimliği";
   static const String interest8 =
       "Kişisel, Aile Akademisi, Alp Beyce, Atwiser, Wiser, Atwiser Yaşama Dair, İletişimde Sorun Çıkartmanın Garantili Yolları, İletişimde Ustalık, İletişimde Sorun Çıkartmanın Garantili Yolları - Susma İşkencesi";
+
+// Duyurular
+  static const String baslik1 = "11 Ocak Kampüs Buluşması";
+  static const String duyuru1 =
+      "Herkes için Kodlama eğitimini bitiren kişilerin katılabileceği kampüs buluşmamız 11 Ocak 2024 tarihindedir. Discorddan form paylaşılmıştır. Bu katılım formunu doldurmayan arkadaşların doldurması önemlidir. \n\nNot: Henüz eğitime hiç başlamamış adayların buluşması, eğitimlerini bitirdikten sonra 20 Şubat 2024 tarihinde yapılacaktır. \n\nSevgiler,";
+
+  static const String baslik2 = "30 Ocak Online Hoşgeldin Buluşması-5";
+  static const String duyuru2 =
+      "Sevgili İstanbul Kodluyor'lu, \n\n30 Ocak salı günü saat 11.00'de aramıza yeni katılan adaylar ile online olarak bir araya geleceğimiz için heyecanlıyız. \n\nİlk etapta tüm süreci birlikte konuşup, neler yapmanız gerektiğini adım adım anlatacağız. 'Eğitimlerim' bölümündeki size tanımlanmış videoları izleyebilirsiniz. 'Eğitime Git' butonuna tıklayarak online oturumların saatini ve içeriğini görebilirsiniz. Online oturumlara saati geldiğinde ilgili yerden tıklayarak katılabilirsiniz. Ayrıca bir mail gönderilmeyecektir. Hoşgeldin Buluşması-5 etkinliğine katılımınızı bekliyoruz. Platformu takip etmek adayların sorumluluğundadır. \n\nNot: Eğer 'Eğitimlerim' bölümünde size atanmış Hoşgeldin Buluşması- 5 başlığını görmüyorsanız, 29 Ocak pazartesiye kadar beklemenizi rica ederiz. 29 Ocak günü hala göremiyorsanız istanbulkodluyor@tobeto.com adresine mail atabilirsiniz. \n\nSevgiler, \nTOBETO | İstanbulKodluyor";
+
+  static const String baslik3 = "Yeni Grupların Discord'a Katılımı";
+  static const String duyuru3 =
+      "Merhabalar, Herkes için Kodlama 4A grubunun discorda katılımı yarın gerçekleşecek olan Mentor oturumu sonrası yapılacaktır. Mentor oturumuna 'Eğitimlerim' bölümünden giriş yapabilirsiniz. \n\nTarih: 8.12.2023 \n\nMentor Oturum Saati: 14.00-15.00 \n\nSevgiler,";
 }

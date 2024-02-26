@@ -92,12 +92,12 @@ class HomeScreen extends StatelessWidget {
                                 ? TImages.istanbulWhite
                                 : TImages.istanbulBlack,
                           ),
-                          width: 170,
+                          width: 150,
                         ),
                       ],
                     ),
                   ),
-                  const SizedBox(height: TSizes.lg),
+                  const SizedBox(height: TSizes.xs),
                   const TabBarWidget(),
                   const TabBarViewWidget(),
                 ],
@@ -148,7 +148,7 @@ class HomeScreen extends StatelessWidget {
                       textAlign: TextAlign.center,
                     ),
                   ),
-                  const SizedBox(height: TSizes.xl),
+                  const SizedBox(height: TSizes.lg),
                   // İstanbul Kodluyor Resmi
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
@@ -160,12 +160,12 @@ class HomeScreen extends StatelessWidget {
                                 ? TImages.istanbulWhite
                                 : TImages.istanbulBlack,
                           ),
-                          width: 170,
+                          width: 160,
                         ),
                       ],
                     ),
                   ),
-                  const SizedBox(height: TSizes.lg),
+                  const SizedBox(height: TSizes.md),
                   const TabBarWidget(),
                   const TabBarViewWidget(),
                 ],

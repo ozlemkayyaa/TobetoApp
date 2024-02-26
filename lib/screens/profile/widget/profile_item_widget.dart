@@ -16,7 +16,6 @@ class ProfileItemWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        // Doğum Tarihi
         Padding(
           padding: const EdgeInsets.all(TSizes.xs),
           child: selectIcon,

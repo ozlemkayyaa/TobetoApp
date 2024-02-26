@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
@@ -7,10 +8,14 @@ import 'package:tobeto/utils/helpers/helper_functions.dart';
 class AnnouncementWidget extends StatelessWidget {
   const AnnouncementWidget({
     super.key,
+    required this.title,
+    required this.message,
     required this.announcement,
     required this.dateTime,
   });
 
+  final String title;
+  final String message;
   final String announcement;
   final String dateTime;
 
@@ -72,7 +77,7 @@ class AnnouncementWidget extends StatelessWidget {
                       ),
                       TextButton(
                         onPressed: () {
-                          // Alert Dialog gelecek
+                          THelperFunctions.showAlert(title, message, context);
                         },
                         child: Text(
                           TTexts.continueRead,

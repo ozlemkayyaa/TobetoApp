@@ -108,25 +108,28 @@ class TabBarViewWidget extends StatelessWidget {
 
         // Duyuru ve Haberlerim altındaki Cardlar
         Padding(
-          padding: const EdgeInsets.all(TSizes.spaceBtwItems),
+          padding: const EdgeInsets.all(TSizes.iconXs),
           child: Column(
             children: [
               const SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
+                scrollDirection: Axis.vertical,
+                child: Column(
                   children: [
                     AnnouncementWidget(
-                        announcement: TTexts.announce1, dateTime: TTexts.date1),
+                        title: TTexts.baslik1,
+                        message: TTexts.duyuru1,
+                        announcement: TTexts.announce1,
+                        dateTime: TTexts.date1),
                     SizedBox(width: TSizes.defaultSpace),
                     AnnouncementWidget(
-                        announcement: TTexts.announce2, dateTime: TTexts.date2),
-                    SizedBox(width: TSizes.defaultSpace),
-                    AnnouncementWidget(
-                        announcement: TTexts.announce3, dateTime: TTexts.date3),
+                        title: TTexts.baslik2,
+                        message: TTexts.duyuru2,
+                        announcement: TTexts.announce2,
+                        dateTime: TTexts.date2),
                   ],
                 ),
               ),
-              const SizedBox(height: TSizes.defaultSpace),
+              const SizedBox(height: TSizes.sm),
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

@@ -49,12 +49,6 @@ class EducationLife extends StatelessWidget {
                   labelText: TTexts.graduationYear,
                 ),
               ),
-              Row(
-                children: [
-                  Checkbox(value: true, onChanged: (value) {}),
-                  const Text(TTexts.continueLearn),
-                ],
-              ),
             ],
           ),
           const SizedBox(height: TSizes.defaultSpace),

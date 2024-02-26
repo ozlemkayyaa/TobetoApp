@@ -11,6 +11,18 @@ class PersonalInformation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final TextEditingController nameController = TextEditingController();
+    final TextEditingController surNameController = TextEditingController();
+    final TextEditingController phoneController = TextEditingController();
+    final TextEditingController dateController = TextEditingController();
+    final TextEditingController tcController = TextEditingController();
+    final TextEditingController countryController = TextEditingController();
+    final TextEditingController cityController = TextEditingController();
+    final TextEditingController townController = TextEditingController();
+    final TextEditingController streetController = TextEditingController();
+    final TextEditingController aboutController = TextEditingController();
+    final TextEditingController emailController = TextEditingController();
+
     return Form(
         child: Padding(
       padding: const EdgeInsets.all(TSizes.sm),
@@ -18,10 +30,12 @@ class PersonalInformation extends StatelessWidget {
         scrollDirection: Axis.vertical,
         child: Column(
           children: [
+            // Ad - Soyad
             Row(
               children: [
                 Expanded(
                   child: TextFormField(
+                    controller: nameController,
                     expands: false,
                     decoration: const InputDecoration(
                       labelText: TTexts.signName,
@@ -32,6 +46,7 @@ class PersonalInformation extends StatelessWidget {
                 const SizedBox(width: TSizes.spaceBtwInputFields),
                 Expanded(
                   child: TextFormField(
+                    controller: surNameController,
                     expands: false,
                     decoration: const InputDecoration(
                       labelText: TTexts.signSurname,
@@ -41,11 +56,15 @@ class PersonalInformation extends StatelessWidget {
                 ),
               ],
             ),
+
+            // Telefon - Doğum Tarihi
+
             const SizedBox(height: TSizes.defaultSpace),
             Row(
               children: [
                 Expanded(
                   child: TextFormField(
+                    controller: phoneController,
                     keyboardType: TextInputType.phone,
                     expands: false,
                     decoration: const InputDecoration(
@@ -57,6 +76,7 @@ class PersonalInformation extends StatelessWidget {
                 const SizedBox(width: TSizes.spaceBtwInputFields),
                 Expanded(
                   child: TextFormField(
+                    controller: dateController,
                     keyboardType: TextInputType.datetime,
                     expands: false,
                     decoration: const InputDecoration(
@@ -67,11 +87,15 @@ class PersonalInformation extends StatelessWidget {
                 ),
               ],
             ),
+
+            // TC - Mail
+
             const SizedBox(height: TSizes.defaultSpace),
             Row(
               children: [
                 Expanded(
                   child: TextFormField(
+                    controller: tcController,
                     keyboardType: TextInputType.number,
                     expands: false,
                     decoration: const InputDecoration(
@@ -83,6 +107,7 @@ class PersonalInformation extends StatelessWidget {
                 const SizedBox(width: TSizes.spaceBtwInputFields),
                 Expanded(
                   child: TextFormField(
+                    controller: emailController,
                     keyboardType: TextInputType.emailAddress,
                     expands: false,
                     decoration: const InputDecoration(
@@ -95,17 +120,23 @@ class PersonalInformation extends StatelessWidget {
             ),
             const SizedBox(height: TSizes.spaceBtwInputFields),
 
-            // E-Mail
+            // Ülke
+
             TextFormField(
+              controller: countryController,
               decoration: const InputDecoration(
                 labelText: TTexts.country,
               ),
             ),
+
+            // İl - İlçe
+
             const SizedBox(height: TSizes.spaceBtwInputFields),
             Row(
               children: [
                 Expanded(
                   child: TextFormField(
+                    controller: cityController,
                     expands: false,
                     decoration: const InputDecoration(
                       labelText: TTexts.city,
@@ -115,6 +146,7 @@ class PersonalInformation extends StatelessWidget {
                 const SizedBox(width: TSizes.spaceBtwInputFields),
                 Expanded(
                   child: TextFormField(
+                    controller: townController,
                     expands: false,
                     decoration: const InputDecoration(
                       labelText: TTexts.ilce,
@@ -123,20 +155,31 @@ class PersonalInformation extends StatelessWidget {
                 ),
               ],
             ),
+
+            // Mahalle/Sokak
+
             const SizedBox(height: TSizes.spaceBtwInputFields),
             TextFormField(
+              controller: streetController,
               maxLines: 3,
               decoration: const InputDecoration(
                 labelText: TTexts.street,
               ),
             ),
+
+            // Hakkımda
+
             const SizedBox(height: TSizes.spaceBtwInputFields),
             TextFormField(
+              controller: aboutController,
               maxLines: 3,
               decoration: const InputDecoration(
                 labelText: TTexts.me,
               ),
             ),
+
+            // Kaydet Butonu
+
             const SizedBox(height: TSizes.spaceBtwInputFields),
             SizedBox(
               width: double.infinity,

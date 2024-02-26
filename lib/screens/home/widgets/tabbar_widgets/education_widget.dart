@@ -23,13 +23,13 @@ class EducationWidget extends StatelessWidget {
 
     return Card(
       child: Container(
-        width: 350,
+        width: 340,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(TSizes.buttonRadius),
           color: dark ? TColors.darkContainer : TColors.lightContainer,
         ),
         child: Padding(
-          padding: const EdgeInsets.all(TSizes.sm),
+          padding: const EdgeInsets.all(TSizes.md),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -38,7 +38,7 @@ class EducationWidget extends StatelessWidget {
                 image: AssetImage(image),
                 fit: BoxFit.fill,
                 width: double.infinity,
-                height: 242,
+                height: 230,
               ),
               const SizedBox(height: TSizes.sm),
 

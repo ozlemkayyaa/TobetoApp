@@ -4,8 +4,8 @@ import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/helpers/helper_functions.dart';
 import 'package:tobeto/utils/theme/custom_themes/button_theme.dart';
 
-class TabButtonWidget extends StatelessWidget {
-  const TabButtonWidget({
+class SearchButtonWidget extends StatelessWidget {
+  const SearchButtonWidget({
     super.key,
     required this.buttonName,
     required this.icon,
