@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tobeto/api/blocs/profile_bloc/profile_bloc.dart';
 import 'package:tobeto/api/blocs/profile_bloc/profile_event.dart';
@@ -87,9 +86,7 @@ class _SocialMediaState extends State<SocialMedia> {
                               ),
                               const SizedBox(height: TSizes.sm),
                               Container(
-                                width: MediaQuery.of(context)
-                                    .size
-                                    .width, // Ekranın genişliği kadar
+                                width: MediaQuery.of(context).size.width,
                                 padding: const EdgeInsets.all(TSizes.sm),
                                 decoration: BoxDecoration(
                                   border: Border.all(color: Colors.grey),
@@ -100,11 +97,10 @@ class _SocialMediaState extends State<SocialMedia> {
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Text(
-                                      socialMedia.url,
-                                      style:
-                                          Theme.of(context).textTheme.bodyLarge,
-                                    ),
+                                    Text(socialMedia.url,
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .bodyLarge),
 
                                     // Çöp Kutusuna basılınca bilgiler siliniyor
                                     IconButton(
@@ -128,7 +124,7 @@ class _SocialMediaState extends State<SocialMedia> {
             ),
           );
         }
-        return const Text("Boş");
+        return const Center(child: Text('Beklenmeyen bir hata oluştu.'));
       },
     );
   }

@@ -1,5 +1,8 @@
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:tobeto/api/blocs/profile_bloc/profile_bloc.dart';
+import 'package:tobeto/api/blocs/profile_bloc/profile_event.dart';
+import 'package:tobeto/api/blocs/profile_bloc/profile_state.dart';
 import 'package:flutter/material.dart';
-import 'package:tobeto/screens/profile_create/widgets/form/certificate.dart';
 import 'package:tobeto/screens/profile_create/widgets/form/language.dart';
 import 'package:tobeto/screens/profile_create/widgets/form/settings.dart';
 import 'package:tobeto/screens/profile_create/widgets/form/personal_information.dart';
@@ -16,22 +19,32 @@ class ProfileTabBarViewWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Expanded(
-      child: Padding(
-        padding: EdgeInsets.all(TSizes.sm),
-        child: TabBarView(
-          children: [
-            PersonalInformationForm(),
-            Experience(),
-            EducationLife(),
-            Skills(),
-            Certificate(),
-            SocialMedia(),
-            Language(),
-            Settings(),
-          ],
-        ),
-      ),
-    );
+    return BlocBuilder<ProfileBloc, ProfileState>(builder: (context, state) {
+      if (state is ProfileInitial || state is ProfileUpdated) {
+        context.read<ProfileBloc>().add(FetchProfileEvent());
+      }
+      if (state is ProfileLoading) {
+        return const Center(child: CircularProgressIndicator());
+      }
+      if (state is ProfileLoaded) {
+        return const Expanded(
+          child: Padding(
+            padding: EdgeInsets.all(TSizes.sm),
+            child: TabBarView(
+              children: [
+                PersonalInformationForm(),
+                Experience(),
+                EducationLife(),
+                Skills(),
+                SocialMedia(),
+                Language(),
+                Settings(),
+              ],
+            ),
+          ),
+        );
+      }
+      return const Center(child: Text('Beklenmeyen bir hata oluştu.'));
+    });
   }
 }

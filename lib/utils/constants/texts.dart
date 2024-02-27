@@ -218,6 +218,7 @@ class TTexts {
   static const String socialMedia = "Medya Hesaplarım";
   static const String language = "Yabancı Dillerim";
   static const String settings = "Ayarlar";
+  static const String languageLevel = "Seviye Seçiniz";
 
   // Kişisel Bilgilerim
   static const String birthdate = "Doğum Tarihi";

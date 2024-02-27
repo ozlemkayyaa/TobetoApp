@@ -173,4 +173,43 @@ class DropdownData {
       DropdownItem("Github"),
     ];
   }
+
+  static List<DropdownItem> getLanguage() {
+    return [
+      DropdownItem("Almanca"),
+      DropdownItem("Arapça"),
+      DropdownItem("Çekçe"),
+      DropdownItem("Çince"),
+      DropdownItem("Danca"),
+      DropdownItem("Fince"),
+      DropdownItem("Fransızca"),
+      DropdownItem("Hindi"),
+      DropdownItem("Hollandaca"),
+      DropdownItem("İbranice"),
+      DropdownItem("İngilizce"),
+      DropdownItem("İspanyolca"),
+      DropdownItem("İsveççe"),
+      DropdownItem("İtalyanca"),
+      DropdownItem("Japonca"),
+      DropdownItem("Korece"),
+      DropdownItem("Lehçe"),
+      DropdownItem("Macarca"),
+      DropdownItem("Norveççe"),
+      DropdownItem("Portekizce"),
+      DropdownItem("Romence"),
+      DropdownItem("Rusça"),
+      DropdownItem("Türkçe"),
+      DropdownItem("Vietnamca"),
+      DropdownItem("Yunanca")
+    ];
+  }
+
+  static List<DropdownItem> getLanguageLevel() {
+    return [
+      DropdownItem("Temel Seviye (A1, A2)"),
+      DropdownItem("Orta Seviye (B1, B2)"),
+      DropdownItem("İleri Seviye (C1, C2)"),
+      DropdownItem("Anadil"),
+    ];
+  }
 }

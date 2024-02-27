@@ -10,8 +10,8 @@ import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
 import 'package:tobeto/utils/helpers/helper_functions.dart';
 
-class ProfileSkills extends StatelessWidget {
-  const ProfileSkills({
+class ProfileLanguage extends StatelessWidget {
+  const ProfileLanguage({
     super.key,
   });
 
@@ -45,7 +45,7 @@ class ProfileSkills extends StatelessWidget {
                         children: [
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Text(TTexts.skills,
+                            child: Text(TTexts.language,
                                 style:
                                     Theme.of(context).textTheme.headlineSmall),
                           ),

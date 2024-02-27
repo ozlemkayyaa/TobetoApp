@@ -89,7 +89,7 @@ class _SkillsState extends State<Skills> {
             ),
           );
         }
-        return const Text("Boş");
+        return const Center(child: Text('Beklenmeyen bir hata oluştu.'));
       },
     );
   }

@@ -84,8 +84,6 @@ class _ProfileAvatarState extends State<ProfileAvatar> {
                         child: Text(TTexts.student,
                             style: Theme.of(context).textTheme.headlineMedium),
                       ),
-                      Text(TTexts.job,
-                          style: Theme.of(context).textTheme.bodyLarge),
                       const SizedBox(height: TSizes.sm),
                       const Row(
                         children: [
