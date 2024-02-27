@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:tobeto/screens/catalog/training/models/go_training_model.dart';
-import 'package:tobeto/screens/catalog/training/widget/detail_widget.dart';
+import 'package:tobeto/screens/go_training/models/go_training_model.dart';
+import 'package:tobeto/screens/go_training/widget/detail_widget.dart';
 import 'package:tobeto/utils/constants/image_strings.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 

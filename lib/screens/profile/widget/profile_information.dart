@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:tobeto/screens/profile/create_profile/create_profile_screen.dart';
+import 'package:tobeto/screens/profile_create/create_profile_screen.dart';
 import 'package:tobeto/screens/profile/widget/profile_item_widget.dart';
 import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/sizes.dart';

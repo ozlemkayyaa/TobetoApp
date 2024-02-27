@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:tobeto/screens/catalog/training/data/go_training_data.dart';
-import 'package:tobeto/screens/catalog/training/models/go_training_model.dart';
-import 'package:tobeto/screens/catalog/training/widget/about_widget.dart';
-import 'package:tobeto/screens/catalog/training/widget/go_training_widget.dart';
+import 'package:tobeto/screens/go_training/data/go_training_data.dart';
+import 'package:tobeto/screens/go_training/models/go_training_model.dart';
+import 'package:tobeto/screens/go_training/widget/about_widget.dart';
+import 'package:tobeto/screens/go_training/widget/go_training_widget.dart';
 import 'package:tobeto/utils/constants/texts.dart';
 
 class GoTrainingTabBarViewWidget extends StatefulWidget {

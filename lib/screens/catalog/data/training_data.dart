@@ -1,5 +1,5 @@
 import 'package:tobeto/screens/catalog/models/training_data_model.dart';
-import 'package:tobeto/screens/catalog/training/go_training.dart';
+import 'package:tobeto/screens/go_training/go_training.dart';
 import 'package:tobeto/utils/constants/image_strings.dart';
 
 List<TrainingData> trainingDataList = [

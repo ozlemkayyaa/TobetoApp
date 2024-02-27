@@ -255,6 +255,7 @@ class TTexts {
   static const String end = "Üyeliği Sonlandır";
 
   //Profile Screen
+  static const String url = "https://";
   static const String skills = "Yetkinlikler";
   static const String job = "Mobile Developer";
   static const String profileInformation = "Profil Bilgileri";

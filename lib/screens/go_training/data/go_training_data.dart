@@ -1,4 +1,4 @@
-import 'package:tobeto/screens/catalog/training/models/go_training_model.dart';
+import 'package:tobeto/screens/go_training/models/go_training_model.dart';
 import 'package:tobeto/utils/constants/image_strings.dart';
 import 'package:tobeto/utils/constants/texts.dart';
 

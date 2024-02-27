@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:tobeto/screens/profile/create_profile/widgets/create_profile_tabbar_view_widget.dart';
-import 'package:tobeto/screens/profile/create_profile/widgets/create_profile_tabbar_widget.dart';
+import 'package:tobeto/screens/profile_create/widgets/create_profile_tabbar_view_widget.dart';
+import 'package:tobeto/screens/profile_create/widgets/create_profile_tabbar_widget.dart';
 import 'package:tobeto/utils/constants/image_strings.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
-import 'package:tobeto/screens/catalog/training/widget/go_training_tabbar_view_widget.dart';
-import 'package:tobeto/screens/catalog/training/widget/go_training_tabbar_widget.dart';
+import 'package:tobeto/screens/go_training/widget/go_training_tabbar_view_widget.dart';
+import 'package:tobeto/screens/go_training/widget/go_training_tabbar_widget.dart';
 import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/image_strings.dart';
 import 'package:tobeto/utils/constants/sizes.dart';

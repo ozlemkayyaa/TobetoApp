@@ -162,4 +162,15 @@ class DropdownData {
       DropdownItem("Building and Construction"),
     ];
   }
+
+  static List<DropdownItem> getSocialMedia() {
+    return [
+      DropdownItem("Instagram"),
+      DropdownItem("Twitter"),
+      DropdownItem("Linkedin"),
+      DropdownItem("Behance"),
+      DropdownItem("Dribble"),
+      DropdownItem("Github"),
+    ];
+  }
 }

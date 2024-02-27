@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tobeto/screens/catalog/training/models/go_training_model.dart';
-import 'package:tobeto/screens/catalog/training/widget/training_detail_page.dart';
+import 'package:tobeto/screens/go_training/models/go_training_model.dart';
+import 'package:tobeto/screens/go_training/widget/training_detail_page.dart';
 import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
