@@ -57,9 +57,30 @@ class _SkillsState extends State<Skills> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: selectedSkills
                       .map(
-                        (skill) => Text(
-                          skill,
-                          style: TextStyle(fontSize: 16),
+                        (skill) => Container(
+                          width: MediaQuery.of(context).size.width,
+                          padding: const EdgeInsets.all(TSizes.sm),
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Colors.grey),
+                            borderRadius: BorderRadius.circular(TSizes.sm),
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                skill,
+                                style: Theme.of(context).textTheme.titleMedium,
+                              ),
+                              IconButton(
+                                icon: const Icon(Icons.delete),
+                                onPressed: () {
+                                  setState(() {
+                                    selectedSkills.remove(skill);
+                                  });
+                                },
+                              )
+                            ],
+                          ),
                         ),
                       )
                       .toList(),

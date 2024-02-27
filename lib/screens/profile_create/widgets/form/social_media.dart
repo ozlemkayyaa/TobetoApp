@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tobeto/api/blocs/profile_bloc/profile_bloc.dart';
 import 'package:tobeto/api/blocs/profile_bloc/profile_event.dart';
@@ -44,7 +45,7 @@ class _SocialMediaState extends State<SocialMedia> {
                       if (selectedItem != null) {
                         selectedSocialMedia.add(SocialMediaData(
                           name: selectedItem.text,
-                          url: '', // URL henüz belirlenmedi
+                          url: '', // URL belli değil
                         ));
                       }
                     });
@@ -63,25 +64,61 @@ class _SocialMediaState extends State<SocialMedia> {
                   child: ElevatedButton(
                     onPressed: () {
                       setState(() {
-                        // Seçilen sosyal medya hesabının URL'sini kaydet
+                        // Seçilen sosyal medya hesabının URL'sini kaydeder
                         selectedSocialMedia.last.url = urlController.text;
-                        urlController.clear(); // Text alanını temizle
+                        urlController.clear(); // Text alanını temizler
                       });
                     },
                     child: const Text(TTexts.save),
                   ),
                 ),
                 const SizedBox(height: TSizes.defaultSpace),
-                // Seçilen sosyal medya hesaplarını ekrana yazdır
+
+                // Seçilen sosyal medya hesaplarını ekrana yazdırır
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: selectedSocialMedia
                       .map((socialMedia) => Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(socialMedia.name,
-                                  style: const TextStyle(fontSize: 16)),
-                              Text(socialMedia.url),
+                              Text(
+                                socialMedia.name,
+                                style: Theme.of(context).textTheme.titleLarge,
+                              ),
+                              const SizedBox(height: TSizes.sm),
+                              Container(
+                                width: MediaQuery.of(context)
+                                    .size
+                                    .width, // Ekranın genişliği kadar
+                                padding: const EdgeInsets.all(TSizes.sm),
+                                decoration: BoxDecoration(
+                                  border: Border.all(color: Colors.grey),
+                                  borderRadius:
+                                      BorderRadius.circular(TSizes.sm),
+                                ),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      socialMedia.url,
+                                      style:
+                                          Theme.of(context).textTheme.bodyLarge,
+                                    ),
+
+                                    // Çöp Kutusuna basılınca bilgiler siliniyor
+                                    IconButton(
+                                      icon: const Icon(Icons.delete),
+                                      onPressed: () {
+                                        setState(() {
+                                          selectedSocialMedia
+                                              .remove(socialMedia);
+                                        });
+                                      },
+                                    )
+                                  ],
+                                ),
+                              ),
                               const SizedBox(height: 8),
                             ],
                           ))
