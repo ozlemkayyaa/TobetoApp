@@ -86,16 +86,22 @@ class TabBarViewWidget extends StatelessWidget {
                 child: Row(
                   children: [
                     ExamWidget(
+                        message: TTexts.examMessage,
+                        title: TTexts.examEveryone,
                         examTitle: TTexts.examEveryone,
                         classTitle: TTexts.everyone,
                         examTime: TTexts.time),
                     SizedBox(width: TSizes.defaultSpace),
                     ExamWidget(
+                        message: TTexts.examMessage,
+                        title: TTexts.examEveryone,
                         examTitle: TTexts.examEveryone,
                         classTitle: TTexts.everyone,
                         examTime: TTexts.time),
                     SizedBox(width: TSizes.defaultSpace),
                     ExamWidget(
+                        message: TTexts.examMessage,
+                        title: TTexts.examEveryone,
                         examTitle: TTexts.examEveryone,
                         classTitle: TTexts.everyone,
                         examTime: TTexts.time),

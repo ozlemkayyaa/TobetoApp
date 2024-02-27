@@ -361,4 +361,14 @@ class TTexts {
   static const String baslik3 = "Yeni Grupların Discord'a Katılımı";
   static const String duyuru3 =
       "Merhabalar, Herkes için Kodlama 4A grubunun discorda katılımı yarın gerçekleşecek olan Mentor oturumu sonrası yapılacaktır. Mentor oturumuna 'Eğitimlerim' bölümünden giriş yapabilirsiniz. \n\nTarih: 8.12.2023 \n\nMentor Oturum Saati: 14.00-15.00 \n\nSevgiler,";
+
+// Sınav
+  static const String examTitle1 = "Tobeto İşte Başarı Modeli";
+  static const String examTitle2 = "Front End";
+  static const String examTitle3 = "Full Stack";
+  static const String examTitle4 = "Back End";
+  static const String examTitle5 = "Microsoft SQL Server";
+  static const String examTitle6 = "Masaüstü Programlama";
+  static const String examMessage =
+      "Bu sınav 25 sorudan oluşmakta olup sınav süresi 30 dakikadır. Sınav çoktan seçmeli test şeklinde olup sınavı yarıda bıraktığınız taktirde çözdüğünüz kısım kadarıyla değerlendirileceksiniz. \n\nSınava Süresi: 30 Dakika  \n\nSoru Sayısı: 25 \n\n Soru Tipi: Çoktan Seçmeli";
 }

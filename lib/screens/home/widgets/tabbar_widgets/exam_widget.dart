@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/helpers/helper_functions.dart';
@@ -6,11 +7,15 @@ import 'package:tobeto/utils/helpers/helper_functions.dart';
 class ExamWidget extends StatelessWidget {
   const ExamWidget({
     super.key,
+    required this.title,
+    required this.message,
     required this.examTitle,
     required this.classTitle,
     required this.examTime,
   });
 
+  final String title;
+  final String message;
   final String examTitle;
   final String classTitle;
   final String examTime;
@@ -29,7 +34,9 @@ class ExamWidget extends StatelessWidget {
             color: dark ? TColors.darkContainer : TColors.lightGrey,
           ),
           child: InkWell(
-            onTap: () {},
+            onTap: () {
+              THelperFunctions.showAlert(title, message, context);
+            },
             child: Padding(
               padding: const EdgeInsets.all(TSizes.spaceBtwItems),
               child: Column(

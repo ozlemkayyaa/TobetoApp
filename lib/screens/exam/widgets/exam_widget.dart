@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
 import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/helpers/helper_functions.dart';
@@ -7,10 +8,14 @@ import 'package:tobeto/utils/helpers/helper_functions.dart';
 class ExamWidget extends StatelessWidget {
   const ExamWidget({
     super.key,
+    required this.title,
+    required this.message,
     required this.testName,
     required this.buttonPadding,
   });
 
+  final String title;
+  final String message;
   final String testName;
   final double buttonPadding;
 
@@ -51,7 +56,9 @@ class ExamWidget extends StatelessWidget {
                 padding:
                     const EdgeInsets.only(bottom: TSizes.sm, top: TSizes.sm),
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    THelperFunctions.showAlert(title, message, context);
+                  },
                   style: ElevatedButton.styleFrom(
                     padding: const EdgeInsets.all(5),
                     backgroundColor: TColors.white,
