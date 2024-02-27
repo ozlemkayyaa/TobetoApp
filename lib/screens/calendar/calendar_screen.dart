@@ -39,28 +39,66 @@ class CalendarScreen extends StatelessWidget {
 List<Appointment> getAppointments() {
   List<Appointment> meetings = <Appointment>[];
   final DateTime today = DateTime.now();
-  final DateTime startTime =
-      DateTime(today.year, today.month, today.day, 13, 0, 0);
-  final DateTime endTime = startTime.add(const Duration(hours: 3));
 
+  // Mobil Uygulama Geliştirme
+  final DateTime mobilStartTime =
+      DateTime(today.year, today.month, today.day, 13, 0, 0);
+  final DateTime mobilEndTime = mobilStartTime.add(const Duration(hours: 3));
   meetings.add(
     Appointment(
-      startTime: startTime,
-      endTime: endTime,
+      startTime: mobilStartTime,
+      endTime: mobilEndTime,
       subject: "Mobil Uygulama Geliştirme",
       color: Colors.blue,
-      recurrenceRule: "FREQ=WEEKLY;BYDAY=TU,TH;WKST=SU;UNTIL=20240131T000000",
-      //isAllDay: true, // Bunu yapınca en üste çıkıyor, bunu yapmayıp belli bir saat aralığı da verebilirisin
-
-      /*
-      Böylece her Salı ve perşembeye saat 13.00-16.00 arasına Mobil derslerini yerleştirmiş oldum.
-      FREQ=WEEKLY: Haftalık tekrar.
-      BYDAY=TU,TH: Sadece Salı ve Perşembe günleri.
-      WKST=SU: Haftanın ilk günü Pazar.
-      UNTIL=20240131T000000: 2024 yılının Ocak ayının sonuna kadar devam et.
-       */
+      recurrenceRule: "FREQ=WEEKLY;BYDAY=TU,TH;WKST=SU;UNTIL=20240930T000000",
     ),
   );
+
+  // Java
+  final DateTime javaStartTime =
+      DateTime(today.year, today.month, today.day, 9, 0, 0);
+  final DateTime javaEndTime = javaStartTime.add(const Duration(hours: 3));
+  meetings.add(
+    Appointment(
+      startTime: javaStartTime,
+      endTime: javaEndTime,
+      subject: "Java",
+      color: Colors.green,
+      recurrenceRule:
+          "FREQ=WEEKLY;BYDAY=MO,WE,FR;WKST=SU;UNTIL=20240930T000000",
+    ),
+  );
+
+  // İş Analisti
+  final DateTime isAnalistiStartTime =
+      DateTime(today.year, today.month, today.day, 9, 0, 0);
+  final DateTime isAnalistiEndTime =
+      isAnalistiStartTime.add(const Duration(hours: 3));
+  meetings.add(
+    Appointment(
+      startTime: isAnalistiStartTime,
+      endTime: isAnalistiEndTime,
+      subject: "İş Analisti",
+      color: Colors.orange,
+      recurrenceRule: "FREQ=WEEKLY;BYDAY=TU,TH;WKST=SU;UNTIL=20240930T000000",
+    ),
+  );
+
+  // .Net
+  final DateTime dotNetStartTime =
+      DateTime(today.year, today.month, today.day, 13, 0, 0);
+  final DateTime dotNetEndTime = dotNetStartTime.add(const Duration(hours: 3));
+  meetings.add(
+    Appointment(
+      startTime: dotNetStartTime,
+      endTime: dotNetEndTime,
+      subject: ".Net",
+      color: Colors.purple,
+      recurrenceRule:
+          "FREQ=WEEKLY;BYDAY=MO,WE,FR;WKST=SU;UNTIL=20240930T000000",
+    ),
+  );
+
   return meetings;
 }
 
