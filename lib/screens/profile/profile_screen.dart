@@ -4,7 +4,6 @@ import 'package:iconsax/iconsax.dart';
 import 'package:tobeto/api/blocs/profile_bloc/profile_bloc.dart';
 import 'package:tobeto/api/blocs/profile_bloc/profile_event.dart';
 import 'package:tobeto/api/blocs/profile_bloc/profile_state.dart';
-import 'package:tobeto/model/user_model.dart';
 import 'package:tobeto/screens/home/widgets/drawer_widget.dart';
 import 'package:tobeto/screens/profile/widget/profile_about.dart';
 import 'package:tobeto/screens/profile/widget/profile_avatar.dart';
@@ -50,7 +49,6 @@ class ProfileScreen extends StatelessWidget {
                 return const Center(child: CircularProgressIndicator());
               }
               if (state is ProfileLoaded) {
-                UserModel user = state.user;
                 return const SingleChildScrollView(
                   child: Column(
                     children: [

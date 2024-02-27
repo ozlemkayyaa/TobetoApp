@@ -8,11 +8,18 @@ import 'package:iconsax/iconsax.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
 
-class PersonalInformationForm extends StatelessWidget {
+class PersonalInformationForm extends StatefulWidget {
   const PersonalInformationForm({
     super.key,
   });
 
+  @override
+  State<PersonalInformationForm> createState() =>
+      _PersonalInformationFormState();
+}
+
+class _PersonalInformationFormState extends State<PersonalInformationForm> {
+  final _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     final TextEditingController nameController = TextEditingController();
@@ -36,6 +43,7 @@ class PersonalInformationForm extends StatelessWidget {
       }
       if (state is ProfileLoaded) {
         return Form(
+          key: _formKey,
           child: Padding(
             padding: const EdgeInsets.all(TSizes.sm),
             child: SingleChildScrollView(
