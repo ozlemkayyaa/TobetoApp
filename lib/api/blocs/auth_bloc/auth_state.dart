@@ -14,7 +14,8 @@ class NotAuthenticated extends AuthState {
 
 class Authenticated extends AuthState {
   User? user;
-  String? userName; // Kullanıcı adını tutmak için
+  String? userName;
+  String? surName; // Kullanıcı adını tutmak için
 
-  Authenticated({this.user, this.userName});
+  Authenticated({this.user, this.userName, this.surName});
 }

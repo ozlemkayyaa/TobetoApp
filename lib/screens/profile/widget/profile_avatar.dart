@@ -6,6 +6,7 @@ import 'package:tobeto/api/blocs/profile_bloc/profile_bloc.dart';
 import 'package:tobeto/api/blocs/profile_bloc/profile_event.dart';
 import 'package:tobeto/api/blocs/profile_bloc/profile_state.dart';
 import 'package:tobeto/model/user_model.dart';
+import 'package:tobeto/screens/profile_create/model/social_media_model.dart';
 import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/image_strings.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
@@ -27,9 +28,9 @@ class _ProfileAvatarState extends State<ProfileAvatar> {
     setState(() {
       if (photo != null) {
         _selectedPhoto = File(photo.path);
-        // Fotoğraf seçildiğinde, ProfileBloc'a UploadPhotoEvent'i gönder
         BlocProvider.of<ProfileBloc>(context)
             .add(UploadPhotoEvent(photo: _selectedPhoto!));
+        context.read<ProfileBloc>().add(FetchProfileEvent());
       }
     });
   }
@@ -41,19 +42,20 @@ class _ProfileAvatarState extends State<ProfileAvatar> {
       builder: (context, state) {
         if (state is ProfileInitial || state is ProfileUpdated) {
           context.read<ProfileBloc>().add(FetchProfileEvent());
-          // ProfileInitial veya ProfileUpdated durumları için bir widget dönüşü
-          return Container(); // veya uygun bir widget
+          return Container();
         }
+
         if (state is ProfileLoading) {
           return const Center(child: CircularProgressIndicator());
         }
+
         if (state is ProfileLoaded) {
           final UserModel userModel = state.userModel;
-          // Kullanıcı adı ve soyadına erişin
           final String name = userModel.name!;
           final String surname = userModel.surname!;
+          final List<SocialMediaData> selectedSocialMedia =
+              state.selectedSocialMedia;
 
-          // Kullanıcı adı ve soyadı boş gelemez, bu nedenle null güvenliği için "!" kullanılabilir
           return Padding(
             padding: const EdgeInsets.all(8.0),
             child: Card(
@@ -69,17 +71,15 @@ class _ProfileAvatarState extends State<ProfileAvatar> {
                       onTap: () {
                         pickImage();
                       },
-                      child: _selectedPhoto != null
-                          ? CircleAvatar(
-                              radius: 50,
-                              backgroundColor:
-                                  dark ? TColors.darkGrey : TColors.lightGrey,
-                              backgroundImage: FileImage(_selectedPhoto!),
-                            )
-                          : const Image(
-                              image: AssetImage(TImages.profileImage),
-                              height: 100,
-                            ),
+                      child: CircleAvatar(
+                        radius: 50,
+                        backgroundColor:
+                            dark ? TColors.darkGrey : TColors.lightGrey,
+                        backgroundImage: userModel.profilePhoto != null
+                            ? NetworkImage(userModel.profilePhoto!)
+                            : const AssetImage(TImages.profileImage)
+                                as ImageProvider,
+                      ),
                     ),
                   ),
                   Column(
@@ -87,19 +87,15 @@ class _ProfileAvatarState extends State<ProfileAvatar> {
                     children: [
                       Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Text('$name $surname',
-                            style: Theme.of(context).textTheme.headlineMedium),
+                        child: Text(
+                          '$name $surname',
+                          style: Theme.of(context).textTheme.headlineMedium,
+                        ),
                       ),
                       const SizedBox(height: TSizes.sm),
-                      const Row(
-                        children: [
-                          Image(
-                              image: AssetImage(TImages.linkedin), height: 35),
-                          Image(image: AssetImage(TImages.github), height: 30),
-                          Image(
-                              image: AssetImage(TImages.instagram), height: 37),
-                        ],
-                      )
+                      Row(
+                        children: _buildSocialMediaIcons(selectedSocialMedia),
+                      ),
                     ],
                   ),
                 ],
@@ -107,9 +103,35 @@ class _ProfileAvatarState extends State<ProfileAvatar> {
             ),
           );
         }
-        // Varsayılan olarak bir widget dönüşü
-        return Container(); // veya uygun bir widget
+
+        return Container();
       },
     );
+  }
+
+  List<Widget> _buildSocialMediaIcons(
+      List<SocialMediaData> selectedSocialMedia) {
+    List<Widget> icons = [];
+
+    for (var socialMedia in selectedSocialMedia) {
+      switch (socialMedia.name) {
+        case 'Github':
+          icons.add(const Image(image: AssetImage(TImages.github), height: 30));
+          break;
+        case 'Linkedin':
+          icons.add(
+              const Image(image: AssetImage(TImages.linkedin), height: 35));
+          break;
+        case 'Instagram':
+          icons.add(
+              const Image(image: AssetImage(TImages.instagram), height: 37));
+          break;
+        // Diğer sosyal medya hesaplarını buraya ekleyebilirsiniz.
+        default:
+          break;
+      }
+    }
+
+    return icons;
   }
 }

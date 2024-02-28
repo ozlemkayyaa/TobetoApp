@@ -31,6 +31,7 @@ class _LanguageState extends State<Language> {
           return const Center(child: CircularProgressIndicator());
         }
         if (state is ProfileLoaded) {
+          final List<LanguageData> selectedLanguage = state.selectedLanguage;
           return SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,

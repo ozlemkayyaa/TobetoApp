@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:tobeto/api/blocs/auth_bloc/auth_bloc.dart';
 import 'package:tobeto/api/blocs/auth_bloc/auth_event.dart';
+import 'package:tobeto/api/blocs/auth_bloc/auth_state.dart';
 import 'package:tobeto/screens/contact/contact_screen.dart';
 import 'package:tobeto/screens/team/team_screen.dart';
 import 'package:tobeto/navigation_menu.dart';
@@ -147,26 +148,35 @@ class DrawerWidget extends StatelessWidget {
 
                 // Profil Kısmı
                 const SizedBox(height: TSizes.spaceBtwSections),
-                ListTile(
-                  title: Container(
-                    padding: const EdgeInsets.all(TSizes.defaultSpace),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20.0),
-                      border: Border.all(
-                          color: dark ? TColors.darkGrey : TColors.grey),
-                    ),
-                    child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            TTexts.profileName,
-                            style: Theme.of(context).textTheme.bodyMedium,
+                BlocBuilder<AuthBloc, AuthState>(
+                  builder: (context, state) {
+                    if (state is Authenticated && state.userName != null) {
+                      return ListTile(
+                        title: Container(
+                          padding: const EdgeInsets.all(TSizes.defaultSpace),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20.0),
+                            border: Border.all(
+                                color: dark ? TColors.darkGrey : TColors.grey),
                           ),
-                          const Icon(
-                            Iconsax.profile_circle,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                '${state.userName!} ${state.surName!}',
+                                style: Theme.of(context).textTheme.bodyMedium,
+                              ),
+                              const Icon(
+                                Iconsax.profile_circle,
+                              ),
+                            ],
                           ),
-                        ]),
-                  ),
+                        ),
+                      );
+                    } else {
+                      return const SizedBox();
+                    }
+                  },
                 ),
 
                 // 2024 Tobeto

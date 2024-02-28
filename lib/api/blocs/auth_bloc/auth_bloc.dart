@@ -39,7 +39,11 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       final UserModel userModel =
           await _userRepository.fetchCurrentUser(UserModel());
       final String? userName = userModel.name;
-      emit(Authenticated(user: _firebaseAuth.currentUser, userName: userName));
+      final String? surName = userModel.surname;
+      emit(Authenticated(
+          user: _firebaseAuth.currentUser,
+          userName: userName,
+          surName: surName));
     } on FirebaseAuthException catch (e) {
       emit(NotAuthenticated(errorMessage: e.message));
     }

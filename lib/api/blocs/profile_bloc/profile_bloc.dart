@@ -15,6 +15,8 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
     on<FetchProfileEvent>(_onFetchProfile);
     on<UpdateProfileEvent>(_onUpdateProfile);
     on<UploadPhotoEvent>(_onUploadPhoto);
+    on<UpdateSocialMediaListEvent>(_onUpdateSocialMediaListEvent);
+    on<UpdateLanguageEvent>(_onUpdateLanguageEvent);
   }
 
   // Profil Getir
@@ -24,7 +26,8 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
     emit(ProfileLoading());
     try {
       final user = await _userRepository.fetchCurrentUser(UserModel());
-      emit(ProfileLoaded(userModel: user));
+      emit(ProfileLoaded(
+          userModel: user, selectedSocialMedia: [], selectedLanguage: []));
     } catch (e) {
       emit(ProfileError(errorMessage: e.toString()));
     }
@@ -43,14 +46,47 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
     }
   }
 
+  // Fotoğrafı Güncelle
   Future<void> _onUploadPhoto(
       UploadPhotoEvent event, Emitter<ProfileState> emit) async {
     emit(ProfileLoading());
     try {
-      await _storageRepository.uploadPhoto(event.photo);
-      emit(ProfileUpdated());
+      final currentState = state;
+      if (currentState is ProfileLoaded) {
+        // Fotoğrafı depola (örneğin Firebase Storage'a yükle)
+        final photoUrl = await _storageRepository.uploadPhoto(event.photo);
+
+        // Kullanıcı modelini fotoğraf URL'si ile güncelle
+        final updatedUser =
+            currentState.userModel.copyWith(profilePhoto: photoUrl);
+
+        // Güncellenmiş kullanıcı modeliyle ProfileLoaded durumunu güncelle
+        emit(ProfileLoaded(
+            userModel: updatedUser,
+            selectedSocialMedia: currentState.selectedSocialMedia,
+            selectedLanguage: currentState.selectedLanguage));
+      }
     } catch (e) {
       emit(ProfileError(errorMessage: e.toString()));
+    }
+  }
+
+  // Sosyal Medya Hesaplarını görünür yap
+  void _onUpdateSocialMediaListEvent(
+      UpdateSocialMediaListEvent event, Emitter<ProfileState> emit) {
+    final currentState = state;
+    if (currentState is ProfileLoaded) {
+      emit(currentState.copyWith(
+          selectedSocialMedia: event.selectedSocialMedia));
+    }
+  }
+
+// Yabancı Dil Seç
+  void _onUpdateLanguageEvent(
+      UpdateLanguageEvent event, Emitter<ProfileState> emit) {
+    final currentState = state;
+    if (currentState is ProfileLoaded) {
+      emit(currentState.copyWith(selectedLanguage: event.selectedLanguage));
     }
   }
 }

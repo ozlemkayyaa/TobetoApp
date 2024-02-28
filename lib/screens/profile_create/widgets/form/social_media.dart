@@ -23,15 +23,20 @@ class _SocialMediaState extends State<SocialMedia> {
   @override
   Widget build(BuildContext context) {
     final TextEditingController urlController = TextEditingController();
+
     return BlocBuilder<ProfileBloc, ProfileState>(
       builder: (context, state) {
         if (state is ProfileInitial || state is ProfileUpdated) {
           context.read<ProfileBloc>().add(FetchProfileEvent());
         }
+
         if (state is ProfileLoading) {
           return const Center(child: CircularProgressIndicator());
         }
+
         if (state is ProfileLoaded) {
+          selectedSocialMedia = state.selectedSocialMedia;
+
           return SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -57,6 +62,7 @@ class _SocialMediaState extends State<SocialMedia> {
                     labelText: TTexts.url,
                   ),
                 ),
+
                 const SizedBox(height: TSizes.defaultSpace),
                 SizedBox(
                   width: double.infinity,
@@ -66,6 +72,8 @@ class _SocialMediaState extends State<SocialMedia> {
                         // Seçilen sosyal medya hesabının URL'sini kaydeder
                         selectedSocialMedia.last.url = urlController.text;
                         urlController.clear(); // Text alanını temizler
+                        context.read<ProfileBloc>().add(
+                            UpdateSocialMediaListEvent(selectedSocialMedia));
                       });
                     },
                     child: const Text(TTexts.save),

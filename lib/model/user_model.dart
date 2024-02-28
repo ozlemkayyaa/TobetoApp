@@ -94,4 +94,42 @@ class UserModel {
       'education': education,
     };
   }
+
+  UserModel copyWith({
+    String? userId,
+    String? name,
+    String? surname,
+    String? description,
+    String? github,
+    String? instagram,
+    String? linkedin,
+    String? email,
+    String? phone,
+    String? profilePhoto,
+    DateTime? dateOfBirth,
+    String? tcNo,
+    String? country,
+    String? city,
+    String? address,
+    String? education,
+  }) {
+    return UserModel(
+      userId: userId ?? this.userId,
+      name: name ?? this.name,
+      surname: surname ?? this.surname,
+      description: description ?? this.description,
+      github: github ?? this.github,
+      instagram: instagram ?? this.instagram,
+      linkedin: linkedin ?? this.linkedin,
+      email: email ?? this.email,
+      phone: phone ?? this.phone,
+      profilePhoto: profilePhoto ?? this.profilePhoto,
+      dateOfBirth: dateOfBirth ?? this.dateOfBirth,
+      tcNo: tcNo ?? this.tcNo,
+      country: country ?? this.country,
+      city: city ?? this.city,
+      address: address ?? this.address,
+      education: education ?? this.education,
+    );
+  }
 }

@@ -1,6 +1,8 @@
 import 'dart:io';
 
 import 'package:tobeto/model/user_model.dart';
+import 'package:tobeto/screens/profile_create/model/language_model.dart';
+import 'package:tobeto/screens/profile_create/model/social_media_model.dart';
 
 abstract class ProfileEvent {}
 
@@ -18,9 +20,23 @@ class UpdateProfileEvent extends ProfileEvent {
   });
 }
 
-// Profil Fotoğradını Yükle
+// Profil Fotoğrafını Yükle
 class UploadPhotoEvent extends ProfileEvent {
   final File photo;
 
   UploadPhotoEvent({required this.photo});
+}
+
+// Sosyal Medya Hesabını Seç
+class UpdateSocialMediaListEvent extends ProfileEvent {
+  final List<SocialMediaData> selectedSocialMedia;
+
+  UpdateSocialMediaListEvent(this.selectedSocialMedia);
+}
+
+// Yabancı Dil Seç
+class UpdateLanguageEvent extends ProfileEvent {
+  final List<LanguageData> selectedLanguage;
+
+  UpdateLanguageEvent(this.selectedLanguage);
 }
