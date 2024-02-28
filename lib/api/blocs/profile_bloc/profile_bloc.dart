@@ -48,7 +48,6 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
     emit(ProfileLoading());
     try {
       await _storageRepository.uploadPhoto(event.photo);
-      // Fotoğrafın URL'sini güncellemek için _userRepository.updateUser() çağrısı yapabilirsiniz.
       emit(ProfileUpdated());
     } catch (e) {
       emit(ProfileError(errorMessage: e.toString()));

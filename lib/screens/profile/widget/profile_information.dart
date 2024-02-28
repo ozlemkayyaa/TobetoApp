@@ -1,22 +1,26 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:iconsax/iconsax.dart';
 import 'package:intl/intl.dart';
+
 import 'package:tobeto/api/blocs/profile_bloc/profile_bloc.dart';
 import 'package:tobeto/api/blocs/profile_bloc/profile_event.dart';
 import 'package:tobeto/api/blocs/profile_bloc/profile_state.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:tobeto/model/user_model.dart';
-import 'package:tobeto/screens/profile_create/create_profile_screen.dart';
 import 'package:tobeto/screens/profile/widget/profile_item_widget.dart';
+import 'package:tobeto/screens/profile_create/create_profile_screen.dart';
 import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
 import 'package:tobeto/utils/helpers/helper_functions.dart';
 
 class ProfileInformation extends StatelessWidget {
+  final UserModel userModel;
+
   const ProfileInformation({
     super.key,
+    required this.userModel,
   });
 
   @override
