@@ -24,7 +24,7 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
     emit(ProfileLoading());
     try {
       final user = await _userRepository.fetchCurrentUser(UserModel());
-      emit(ProfileLoaded(user: user));
+      emit(ProfileLoaded(userModel: user));
     } catch (e) {
       emit(ProfileError(errorMessage: e.toString()));
     }
@@ -36,7 +36,7 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
       UpdateProfileEvent event, Emitter<ProfileState> emit) async {
     emit(ProfileLoading());
     try {
-      await _userRepository.updateUser(event.user);
+      await _userRepository.updateUser(event.userModel);
       emit(ProfileUpdated());
     } catch (e) {
       emit(ProfileError(errorMessage: e.toString()));

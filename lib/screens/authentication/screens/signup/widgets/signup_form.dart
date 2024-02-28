@@ -5,9 +5,11 @@ import 'package:iconsax/iconsax.dart';
 import 'package:tobeto/api/blocs/auth_bloc/auth_bloc.dart';
 import 'package:tobeto/api/blocs/auth_bloc/auth_event.dart';
 import 'package:tobeto/api/blocs/auth_bloc/auth_state.dart';
+import 'package:tobeto/model/user_model.dart';
 import 'package:tobeto/screens/authentication/screens/login/login_screen.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
+import 'package:tobeto/utils/validators/validation.dart';
 
 class SignupForm extends StatelessWidget {
   final TextEditingController nameController = TextEditingController();
@@ -21,9 +23,13 @@ class SignupForm extends StatelessWidget {
     super.key,
   });
 
+  final _formKey = GlobalKey<FormState>();
+  final UserModel _user = UserModel();
+
   @override
   Widget build(BuildContext context) {
     return Form(
+      key: _formKey,
       child: Column(
         children: [
           // Ad
@@ -31,6 +37,10 @@ class SignupForm extends StatelessWidget {
             children: [
               Expanded(
                 child: TextFormField(
+                  onSaved: (value) {
+                    _user.name = value!;
+                  },
+                  validator: TValidator.validateName,
                   controller: nameController,
                   expands: false,
                   decoration: const InputDecoration(
@@ -43,6 +53,10 @@ class SignupForm extends StatelessWidget {
               const SizedBox(width: TSizes.spaceBtwInputFields),
               Expanded(
                 child: TextFormField(
+                  onSaved: (value) {
+                    _user.surname = value!;
+                  },
+                  validator: TValidator.validateName,
                   controller: surnameController,
                   expands: false,
                   decoration: const InputDecoration(
@@ -57,6 +71,10 @@ class SignupForm extends StatelessWidget {
 
           // E-Mail
           TextFormField(
+            onSaved: (value) {
+              _user.email = value!;
+            },
+            validator: TValidator.validateEmail,
             controller: emailController,
             decoration: const InputDecoration(
               labelText: TTexts.signEmail,
@@ -67,6 +85,10 @@ class SignupForm extends StatelessWidget {
 
           //Phone Number
           TextFormField(
+            onSaved: (value) {
+              _user.phone = value!;
+            },
+            validator: TValidator.validatePhoneNumber,
             controller: phoneController,
             decoration: const InputDecoration(
               labelText: TTexts.signPhoneNumber,
@@ -77,6 +99,7 @@ class SignupForm extends StatelessWidget {
 
           // Password
           TextFormField(
+            validator: TValidator.validatePassword,
             controller: passwordController,
             obscureText: true,
             decoration: const InputDecoration(
@@ -89,6 +112,7 @@ class SignupForm extends StatelessWidget {
 
           // Password Again
           TextFormField(
+            validator: TValidator.validatePassword,
             controller: confirmPasswordController,
             obscureText: true,
             decoration: const InputDecoration(
@@ -104,22 +128,17 @@ class SignupForm extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
-                TTexts.registerText,
-                style: Theme.of(context).textTheme.bodySmall,
-              ),
+              Text(TTexts.registerText,
+                  style: Theme.of(context).textTheme.bodySmall),
               TextButton(
                   onPressed: () {
                     Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const LoginScreen()),
-                    );
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const LoginScreen()));
                   },
-                  child: Text(
-                    TTexts.loginButton,
-                    style: Theme.of(context).textTheme.bodyLarge,
-                  ))
+                  child: Text(TTexts.loginButton,
+                      style: Theme.of(context).textTheme.bodyLarge))
             ],
           ),
           const SizedBox(height: TSizes.spaceBtwItems),
@@ -131,13 +150,17 @@ class SignupForm extends StatelessWidget {
                 width: double.infinity,
                 child: ElevatedButton(
                     onPressed: () {
-                      context.read<AuthBloc>().add(RegisterEvent(
-                          name: nameController.text,
-                          surname: surnameController.text,
-                          email: emailController.text,
-                          phone: phoneController.text,
-                          password: passwordController.text,
-                          confirmPassword: confirmPasswordController.text));
+                      if (_formKey.currentState!.validate()) {
+                        _formKey.currentState!.save();
+                        context.read<AuthBloc>().add(RegisterEvent(
+                              name: _user.name!,
+                              surname: _user.surname!,
+                              email: _user.email!,
+                              phone: _user.phone!,
+                              password: passwordController.text,
+                              confirmPassword: confirmPasswordController.text,
+                            ));
+                      }
                     },
                     child: const Text(TTexts.registerButton)),
               );

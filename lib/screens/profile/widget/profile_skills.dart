@@ -68,7 +68,8 @@ class ProfileSkills extends StatelessWidget {
                       ),
                       const SizedBox(
                         height: TSizes.sm,
-                      )
+                      ),
+                      Text(""),
                     ],
                   ),
                 ),

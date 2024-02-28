@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class UserModel {
-  String? userId; // doc.set => id'yi alır.
+  String? userId;
   String? name;
   String? surname;
   String? description;
@@ -12,11 +12,11 @@ class UserModel {
   String? phone;
   String? profilePhoto;
   DateTime? dateOfBirth;
-  // yeni eklenenler:
   String? tcNo;
   String? country;
   String? city;
   String? address;
+  String? education;
 
   UserModel({
     this.name,
@@ -34,11 +34,10 @@ class UserModel {
     this.country,
     this.city,
     this.address,
+    this.education,
   });
 
-  // -------------------------------------------------
-
-  // ------------------------- (firestore bilgi çekme:) ------------------------- oku
+  // ------------------------- (firestore bilgi çekme:) -------------------------
   factory UserModel.fromMap(Map<String, dynamic> map) {
     return UserModel(
       userId: map['userId'] ?? "",
@@ -56,6 +55,7 @@ class UserModel {
       country: map['country'] ?? "",
       city: map['city'] ?? "",
       address: map['address'] ?? "",
+      education: map['education'] ?? "",
     );
   }
 
@@ -75,7 +75,6 @@ class UserModel {
   // filtereleeme nin amacı: firestor'a null olanları kaydetme.
 
   Map<String, dynamic> _createMap() {
-    // value = email.textcontroller
     return {
       'userId': userId,
       'email': email,
@@ -92,6 +91,7 @@ class UserModel {
       'country': country,
       'city': city,
       'address': address,
+      'education': education,
     };
   }
 }

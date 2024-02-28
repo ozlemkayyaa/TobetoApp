@@ -5,10 +5,10 @@ import 'package:image_picker/image_picker.dart';
 import 'package:tobeto/api/blocs/profile_bloc/profile_bloc.dart';
 import 'package:tobeto/api/blocs/profile_bloc/profile_event.dart';
 import 'package:tobeto/api/blocs/profile_bloc/profile_state.dart';
+import 'package:tobeto/model/user_model.dart';
 import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/image_strings.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
-import 'package:tobeto/utils/constants/texts.dart';
 import 'package:tobeto/utils/helpers/helper_functions.dart';
 
 class ProfileAvatar extends StatefulWidget {
@@ -48,6 +48,12 @@ class _ProfileAvatarState extends State<ProfileAvatar> {
           return const Center(child: CircularProgressIndicator());
         }
         if (state is ProfileLoaded) {
+          final UserModel userModel = state.userModel;
+          // Kullanıcı adı ve soyadına erişin
+          final String name = userModel.name!;
+          final String surname = userModel.surname!;
+
+          // Kullanıcı adı ve soyadı boş gelemez, bu nedenle null güvenliği için "!" kullanılabilir
           return Padding(
             padding: const EdgeInsets.all(8.0),
             child: Card(
@@ -81,7 +87,7 @@ class _ProfileAvatarState extends State<ProfileAvatar> {
                     children: [
                       Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Text(TTexts.student,
+                        child: Text('$name $surname',
                             style: Theme.of(context).textTheme.headlineMedium),
                       ),
                       const SizedBox(height: TSizes.sm),

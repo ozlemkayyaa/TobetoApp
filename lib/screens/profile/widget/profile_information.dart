@@ -1,10 +1,12 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:intl/intl.dart';
 import 'package:tobeto/api/blocs/profile_bloc/profile_bloc.dart';
 import 'package:tobeto/api/blocs/profile_bloc/profile_event.dart';
 import 'package:tobeto/api/blocs/profile_bloc/profile_state.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:tobeto/model/user_model.dart';
 import 'package:tobeto/screens/profile_create/create_profile_screen.dart';
 import 'package:tobeto/screens/profile/widget/profile_item_widget.dart';
 import 'package:tobeto/utils/constants/colors.dart';
@@ -29,6 +31,15 @@ class ProfileInformation extends StatelessWidget {
         return const Center(child: CircularProgressIndicator());
       }
       if (state is ProfileLoaded) {
+        final UserModel userModel = state.userModel;
+
+        final String email = userModel.email!;
+        final String phone = userModel.phone!;
+        final String education = userModel.education!;
+        final String birthdate = userModel.dateOfBirth != null
+            ? DateFormat('dd/MM/yyyy').format(userModel.dateOfBirth!)
+            : '';
+
         return Padding(
           padding: const EdgeInsets.only(
               bottom: TSizes.sm, left: TSizes.sm, right: TSizes.sm),
@@ -70,31 +81,31 @@ class ProfileInformation extends StatelessWidget {
                   ),
 
                   // Doğum Tarihi
-                  const ProfileItemWidget(
+                  ProfileItemWidget(
                     title: TTexts.birthdate,
-                    data: TTexts.studentBirthdate,
-                    selectIcon: Icon(Iconsax.calendar, size: 35),
+                    data: birthdate,
+                    selectIcon: const Icon(Iconsax.calendar, size: 35),
                   ),
 
                   // Eğitim
-                  const ProfileItemWidget(
+                  ProfileItemWidget(
                     title: TTexts.education,
-                    data: TTexts.licanseDegree,
-                    selectIcon: Icon(Icons.school_outlined, size: 35),
+                    data: education,
+                    selectIcon: const Icon(Icons.school_outlined, size: 35),
                   ),
 
                   // E-Mail
-                  const ProfileItemWidget(
+                  ProfileItemWidget(
                     title: TTexts.postaAdress,
-                    data: TTexts.studentEMail,
-                    selectIcon: Icon(CupertinoIcons.mail, size: 35),
+                    data: email,
+                    selectIcon: const Icon(CupertinoIcons.mail, size: 35),
                   ),
 
                   // Telefon
-                  const ProfileItemWidget(
+                  ProfileItemWidget(
                     title: TTexts.phoneNumber,
-                    data: TTexts.studentTelephoneNumber,
-                    selectIcon: Icon(Iconsax.call, size: 35),
+                    data: phone,
+                    selectIcon: const Icon(Iconsax.call, size: 35),
                   ),
                 ],
               ),

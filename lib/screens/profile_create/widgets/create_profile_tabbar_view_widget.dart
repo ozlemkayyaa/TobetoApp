@@ -5,7 +5,7 @@ import 'package:tobeto/api/blocs/profile_bloc/profile_state.dart';
 import 'package:flutter/material.dart';
 import 'package:tobeto/screens/profile_create/widgets/form/language.dart';
 import 'package:tobeto/screens/profile_create/widgets/form/settings.dart';
-import 'package:tobeto/screens/profile_create/widgets/form/personal_information.dart';
+import 'package:tobeto/screens/profile_create/widgets/form/personal_information_form.dart';
 import 'package:tobeto/screens/profile_create/widgets/form/education_life.dart';
 import 'package:tobeto/screens/profile_create/widgets/form/experience.dart';
 import 'package:tobeto/screens/profile_create/widgets/form/skills.dart';

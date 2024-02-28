@@ -10,10 +10,10 @@ class FetchProfileEvent extends ProfileEvent {}
 
 // Profil Bilgilerimi Güncelle
 class UpdateProfileEvent extends ProfileEvent {
-  UserModel user;
+  final UserModel userModel;
   File? photo;
   UpdateProfileEvent({
-    required this.user,
+    required this.userModel,
     this.photo,
   });
 }

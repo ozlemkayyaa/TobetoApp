@@ -11,8 +11,8 @@ class ProfileLoading extends ProfileState {
 
 // Yüklendi, Profil bilgileri ekranda gözükür.
 class ProfileLoaded extends ProfileState {
-  UserModel user;
-  ProfileLoaded({required this.user});
+  final UserModel userModel;
+  ProfileLoaded({required this.userModel});
 }
 
 //  Veri Yoksa

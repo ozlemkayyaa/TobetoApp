@@ -4,6 +4,7 @@ import 'package:tobeto/api/blocs/profile_bloc/profile_event.dart';
 import 'package:tobeto/api/blocs/profile_bloc/profile_state.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:tobeto/model/user_model.dart';
 import 'package:tobeto/screens/profile_create/create_profile_screen.dart';
 import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
@@ -26,6 +27,9 @@ class ProfileAbout extends StatelessWidget {
         return const Center(child: CircularProgressIndicator());
       }
       if (state is ProfileLoaded) {
+        final UserModel userModel = state.userModel;
+        final String about = userModel.description!;
+
         return Padding(
           padding: const EdgeInsets.only(
               bottom: TSizes.sm, left: TSizes.sm, right: TSizes.sm),
@@ -64,6 +68,11 @@ class ProfileAbout extends StatelessWidget {
                       color: TColors.black,
                       height: 0.5,
                     ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(about,
+                        style: Theme.of(context).textTheme.bodyMedium),
                   ),
                 ],
               ),

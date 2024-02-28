@@ -3,14 +3,22 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tobeto/api/blocs/profile_bloc/profile_bloc.dart';
 import 'package:tobeto/api/blocs/profile_bloc/profile_event.dart';
 import 'package:tobeto/api/blocs/profile_bloc/profile_state.dart';
+import 'package:tobeto/model/user_model.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
 
-class EducationLife extends StatelessWidget {
+class EducationLife extends StatefulWidget {
   const EducationLife({
     super.key,
   });
 
+  @override
+  State<EducationLife> createState() => _EducationLifeState();
+}
+
+class _EducationLifeState extends State<EducationLife> {
+  final _formKey = GlobalKey<FormState>();
+  final _userModel = UserModel();
   @override
   Widget build(BuildContext context) {
     final TextEditingController gradeController = TextEditingController();
@@ -29,15 +37,19 @@ class EducationLife extends StatelessWidget {
       }
       if (state is ProfileLoaded) {
         return Form(
+          key: _formKey,
           child: Padding(
             padding: const EdgeInsets.all(TSizes.sm),
             child: Column(
               children: [
                 TextFormField(
+                  onSaved: (value) {
+                    _userModel.education = value;
+                  },
                   controller: gradeController,
                   expands: false,
                   decoration: const InputDecoration(
-                    labelText: TTexts.grade,
+                    labelText: TTexts.education,
                   ),
                 ),
                 const SizedBox(height: TSizes.spaceBtwInputFields),
@@ -79,7 +91,16 @@ class EducationLife extends StatelessWidget {
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                      onPressed: () {}, child: const Text(TTexts.save)),
+                      onPressed: () {
+                        if (_formKey.currentState!.validate()) {
+                          _formKey.currentState!.save();
+                          context
+                              .read<ProfileBloc>()
+                              .add(UpdateProfileEvent(userModel: _userModel));
+                          Navigator.pop(context);
+                        }
+                      },
+                      child: const Text(TTexts.save)),
                 )
               ],
             ),
