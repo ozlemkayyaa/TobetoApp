@@ -4,7 +4,6 @@ import 'package:tobeto/model/user_model.dart';
 import 'package:tobeto/screens/profile_create/model/language_model.dart';
 import 'package:tobeto/screens/profile_create/model/skills_model.dart';
 import 'package:tobeto/screens/profile_create/model/social_media_model.dart';
-import 'package:tobeto/screens/profile_create/widgets/form/skills.dart';
 
 abstract class ProfileEvent {}
 
@@ -49,3 +48,5 @@ class UpdateSkillsEvent extends ProfileEvent {
 
   UpdateSkillsEvent(this.selectedSkills);
 }
+
+class DeleteUserEvent extends ProfileEvent {}

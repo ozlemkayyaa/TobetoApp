@@ -18,6 +18,7 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
     on<UpdateSocialMediaListEvent>(_onUpdateSocialMediaListEvent);
     on<UpdateLanguageEvent>(_onUpdateLanguageEvent);
     on<UpdateSkillsEvent>(_onUpdateSkillsEvent);
+    on<DeleteUserEvent>(_onDeleteUser);
   }
 
   // Profil Getir
@@ -101,6 +102,17 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
     final currentState = state;
     if (currentState is ProfileLoaded) {
       emit(currentState.copyWith(selectedSkills: event.selectedSkills));
+    }
+  }
+
+  // Kullanıcıyı sil
+  Future<void> _onDeleteUser(
+      DeleteUserEvent event, Emitter<ProfileState> emit) async {
+    try {
+      await _userRepository.deleteUser(UserModel());
+      emit(ProfileUpdated());
+    } catch (e) {
+      emit(ProfileError(errorMessage: (e.toString())));
     }
   }
 }

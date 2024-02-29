@@ -5,7 +5,7 @@ import 'package:iconsax/iconsax.dart';
 import 'package:tobeto/api/blocs/auth_bloc/auth_bloc.dart'; // AuthBloc'u import edin
 import 'package:tobeto/api/blocs/auth_bloc/auth_event.dart';
 import 'package:tobeto/api/blocs/auth_bloc/auth_state.dart';
-import 'package:tobeto/screens/authentication/screens/password/forgot_password.dart';
+import 'package:tobeto/screens/authentication/screens/password/forgotten_password.dart';
 import 'package:tobeto/screens/authentication/screens/signup/signup_screen.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
@@ -59,7 +59,7 @@ class LoginForm extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const ForgotPassword()),
+                              builder: (context) => const ForgottenPassword()),
                         );
                       },
                       child: const Text(TTexts.passwordForgot),

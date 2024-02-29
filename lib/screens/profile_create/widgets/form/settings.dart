@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:tobeto/api/blocs/auth_bloc/auth_bloc.dart';
+import 'package:tobeto/api/blocs/auth_bloc/auth_event.dart';
 import 'package:tobeto/api/blocs/profile_bloc/profile_bloc.dart';
 import 'package:tobeto/api/blocs/profile_bloc/profile_event.dart';
 import 'package:tobeto/api/blocs/profile_bloc/profile_state.dart';
+import 'package:tobeto/screens/authentication/screens/login/login_screen.dart';
 import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
@@ -69,7 +72,12 @@ class Settings extends StatelessWidget {
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        context.read<AuthBloc>().add(ChangePassword(
+                            newPassword: newController.text.trim(),
+                            confirmNewPassword:
+                                newAgainController.text.trim()));
+                      },
                       child: const Text(TTexts.changePassword)),
                 ),
                 const SizedBox(height: TSizes.defaultSpace),
@@ -79,7 +87,11 @@ class Settings extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                         backgroundColor: TColors.error,
                         side: const BorderSide(color: TColors.error)),
-                    onPressed: () {},
+                    onPressed: () {
+                      context.read<ProfileBloc>().add(DeleteUserEvent());
+                      BlocProvider.of<AuthBloc>(context).add(LogoutEvent());
+                      Navigator.pop(context);
+                    },
                     child: const Text(TTexts.end),
                   ),
                 ),

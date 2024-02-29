@@ -5,8 +5,8 @@ import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
 import 'package:tobeto/utils/helpers/helper_functions.dart';
 
-class ForgotPassword extends StatelessWidget {
-  const ForgotPassword({super.key});
+class ForgottenPassword extends StatelessWidget {
+  const ForgottenPassword({super.key});
 
   @override
   Widget build(BuildContext context) {

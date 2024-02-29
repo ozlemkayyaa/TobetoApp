@@ -12,11 +12,16 @@ import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
 import 'package:tobeto/utils/helpers/helper_functions.dart';
 
-class ProfileSkills extends StatelessWidget {
+class ProfileSkills extends StatefulWidget {
   const ProfileSkills({
     super.key,
   });
 
+  @override
+  State<ProfileSkills> createState() => _ProfileSkillsState();
+}
+
+class _ProfileSkillsState extends State<ProfileSkills> {
   @override
   Widget build(BuildContext context) {
     final dark = THelperFunctions.isDarkMode(context);

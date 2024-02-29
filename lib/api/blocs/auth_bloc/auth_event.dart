@@ -25,3 +25,21 @@ class RegisterEvent extends AuthEvent {
 }
 
 class LogoutEvent extends AuthEvent {}
+
+class ForgotPassword extends AuthEvent {
+  String email;
+  ForgotPassword({
+    required this.email,
+  });
+}
+
+class ChangePassword extends AuthEvent {
+  String newPassword;
+  String confirmNewPassword;
+  ChangePassword({
+    required this.newPassword,
+    required this.confirmNewPassword,
+  });
+}
+
+class DeleteUserEmail extends AuthEvent {}

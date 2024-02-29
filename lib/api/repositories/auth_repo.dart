@@ -20,4 +20,35 @@ class AuthRepository {
   Future<void> logoutUser() async {
     await _firebaseAuth.signOut();
   }
+
+  // Forgot Password
+  Future<void> forgotPassword(String email) async {
+    try {
+      await _firebaseAuth.setLanguageCode('tr');
+      await _firebaseAuth.sendPasswordResetEmail(email: email);
+    } catch (e) {
+      print(e);
+    }
+  }
+
+  // Change Password
+  Future<void> changePassword(
+      String newPassword, String confirmNewPassword) async {
+    final user = FirebaseAuth.instance.currentUser;
+
+    if (user != null) {
+      await user.updatePassword(newPassword);
+    } else {
+      throw Exception('Kullanıcı yok');
+    }
+  }
+
+  // Delete
+  Future<void> deleteUserEmail() async {
+    final user = FirebaseAuth.instance.currentUser;
+    if (user == null) {
+      return;
+    }
+    await user.delete();
+  }
 }

@@ -36,4 +36,12 @@ class UserRepository {
     userModel.userId = _firebaseAuth.currentUser!.uid;
     await users.doc(userModel.userId).update(userModel.toMap());
   }
+
+  // Delete
+  Future<void> deleteUser(UserModel userModel) async {
+    final CollectionReference users =
+        _firebaseFirestore.collection(Collections.USERS);
+    userModel.userId = _firebaseAuth.currentUser!.uid;
+    await users.doc(userModel.userId).delete();
+  }
 }

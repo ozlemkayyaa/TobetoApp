@@ -18,6 +18,9 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     on<LoginEvent>(_onLogin);
     on<RegisterEvent>(_onRegister);
     on<LogoutEvent>(_onLogout);
+    on<DeleteUserEmail>(_onDeleteUserEmail);
+    on<ForgotPassword>(_onForgotPassword);
+    on<ChangePassword>(_onChangePassword);
 
     _firebaseAuth.authStateChanges().listen((user) {
       if (user != null) {
@@ -78,6 +81,39 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       await _authRepository.logoutUser();
     } catch (e) {
       // ignore: avoid_print
+      print(e);
+    }
+  }
+
+  // forgotPassword
+
+  void _onForgotPassword(ForgotPassword event, Emitter<AuthState> emit) async {
+    try {
+      await _authRepository.forgotPassword(event.email);
+    } catch (e) {
+      print(e);
+    }
+  }
+
+  // changePassword
+
+  void _onChangePassword(ChangePassword event, Emitter<AuthState> emit) async {
+    try {
+      if (event.newPassword == event.confirmNewPassword) {
+        await _authRepository.changePassword(
+            event.newPassword, event.confirmNewPassword);
+      }
+    } catch (e) {
+      print(e);
+    }
+  }
+
+  Future<void> _onDeleteUserEmail(
+      DeleteUserEmail event, Emitter<AuthState> emit) async {
+    emit(AuthLoading());
+    try {
+      await _authRepository.deleteUserEmail();
+    } catch (e) {
       print(e);
     }
   }

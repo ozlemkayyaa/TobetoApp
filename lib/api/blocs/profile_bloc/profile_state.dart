@@ -46,3 +46,5 @@ class ProfileError extends ProfileState {
 }
 
 class ProfileUpdated extends ProfileState {}
+
+class ProfileDeleted extends ProfileState {}
