@@ -82,7 +82,7 @@ class _CatalogeScreenState extends State<CatalogeScreen> {
                         ),
                       ),
 
-                      // Eğitimmlerin listelenmesi
+                      // Eğitimlerin listelenmesi
                       Column(
                         children: visibleTrainings.map((training) {
                           return TrainingsWidget(

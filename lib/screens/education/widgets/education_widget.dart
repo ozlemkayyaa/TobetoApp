@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:tobeto/screens/education/education_screen.dart';
 import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
@@ -11,11 +10,13 @@ class EducationWidget extends StatelessWidget {
     required this.title,
     required this.date,
     required this.image,
+    required this.navigateTo,
   });
 
   final String title;
   final String date;
   final String image;
+  final Widget navigateTo;
 
   @override
   Widget build(BuildContext context) {
@@ -58,8 +59,7 @@ class EducationWidget extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(
-                            builder: (context) => const EducationScreen()),
+                        MaterialPageRoute(builder: (context) => navigateTo),
                       );
                     },
                     style: ElevatedButton.styleFrom(

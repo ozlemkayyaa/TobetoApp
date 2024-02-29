@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:tobeto/screens/announcements/announcement_screen.dart';
 import 'package:tobeto/screens/education/education_screen.dart';
+import 'package:tobeto/screens/education/widgets/ecmel.dart';
+import 'package:tobeto/screens/education/widgets/istCode.dart';
 import 'package:tobeto/screens/home/widgets/application_widget.dart';
 import 'package:tobeto/screens/exam/widgets/exam_home_widget.dart';
 import 'package:tobeto/screens/education/widgets/education_widget.dart';
@@ -45,11 +47,13 @@ class TabBarViewWidget extends StatelessWidget {
             child: Row(
               children: [
                 const EducationWidget(
+                    navigateTo: Ecmel(),
                     image: TImages.ecmelHoca,
                     title: TTexts.ecmel,
                     date: TTexts.ecmelDate),
                 const SizedBox(width: TSizes.spaceBtwItems),
                 const EducationWidget(
+                    navigateTo: IstCode(),
                     image: TImages.istKod,
                     title: TTexts.howEducation,
                     date: TTexts.howEducationDate),

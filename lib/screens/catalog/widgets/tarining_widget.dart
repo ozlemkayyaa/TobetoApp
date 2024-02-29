@@ -32,7 +32,7 @@ class TrainingsWidget extends StatelessWidget {
       },
       child: Card(
         child: Container(
-          width: 360,
+          width: 350,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(TSizes.buttonRadius),
             color: dark ? TColors.darkContainer : TColors.lightContainer,
@@ -47,7 +47,7 @@ class TrainingsWidget extends StatelessWidget {
                   image: AssetImage(image),
                   fit: BoxFit.fill,
                   width: double.infinity,
-                  height: 280,
+                  height: 250,
                 ),
                 const SizedBox(height: TSizes.sm),
 

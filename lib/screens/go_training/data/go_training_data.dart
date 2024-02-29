@@ -114,4 +114,32 @@ class GoTrainingData {
       )
     ];
   }
+
+  static List<GoTrainingModel> getLessons9() {
+    return [
+      GoTrainingModel(
+        title: TTexts.ecmel,
+        time: "3 dk",
+        image: TImages.ecmelHoca,
+        like: 327,
+        visible: 43,
+        content: '',
+        interest: '',
+      )
+    ];
+  }
+
+  static List<GoTrainingModel> getLessons10() {
+    return [
+      GoTrainingModel(
+        title: TTexts.howEducation,
+        time: "1 dk",
+        image: TImages.istKod,
+        like: 327,
+        visible: 43,
+        content: '',
+        interest: '',
+      )
+    ];
+  }
 }
