@@ -27,6 +27,7 @@ class AuthRepository {
       await _firebaseAuth.setLanguageCode('tr');
       await _firebaseAuth.sendPasswordResetEmail(email: email);
     } catch (e) {
+      // ignore: avoid_print
       print(e);
     }
   }

@@ -91,6 +91,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     try {
       await _authRepository.forgotPassword(event.email);
     } catch (e) {
+      // ignore: avoid_print
       print(e);
     }
   }
@@ -104,6 +105,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
             event.newPassword, event.confirmNewPassword);
       }
     } catch (e) {
+      // ignore: avoid_print
       print(e);
     }
   }
@@ -114,6 +116,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     try {
       await _authRepository.deleteUserEmail();
     } catch (e) {
+      // ignore: avoid_print
       print(e);
     }
   }

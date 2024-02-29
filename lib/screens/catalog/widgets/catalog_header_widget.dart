@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tobeto/screens/education/widgets/search_button_widget.dart';
 import 'package:tobeto/utils/constants/colors.dart';
