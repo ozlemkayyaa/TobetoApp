@@ -6,7 +6,6 @@ import 'package:tobeto/api/blocs/auth_bloc/auth_event.dart';
 import 'package:tobeto/api/blocs/profile_bloc/profile_bloc.dart';
 import 'package:tobeto/api/blocs/profile_bloc/profile_event.dart';
 import 'package:tobeto/api/blocs/profile_bloc/profile_state.dart';
-import 'package:tobeto/screens/authentication/screens/login/login_screen.dart';
 import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';

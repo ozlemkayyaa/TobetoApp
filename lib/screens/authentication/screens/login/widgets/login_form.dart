@@ -5,12 +5,13 @@ import 'package:iconsax/iconsax.dart';
 import 'package:tobeto/api/blocs/auth_bloc/auth_bloc.dart'; // AuthBloc'u import edin
 import 'package:tobeto/api/blocs/auth_bloc/auth_event.dart';
 import 'package:tobeto/api/blocs/auth_bloc/auth_state.dart';
+import 'package:tobeto/model/user_model.dart';
 import 'package:tobeto/screens/authentication/screens/password/forgotten_password.dart';
 import 'package:tobeto/screens/authentication/screens/signup/signup_screen.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
+import 'package:tobeto/utils/validators/validation.dart';
 
-@override
 class LoginForm extends StatelessWidget {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
@@ -19,16 +20,24 @@ class LoginForm extends StatelessWidget {
     super.key,
   });
 
+  final _formKey = GlobalKey<FormState>();
+  final UserModel _user = UserModel();
+
   @override
   Widget build(BuildContext context) {
     return Form(
+      key: _formKey,
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: TSizes.spaceBtwSections),
         child: Column(
           children: [
             // Email
             TextFormField(
-              controller: emailController, // Email denetleyicisi
+              onSaved: (value) {
+                _user.email = value!;
+              },
+              validator: TValidator.validateEmail,
+              controller: emailController,
               decoration: const InputDecoration(
                 prefixIcon: Icon(CupertinoIcons.mail),
                 labelText: TTexts.userEmail,
@@ -38,7 +47,8 @@ class LoginForm extends StatelessWidget {
 
             // Password
             TextFormField(
-              controller: passwordController, // Şifre denetleyicisi
+              validator: TValidator.validatePassword,
+              controller: passwordController,
               decoration: const InputDecoration(
                 prefixIcon: Icon(Iconsax.lock),
                 labelText: TTexts.userPassword,
@@ -78,9 +88,13 @@ class LoginForm extends StatelessWidget {
                   child: ElevatedButton(
                     onPressed: () {
                       // Giriş butonu tıklandığında AuthBloc'a giriş olayını ilet
-                      context.read<AuthBloc>().add(LoginEvent(
-                          email: emailController.text,
-                          password: passwordController.text));
+                      if (_formKey.currentState!.validate()) {
+                        _formKey.currentState!.save();
+                        context.read<AuthBloc>().add(LoginEvent(
+                              email: _user.email!,
+                              password: passwordController.text,
+                            ));
+                      }
                     },
                     child: const Text(TTexts.loginButton),
                   ),
@@ -90,6 +104,7 @@ class LoginForm extends StatelessWidget {
             const SizedBox(height: TSizes.spaceBtwItems),
 
             // Register Button
+
             SizedBox(
               width: double.infinity,
               child: OutlinedButton(
