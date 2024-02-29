@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:tobeto/screens/contact/message_screen.dart';
 import 'package:tobeto/screens/contact/widgets/divider_widget.dart';
-import 'package:tobeto/screens/home/widgets/drawer_widget.dart';
 import 'package:tobeto/utils/constants/image_strings.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
@@ -25,7 +24,6 @@ class ContactScreen extends StatelessWidget {
             )
           ],
         ),
-        drawer: const DrawerWidget(),
         body: Padding(
           padding: const EdgeInsets.all(TSizes.sm),
           child: Column(

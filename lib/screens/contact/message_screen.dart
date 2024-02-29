@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:tobeto/screens/contact/message_form.dart';
-import 'package:tobeto/screens/home/widgets/drawer_widget.dart';
 import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/image_strings.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
@@ -28,7 +27,6 @@ class MessageScreen extends StatelessWidget {
           )
         ],
       ),
-      drawer: const DrawerWidget(),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(TSizes.sm),

@@ -178,23 +178,6 @@ class DrawerWidget extends StatelessWidget {
                     }
                   },
                 ),
-
-                // 2024 Tobeto
-                ListTile(
-                  title: Row(
-                    children: [
-                      const Icon(Iconsax.copyright),
-                      Padding(
-                        padding: const EdgeInsets.only(
-                            left: TSizes.defaultSpace / 4),
-                        child: Text(
-                          TTexts.year,
-                          style: Theme.of(context).textTheme.labelLarge,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
               ],
             ),
           ),
