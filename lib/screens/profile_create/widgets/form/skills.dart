@@ -6,6 +6,7 @@ import 'package:tobeto/api/blocs/profile_bloc/profile_state.dart';
 import 'package:tobeto/screens/catalog/data/dropdown_data.dart';
 import 'package:tobeto/screens/catalog/models/dropdown_items.dart';
 import 'package:tobeto/screens/catalog/widgets/custom_drop_button.dart';
+import 'package:tobeto/screens/profile_create/model/skills_model.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
 
@@ -30,6 +31,7 @@ class _SkillsState extends State<Skills> {
           return const Center(child: CircularProgressIndicator());
         }
         if (state is ProfileLoaded) {
+          final List<SkillsData> selectedSkills = state.selectedSkills;
           return SingleChildScrollView(
             child: Column(
               children: [
@@ -39,7 +41,11 @@ class _SkillsState extends State<Skills> {
                   onChanged: (DropdownItem? selectedItem) {
                     setState(() {
                       if (selectedItem != null) {
-                        selectedSkills.add(selectedItem.text);
+                        selectedSkills
+                            .add(SkillsData(skills: selectedItem.text));
+                        context
+                            .read<ProfileBloc>()
+                            .add(UpdateSkillsEvent(selectedSkills));
                       }
                     });
                   },
@@ -48,7 +54,9 @@ class _SkillsState extends State<Skills> {
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
                     child: const Text(TTexts.save),
                   ),
                 ),
@@ -57,7 +65,7 @@ class _SkillsState extends State<Skills> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: selectedSkills
                       .map(
-                        (skill) => Container(
+                        (skillData) => Container(
                           width: MediaQuery.of(context).size.width,
                           padding: const EdgeInsets.all(TSizes.sm),
                           decoration: BoxDecoration(
@@ -68,14 +76,17 @@ class _SkillsState extends State<Skills> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-                                skill,
+                                skillData.skills,
                                 style: Theme.of(context).textTheme.titleMedium,
                               ),
                               IconButton(
                                 icon: const Icon(Icons.delete),
                                 onPressed: () {
                                   setState(() {
-                                    selectedSkills.remove(skill);
+                                    selectedSkills.remove(skillData);
+                                    context
+                                        .read<ProfileBloc>()
+                                        .add(UpdateSkillsEvent(selectedSkills));
                                   });
                                 },
                               )

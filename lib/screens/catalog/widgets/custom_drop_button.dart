@@ -4,16 +4,17 @@ import 'package:tobeto/screens/catalog/models/dropdown_items.dart';
 class CustomDropdownButton extends StatefulWidget {
   final String buttonText;
   final List<DropdownItem> itemList;
-  final ValueChanged<DropdownItem?>? onChanged; // Eklenen satır
+  final ValueChanged<DropdownItem?>? onChanged;
 
   const CustomDropdownButton({
     required this.buttonText,
     required this.itemList,
-    this.onChanged, // Eklenen satır
-    super.key, // Burada key parametresi düzgün tanımlanmış
-  }); // key parametresi üst sınıfa iletiliyor
+    this.onChanged,
+    super.key,
+  });
 
   @override
+
   // ignore: library_private_types_in_public_api
   _CustomDropdownButtonState createState() => _CustomDropdownButtonState();
 }
@@ -41,7 +42,7 @@ class _CustomDropdownButtonState extends State<CustomDropdownButton> {
           onChanged: (value) {
             setState(() {
               _selectedItem = value;
-              widget.onChanged?.call(value); // onChanged fonksiyonunu çağır
+              widget.onChanged?.call(value);
             });
           },
           items: widget.itemList.map((item) {

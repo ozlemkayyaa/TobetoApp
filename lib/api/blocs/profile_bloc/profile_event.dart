@@ -2,7 +2,9 @@ import 'dart:io';
 
 import 'package:tobeto/model/user_model.dart';
 import 'package:tobeto/screens/profile_create/model/language_model.dart';
+import 'package:tobeto/screens/profile_create/model/skills_model.dart';
 import 'package:tobeto/screens/profile_create/model/social_media_model.dart';
+import 'package:tobeto/screens/profile_create/widgets/form/skills.dart';
 
 abstract class ProfileEvent {}
 
@@ -39,4 +41,11 @@ class UpdateLanguageEvent extends ProfileEvent {
   final List<LanguageData> selectedLanguage;
 
   UpdateLanguageEvent(this.selectedLanguage);
+}
+
+// Yetkinliklerim Seç
+class UpdateSkillsEvent extends ProfileEvent {
+  final List<SkillsData> selectedSkills;
+
+  UpdateSkillsEvent(this.selectedSkills);
 }

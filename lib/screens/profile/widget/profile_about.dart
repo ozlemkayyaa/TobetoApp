@@ -72,7 +72,7 @@ class ProfileAbout extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(about,
-                        style: Theme.of(context).textTheme.bodyMedium),
+                        style: Theme.of(context).textTheme.bodyLarge),
                   ),
                 ],
               ),

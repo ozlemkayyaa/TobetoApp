@@ -5,6 +5,7 @@ import 'package:tobeto/api/blocs/profile_bloc/profile_state.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:tobeto/screens/profile_create/create_profile_screen.dart';
+import 'package:tobeto/screens/profile_create/model/language_model.dart';
 import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
@@ -27,6 +28,7 @@ class ProfileLanguage extends StatelessWidget {
         return const Center(child: CircularProgressIndicator());
       }
       if (state is ProfileLoaded) {
+        final List<LanguageData> languages = state.selectedLanguage;
         return Column(
           children: [
             Padding(
@@ -62,13 +64,14 @@ class ProfileLanguage extends StatelessWidget {
                           ),
                         ],
                       ),
-                      const Divider(
-                        color: TColors.black,
-                        height: 0.5,
-                      ),
-                      const SizedBox(
-                        height: TSizes.sm,
-                      )
+                      const Divider(color: TColors.black, height: 0.5),
+                      const SizedBox(height: TSizes.sm),
+                      Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: languages.map((language) {
+                            return Text(language.name,
+                                style: Theme.of(context).textTheme.bodyLarge);
+                          }).toList()),
                     ],
                   ),
                 ),

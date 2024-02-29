@@ -44,6 +44,9 @@ class _LanguageState extends State<Language> {
                       if (selectedItem != null) {
                         selectedLanguage.add(
                             LanguageData(name: selectedItem.text, level: ""));
+                        context
+                            .read<ProfileBloc>()
+                            .add(UpdateLanguageEvent(selectedLanguage));
                       }
                     });
                   },
@@ -65,7 +68,9 @@ class _LanguageState extends State<Language> {
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
                     child: const Text(TTexts.save),
                   ),
                 ),
@@ -106,6 +111,9 @@ class _LanguageState extends State<Language> {
                                       onPressed: () {
                                         setState(() {
                                           selectedLanguage.remove(language);
+                                          context.read<ProfileBloc>().add(
+                                              UpdateLanguageEvent(
+                                                  selectedLanguage));
                                         });
                                       },
                                     )

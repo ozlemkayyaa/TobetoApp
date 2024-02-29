@@ -17,6 +17,7 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
     on<UploadPhotoEvent>(_onUploadPhoto);
     on<UpdateSocialMediaListEvent>(_onUpdateSocialMediaListEvent);
     on<UpdateLanguageEvent>(_onUpdateLanguageEvent);
+    on<UpdateSkillsEvent>(_onUpdateSkillsEvent);
   }
 
   // Profil Getir
@@ -27,7 +28,10 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
     try {
       final user = await _userRepository.fetchCurrentUser(UserModel());
       emit(ProfileLoaded(
-          userModel: user, selectedSocialMedia: [], selectedLanguage: []));
+          userModel: user,
+          selectedSocialMedia: [],
+          selectedLanguage: [],
+          selectedSkills: []));
     } catch (e) {
       emit(ProfileError(errorMessage: e.toString()));
     }
@@ -64,7 +68,8 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
         emit(ProfileLoaded(
             userModel: updatedUser,
             selectedSocialMedia: currentState.selectedSocialMedia,
-            selectedLanguage: currentState.selectedLanguage));
+            selectedLanguage: currentState.selectedLanguage,
+            selectedSkills: currentState.selectedSkills));
       }
     } catch (e) {
       emit(ProfileError(errorMessage: e.toString()));
@@ -87,6 +92,15 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
     final currentState = state;
     if (currentState is ProfileLoaded) {
       emit(currentState.copyWith(selectedLanguage: event.selectedLanguage));
+    }
+  }
+
+  // Yetkinliklerim seç
+  void _onUpdateSkillsEvent(
+      UpdateSkillsEvent event, Emitter<ProfileState> emit) {
+    final currentState = state;
+    if (currentState is ProfileLoaded) {
+      emit(currentState.copyWith(selectedSkills: event.selectedSkills));
     }
   }
 }

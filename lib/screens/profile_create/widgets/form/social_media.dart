@@ -74,6 +74,7 @@ class _SocialMediaState extends State<SocialMedia> {
                         urlController.clear(); // Text alanını temizler
                         context.read<ProfileBloc>().add(
                             UpdateSocialMediaListEvent(selectedSocialMedia));
+                        Navigator.pop(context);
                       });
                     },
                     child: const Text(TTexts.save),
