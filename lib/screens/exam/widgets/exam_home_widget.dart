@@ -35,7 +35,7 @@ class ExamHomeWidget extends StatelessWidget {
           ),
           child: InkWell(
             onTap: () {
-              THelperFunctions.showAlert(title, message, context);
+              THelperFunctions.showAlert2(title, message, context);
             },
             child: Padding(
               padding: const EdgeInsets.all(TSizes.spaceBtwItems),

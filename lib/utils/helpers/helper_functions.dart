@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:tobeto/screens/quiz/quiz_screen.dart';
 
 class THelperFunctions {
 // SnackBar gösteren fonksiyon
@@ -21,6 +22,30 @@ class THelperFunctions {
             TextButton(
               onPressed: () => Navigator.of(context).pop(),
               child: const Text('Tamam'),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  // AlertDialog gösteren fonksiyon
+  static void showAlert2(String title, String message, BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text(title),
+          content: Text(message),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (contex) => const QuizScreen(),
+                ),
+              ),
+              child: const Text('SINAVA BAŞLA'),
             ),
           ],
         );
