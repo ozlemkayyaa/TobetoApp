@@ -4,7 +4,7 @@ class TrainingData {
   final String title;
   final String time;
   final String image;
-  final Widget trainingPage; // Yeni eklenen sayfa
+  final Widget trainingPage;
 
   TrainingData({
     required this.title,
