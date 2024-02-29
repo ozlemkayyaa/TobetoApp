@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tobeto/screens/home/widgets/tabbar_widgets/education_widget.dart';
+import 'package:tobeto/screens/education/widgets/education_widget.dart';
 import 'package:tobeto/utils/constants/image_strings.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';

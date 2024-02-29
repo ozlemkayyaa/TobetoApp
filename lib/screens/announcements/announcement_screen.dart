@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:tobeto/screens/education/widgets/search_button_widget.dart';
-import 'package:tobeto/screens/home/widgets/tabbar_widgets/announcement_widget.dart';
+import 'package:tobeto/screens/announcements/widget/announcement_widget.dart';
 import 'package:tobeto/utils/constants/image_strings.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';

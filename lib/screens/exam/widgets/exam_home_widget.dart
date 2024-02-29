@@ -4,8 +4,8 @@ import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/helpers/helper_functions.dart';
 
-class ExamWidget extends StatelessWidget {
-  const ExamWidget({
+class ExamHomeWidget extends StatelessWidget {
+  const ExamHomeWidget({
     super.key,
     required this.title,
     required this.message,
