@@ -35,7 +35,6 @@ class AnnouncementScreen extends StatelessWidget {
             // Arama Butonu
             SizedBox(height: TSizes.sm),
             SearchButtonWidget(
-              icon: Icons.search,
               buttonName: TTexts.searchButton,
             ),
 

@@ -287,7 +287,7 @@ class TTexts {
   static const String software = "Yazılım Dili";
   static const String instructor = "Eğitmen";
   static const String situation = "Durum";
-
+  static const String searchEducatiion = "Eğitim Arayın...";
   // GO TRAINING
   static const String about2 = "Hakkımda";
   static const String contents = "İçerik";

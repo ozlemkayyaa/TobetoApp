@@ -8,11 +8,9 @@ class SearchButtonWidget extends StatelessWidget {
   const SearchButtonWidget({
     super.key,
     required this.buttonName,
-    required this.icon,
   });
 
   final String buttonName;
-  final IconData icon;
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +32,7 @@ class SearchButtonWidget extends StatelessWidget {
                   fillColor: dark ? TColors.darkGrey : TColors.grey,
                   suffixIcon: const Icon(CupertinoIcons.search),
                   suffixIconColor: TColors.darkerGrey,
-                  labelText: "Arama",
+                  labelText: buttonName,
                   labelStyle: const TextStyle(color: TColors.black)),
             ),
           ),

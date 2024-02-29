@@ -37,7 +37,6 @@ class EducationScreen extends StatelessWidget {
             // Arama
             SizedBox(height: TSizes.sm),
             SearchButtonWidget(
-              icon: Icons.search,
               buttonName: TTexts.searchButton,
             ),
 
