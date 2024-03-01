@@ -3,7 +3,7 @@ import 'package:iconsax/iconsax.dart';
 import 'package:tobeto/screens/announcements/announcement_screen.dart';
 import 'package:tobeto/screens/education/education_screen.dart';
 import 'package:tobeto/screens/education/widgets/ecmel.dart';
-import 'package:tobeto/screens/education/widgets/istCode.dart';
+import 'package:tobeto/screens/education/widgets/ist_code.dart';
 import 'package:tobeto/screens/home/widgets/application_widget.dart';
 import 'package:tobeto/screens/exam/widgets/exam_home_widget.dart';
 import 'package:tobeto/screens/education/widgets/education_widget.dart';

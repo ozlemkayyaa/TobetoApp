@@ -16,7 +16,7 @@ class Mobil extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<GoTrainingModel> trainingData9 = GoTrainingData.getLessons9();
+    List<GoTrainingModel> trainingData11 = GoTrainingData.getLessons11();
 
     return DefaultTabController(
       length: 2,
@@ -34,7 +34,7 @@ class Mobil extends StatelessWidget {
         ),
         body: Column(
           children: [
-            const GoEducationHeader(title: TTexts.ecmel),
+            const GoEducationHeader(title: TTexts.mobil),
             TabBar(
               tabAlignment: TabAlignment.start,
               isScrollable: true,
@@ -58,7 +58,7 @@ class Mobil extends StatelessWidget {
                   // İçerik
                   ListView(
                     children: [
-                      ...trainingData9
+                      ...trainingData11
                           .map((data) => GoTrainingWidget(lessonData: data)),
                     ],
                   ),

@@ -142,4 +142,32 @@ class GoTrainingData {
       )
     ];
   }
+
+  static List<GoTrainingModel> getLessons11() {
+    return [
+      GoTrainingModel(
+        title: TTexts.mobil,
+        time: "119 saat",
+        image: TImages.mobil,
+        like: 327,
+        visible: 43,
+        content: '',
+        interest: '',
+      )
+    ];
+  }
+
+  static List<GoTrainingModel> getLessons12() {
+    return [
+      GoTrainingModel(
+        title: TTexts.softSkill,
+        time: "1 dk",
+        image: TImages.softskill,
+        like: 327,
+        visible: 43,
+        content: '',
+        interest: '',
+      )
+    ];
+  }
 }

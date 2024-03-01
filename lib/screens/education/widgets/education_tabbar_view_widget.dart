@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tobeto/screens/education/widgets/ecmel.dart';
 import 'package:tobeto/screens/education/widgets/education_widget.dart';
-import 'package:tobeto/screens/education/widgets/istCode.dart';
+import 'package:tobeto/screens/education/widgets/ist_code.dart';
 import 'package:tobeto/screens/education/widgets/mobil.dart';
 import 'package:tobeto/screens/education/widgets/soft_skill.dart';
 import 'package:tobeto/utils/constants/image_strings.dart';
