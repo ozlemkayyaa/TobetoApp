@@ -1,6 +1,6 @@
 
 <p align="center">
-  <a href="https://gitpoint.co/">
+  <a href="https://tobeto.com/giris">
     <img alt="Tobeto App" title="Tobeto App" src="https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/0170dbc3-82e7-453d-a479-e6ac1f7f4e0f" width="450">
   </a>
 </p>
@@ -37,12 +37,12 @@ TOBETO Mobil Uygulama Projesi, kullanıcılara çeşitli eğitimlere kolay eriş
 
 <p align="center">
   <img src = "https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/84b3c8e4-eb2b-49fa-8ff9-19c6b3f613e5" width=400><br>
-  <img src = "https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/40bbefbf-25b1-46ff-8ce5-79a9fe84a289" width=350>
-  <img src = "https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/2081d8a1-52ed-407e-8cb4-a2d4af3e1512" width=370>
-  <img src = "https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/3fa9ff99-32d8-4aa5-b975-f10262204f60" width=350>
-  <img src = "https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/5ebb874e-756c-4fa1-afb1-53bd61d68142" width=350>
-  <img src = "https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/8ee54b2e-3508-4948-ac92-4d8425ebf57f" width=450>
-  <img src = "https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/90acfc2c-b125-462e-81ee-76afd1e7b45c" width=450>
+  <img src = "https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/40bbefbf-25b1-46ff-8ce5-79a9fe84a289" width=300>
+  <img src = "https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/2081d8a1-52ed-407e-8cb4-a2d4af3e1512" width=320>
+  <img src = "https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/3fa9ff99-32d8-4aa5-b975-f10262204f60" width=300>
+  <img src = "https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/5ebb874e-756c-4fa1-afb1-53bd61d68142" width=300>
+  <img src = "https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/8ee54b2e-3508-4948-ac92-4d8425ebf57f" width=300>
+  <img src = "https://github.com/ozlemkayyaa/TobetoApp/assets/126676960/90acfc2c-b125-462e-81ee-76afd1e7b45c" width=300>
 </p>
 
 
