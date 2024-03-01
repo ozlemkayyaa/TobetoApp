@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:tobeto/screens/exam/exam_screen.dart';
+import 'package:tobeto/navigation_menu.dart';
 import 'package:tobeto/utils/constants/image_strings.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 
@@ -51,7 +51,7 @@ class _ResultScreenState extends State<ResultScreen> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const ExamScreen()));
+                          builder: (context) => const NavigationMenu()));
                 },
                 child: Text("ÇIKIŞ",
                     style: Theme.of(context)
