@@ -5,7 +5,7 @@ import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
 
-class GoEducationHeader extends StatelessWidget {
+class GoEducationHeader extends StatefulWidget {
   const GoEducationHeader({
     super.key,
     required this.title,
@@ -13,6 +13,13 @@ class GoEducationHeader extends StatelessWidget {
 
   final String title;
 
+  @override
+  State<GoEducationHeader> createState() => _GoEducationHeaderState();
+}
+
+class _GoEducationHeaderState extends State<GoEducationHeader> {
+  Color _favoriteColor = Colors.black;
+  Color _bookmarkColor = Colors.black;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -22,7 +29,7 @@ class GoEducationHeader extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.all(TSizes.md),
           child: Text(
-            title,
+            widget.title,
             style: Theme.of(context).textTheme.headlineMedium,
           ),
         ),
@@ -40,14 +47,33 @@ class GoEducationHeader extends StatelessWidget {
         ),
 
         // Beğenme ve Kaydetme iconu
-        const Padding(
-          padding: EdgeInsets.only(right: TSizes.lg),
+        Padding(
+          padding: const EdgeInsets.only(right: TSizes.lg),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              Icon(Icons.favorite_outline_outlined),
-              SizedBox(width: TSizes.xs),
-              Icon(Icons.bookmark_outline_outlined),
+              IconButton(
+                icon: const Icon(Icons.favorite_outlined),
+                color: _favoriteColor,
+                onPressed: () {
+                  setState(() {
+                    _favoriteColor = _favoriteColor == Colors.red
+                        ? Colors.black
+                        : Colors.red;
+                  });
+                },
+              ),
+              IconButton(
+                icon: const Icon(Icons.bookmark_outlined),
+                color: _bookmarkColor,
+                onPressed: () {
+                  setState(() {
+                    _bookmarkColor = _bookmarkColor == Colors.amber
+                        ? Colors.black
+                        : Colors.amber;
+                  });
+                },
+              ),
             ],
           ),
         ),
@@ -58,7 +84,7 @@ class GoEducationHeader extends StatelessWidget {
           child: LinearPercentIndicator(
             width: 395,
             lineHeight: 10.0,
-            percent: 0.2,
+            percent: 0.1,
             barRadius: const Radius.circular(20),
             backgroundColor: TColors.grey,
             progressColor: TColors.info,

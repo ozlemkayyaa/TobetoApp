@@ -43,6 +43,7 @@ class TImages {
 
   // Course Screen
   static const String education = "assets/images/eğitimlerim.png";
+  static const String exam = "assets/images/exam.png";
 
   // News Screen
   static const String news = "assets/images/duyurularım.png";

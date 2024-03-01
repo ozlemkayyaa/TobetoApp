@@ -21,7 +21,6 @@ class _QuizScreen extends State<QuizScreen> {
   PageController? controller = PageController(initialPage: 0);
   bool isPressed = false;
 
-  Color background = TColors.white;
   Color trueAnswer = TColors.success;
   Color wrongAnswer = TColors.error;
   Color buttonControl = TColors.primary;
@@ -43,9 +42,9 @@ class _QuizScreen extends State<QuizScreen> {
           )
         ],
       ),
-      backgroundColor: background,
       body: Padding(
-        padding: const EdgeInsets.all(TSizes.md),
+        padding: const EdgeInsets.only(
+            left: TSizes.md, right: TSizes.md, top: TSizes.xl),
         child: PageView.builder(
           physics: const NeverScrollableScrollPhysics(),
           controller: controller!,
@@ -68,7 +67,7 @@ class _QuizScreen extends State<QuizScreen> {
                       style: Theme.of(context).textTheme.headlineLarge),
                 ),
                 const Divider(
-                    color: TColors.profile2, height: 15.0, thickness: 2.0),
+                    color: TColors.darkGrey, height: 15.0, thickness: 2.0),
                 const SizedBox(height: 25.0),
                 Text(questions[index].question!,
                     style: Theme.of(context).textTheme.headlineMedium),
@@ -138,18 +137,13 @@ class _QuizScreen extends State<QuizScreen> {
                       style: OutlinedButton.styleFrom(
                         shape: const StadiumBorder(),
                         side: const BorderSide(
-                            color: TColors.secondary, width: 4.0),
+                            color: TColors.darkGrey, width: 4.0),
                       ),
                       child: Text(
-                        index + 1 == questions.length
-                            ? "Sonucu Göster"
-                            : "Sıradaki Soru",
-                        style: const TextStyle(
-                          color: Colors.black,
-                          fontSize: 17.0,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
+                          index + 1 == questions.length
+                              ? "Sonucu Göster"
+                              : "Sıradaki Soru",
+                          style: Theme.of(context).textTheme.titleLarge),
                     )
                   ],
                 ),

@@ -57,7 +57,7 @@ class ExamWidget extends StatelessWidget {
                     const EdgeInsets.only(bottom: TSizes.sm, top: TSizes.sm),
                 child: ElevatedButton(
                   onPressed: () {
-                    THelperFunctions.showAlert(title, message, context);
+                    THelperFunctions.showAlert2(title, message, context);
                   },
                   style: ElevatedButton.styleFrom(
                     padding: const EdgeInsets.all(5),
