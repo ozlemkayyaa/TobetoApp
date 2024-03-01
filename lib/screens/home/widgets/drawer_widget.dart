@@ -7,7 +7,6 @@ import 'package:tobeto/api/blocs/auth_bloc/auth_event.dart';
 import 'package:tobeto/api/blocs/auth_bloc/auth_state.dart';
 import 'package:tobeto/screens/contact/contact_screen.dart';
 import 'package:tobeto/screens/team/team_screen.dart';
-import 'package:tobeto/navigation_menu.dart';
 import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/image_strings.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
@@ -37,6 +36,11 @@ class DrawerWidget extends StatelessWidget {
                     width: 150, // Resmin genişliği
                     height: 80, // Resmin yüksekliği
                   ),
+                  IconButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      icon: const Icon(Icons.close))
                 ]),
           ),
 
@@ -45,32 +49,6 @@ class DrawerWidget extends StatelessWidget {
             child: ListView(
               padding: const EdgeInsets.only(left: TSizes.defaultSpace),
               children: [
-                // Biz Kimiz?
-                SizedBox(
-                    height: TSizes.spaceBtwSections + 10,
-                    child: ListTile(
-                        title: Row(
-                          children: [
-                            const Icon(CupertinoIcons.home),
-                            Padding(
-                              padding: const EdgeInsets.only(
-                                  left: TSizes.defaultSpace / 4),
-                              child: Text(
-                                TTexts.home,
-                                style:
-                                    Theme.of(context).textTheme.headlineSmall,
-                              ),
-                            ),
-                          ],
-                        ),
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const NavigationMenu(),
-                              ));
-                        })),
-
                 // Ekibimiz
                 SizedBox(
                     height: TSizes.spaceBtwSections + 10,

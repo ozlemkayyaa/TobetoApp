@@ -21,15 +21,15 @@ class ProfileAvatar extends StatefulWidget {
 
 class _ProfileAvatarState extends State<ProfileAvatar> {
   final ImagePicker _picker = ImagePicker();
-  File? _selectedPhoto;
 
-  Future pickImage() async {
-    final photo = await _picker.pickImage(source: ImageSource.camera);
+  Future<void> pickImage(ImageSource source) async {
+    final photo = await _picker.pickImage(source: source);
     setState(() {
       if (photo != null) {
-        _selectedPhoto = File(photo.path);
+        File selectedPhoto = File(photo.path);
+        selectedPhoto = File(photo.path);
         BlocProvider.of<ProfileBloc>(context)
-            .add(UploadPhotoEvent(photo: _selectedPhoto!));
+            .add(UploadPhotoEvent(photo: selectedPhoto));
         context.read<ProfileBloc>().add(FetchProfileEvent());
       }
     });
@@ -69,7 +69,35 @@ class _ProfileAvatarState extends State<ProfileAvatar> {
                         top: TSizes.sm, bottom: TSizes.sm),
                     child: GestureDetector(
                       onTap: () {
-                        pickImage();
+                        // Profil fotoğrafı bölümüne tıklandığında galeri veya kamera seçeneklerini sun
+                        showModalBottomSheet(
+                          context: context,
+                          builder: (BuildContext context) {
+                            return SafeArea(
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: <Widget>[
+                                  ListTile(
+                                    leading: const Icon(Icons.photo_library),
+                                    title: const Text('Galeri'),
+                                    onTap: () {
+                                      pickImage(ImageSource.gallery);
+                                      Navigator.pop(context);
+                                    },
+                                  ),
+                                  ListTile(
+                                    leading: const Icon(Icons.camera_alt),
+                                    title: const Text('Kamera'),
+                                    onTap: () {
+                                      pickImage(ImageSource.camera);
+                                      Navigator.pop(context);
+                                    },
+                                  ),
+                                ],
+                              ),
+                            );
+                          },
+                        );
                       },
                       child: CircleAvatar(
                         radius: 50,
