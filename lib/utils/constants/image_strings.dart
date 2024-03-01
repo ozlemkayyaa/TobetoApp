@@ -29,6 +29,8 @@ class TImages {
   static const String sinav = "assets/images/sınavlar.png";
   static const String notFound = "assets/images/videoNotFound.jpg";
   static const String ecmelHoca = "assets/images/ecmelHoca.jpg";
+  static const String mobil = "assets/images/mobil.png";
+  static const String softskill = "assets/images/softskill.png";
 
   // OnBoarding
   static const String coding = "assets/images/onboarding/coding.png";

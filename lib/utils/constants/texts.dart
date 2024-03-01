@@ -117,6 +117,10 @@ class TTexts {
   static const String goEducation = "Eğitime Git";
   static const String howEducation = "Eğitimlere Nasıl Katılırım?";
   static const String howEducationDate = "8 Eylül 2023 17:06";
+  static const String mobil = "Mobil Geliştirici (Flutter) - 1B";
+  static const String mobilDate = "23 Ekim 2023 03:00";
+  static const String softSkill = "SoftSkill: İletişim Becerileri";
+  static const String softSkillDate = "25 Ekim 2023 14:11";
 
   // Sınavlarım
   static const String examEveryone =
