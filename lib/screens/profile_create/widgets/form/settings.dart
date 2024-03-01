@@ -10,11 +10,19 @@ import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
 
-class Settings extends StatelessWidget {
+class Settings extends StatefulWidget {
   const Settings({
     super.key,
   });
 
+  @override
+  State<Settings> createState() => _SettingsState();
+}
+
+bool _oldObscureText = true;
+bool _newObscureText = true;
+
+class _SettingsState extends State<Settings> {
   @override
   Widget build(BuildContext context) {
     final TextEditingController oldController = TextEditingController();
@@ -37,21 +45,39 @@ class Settings extends StatelessWidget {
                 // Password
                 TextFormField(
                   controller: oldController,
-                  obscureText: true,
-                  decoration: const InputDecoration(
+                  obscureText: _oldObscureText,
+                  decoration: InputDecoration(
                     labelText: TTexts.old,
-                    prefixIcon: Icon(Iconsax.lock),
-                    suffixIcon: Icon(Iconsax.eye_slash),
+                    prefixIcon: const Icon(Iconsax.lock),
+                    suffixIcon: IconButton(
+                      icon: Icon(_oldObscureText
+                          ? Icons.visibility
+                          : Icons.visibility_off),
+                      onPressed: () {
+                        setState(() {
+                          _oldObscureText = !_oldObscureText;
+                        });
+                      },
+                    ),
                   ),
                 ),
                 const SizedBox(height: TSizes.spaceBtwInputFields),
                 TextFormField(
                   controller: newController,
-                  obscureText: true,
-                  decoration: const InputDecoration(
+                  obscureText: _newObscureText,
+                  decoration: InputDecoration(
                     labelText: TTexts.newPassword,
-                    prefixIcon: Icon(Iconsax.lock),
-                    suffixIcon: Icon(Iconsax.eye_slash),
+                    prefixIcon: const Icon(Iconsax.lock),
+                    suffixIcon: IconButton(
+                      icon: Icon(_newObscureText
+                          ? Icons.visibility
+                          : Icons.visibility_off),
+                      onPressed: () {
+                        setState(() {
+                          _newObscureText = !_newObscureText;
+                        });
+                      },
+                    ),
                   ),
                 ),
                 const SizedBox(height: TSizes.spaceBtwInputFields),
@@ -59,11 +85,20 @@ class Settings extends StatelessWidget {
                 // Password Again
                 TextFormField(
                   controller: newAgainController,
-                  obscureText: true,
-                  decoration: const InputDecoration(
+                  obscureText: _newObscureText,
+                  decoration: InputDecoration(
                     labelText: TTexts.newAgain,
-                    prefixIcon: Icon(Iconsax.lock),
-                    suffixIcon: Icon(Iconsax.eye_slash),
+                    prefixIcon: const Icon(Iconsax.lock),
+                    suffixIcon: IconButton(
+                      icon: Icon(_newObscureText
+                          ? Icons.visibility
+                          : Icons.visibility_off),
+                      onPressed: () {
+                        setState(() {
+                          _newObscureText = !_newObscureText;
+                        });
+                      },
+                    ),
                   ),
                 ),
 

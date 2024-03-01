@@ -11,20 +11,34 @@ import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
 import 'package:tobeto/utils/validators/validation.dart';
 
-class SignupForm extends StatelessWidget {
-  final TextEditingController nameController = TextEditingController();
-  final TextEditingController surnameController = TextEditingController();
-  final TextEditingController emailController = TextEditingController();
-  final TextEditingController passwordController = TextEditingController();
-  final TextEditingController confirmPasswordController =
-      TextEditingController();
-  final TextEditingController phoneController = TextEditingController();
-  SignupForm({
+class SignupForm extends StatefulWidget {
+  const SignupForm({
     super.key,
   });
 
+  @override
+  State<SignupForm> createState() => _SignupFormState();
+}
+
+class _SignupFormState extends State<SignupForm> {
+  final TextEditingController nameController = TextEditingController();
+
+  final TextEditingController surnameController = TextEditingController();
+
+  final TextEditingController emailController = TextEditingController();
+
+  final TextEditingController passwordController = TextEditingController();
+
+  final TextEditingController confirmPasswordController =
+      TextEditingController();
+
+  final TextEditingController phoneController = TextEditingController();
+
   final _formKey = GlobalKey<FormState>();
+
   final UserModel _user = UserModel();
+
+  bool _obscureText = true;
 
   @override
   Widget build(BuildContext context) {
@@ -101,11 +115,19 @@ class SignupForm extends StatelessWidget {
           TextFormField(
             validator: TValidator.validatePassword,
             controller: passwordController,
-            obscureText: true,
-            decoration: const InputDecoration(
+            obscureText: _obscureText,
+            decoration: InputDecoration(
               labelText: TTexts.signPassword,
-              prefixIcon: Icon(Iconsax.lock),
-              suffixIcon: Icon(Iconsax.eye_slash),
+              prefixIcon: const Icon(Iconsax.lock),
+              suffixIcon: IconButton(
+                icon: Icon(
+                    _obscureText ? Icons.visibility : Icons.visibility_off),
+                onPressed: () {
+                  setState(() {
+                    _obscureText = !_obscureText;
+                  });
+                },
+              ),
             ),
           ),
           const SizedBox(height: TSizes.spaceBtwInputFields),
@@ -114,11 +136,19 @@ class SignupForm extends StatelessWidget {
           TextFormField(
             validator: TValidator.validatePassword,
             controller: confirmPasswordController,
-            obscureText: true,
-            decoration: const InputDecoration(
+            obscureText: _obscureText,
+            decoration: InputDecoration(
               labelText: TTexts.signPasswordAgain,
-              prefixIcon: Icon(Iconsax.lock),
-              suffixIcon: Icon(Iconsax.eye_slash),
+              prefixIcon: const Icon(Iconsax.lock),
+              suffixIcon: IconButton(
+                icon: Icon(
+                    _obscureText ? Icons.visibility : Icons.visibility_off),
+                onPressed: () {
+                  setState(() {
+                    _obscureText = !_obscureText;
+                  });
+                },
+              ),
             ),
           ),
           const SizedBox(height: TSizes.spaceBtwSections),

@@ -12,16 +12,25 @@ import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
 import 'package:tobeto/utils/validators/validation.dart';
 
-class LoginForm extends StatelessWidget {
-  final TextEditingController emailController = TextEditingController();
-  final TextEditingController passwordController = TextEditingController();
-
-  LoginForm({
+class LoginForm extends StatefulWidget {
+  const LoginForm({
     super.key,
   });
 
+  @override
+  State<LoginForm> createState() => _LoginFormState();
+}
+
+class _LoginFormState extends State<LoginForm> {
+  final TextEditingController emailController = TextEditingController();
+
+  final TextEditingController passwordController = TextEditingController();
+
   final _formKey = GlobalKey<FormState>();
+
   final UserModel _user = UserModel();
+
+  bool _obscureText = true;
 
   @override
   Widget build(BuildContext context) {
@@ -49,10 +58,19 @@ class LoginForm extends StatelessWidget {
             TextFormField(
               validator: TValidator.validatePassword,
               controller: passwordController,
-              decoration: const InputDecoration(
-                prefixIcon: Icon(Iconsax.lock),
-                labelText: TTexts.userPassword,
-                suffixIcon: Icon(Iconsax.eye_slash),
+              obscureText: _obscureText,
+              decoration: InputDecoration(
+                labelText: TTexts.signPassword,
+                prefixIcon: const Icon(Iconsax.lock),
+                suffixIcon: IconButton(
+                  icon: Icon(
+                      _obscureText ? Icons.visibility : Icons.visibility_off),
+                  onPressed: () {
+                    setState(() {
+                      _obscureText = !_obscureText;
+                    });
+                  },
+                ),
               ),
             ),
             const SizedBox(height: TSizes.spaceBtwInputFields / 2),

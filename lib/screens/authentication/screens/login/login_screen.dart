@@ -26,23 +26,23 @@ class LoginScreen extends StatelessWidget {
             return const NavigationMenu();
           } else {
             // Kullanıcı giriş yapmamışsa giriş formunu göster
-            return SingleChildScrollView(
+            return const SingleChildScrollView(
               child: Padding(
                 padding: TSpacingStyle.paddingWithAppBarHeight,
                 child: Column(
                   children: [
                     // Logo, Title, SubTitle
-                    const LoginHeader(),
+                    LoginHeader(),
 
                     // Form
                     LoginForm(),
 
                     // Divider
-                    const FormDivider(dividerText: TTexts.orSign),
-                    const SizedBox(height: TSizes.spaceBtwSections),
+                    FormDivider(dividerText: TTexts.orSign),
+                    SizedBox(height: TSizes.spaceBtwSections),
 
                     // Footer
-                    const SocialButtons(),
+                    SocialButtons(),
                   ],
                 ),
               ),
