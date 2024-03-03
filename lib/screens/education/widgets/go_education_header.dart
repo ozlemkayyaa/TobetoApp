@@ -18,8 +18,8 @@ class GoEducationHeader extends StatefulWidget {
 }
 
 class _GoEducationHeaderState extends State<GoEducationHeader> {
-  Color _favoriteColor = TColors.black;
-  Color _bookmarkColor = TColors.black;
+  Color _favoriteColor = TColors.darkerGrey;
+  Color _bookmarkColor = TColors.darkerGrey;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -82,7 +82,7 @@ class _GoEducationHeaderState extends State<GoEducationHeader> {
         Padding(
           padding: const EdgeInsets.all(TSizes.xs),
           child: LinearPercentIndicator(
-            width: 395,
+            width: 350,
             lineHeight: 10.0,
             percent: 0.1,
             barRadius: const Radius.circular(20),

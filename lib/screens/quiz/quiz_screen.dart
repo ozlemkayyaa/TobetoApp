@@ -45,7 +45,7 @@ class _QuizScreen extends State<QuizScreen> {
       ),
       body: Padding(
         padding: const EdgeInsets.only(
-            left: TSizes.md, right: TSizes.md, top: TSizes.xl),
+            left: TSizes.md, right: TSizes.md, top: TSizes.lg),
         child: PageView.builder(
           physics: const NeverScrollableScrollPhysics(),
           controller: controller!,

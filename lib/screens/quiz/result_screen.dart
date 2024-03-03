@@ -40,9 +40,9 @@ class _ResultScreenState extends State<ResultScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(TTexts.examResult,
-                    style: Theme.of(context).textTheme.headlineLarge),
-                Text("${widget.score}",
-                    style: Theme.of(context).textTheme.headlineLarge),
+                    style: Theme.of(context).textTheme.headlineMedium),
+                Text(": ${widget.score}",
+                    style: Theme.of(context).textTheme.headlineMedium),
               ],
             ),
             SizedBox(

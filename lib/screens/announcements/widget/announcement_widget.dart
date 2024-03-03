@@ -27,8 +27,8 @@ class AnnouncementWidget extends StatelessWidget {
       children: [
         Card(
           child: Container(
-            width: 370,
-            height: 150,
+            width: double.infinity,
+            height: 155,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(TSizes.buttonRadius),
               color: dark ? TColors.darkContainer : TColors.lightContainer,

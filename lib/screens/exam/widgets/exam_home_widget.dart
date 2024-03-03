@@ -14,11 +14,11 @@ class ExamHomeWidget extends StatelessWidget {
     required this.examTime,
   });
 
-  final String title;
-  final String message;
-  final String examTitle;
   final String classTitle;
   final String examTime;
+  final String examTitle;
+  final String message;
+  final String title;
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class ExamHomeWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-          width: 180,
+          width: 200,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(TSizes.buttonRadius),
             color: dark ? TColors.darkContainer : TColors.lightGrey,

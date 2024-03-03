@@ -23,10 +23,9 @@ class TabBarViewWidget extends StatelessWidget {
     return Expanded(
       child: TabBarView(children: [
         // Başvurularım butonunun altındaki Cardlar
-        const Padding(
-          padding: EdgeInsets.all(TSizes.sm),
-          child: SingleChildScrollView(
-            scrollDirection: Axis.vertical,
+        const SingleChildScrollView(
+          child: Padding(
+            padding: EdgeInsets.all(TSizes.sm),
             child: Column(
               children: [
                 ApplicationWidget(
@@ -40,42 +39,46 @@ class TabBarViewWidget extends StatelessWidget {
         ),
 
         // Eğitimlerim butonunun altındaki Cardlar
-        Padding(
-          padding: const EdgeInsets.all(TSizes.sm),
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
           child: SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              children: [
-                const EducationWidget(
-                    navigateTo: Ecmel(),
-                    image: TImages.ecmelHoca,
-                    title: TTexts.ecmel,
-                    date: TTexts.ecmelDate),
-                const SizedBox(width: TSizes.spaceBtwItems),
-                const EducationWidget(
-                    navigateTo: IstCode(),
-                    image: TImages.istKod,
-                    title: TTexts.howEducation,
-                    date: TTexts.howEducationDate),
-                const SizedBox(width: TSizes.spaceBtwItems),
-                const SizedBox(height: TSizes.defaultSpace),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    IconButton(
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const EducationScreen()),
-                          );
-                        },
-                        icon: const Icon(Iconsax.arrow_circle_right)),
-                    Text(TTexts.more,
-                        style: Theme.of(context).textTheme.bodyLarge)
-                  ],
-                ),
-              ],
+            scrollDirection: Axis.vertical,
+            child: Padding(
+              padding: const EdgeInsets.all(TSizes.sm),
+              child: Row(
+                children: [
+                  const EducationWidget(
+                      navigateTo: Ecmel(),
+                      image: TImages.ecmelHoca,
+                      title: TTexts.ecmel,
+                      date: TTexts.ecmelDate),
+                  const SizedBox(width: TSizes.spaceBtwItems),
+                  const EducationWidget(
+                      navigateTo: IstCode(),
+                      image: TImages.istKod,
+                      title: TTexts.howEducation,
+                      date: TTexts.howEducationDate),
+                  const SizedBox(width: TSizes.spaceBtwItems),
+                  const SizedBox(height: TSizes.defaultSpace),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      IconButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      const EducationScreen()),
+                            );
+                          },
+                          icon: const Icon(Iconsax.arrow_circle_right)),
+                      Text(TTexts.more,
+                          style: Theme.of(context).textTheme.bodyLarge)
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
         ),
@@ -117,13 +120,12 @@ class TabBarViewWidget extends StatelessWidget {
         ),
 
         // Duyuru ve Haberlerim altındaki Cardlar
-        Padding(
-          padding: const EdgeInsets.all(TSizes.iconXs),
-          child: Column(
-            children: [
-              const SingleChildScrollView(
-                scrollDirection: Axis.vertical,
-                child: Column(
+        SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(TSizes.iconXs),
+            child: Column(
+              children: [
+                const Column(
                   children: [
                     AnnouncementWidget(
                         title: TTexts.baslik1,
@@ -138,41 +140,44 @@ class TabBarViewWidget extends StatelessWidget {
                         dateTime: TTexts.date2),
                   ],
                 ),
-              ),
-              const SizedBox(height: TSizes.sm),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  IconButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const AnnouncementScreen()),
-                        );
-                      },
-                      icon: const Icon(Iconsax.arrow_circle_right)),
-                  Text(TTexts.more,
-                      style: Theme.of(context).textTheme.bodyLarge)
-                ],
-              ),
-            ],
+                const SizedBox(height: TSizes.sm),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    IconButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    const AnnouncementScreen()),
+                          );
+                        },
+                        icon: const Icon(Iconsax.arrow_circle_right)),
+                    Text(TTexts.more,
+                        style: Theme.of(context).textTheme.bodyLarge)
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
 
         // Anketlerim
-        Padding(
-          padding: const EdgeInsets.all(TSizes.defaultSpace),
-          child: Column(
-            children: [
-              const Image(
-                image: AssetImage(TImages.anket),
-                height: 270,
-              ),
-              const SizedBox(height: TSizes.defaultSpace + 5),
-              Text(TTexts.anket,
-                  style: Theme.of(context).textTheme.titleMedium),
-            ],
+        SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(TSizes.defaultSpace),
+            child: Column(
+              children: [
+                const Image(
+                  image: AssetImage(TImages.anket),
+                  height: 230,
+                ),
+                const SizedBox(height: TSizes.defaultSpace + 5),
+                Text(TTexts.anket,
+                    style: Theme.of(context).textTheme.labelMedium),
+              ],
+            ),
           ),
         ),
       ]),

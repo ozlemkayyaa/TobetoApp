@@ -48,12 +48,12 @@ class ApplicationWidget extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
                           Text(TTexts.istCod,
-                              style: Theme.of(context).textTheme.headlineSmall),
+                              style: Theme.of(context).textTheme.titleLarge),
 
                           // Kabul edildi /  Değerlendirmede bu yazının bulunnduğu kutu
                           Padding(
                             padding: const EdgeInsets.only(
-                                left: TSizes.appBarHeight + 18),
+                                left: TSizes.loadingIndicatorSize),
                             child: Container(
                               height: MediaQuery.of(context).size.height * 0.04,
                               width: MediaQuery.of(context).size.width * 0.36,
@@ -69,7 +69,7 @@ class ApplicationWidget extends StatelessWidget {
                                 child: Text(accepted,
                                     style: Theme.of(context)
                                         .textTheme
-                                        .titleLarge!
+                                        .bodyLarge!
                                         .apply(color: TColors.white)),
                               ),
                             ),
