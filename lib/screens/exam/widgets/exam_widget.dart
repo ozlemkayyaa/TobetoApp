@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
+import 'package:tobeto/utils/constants/texts.dart';
 import 'package:tobeto/utils/helpers/helper_functions.dart';
 
 class ExamWidget extends StatelessWidget {
@@ -68,7 +69,7 @@ class ExamWidget extends StatelessWidget {
                     ),
                   ),
                   child: Text(
-                    "Başla",
+                    TTexts.start,
                     style: Theme.of(context)
                         .textTheme
                         .titleMedium!

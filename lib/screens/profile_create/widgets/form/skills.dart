@@ -100,7 +100,7 @@ class _SkillsState extends State<Skills> {
             ),
           );
         }
-        return const Center(child: Text('Beklenmeyen bir hata oluştu.'));
+        return const Center(child: Text(TTexts.errorMessage));
       },
     );
   }

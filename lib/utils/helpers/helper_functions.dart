@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:tobeto/screens/quiz/quiz_screen.dart';
+import 'package:tobeto/utils/constants/texts.dart';
 
 class THelperFunctions {
 // SnackBar gösteren fonksiyon
@@ -21,7 +22,7 @@ class THelperFunctions {
           actions: [
             TextButton(
               onPressed: () => Navigator.of(context).pop(),
-              child: const Text('Tamam'),
+              child: const Text(TTexts.okey),
             ),
           ],
         );
@@ -45,7 +46,7 @@ class THelperFunctions {
                   builder: (contex) => const QuizScreen(),
                 ),
               ),
-              child: const Text('SINAVA BAŞLA'),
+              child: const Text(TTexts.startExam),
             ),
           ],
         );
@@ -90,7 +91,7 @@ class THelperFunctions {
 
 // Tarih formatını düzenleyen fonksiyon
   static String getFormattedDate(DateTime date,
-      {String format = 'dd MMM yyyy'}) {
+      {String format = TTexts.dateFormat}) {
     return DateFormat(format).format(date);
   }
 }

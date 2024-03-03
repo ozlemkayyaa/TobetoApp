@@ -107,7 +107,7 @@ class _EducationLifeState extends State<EducationLife> {
           ),
         );
       }
-      return const Center(child: Text('Beklenmeyen bir hata oluştu.'));
+      return const Center(child: Text(TTexts.errorMessage));
     });
   }
 }

@@ -13,6 +13,7 @@ import 'package:tobeto/screens/profile/widget/profile_language.dart';
 import 'package:tobeto/screens/profile/widget/profile_skills.dart';
 import 'package:tobeto/utils/constants/image_strings.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
+import 'package:tobeto/utils/constants/texts.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -73,7 +74,7 @@ class ProfileScreen extends StatelessWidget {
           ),
         );
       }
-      return const Center(child: Text('Beklenmeyen bir hata oluştu.'));
+      return const Center(child: Text(TTexts.errorMessage));
     });
   }
 }

@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tobeto/api/blocs/auth_bloc/auth_bloc.dart';
 import 'package:tobeto/api/blocs/auth_bloc/auth_state.dart';
 import 'package:tobeto/navigation_menu.dart';
-//import 'package:tobeto/screens/authentication/screens/login/login_screen.dart';
 import 'package:tobeto/screens/authentication/screens/onboarding/onboarding.dart';
 
 class StartPage extends StatefulWidget {

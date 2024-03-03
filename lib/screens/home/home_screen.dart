@@ -42,65 +42,68 @@ class HomeScreen extends StatelessWidget {
           },
           builder: (context, state) {
             if (state is Authenticated && state.userName != null) {
-              return Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  const SizedBox(height: TSizes.defaultSpace),
-                  Padding(
-                    padding: const EdgeInsets.only(left: TSizes.sm),
-                    child: RichText(
-                      text: TextSpan(
+              return SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    const SizedBox(height: TSizes.defaultSpace),
+                    Padding(
+                      padding: const EdgeInsets.only(left: TSizes.sm),
+                      child: RichText(
+                        text: TextSpan(
+                          children: [
+                            TextSpan(
+                              text: '${TTexts.tobetoPurple} ',
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .headlineMedium!
+                                  .apply(color: TColors.primary),
+                            ),
+                            TextSpan(
+                              text: TTexts.welcome,
+                              style: Theme.of(context).textTheme.headlineMedium,
+                            ),
+                            TextSpan(
+                              text:
+                                  '${state.userName?.capitalizeFirstLetter()} ',
+                              style: Theme.of(context).textTheme.headlineMedium,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: TSizes.xl),
+                    // İkinci Text
+                    Padding(
+                      padding: const EdgeInsets.only(left: TSizes.xs),
+                      child: Text(
+                        TTexts.introduction,
+                        style: Theme.of(context).textTheme.headlineSmall,
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                    const SizedBox(height: TSizes.xl),
+                    // İstanbul Kodluyor Resmi
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Column(
                         children: [
-                          TextSpan(
-                            text: '${TTexts.tobetoPurple} ',
-                            style: Theme.of(context)
-                                .textTheme
-                                .headlineMedium!
-                                .apply(color: TColors.primary),
-                          ),
-                          TextSpan(
-                            text: TTexts.welcome,
-                            style: Theme.of(context).textTheme.headlineMedium,
-                          ),
-                          TextSpan(
-                            text: '${state.userName?.capitalizeFirstLetter()} ',
-                            style: Theme.of(context).textTheme.headlineMedium,
+                          Image(
+                            image: AssetImage(
+                              dark
+                                  ? TImages.istanbulWhite
+                                  : TImages.istanbulBlack,
+                            ),
+                            width: 150,
                           ),
                         ],
                       ),
                     ),
-                  ),
-                  const SizedBox(height: TSizes.xl),
-                  // İkinci Text
-                  Padding(
-                    padding: const EdgeInsets.only(left: TSizes.xs),
-                    child: Text(
-                      TTexts.introduction,
-                      style: Theme.of(context).textTheme.headlineSmall,
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
-                  const SizedBox(height: TSizes.xl),
-                  // İstanbul Kodluyor Resmi
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Column(
-                      children: [
-                        Image(
-                          image: AssetImage(
-                            dark
-                                ? TImages.istanbulWhite
-                                : TImages.istanbulBlack,
-                          ),
-                          width: 150,
-                        ),
-                      ],
-                    ),
-                  ),
-                  const SizedBox(height: TSizes.xs),
-                  const TabBarWidget(),
-                  const TabBarViewWidget(),
-                ],
+                    const SizedBox(height: TSizes.xs),
+                    const TabBarWidget(),
+                    const TabBarViewWidget(),
+                  ],
+                ),
               );
             } else if (state is Authenticated && state.userName == null) {
               return Column(

@@ -54,7 +54,7 @@ class ProfileTabBarWidget extends StatelessWidget {
                       style: Theme.of(context).textTheme.titleLarge)),
             ]);
       }
-      return const Center(child: Text('Beklenmeyen bir hata oluştu.'));
+      return const Center(child: Text(TTexts.errorMessage));
     });
   }
 }

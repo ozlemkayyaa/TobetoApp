@@ -5,6 +5,7 @@ import 'package:tobeto/screens/quiz/result_screen.dart';
 import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/image_strings.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
+import 'package:tobeto/utils/constants/texts.dart';
 
 class QuizScreen extends StatefulWidget {
   const QuizScreen({
@@ -24,7 +25,7 @@ class _QuizScreen extends State<QuizScreen> {
   Color trueAnswer = TColors.success;
   Color wrongAnswer = TColors.error;
   Color buttonControl = TColors.primary;
-  Color appBarColor = TColors.primary;
+
   int score = 0;
 
   @override
@@ -33,7 +34,7 @@ class _QuizScreen extends State<QuizScreen> {
       appBar: AppBar(
         automaticallyImplyLeading: true,
         title: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-          Image.asset(TImages.appBarLogo, height: 18),
+          Image.asset(TImages.appBarLogo, height: TSizes.fontSizeLg),
         ]),
         actions: const [
           Padding(
@@ -83,7 +84,8 @@ class _QuizScreen extends State<QuizScreen> {
                               ? trueAnswer
                               : wrongAnswer
                           : buttonControl,
-                      padding: const EdgeInsets.symmetric(vertical: 20.0),
+                      padding: const EdgeInsets.symmetric(
+                          vertical: TSizes.fontSizeLg),
                       onPressed: isPressed
                           ? () {}
                           : () {
@@ -137,12 +139,12 @@ class _QuizScreen extends State<QuizScreen> {
                       style: OutlinedButton.styleFrom(
                         shape: const StadiumBorder(),
                         side: const BorderSide(
-                            color: TColors.darkGrey, width: 4.0),
+                            color: TColors.darkGrey, width: TSizes.xs),
                       ),
                       child: Text(
                           index + 1 == questions.length
-                              ? "Sonucu Göster"
-                              : "Sıradaki Soru",
+                              ? TTexts.result
+                              : TTexts.nextQuestion,
                           style: Theme.of(context).textTheme.titleLarge),
                     )
                   ],

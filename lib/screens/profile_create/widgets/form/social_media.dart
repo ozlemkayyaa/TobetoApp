@@ -133,7 +133,7 @@ class _SocialMediaState extends State<SocialMedia> {
             ),
           );
         }
-        return const Center(child: Text('Beklenmeyen bir hata oluştu.'));
+        return const Center(child: Text(TTexts.errorMessage));
       },
     );
   }

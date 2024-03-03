@@ -18,7 +18,7 @@ class EducationScreen extends StatelessWidget {
         appBar: AppBar(
           automaticallyImplyLeading: true,
           title: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-            Image.asset(TImages.appBarLogo, height: 18),
+            Image.asset(TImages.appBarLogo, height: TSizes.fontSizeLg),
           ]),
           actions: const [
             Padding(

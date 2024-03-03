@@ -3,6 +3,7 @@ import 'package:iconsax/iconsax.dart';
 import 'package:tobeto/navigation_menu.dart';
 import 'package:tobeto/utils/constants/image_strings.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
+import 'package:tobeto/utils/constants/texts.dart';
 
 class ResultScreen extends StatefulWidget {
   final int score;
@@ -20,7 +21,7 @@ class _ResultScreenState extends State<ResultScreen> {
       appBar: AppBar(
         automaticallyImplyLeading: true,
         title: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-          Image.asset(TImages.appBarLogo, height: 18),
+          Image.asset(TImages.appBarLogo, height: TSizes.fontSizeLg),
         ]),
         actions: const [
           Padding(
@@ -38,7 +39,7 @@ class _ResultScreenState extends State<ResultScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Sınav Sonucunuz: ",
+                Text(TTexts.examResult,
                     style: Theme.of(context).textTheme.headlineLarge),
                 Text("${widget.score}",
                     style: Theme.of(context).textTheme.headlineLarge),
@@ -53,7 +54,7 @@ class _ResultScreenState extends State<ResultScreen> {
                       MaterialPageRoute(
                           builder: (context) => const NavigationMenu()));
                 },
-                child: Text("ÇIKIŞ",
+                child: Text(TTexts.exit,
                     style: Theme.of(context)
                         .textTheme
                         .titleLarge!

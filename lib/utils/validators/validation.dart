@@ -1,8 +1,10 @@
+import 'package:tobeto/utils/constants/texts.dart';
+
 class TValidator {
   // Ad/Soayad doğrulaması yapan fonksiyon
   static String? validateName(String? value) {
     if (value == null || value.isEmpty) {
-      return "Bu alan boş bırakılamaz.";
+      return TTexts.validation;
     }
     return null; // Geçerli durumda null döndür
   }
@@ -10,7 +12,7 @@ class TValidator {
   // E-posta doğrulaması yapan fonksiyon
   static String? validateEmail(String? value) {
     if (value == null || value.isEmpty) {
-      return "Lütfen E-Posta adresinizi giriniz.";
+      return TTexts.validationEmail;
     }
     return null; // Geçerli durumda null döndür
   }
@@ -18,12 +20,12 @@ class TValidator {
   // Şifre doğrulaması yapan fonksiyon
   static String? validatePassword(String? value) {
     if (value == null || value.isEmpty) {
-      return "Şifre boş bırakılamaz.";
+      return TTexts.validatePassword;
     }
 
     // Şifre uzunluğunu kontrol et
     if (value.length < 8) {
-      return 'Şifreniz 8 karakterli olmalıdır.';
+      return TTexts.validatePassword2;
     }
     return null;
   }
@@ -31,12 +33,12 @@ class TValidator {
   // Telefon numarası doğrulaması yapan fonksiyon
   static String? validatePhoneNumber(String? value) {
     if (value == null || value.isEmpty) {
-      return "Lütfen telefon numaranızı giriniz.";
+      return TTexts.validatePhone;
     }
     // Telefon numarası uzunluğunu kontrol et
     if (value.length < 10) {
       // Örnek: (123)456-78-90
-      return 'Telefon numarası 10 karakterli olmalıdır.';
+      return TTexts.validatePhone2;
     }
     return null;
   }

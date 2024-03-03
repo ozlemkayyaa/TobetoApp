@@ -4,6 +4,7 @@ import 'package:tobeto/screens/go_training/models/go_training_model.dart';
 import 'package:tobeto/screens/go_training/widget/detail_widget.dart';
 import 'package:tobeto/utils/constants/image_strings.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
+import 'package:tobeto/utils/constants/texts.dart';
 
 class TrainingDetailPage extends StatelessWidget {
   final GoTrainingModel lessonData;
@@ -18,7 +19,7 @@ class TrainingDetailPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-          Image.asset(TImages.appBarLogo, height: 18),
+          Image.asset(TImages.appBarLogo, height: TSizes.fontSizeLg),
         ]),
         actions: const [
           Padding(
@@ -29,10 +30,10 @@ class TrainingDetailPage extends StatelessWidget {
       ),
       body: DetailWidget(
         lessonData: lessonData,
-        category: "Kişisel Mükemmellik",
-        content: "Konu Uzmanı Videosu",
-        factory: "Enocta",
-        language: "Türkçe",
+        category: TTexts.category1,
+        content: TTexts.konu,
+        factory: TTexts.enocta,
+        language: TTexts.turkce,
       ),
     );
   }

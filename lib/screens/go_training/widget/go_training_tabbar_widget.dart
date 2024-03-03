@@ -23,7 +23,7 @@ class GoTrainingTabBarWidget extends StatelessWidget {
             child: Text(TTexts.contents,
                 style: Theme.of(context).textTheme.headlineSmall)),
         Tab(
-            child: Text("Hakkında",
+            child: Text(TTexts.about2,
                 style: Theme.of(context).textTheme.headlineSmall)),
       ],
     );

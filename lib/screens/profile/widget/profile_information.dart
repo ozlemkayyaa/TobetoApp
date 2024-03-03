@@ -41,7 +41,7 @@ class ProfileInformation extends StatelessWidget {
         final String phone = userModel.phone!;
         final String education = userModel.education!;
         final String birthdate = userModel.dateOfBirth != null
-            ? DateFormat('dd/MM/yyyy').format(userModel.dateOfBirth!)
+            ? DateFormat(TTexts.dateFormat).format(userModel.dateOfBirth!)
             : '';
 
         return Padding(
@@ -51,7 +51,7 @@ class ProfileInformation extends StatelessWidget {
             elevation: 3,
             color: dark ? TColors.darkerGrey : TColors.lightGrey,
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(TSizes.sm),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -59,7 +59,7 @@ class ProfileInformation extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.all(TSizes.sm),
                         child: Text(TTexts.profileInformation,
                             style: Theme.of(context).textTheme.headlineSmall),
                       ),
@@ -77,7 +77,7 @@ class ProfileInformation extends StatelessWidget {
                     ],
                   ),
                   const Padding(
-                    padding: EdgeInsets.only(bottom: 8.0),
+                    padding: EdgeInsets.only(bottom: TSizes.sm),
                     child: Divider(
                       color: TColors.black,
                       height: 0.5,
@@ -88,28 +88,32 @@ class ProfileInformation extends StatelessWidget {
                   ProfileItemWidget(
                     title: TTexts.birthdate,
                     data: birthdate,
-                    selectIcon: const Icon(Iconsax.calendar, size: 35),
+                    selectIcon: const Icon(Iconsax.calendar,
+                        size: TSizes.loadingIndicatorSize),
                   ),
 
                   // Eğitim
                   ProfileItemWidget(
                     title: TTexts.education,
                     data: education,
-                    selectIcon: const Icon(Icons.school_outlined, size: 35),
+                    selectIcon: const Icon(Icons.school_outlined,
+                        size: TSizes.loadingIndicatorSize),
                   ),
 
                   // E-Mail
                   ProfileItemWidget(
                     title: TTexts.postaAdress,
                     data: email,
-                    selectIcon: const Icon(CupertinoIcons.mail, size: 35),
+                    selectIcon: const Icon(CupertinoIcons.mail,
+                        size: TSizes.loadingIndicatorSize),
                   ),
 
                   // Telefon
                   ProfileItemWidget(
                     title: TTexts.phoneNumber,
                     data: phone,
-                    selectIcon: const Icon(Iconsax.call, size: 35),
+                    selectIcon: const Icon(Iconsax.call,
+                        size: TSizes.loadingIndicatorSize),
                   ),
                 ],
               ),
@@ -117,7 +121,7 @@ class ProfileInformation extends StatelessWidget {
           ),
         );
       }
-      return const Center(child: Text('Beklenmeyen bir hata oluştu.'));
+      return const Center(child: Text(TTexts.errorMessage));
     });
   }
 }

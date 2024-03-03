@@ -124,7 +124,7 @@ class _CatalogeScreenState extends State<CatalogeScreen> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const Text('Filtrele'),
+                      const Text(TTexts.filter),
                       IconButton(
                           onPressed: () {
                             Navigator.pop(context);

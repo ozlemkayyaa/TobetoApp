@@ -10,6 +10,7 @@ import 'package:tobeto/screens/profile_create/model/social_media_model.dart';
 import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/image_strings.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
+import 'package:tobeto/utils/constants/texts.dart';
 import 'package:tobeto/utils/helpers/helper_functions.dart';
 
 class ProfileAvatar extends StatefulWidget {
@@ -77,17 +78,20 @@ class _ProfileAvatarState extends State<ProfileAvatar> {
                               child: Column(
                                 mainAxisSize: MainAxisSize.min,
                                 children: <Widget>[
+                                  // Galeri
                                   ListTile(
                                     leading: const Icon(Icons.photo_library),
-                                    title: const Text('Galeri'),
+                                    title: const Text(TTexts.gallery),
                                     onTap: () {
                                       pickImage(ImageSource.gallery);
                                       Navigator.pop(context);
                                     },
                                   ),
+
+                                  // Kamera
                                   ListTile(
                                     leading: const Icon(Icons.camera_alt),
-                                    title: const Text('Kamera'),
+                                    title: const Text(TTexts.camera),
                                     onTap: () {
                                       pickImage(ImageSource.camera);
                                       Navigator.pop(context);
@@ -132,7 +136,7 @@ class _ProfileAvatarState extends State<ProfileAvatar> {
           );
         }
 
-        return Container();
+        return const Center(child: Text(TTexts.errorMessage));
       },
     );
   }
@@ -143,14 +147,14 @@ class _ProfileAvatarState extends State<ProfileAvatar> {
 
     for (var socialMedia in selectedSocialMedia) {
       switch (socialMedia.name) {
-        case 'Github':
+        case TTexts.github:
           icons.add(const Image(image: AssetImage(TImages.github), height: 30));
           break;
-        case 'Linkedin':
+        case TTexts.linkedin:
           icons.add(
               const Image(image: AssetImage(TImages.linkedin), height: 35));
           break;
-        case 'Instagram':
+        case TTexts.instagram:
           icons.add(
               const Image(image: AssetImage(TImages.instagram), height: 37));
           break;

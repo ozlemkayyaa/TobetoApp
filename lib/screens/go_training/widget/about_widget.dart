@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
+import 'package:tobeto/utils/constants/texts.dart';
 
 class AboutWidget extends StatelessWidget {
   final String baslangic;
@@ -39,17 +40,17 @@ class AboutWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           for (var entry in {
-            "Başlangıç": baslangic,
-            "Bitiş": bitis,
-            "Tahmini Süre": tahminiSure,
-            "Eğitim Türü": egitimTuru,
-            "Kategori": kategori,
-            "Seviye": seviye,
-            "İçerik": icerik,
-            if (gorev != null) "Görev": gorev!,
-            if (video != null) "Video": video!,
-            if (eEgitim != null) "E-Eğitim": eEgitim!,
-            "Üretici Firma": ureticiFirma,
+            TTexts.baslangic: baslangic,
+            TTexts.bitis: bitis,
+            TTexts.tahminiSure: tahminiSure,
+            TTexts.egitimTuru: egitimTuru,
+            TTexts.category: kategori,
+            TTexts.level: seviye,
+            TTexts.icerik: icerik,
+            if (gorev != null) TTexts.gorev: gorev!,
+            if (video != null) TTexts.video: video!,
+            if (eEgitim != null) TTexts.eEgitim: eEgitim!,
+            TTexts.ureticiFirma: ureticiFirma,
           }.entries)
             Padding(
               padding: const EdgeInsets.only(
@@ -60,33 +61,30 @@ class AboutWidget extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    entry.key,
-                    style: Theme.of(context).textTheme.headlineSmall,
-                  ),
-                  Text(
-                    entry.value,
-                    style: Theme.of(context).textTheme.bodySmall,
-                  ),
+                  Text(entry.key,
+                      style: Theme.of(context).textTheme.headlineSmall),
+                  Text(entry.value,
+                      style: Theme.of(context).textTheme.bodySmall),
                 ],
               ),
             ),
-          const SizedBox(height: 16),
+          const SizedBox(height: TSizes.md),
           Padding(
-            padding:
-                const EdgeInsets.only(left: 12.0, right: 12, top: 4, bottom: 4),
-            child: Text(
-              "Açıklama",
-              style: Theme.of(context).textTheme.headlineSmall,
-            ),
+            padding: const EdgeInsets.only(
+                left: TSizes.iconXs,
+                right: TSizes.iconXs,
+                top: TSizes.xs,
+                bottom: TSizes.xs),
+            child: Text(TTexts.explain,
+                style: Theme.of(context).textTheme.headlineSmall),
           ),
           Padding(
-            padding:
-                const EdgeInsets.only(left: 8.0, right: 8, top: 4, bottom: 4),
-            child: Text(
-              explain,
-              style: Theme.of(context).textTheme.bodySmall,
-            ),
+            padding: const EdgeInsets.only(
+                left: TSizes.sm,
+                right: TSizes.sm,
+                top: TSizes.xs,
+                bottom: TSizes.xs),
+            child: Text(explain, style: Theme.of(context).textTheme.bodySmall),
           ),
         ],
       ),

@@ -11,6 +11,7 @@ import 'package:tobeto/screens/profile_create/widgets/form/experience.dart';
 import 'package:tobeto/screens/profile_create/widgets/form/skills.dart';
 import 'package:tobeto/screens/profile_create/widgets/form/social_media.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
+import 'package:tobeto/utils/constants/texts.dart';
 
 class ProfileTabBarViewWidget extends StatelessWidget {
   const ProfileTabBarViewWidget({
@@ -44,7 +45,7 @@ class ProfileTabBarViewWidget extends StatelessWidget {
           ),
         );
       }
-      return const Center(child: Text('Beklenmeyen bir hata oluştu.'));
+      return const Center(child: Text(TTexts.errorMessage));
     });
   }
 }

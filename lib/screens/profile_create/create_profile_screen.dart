@@ -8,6 +8,7 @@ import 'package:tobeto/screens/profile_create/widgets/create_profile_tabbar_view
 import 'package:tobeto/screens/profile_create/widgets/create_profile_tabbar_widget.dart';
 import 'package:tobeto/utils/constants/image_strings.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
+import 'package:tobeto/utils/constants/texts.dart';
 
 class CreateProfileScreen extends StatelessWidget {
   const CreateProfileScreen({super.key});
@@ -41,14 +42,13 @@ class CreateProfileScreen extends StatelessWidget {
             body: const Column(
               children: [
                 ProfileTabBarWidget(),
-                //SizedBox(height: TSizes.sm),
                 ProfileTabBarViewWidget(),
               ],
             ),
           ),
         );
       }
-      return const Center(child: Text('Beklenmeyen bir hata oluştu.'));
+      return const Center(child: Text(TTexts.errorMessage));
     });
   }
 }

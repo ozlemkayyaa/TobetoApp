@@ -134,7 +134,7 @@ class _SettingsState extends State<Settings> {
           ),
         );
       }
-      return const Center(child: Text('Beklenmeyen bir hata oluştu.'));
+      return const Center(child: Text(TTexts.errorMessage));
     });
   }
 }

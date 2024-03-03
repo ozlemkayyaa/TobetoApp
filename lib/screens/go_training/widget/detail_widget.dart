@@ -33,11 +33,10 @@ class DetailWidget extends StatelessWidget {
             children: [
               // Eğitim Resmi
               Image(
-                image: AssetImage(lessonData.image),
-                fit: BoxFit.fill,
-                width: 200,
-                height: 150,
-              ),
+                  image: AssetImage(lessonData.image),
+                  fit: BoxFit.fill,
+                  width: 200,
+                  height: 150),
               const SizedBox(height: TSizes.sm),
 
               // Eğitim başlığı
@@ -46,10 +45,8 @@ class DetailWidget extends StatelessWidget {
                   left: TSizes.md,
                   bottom: TSizes.xs,
                 ),
-                child: Text(
-                  lessonData.title,
-                  style: Theme.of(context).textTheme.headlineSmall,
-                ),
+                child: Text(lessonData.title,
+                    style: Theme.of(context).textTheme.headlineSmall),
               ),
               const SizedBox(height: TSizes.sm),
 
@@ -66,7 +63,7 @@ class DetailWidget extends StatelessWidget {
                           border: Border.all(color: TColors.info)),
                       child: Padding(
                         padding: const EdgeInsets.all(TSizes.xs),
-                        child: Text("VIDEO",
+                        child: Text(TTexts.videos,
                             style: Theme.of(context)
                                 .textTheme
                                 .bodyLarge!
@@ -115,10 +112,10 @@ class DetailWidget extends StatelessWidget {
           ),
           const SizedBox(height: TSizes.sm),
           for (var entry in {
-            "Kategori": category,
-            "Dili": language,
-            "Alt Tip": content,
-            "Üretici Firma": factory,
+            TTexts.category: category,
+            TTexts.dil: language,
+            TTexts.altTip: content,
+            TTexts.firma: factory,
           }.entries)
             Padding(
               padding: const EdgeInsets.only(
@@ -146,7 +143,7 @@ class DetailWidget extends StatelessWidget {
                 right: TSizes.md,
                 top: TSizes.sm,
                 bottom: TSizes.xs),
-            child: Text("İçerik",
+            child: Text(TTexts.icerik,
                 style: Theme.of(context).textTheme.headlineSmall),
           ),
           Padding(
@@ -163,7 +160,7 @@ class DetailWidget extends StatelessWidget {
                 right: TSizes.md,
                 top: TSizes.sm,
                 bottom: TSizes.xs),
-            child: Text("İlgi Alanları",
+            child: Text(TTexts.ilgiAlanlari,
                 style: Theme.of(context).textTheme.headlineSmall),
           ),
           Padding(

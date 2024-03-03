@@ -18,8 +18,8 @@ class GoEducationHeader extends StatefulWidget {
 }
 
 class _GoEducationHeaderState extends State<GoEducationHeader> {
-  Color _favoriteColor = Colors.black;
-  Color _bookmarkColor = Colors.black;
+  Color _favoriteColor = TColors.black;
+  Color _bookmarkColor = TColors.black;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -57,9 +57,9 @@ class _GoEducationHeaderState extends State<GoEducationHeader> {
                 color: _favoriteColor,
                 onPressed: () {
                   setState(() {
-                    _favoriteColor = _favoriteColor == Colors.red
-                        ? Colors.black
-                        : Colors.red;
+                    _favoriteColor = _favoriteColor == TColors.error
+                        ? TColors.black
+                        : TColors.error;
                   });
                 },
               ),
@@ -68,9 +68,9 @@ class _GoEducationHeaderState extends State<GoEducationHeader> {
                 color: _bookmarkColor,
                 onPressed: () {
                   setState(() {
-                    _bookmarkColor = _bookmarkColor == Colors.amber
-                        ? Colors.black
-                        : Colors.amber;
+                    _bookmarkColor = _bookmarkColor == TColors.accent
+                        ? TColors.black
+                        : TColors.accent;
                   });
                 },
               ),

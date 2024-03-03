@@ -96,6 +96,9 @@ class TTexts {
   static const String work = "Aradığın \"İş\" Burada";
   static const String more = "Daha Fazla Göster";
 
+  // Error Message
+  static const String errorMessage = "Beklenmeyen bir hata oluştu.";
+
   // TabBar
   static const String applications = 'Başvurularım';
   static const String trainings = 'Eğitimlerim';
@@ -224,6 +227,13 @@ class TTexts {
   static const String settings = "Ayarlar";
   static const String languageLevel = "Seviye Seçiniz";
 
+  // Profile Avatar
+  static const String camera = "Kamera";
+  static const String gallery = "Galeri";
+  static const String github = "Github";
+  static const String instagram = "Instagram";
+  static const String linkedin = "Linkedin";
+
   // Kişisel Bilgilerim
   static const String birthdate = "Doğum Tarihi";
   static const String tc = "TC";
@@ -292,8 +302,9 @@ class TTexts {
   static const String instructor = "Eğitmen";
   static const String situation = "Durum";
   static const String searchEducatiion = "Eğitim Arayın...";
+
   // GO TRAINING
-  static const String about2 = "Hakkımda";
+  static const String about2 = "Hakkında";
   static const String contents = "İçerik";
   static const String notStart = "Başlamadın";
   static const String video = "Video - ";
@@ -314,10 +325,41 @@ class TTexts {
   static const String title8 =
       "İletişimde Sorun Çıkartmanın Garantili Yolları: Susma İşkencesi";
 
-  // KATALOG - HAKKINDA
+  // KATALOG - HAKKINDA - ABOUT
 
+  static const String baslangic1 = "15 EYL 2022 10:00";
+  static const String bitis1 = "Bu eğitimi istediğin zaman alabilirsin";
+  static const String tahminiSure1 = "3 sa 49 dk";
+  static const String egitimTuru1 = "Eğitim";
+  static const String category1 = "Kişisel Mükemmellik";
+  static const String seviye1 = "İleri";
+  static const String icerik1 = "20";
+  static const String ureticiFirma = "Enocta";
+  static const String eEgitim1 = "5";
+  static const String gorev1 = "5";
+  static const String video1 = "10";
   static const String explain1 =
       "Etkili İletişim Gelişim Yolculuğu'nun amacı günümüzün en önemli konularından biri olan temel iletişim ve etkili iletişim becerileri konularında çalışan yetkinliğinin artmasını sağlamaktır.";
+
+  static const String ilgiAlanlari = "İlgi Alanları";
+  static const String icerik = "İçerik";
+  static const String dil = "Dili";
+  static const String altTip = "Alt Tip";
+  static const String firma = "Üretici Firma";
+  static const String videos = "Video";
+  static const String enocta = "Enocta";
+  static const String konu = "Konu Uzmanı Videosu";
+
+  static const String baslangic = "Başlangıç";
+  static const String bitis = "Bitiş";
+  static const String tahminiSure = "Tahmini Süre";
+  static const String egitimTuru = "Eğitim Türü";
+  static const String gorev = "Görev";
+  static const String eEgitim = "E-Eğitim";
+  static const String ureticiFirmaa = "Üretici Firma";
+  static const String explain = "Açıklama";
+  // Language
+  static const String turkce = "Türkçe";
 
   // KATALOG - DETAY
   static const String go = "EĞİTİME GİT";
@@ -375,4 +417,95 @@ class TTexts {
   static const String examTitle6 = "Masaüstü Programlama";
   static const String examMessage =
       "Bu sınav 25 sorudan oluşmakta olup sınav süresi 30 dakikadır. Sınav çoktan seçmeli test şeklinde olup sınavı yarıda bıraktığınız taktirde çözdüğünüz kısım kadarıyla değerlendirileceksiniz. \n\nSınava Süresi: 30 Dakika  \n\nSoru Sayısı: 25 \n\n Soru Tipi: Çoktan Seçmeli";
+
+// Validasyon
+  static const String validation = "Bu alan boş bırakılamaz.";
+  static const String validationEmail = "Lütfen E-Posta adresinizi giriniz.";
+  static const String validatePassword = "Şifre boş bırakılamaz.";
+  static const String validatePassword2 = "Şifreniz 8 karakterli olmalıdır.";
+  static const String validatePhone = "Lütfen telefon numaranızı giriniz.";
+  static const String validatePhone2 =
+      "Telefon numarası 10 karakterli olmalıdır.";
+
+  // Helpers
+  static const String start = "Başla";
+  static const String startExam = "SINAVA BAŞLA";
+  static const String okey = "Tamam";
+  static const String dateFormat = "dd MMM yyyy";
+
+  // Quiz Screen
+  static const String question = "SORU";
+  static const String result = "Sonucu Göster";
+  static const String nextQuestion = "Sıradaki Soru";
+  static const String examResult = "Sınav Sonucunuz";
+  static const String exit = "ÇIKIŞ";
+
+  // Questions
+  static const String question1 =
+      "Aşağidakilerden hangisi Flutter'da bir widget türüdür?";
+  static const String answer1A = "Stateful";
+  static const String answer1B = "Constructor";
+  static const String answer1C = "Class";
+  static const String answer1D = "Const";
+
+  static const String question2 =
+      "Flutter hangi dil kullanılarak geliştirilmektedir?";
+  static const String answer2A = "Python";
+  static const String answer2B = "JavaScript";
+  static const String answer2C = "Dart";
+  static const String answer2D = "C++";
+
+  static const String question3 = "Flutter'da Widget nedir?";
+  static const String answer3A = "const değerler widget'dır.";
+  static const String answer3B = "class yapıları widget'dır.";
+  static const String answer3C = "Sadece text bir widget'dır.";
+  static const String answer3D = "Flutter'da herşey widget'dır.";
+
+  static const String question4 = "Tüm eklentileri güncelleme komutu nedir?";
+  static const String answer4A = "flutter pub upgrade";
+  static const String answer4B = "fstful";
+  static const String answer4C = "flutter create";
+  static const String answer4D = "flutter";
+
+  static const String question5 =
+      "Bir widget’ın boyutunu ekran boyutuna göre nasıl ayarlarsınız?";
+  static const String answer5A = "double.infinity";
+  static const String answer5B = "MediaQuery.of(context).size";
+  static const String answer5C = "EdgeInsets.symmetric";
+  static const String answer5D = "mainAxisAlignment: MainAxisAlignment.center";
+
+  static const String question6 =
+      "Döngü şartı geçerli olmasa bile en az bir kere çalışacak döngü türü hangisidir?";
+  static const String answer6A = "do-while";
+  static const String answer6B = "for";
+  static const String answer6C = "if";
+  static const String answer6D = "while";
+
+  static const String question7 =
+      "Aşağıdakilerden hangisi Column Widget tanımlama parametrelerinden biri değildir?";
+  static const String answer7A = "child";
+  static const String answer7B = "mainAxisAlignment";
+  static const String answer7C = "children";
+  static const String answer7D = "crossAxisAlignment";
+
+  static const String question8 =
+      "Bir önceki sayfaya geçmek için aşağıdaki Navigator fonksiyonlarından hangisi kullanılır?";
+  static const String answer8A = "push";
+  static const String answer8B = "goto";
+  static const String answer8C = "delete";
+  static const String answer8D = "pop";
+
+  static const String question9 =
+      "Aşağıdakilerden hangisi Scaffold Widget tanımlama özelliklerinden biri değildir?";
+  static const String answer9A = "floatingActionButton";
+  static const String answer9B = "body";
+  static const String answer9C = "animation";
+  static const String answer9D = "appBar";
+
+  static const String question10 =
+      "Bir Column içine beş adet Row bırakmak isteyen bir flutter geliştiricisi Column Widget'ının hangi özelliğini kullanmalıdır?";
+  static const String answer10A = "text";
+  static const String answer10B = "parent";
+  static const String answer10C = "child";
+  static const String answer10D = "children";
 }

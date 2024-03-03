@@ -37,7 +37,7 @@ class ProfileAbout extends StatelessWidget {
             elevation: 3,
             color: dark ? TColors.darkerGrey : TColors.lightGrey,
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(TSizes.sm),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -45,7 +45,7 @@ class ProfileAbout extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.all(TSizes.sm),
                         child: Text(TTexts.aboutMe,
                             style: Theme.of(context).textTheme.headlineSmall),
                       ),
@@ -63,14 +63,14 @@ class ProfileAbout extends StatelessWidget {
                     ],
                   ),
                   const Padding(
-                    padding: EdgeInsets.only(bottom: 8.0),
+                    padding: EdgeInsets.only(bottom: TSizes.sm),
                     child: Divider(
                       color: TColors.black,
                       height: 0.5,
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.all(TSizes.sm),
                     child: Text(about,
                         style: Theme.of(context).textTheme.bodyLarge),
                   ),
@@ -80,7 +80,7 @@ class ProfileAbout extends StatelessWidget {
           ),
         );
       }
-      return const Center(child: Text('Beklenmeyen bir hata oluştu.'));
+      return const Center(child: Text(TTexts.errorMessage));
     });
   }
 }

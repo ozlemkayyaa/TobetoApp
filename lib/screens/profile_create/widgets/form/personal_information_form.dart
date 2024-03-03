@@ -36,7 +36,8 @@ class _PersonalInformationFormState extends State<PersonalInformationForm> {
     if (pickedDate != null && pickedDate != _selectedDate) {
       setState(() {
         _selectedDate = pickedDate;
-        dateController.text = DateFormat('dd/MM/yyyy').format(_selectedDate!);
+        dateController.text =
+            DateFormat(TTexts.dateFormat).format(_selectedDate!);
       });
     }
   }
@@ -275,7 +276,7 @@ class _PersonalInformationFormState extends State<PersonalInformationForm> {
           ),
         );
       }
-      return const Center(child: Text('Beklenmeyen bir hata oluştu.'));
+      return const Center(child: Text(TTexts.errorMessage));
     });
   }
 }

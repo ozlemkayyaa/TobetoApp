@@ -130,7 +130,7 @@ class _LanguageState extends State<Language> {
             ),
           );
         }
-        return const Center(child: Text('Beklenmeyen bir hata oluştu.'));
+        return const Center(child: Text(TTexts.errorMessage));
       },
     );
   }

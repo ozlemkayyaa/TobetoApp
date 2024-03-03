@@ -152,7 +152,7 @@ class DrawerWidget extends StatelessWidget {
                         ),
                       );
                     } else {
-                      return const SizedBox();
+                      return const Center(child: Text(TTexts.errorMessage));
                     }
                   },
                 ),

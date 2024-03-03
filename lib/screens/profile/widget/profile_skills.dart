@@ -44,7 +44,7 @@ class _ProfileSkillsState extends State<ProfileSkills> {
                 elevation: 3,
                 color: dark ? TColors.darkerGrey : TColors.lightGrey,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(TSizes.sm),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -52,7 +52,7 @@ class _ProfileSkillsState extends State<ProfileSkills> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Padding(
-                            padding: const EdgeInsets.all(8.0),
+                            padding: const EdgeInsets.all(TSizes.sm),
                             child: Text(TTexts.skills,
                                 style:
                                     Theme.of(context).textTheme.headlineSmall),
@@ -86,7 +86,7 @@ class _ProfileSkillsState extends State<ProfileSkills> {
           ],
         );
       }
-      return const Center(child: Text('Beklenmeyen bir hata oluştu.'));
+      return const Center(child: Text(TTexts.errorMessage));
     });
   }
 }
