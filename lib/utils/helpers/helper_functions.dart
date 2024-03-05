@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:tobeto/screens/quiz/quiz_screen.dart';
+import 'package:tobeto/utils/constants/texts.dart';
 
 class THelperFunctions {
 // SnackBar gösteren fonksiyon
@@ -20,7 +22,31 @@ class THelperFunctions {
           actions: [
             TextButton(
               onPressed: () => Navigator.of(context).pop(),
-              child: const Text('Tamam'),
+              child: const Text(TTexts.okey),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  // AlertDialog gösteren fonksiyon
+  static void showAlert2(String title, String message, BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text(title),
+          content: Text(message),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (contex) => const QuizScreen(),
+                ),
+              ),
+              child: const Text(TTexts.startExam),
             ),
           ],
         );
@@ -65,23 +91,7 @@ class THelperFunctions {
 
 // Tarih formatını düzenleyen fonksiyon
   static String getFormattedDate(DateTime date,
-      {String format = 'dd MMM yyyy'}) {
+      {String format = TTexts.dateFormat}) {
     return DateFormat(format).format(date);
-  }
-
-// Listede tekrarlanan öğeleri kaldıran fonksiyon
-  static List<T> removeDuplicates<T>(List<T> list) {
-    return list.toSet().toList();
-  }
-
-// Belirli bir boyutta sıralı widget'ları saran fonksiyon
-  static List<Widget> wrapWidgets(List<Widget> widgets, int rowSize) {
-    final wrappedList = <Widget>[];
-    for (var i = 0; i < widgets.length; i += rowSize) {
-      final rowChildren = widgets.sublist(
-          i, i + rowSize > widgets.length ? widgets.length : i + rowSize);
-      wrappedList.add(Row(children: rowChildren));
-    }
-    return wrappedList;
   }
 }

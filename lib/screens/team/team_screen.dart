@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:tobeto/screens/home/widgets/drawer_widget.dart';
 import 'package:tobeto/screens/team/widgets/team_tabbar_view_widget.dart';
 import 'package:tobeto/screens/team/widgets/team_tabbar_widget.dart';
 import 'package:tobeto/utils/constants/image_strings.dart';
@@ -26,7 +25,7 @@ class TeamScreen extends StatelessWidget {
             ),
           ],
         ),
-        drawer: const DrawerWidget(),
+        //drawer: const DrawerWidget(),
         body: const Column(
           children: [
             TeamTabBarWidget(),

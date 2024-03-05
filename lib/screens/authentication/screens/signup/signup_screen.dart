@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:tobeto/blocs/auth_bloc/auth_bloc.dart';
-import 'package:tobeto/blocs/auth_bloc/auth_state.dart';
+import 'package:tobeto/api/blocs/auth_bloc/auth_bloc.dart';
+import 'package:tobeto/api/blocs/auth_bloc/auth_state.dart';
 import 'package:tobeto/screens/authentication/models/login_signup/form_divider.dart';
 import 'package:tobeto/screens/authentication/models/login_signup/social_buttons.dart';
 import 'package:tobeto/screens/authentication/screens/signup/widgets/signup_form.dart';
@@ -44,7 +44,7 @@ class SignupScreen extends StatelessWidget {
                     const SizedBox(height: TSizes.spaceBtwSections),
 
                     // Form
-                    SignupForm(),
+                    const SignupForm(),
                     const SizedBox(height: TSizes.spaceBtwSections),
 
                     // Divider

@@ -1,34 +1,52 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart'; // BlocProvider eklemeyi unutmayın
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:tobeto/blocs/auth_bloc/auth_bloc.dart'; // AuthBloc'u import edin
-import 'package:tobeto/blocs/auth_bloc/auth_event.dart';
-import 'package:tobeto/blocs/auth_bloc/auth_state.dart';
-import 'package:tobeto/screens/authentication/screens/password/forgot_password.dart';
+import 'package:tobeto/api/blocs/auth_bloc/auth_bloc.dart';
+import 'package:tobeto/api/blocs/auth_bloc/auth_event.dart';
+import 'package:tobeto/api/blocs/auth_bloc/auth_state.dart';
+import 'package:tobeto/model/user_model.dart';
+import 'package:tobeto/screens/authentication/screens/password/forgotten_password.dart';
 import 'package:tobeto/screens/authentication/screens/signup/signup_screen.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
+import 'package:tobeto/utils/validators/validation.dart';
 
-@override
-class LoginForm extends StatelessWidget {
-  final TextEditingController emailController = TextEditingController();
-  final TextEditingController passwordController = TextEditingController();
-
-  LoginForm({
+class LoginForm extends StatefulWidget {
+  const LoginForm({
     super.key,
   });
 
   @override
+  State<LoginForm> createState() => _LoginFormState();
+}
+
+class _LoginFormState extends State<LoginForm> {
+  final TextEditingController emailController = TextEditingController();
+
+  final TextEditingController passwordController = TextEditingController();
+
+  final _formKey = GlobalKey<FormState>();
+
+  final UserModel _user = UserModel();
+
+  bool _obscureText = true;
+
+  @override
   Widget build(BuildContext context) {
     return Form(
+      key: _formKey,
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: TSizes.spaceBtwSections),
         child: Column(
           children: [
             // Email
             TextFormField(
-              controller: emailController, // Email denetleyicisi
+              onSaved: (value) {
+                _user.email = value!;
+              },
+              validator: TValidator.validateEmail,
+              controller: emailController,
               decoration: const InputDecoration(
                 prefixIcon: Icon(CupertinoIcons.mail),
                 labelText: TTexts.userEmail,
@@ -38,44 +56,38 @@ class LoginForm extends StatelessWidget {
 
             // Password
             TextFormField(
-              controller: passwordController, // Şifre denetleyicisi
-              decoration: const InputDecoration(
-                prefixIcon: Icon(Iconsax.lock),
-                labelText: TTexts.userPassword,
-                suffixIcon: Icon(Iconsax.eye_slash),
+              validator: TValidator.validatePassword,
+              controller: passwordController,
+              obscureText: _obscureText,
+              decoration: InputDecoration(
+                labelText: TTexts.signPassword,
+                prefixIcon: const Icon(Iconsax.lock),
+                suffixIcon: IconButton(
+                  icon: Icon(
+                      _obscureText ? Icons.visibility : Icons.visibility_off),
+                  onPressed: () {
+                    setState(() {
+                      _obscureText = !_obscureText;
+                    });
+                  },
+                ),
               ),
             ),
             const SizedBox(height: TSizes.spaceBtwInputFields / 2),
 
-            // Remember Me and Forgot Password
+            // Forgot Password
             BlocBuilder<AuthBloc, AuthState>(
               builder: (context, state) {
-                final bool rememberMeEnabled =
-                    state is RememberMeState ? state.rememberMe : false;
                 return Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    // Remember Me
-                    Row(
-                      children: [
-                        Checkbox(
-                          value: rememberMeEnabled,
-                          onChanged: (value) {
-                            context.read<AuthBloc>().add(
-                                RememberMeChanged(rememberMe: value ?? false));
-                          },
-                        ),
-                        const Text(TTexts.rememeberMe),
-                      ],
-                    ),
-
                     // Forgot Password
                     TextButton(
                       onPressed: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const ForgotPassword()),
+                              builder: (context) => const ForgottenPassword()),
                         );
                       },
                       child: const Text(TTexts.passwordForgot),
@@ -94,9 +106,13 @@ class LoginForm extends StatelessWidget {
                   child: ElevatedButton(
                     onPressed: () {
                       // Giriş butonu tıklandığında AuthBloc'a giriş olayını ilet
-                      context.read<AuthBloc>().add(Login(
-                          email: emailController.text,
-                          password: passwordController.text));
+                      if (_formKey.currentState!.validate()) {
+                        _formKey.currentState!.save();
+                        context.read<AuthBloc>().add(LoginEvent(
+                              email: _user.email!,
+                              password: passwordController.text,
+                            ));
+                      }
                     },
                     child: const Text(TTexts.loginButton),
                   ),
@@ -106,6 +122,7 @@ class LoginForm extends StatelessWidget {
             const SizedBox(height: TSizes.spaceBtwItems),
 
             // Register Button
+
             SizedBox(
               width: double.infinity,
               child: OutlinedButton(

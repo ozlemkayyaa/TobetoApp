@@ -1,8 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:tobeto/screens/education/widgets/search_button_widget.dart';
 import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/image_strings.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
+import 'package:tobeto/utils/constants/texts.dart';
 
 class CatalogHeaderWidget extends StatelessWidget {
   const CatalogHeaderWidget({
@@ -26,25 +27,16 @@ class CatalogHeaderWidget extends StatelessWidget {
                 .apply(color: TColors.white),
           ),
         ),
-        Align(
+        const Align(
           alignment: Alignment.bottomCenter,
           child: SizedBox(
             width: double.infinity,
             child: Padding(
-              padding: const EdgeInsets.only(
-                  top: 90, left: TSizes.sm, right: TSizes.sm),
-              child: Form(
-                child: TextFormField(
-                  decoration: const InputDecoration(
-                      filled: true,
-                      fillColor: TColors.grey,
-                      suffixIcon: Icon(CupertinoIcons.search),
-                      suffixIconColor: TColors.darkerGrey,
-                      labelText: "Eğitim Arayın...",
-                      labelStyle: TextStyle(color: TColors.darkerGrey)),
-                ),
-              ),
-            ),
+                padding:
+                    EdgeInsets.only(top: 90, left: TSizes.sm, right: TSizes.sm),
+                child: SearchButtonWidget(
+                  buttonName: TTexts.searchEducatiion,
+                )),
           ),
         )
       ],

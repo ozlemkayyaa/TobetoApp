@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:tobeto/screens/education/widgets/az_button_widget.dart';
-import 'package:tobeto/screens/education/widgets/choise_button_widget.dart';
 import 'package:tobeto/screens/education/widgets/education_tabbar_widget.dart';
 import 'package:tobeto/screens/education/widgets/education_tabbar_view_widget.dart';
 import 'package:tobeto/screens/education/widgets/search_button_widget.dart';
-import 'package:tobeto/screens/home/widgets/drawer_widget.dart';
 import 'package:tobeto/utils/constants/image_strings.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
@@ -21,7 +18,7 @@ class EducationScreen extends StatelessWidget {
         appBar: AppBar(
           automaticallyImplyLeading: true,
           title: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-            Image.asset(TImages.appBarLogo, height: 18),
+            Image.asset(TImages.appBarLogo, height: TSizes.fontSizeLg),
           ]),
           actions: const [
             Padding(
@@ -30,7 +27,6 @@ class EducationScreen extends StatelessWidget {
             )
           ],
         ),
-        drawer: const DrawerWidget(),
         body: const Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
@@ -39,18 +35,10 @@ class EducationScreen extends StatelessWidget {
             ),
 
             // Arama
-            TabButtonWidget(
-              icon: Icons.search,
+            SizedBox(height: TSizes.sm),
+            SearchButtonWidget(
               buttonName: TTexts.searchButton,
             ),
-
-            // Kurum Seçiniz
-            ChoiseButtonWidget(
-              buttonName: TTexts.choise,
-            ),
-
-            // Adına Göre
-            AZButtonWidget(),
 
             EducationTabBarWidget(),
 

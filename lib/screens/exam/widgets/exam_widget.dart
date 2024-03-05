@@ -1,18 +1,22 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
 import 'package:tobeto/utils/constants/colors.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
+import 'package:tobeto/utils/constants/texts.dart';
 import 'package:tobeto/utils/helpers/helper_functions.dart';
 
 class ExamWidget extends StatelessWidget {
   const ExamWidget({
     super.key,
+    required this.title,
+    required this.message,
     required this.testName,
-    required this.buttonPadding,
   });
 
+  final String title;
+  final String message;
   final String testName;
-  final double buttonPadding;
 
   @override
   Widget build(BuildContext context) {
@@ -25,6 +29,7 @@ class ExamWidget extends StatelessWidget {
           borderRadius: BorderRadius.circular(30),
           border: Border.all(color: dark ? TColors.black : TColors.white)),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           const Padding(
             padding: EdgeInsets.all(TSizes.sm),
@@ -32,6 +37,7 @@ class ExamWidget extends StatelessWidget {
                 color: TColors.white),
           ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
                 testName,
@@ -42,31 +48,30 @@ class ExamWidget extends StatelessWidget {
               ),
             ],
           ),
-          Padding(
-            padding: EdgeInsets.only(left: buttonPadding),
-            child: SizedBox(
-              width: 90,
-              height: 50,
-              child: Padding(
-                padding:
-                    const EdgeInsets.only(bottom: TSizes.sm, top: TSizes.sm),
-                child: ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                    padding: const EdgeInsets.all(5),
-                    backgroundColor: TColors.white,
-                    side: const BorderSide(color: TColors.white),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(TSizes.appBarHeight),
-                    ),
+          SizedBox(
+            width: 60,
+            height: 50,
+            child: Padding(
+              padding: const EdgeInsets.only(
+                  bottom: TSizes.sm, top: TSizes.sm, right: TSizes.sm),
+              child: ElevatedButton(
+                onPressed: () {
+                  THelperFunctions.showAlert2(title, message, context);
+                },
+                style: ElevatedButton.styleFrom(
+                  padding: const EdgeInsets.all(5),
+                  backgroundColor: TColors.white,
+                  side: const BorderSide(color: TColors.white),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(TSizes.appBarHeight),
                   ),
-                  child: Text(
-                    "Başla",
-                    style: Theme.of(context)
-                        .textTheme
-                        .titleMedium!
-                        .apply(color: dark ? TColors.black : TColors.black),
-                  ),
+                ),
+                child: Text(
+                  TTexts.start,
+                  style: Theme.of(context)
+                      .textTheme
+                      .bodyLarge!
+                      .apply(color: dark ? TColors.black : TColors.black),
                 ),
               ),
             ),

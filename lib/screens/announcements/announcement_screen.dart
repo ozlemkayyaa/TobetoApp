@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:tobeto/screens/education/widgets/choise_button_widget.dart';
+import 'package:tobeto/screens/announcements/widget/announcement_widget.dart';
 import 'package:tobeto/screens/education/widgets/search_button_widget.dart';
-import 'package:tobeto/screens/home/widgets/drawer_widget.dart';
-import 'package:tobeto/screens/home/widgets/tabbar_widgets/announcement_widget.dart';
 import 'package:tobeto/utils/constants/image_strings.dart';
 import 'package:tobeto/utils/constants/sizes.dart';
 import 'package:tobeto/utils/constants/texts.dart';
@@ -17,7 +15,7 @@ class AnnouncementScreen extends StatelessWidget {
       appBar: AppBar(
         automaticallyImplyLeading: true,
         title: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-          Image.asset(TImages.appBarLogo, height: 18),
+          Image.asset(TImages.appBarLogo, height: TSizes.fontSizeLg),
         ]),
         actions: const [
           Padding(
@@ -26,7 +24,6 @@ class AnnouncementScreen extends StatelessWidget {
           )
         ],
       ),
-      drawer: const DrawerWidget(),
       body: const SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -36,45 +33,47 @@ class AnnouncementScreen extends StatelessWidget {
             ),
 
             // Arama Butonu
-            TabButtonWidget(
-              icon: Icons.search,
+            SizedBox(height: TSizes.sm),
+            SearchButtonWidget(
               buttonName: TTexts.searchButton,
             ),
 
-            // Tür Butou
-            TabButtonWidget(
-              icon: Icons.keyboard_arrow_down,
-              buttonName: TTexts.type,
-            ),
-
-            // Organizasyon Butonu
-            ChoiseButtonWidget(
-              buttonName: TTexts.organization,
-            ),
-
-            // Sıralama
-            TabButtonWidget(
-              icon: Icons.keyboard_arrow_down,
-              buttonName: TTexts.sort,
-            ),
             SizedBox(height: TSizes.sm),
             AnnouncementWidget(
-                announcement: TTexts.announce1, dateTime: TTexts.date1),
+                title: TTexts.baslik1,
+                message: TTexts.duyuru1,
+                announcement: TTexts.announce1,
+                dateTime: TTexts.date1),
             SizedBox(height: TSizes.sm),
             AnnouncementWidget(
-                announcement: TTexts.announce2, dateTime: TTexts.date2),
+                title: TTexts.baslik2,
+                message: TTexts.duyuru2,
+                announcement: TTexts.announce2,
+                dateTime: TTexts.date2),
             SizedBox(height: TSizes.sm),
             AnnouncementWidget(
-                announcement: TTexts.announce3, dateTime: TTexts.date3),
+                title: TTexts.baslik3,
+                message: TTexts.duyuru3,
+                announcement: TTexts.announce3,
+                dateTime: TTexts.date3),
             SizedBox(height: TSizes.sm),
             AnnouncementWidget(
-                announcement: TTexts.announce1, dateTime: TTexts.date1),
+                title: TTexts.baslik1,
+                message: TTexts.duyuru1,
+                announcement: TTexts.announce1,
+                dateTime: TTexts.date1),
             SizedBox(height: TSizes.sm),
             AnnouncementWidget(
-                announcement: TTexts.announce2, dateTime: TTexts.date2),
+                title: TTexts.baslik2,
+                message: TTexts.duyuru2,
+                announcement: TTexts.announce2,
+                dateTime: TTexts.date2),
             SizedBox(height: TSizes.sm),
             AnnouncementWidget(
-                announcement: TTexts.announce3, dateTime: TTexts.date3),
+                title: TTexts.baslik3,
+                message: TTexts.duyuru3,
+                announcement: TTexts.announce3,
+                dateTime: TTexts.date3),
             SizedBox(height: TSizes.sm),
           ],
         ),
@@ -82,32 +81,3 @@ class AnnouncementScreen extends StatelessWidget {
     );
   }
 }
-
-class CupertinoIcon {}
-
-
-
-/*
-Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            DropdownButton<String>(
-              value: selectedOption,
-              onChanged: (String? newValue) {
-                selectedOption = newValue!;
-                print('Seçilen: $selectedOption');
-              },
-              items: options.map<DropdownMenuItem<String>>((String value) {
-                return DropdownMenuItem<String>(
-                  value: value,
-                  child: Text(value),
-                );
-              }).toList(),
-            ),
-          ],
-        ),
-      ),
-    );
- */

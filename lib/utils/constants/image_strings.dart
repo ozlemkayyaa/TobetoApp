@@ -12,6 +12,9 @@ class TImages {
   static const String google = "assets/logos/googleLogo.png";
   static const String apple = "assets/logos/appleLogo.png";
   static const String appleWhite = "assets/logos/appleWhite.png";
+  static const String instagram = "assets/images/instagram.png";
+  static const String linkedin = "assets/images/linkedin.png";
+  static const String github = "assets/images/github.png";
 
   // Other Images
   static const String background = "assets/images/background.png";
@@ -26,6 +29,8 @@ class TImages {
   static const String sinav = "assets/images/sınavlar.png";
   static const String notFound = "assets/images/videoNotFound.jpg";
   static const String ecmelHoca = "assets/images/ecmelHoca.jpg";
+  static const String mobil = "assets/images/mobil.png";
+  static const String softskill = "assets/images/softskill.png";
 
   // OnBoarding
   static const String coding = "assets/images/onboarding/coding.png";
@@ -40,6 +45,7 @@ class TImages {
 
   // Course Screen
   static const String education = "assets/images/eğitimlerim.png";
+  static const String exam = "assets/images/exam.png";
 
   // News Screen
   static const String news = "assets/images/duyurularım.png";

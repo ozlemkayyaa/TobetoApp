@@ -132,4 +132,84 @@ class DropdownData {
       DropdownItem("Devam Eden Eğitimler")
     ];
   }
+
+  static List<DropdownItem> getSkills() {
+    return [
+      DropdownItem("C#"),
+      DropdownItem("SQL"),
+      DropdownItem("Muhasebe"),
+      DropdownItem("JavaScript"),
+      DropdownItem("Aktif Öğrenme"),
+      DropdownItem("Aktif Dinleme"),
+      DropdownItem("Uyum Sağlama"),
+      DropdownItem("Yönetim ve İdare"),
+      DropdownItem("Reklam"),
+      DropdownItem("Algoritmalar"),
+      DropdownItem("Android (İşletim Sistemi)"),
+      DropdownItem("Apache Ambari"),
+      DropdownItem("Uygulama Mağazası (IOS)"),
+      DropdownItem("Apple Sağlık Kiti"),
+      DropdownItem("Apple IOS"),
+      DropdownItem("Apple XCode"),
+      DropdownItem("Uygulamalı Makine Öğrenimi"),
+      DropdownItem("Back End"),
+      DropdownItem("Büyük Veri"),
+      DropdownItem("Blok Zinciri"),
+      DropdownItem("Bootstarp (Front-End Framework)"),
+      DropdownItem("Marka Yönetimi"),
+      DropdownItem("İletişim"),
+      DropdownItem("Pazarlama"),
+      DropdownItem("Building and Construction"),
+    ];
+  }
+
+  static List<DropdownItem> getSocialMedia() {
+    return [
+      DropdownItem("Instagram"),
+      DropdownItem("Twitter"),
+      DropdownItem("Linkedin"),
+      DropdownItem("Behance"),
+      DropdownItem("Dribble"),
+      DropdownItem("Github"),
+    ];
+  }
+
+  static List<DropdownItem> getLanguage() {
+    return [
+      DropdownItem("Almanca"),
+      DropdownItem("Arapça"),
+      DropdownItem("Çekçe"),
+      DropdownItem("Çince"),
+      DropdownItem("Danca"),
+      DropdownItem("Fince"),
+      DropdownItem("Fransızca"),
+      DropdownItem("Hindi"),
+      DropdownItem("Hollandaca"),
+      DropdownItem("İbranice"),
+      DropdownItem("İngilizce"),
+      DropdownItem("İspanyolca"),
+      DropdownItem("İsveççe"),
+      DropdownItem("İtalyanca"),
+      DropdownItem("Japonca"),
+      DropdownItem("Korece"),
+      DropdownItem("Lehçe"),
+      DropdownItem("Macarca"),
+      DropdownItem("Norveççe"),
+      DropdownItem("Portekizce"),
+      DropdownItem("Romence"),
+      DropdownItem("Rusça"),
+      DropdownItem("Türkçe"),
+      DropdownItem("Vietnamca"),
+      DropdownItem("Yunanca")
+    ];
+  }
+
+  static List<DropdownItem> getLanguageLevel() {
+    return [
+      DropdownItem("Temel Seviye (A1, A2)"),
+      DropdownItem("Orta Seviye (B1, B2)"),
+      DropdownItem("İleri Seviye (C1, C2)"),
+      DropdownItem("Anadil"),
+    ];
+  }
 }

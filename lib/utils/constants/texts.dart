@@ -88,13 +88,16 @@ class TTexts {
   // HomePage Text
   static const String tobetoPurple = 'TOBETO';
   static const String welcome = '\'ya hoş geldin ';
-  static const String user = "Özlem,";
+  static const String user = "";
   static const String introduction =
       'Yeni nesil öğrenme deneyimi ile Tobeto kariyer yolculuğunda senin yanında!';
   static const String freeEducation =
       'Ücretsiz eğitimlerle, geleceğin mesleklerinde sen de yerini al.';
   static const String work = "Aradığın \"İş\" Burada";
   static const String more = "Daha Fazla Göster";
+
+  // Error Message
+  static const String errorMessage = "Beklenmeyen bir hata oluştu.";
 
   // TabBar
   static const String applications = 'Başvurularım';
@@ -117,6 +120,10 @@ class TTexts {
   static const String goEducation = "Eğitime Git";
   static const String howEducation = "Eğitimlere Nasıl Katılırım?";
   static const String howEducationDate = "8 Eylül 2023 17:06";
+  static const String mobil = "Mobil Geliştirici (Flutter) - 1B";
+  static const String mobilDate = "23 Ekim 2023 03:00";
+  static const String softSkill = "SoftSkill: İletişim Becerileri";
+  static const String softSkillDate = "25 Ekim 2023 14:11";
 
   // Sınavlarım
   static const String examEveryone =
@@ -160,7 +167,7 @@ class TTexts {
   static const String tel = "(0216) 331 48 00";
   static const String ePosta = "info@tobeto.com";
   static const String adress =
-      "Kavacık, Rüzgarlıbahçe Mah. Çampınarı Sok. \nNo:4 Smart Plaza B Blok Kat:3 34805, \nBeykoz/İstanbul";
+      "Kavacık, Rüzgarlıbahçe Mah. \nÇampınarı Sok.No:4 \nSmart Plaza B Blok Kat:3 34805, \nBeykoz/İstanbul";
   static const String telIstCod = "(0216) 969 22 40";
   static const String ePostaIstCod = "istanbulkodluyor@tobeto.com";
   static const String contactForm = "İletişim Formu";
@@ -210,14 +217,22 @@ class TTexts {
   static const String alpTitle = "Lidya Ventures Yönetim Kurulu Üyesi";
 
   // Profile
-  static const String one = "Kişisel Bilgilerim";
-  static const String two = "Deneyimlerim";
-  static const String three = "Eğitim Hayatım";
-  static const String four = "Yetkinliklerim";
-  static const String five = "Sertifikalarım";
-  static const String six = "Medya Hesaplarım";
-  static const String seven = "Yabancı Dillerim";
-  static const String eight = "Ayarlar";
+  static const String personalInfo = "Kişisel Bilgilerim";
+  static const String experience = "Deneyimlerim";
+  static const String educationLife = "Eğitim Hayatım";
+  static const String skill = "Yetkinliklerim";
+  static const String certificate = "Sertifikalarım";
+  static const String socialMedia = "Medya Hesaplarım";
+  static const String language = "Yabancı Dillerim";
+  static const String settings = "Ayarlar";
+  static const String languageLevel = "Seviye Seçiniz";
+
+  // Profile Avatar
+  static const String camera = "Kamera";
+  static const String gallery = "Galeri";
+  static const String github = "Github";
+  static const String instagram = "Instagram";
+  static const String linkedin = "Linkedin";
 
   // Kişisel Bilgilerim
   static const String birthdate = "Doğum Tarihi";
@@ -255,11 +270,16 @@ class TTexts {
   static const String end = "Üyeliği Sonlandır";
 
   //Profile Screen
-  static const String nameSurname = "Ad Soyad";
+  static const String url = "https://";
+  static const String skills = "Yetkinlikler";
+  static const String job = "Mobile Developer";
+  static const String profileInformation = "Profil Bilgileri";
   static const String student = "Özlem Kaya";
+  static const String education = "Eğitim Durumu";
+  static const String licanseDegree = "Lisans Derecesi";
   static const String studentBirthdate = "01.01.1980";
   static const String postaAdress = "E-Posta Adresi";
-  static const String studentEMail = "ozlem@deneme.com";
+  static const String studentEMail = "ozlem@gmail.com";
   static const String phoneNumber = "Telefon Numarası";
   static const String studentTelephoneNumber = "+905324678558";
 
@@ -281,6 +301,7 @@ class TTexts {
   static const String software = "Yazılım Dili";
   static const String instructor = "Eğitmen";
   static const String situation = "Durum";
+  static const String searchEducatiion = "Eğitim Arayın...";
 
   // GO TRAINING
   static const String about2 = "Hakkında";
@@ -304,10 +325,41 @@ class TTexts {
   static const String title8 =
       "İletişimde Sorun Çıkartmanın Garantili Yolları: Susma İşkencesi";
 
-  // KATALOG - HAKKINDA
+  // KATALOG - HAKKINDA - ABOUT
 
+  static const String baslangic1 = "15 EYL 2022 10:00";
+  static const String bitis1 = "Bu eğitimi istediğin zaman alabilirsin";
+  static const String tahminiSure1 = "3 sa 49 dk";
+  static const String egitimTuru1 = "Eğitim";
+  static const String category1 = "Kişisel Mükemmellik";
+  static const String seviye1 = "İleri";
+  static const String icerik1 = "20";
+  static const String ureticiFirma = "Enocta";
+  static const String eEgitim1 = "5";
+  static const String gorev1 = "5";
+  static const String video1 = "10";
   static const String explain1 =
       "Etkili İletişim Gelişim Yolculuğu'nun amacı günümüzün en önemli konularından biri olan temel iletişim ve etkili iletişim becerileri konularında çalışan yetkinliğinin artmasını sağlamaktır.";
+
+  static const String ilgiAlanlari = "İlgi Alanları";
+  static const String icerik = "İçerik";
+  static const String dil = "Dili";
+  static const String altTip = "Alt Tip";
+  static const String firma = "Üretici Firma";
+  static const String videos = "Video";
+  static const String enocta = "Enocta";
+  static const String konu = "Konu Uzmanı Videosu";
+
+  static const String baslangic = "Başlangıç";
+  static const String bitis = "Bitiş";
+  static const String tahminiSure = "Tahmini Süre";
+  static const String egitimTuru = "Eğitim Türü";
+  static const String gorev = "Görev";
+  static const String eEgitim = "E-Eğitim";
+  static const String ureticiFirmaa = "Üretici Firma";
+  static const String explain = "Açıklama";
+  // Language
+  static const String turkce = "Türkçe";
 
   // KATALOG - DETAY
   static const String go = "EĞİTİME GİT";
@@ -342,4 +394,118 @@ class TTexts {
       "Kişisel, Aile Akademisi, Alp Beyce, Atwiser, Wiser, Atwiser Yaşama Dair, İletişimde Sorun Çıkartmanın Garantili Yolları, İletişimde Ustalık, İletişimde Sorun Çıkartmanın Garantili Yolları - Sorgu Hakimliği";
   static const String interest8 =
       "Kişisel, Aile Akademisi, Alp Beyce, Atwiser, Wiser, Atwiser Yaşama Dair, İletişimde Sorun Çıkartmanın Garantili Yolları, İletişimde Ustalık, İletişimde Sorun Çıkartmanın Garantili Yolları - Susma İşkencesi";
+
+// Duyurular
+  static const String baslik1 = "11 Ocak Kampüs Buluşması";
+  static const String duyuru1 =
+      "Herkes için Kodlama eğitimini bitiren kişilerin katılabileceği kampüs buluşmamız 11 Ocak 2024 tarihindedir. Discorddan form paylaşılmıştır. Bu katılım formunu doldurmayan arkadaşların doldurması önemlidir. \n\nNot: Henüz eğitime hiç başlamamış adayların buluşması, eğitimlerini bitirdikten sonra 20 Şubat 2024 tarihinde yapılacaktır. \n\nSevgiler,";
+
+  static const String baslik2 = "30 Ocak Online Hoşgeldin Buluşması-5";
+  static const String duyuru2 =
+      "Sevgili İstanbul Kodluyor'lu, \n\n30 Ocak salı günü saat 11.00'de aramıza yeni katılan adaylar ile online olarak bir araya geleceğimiz için heyecanlıyız. \n\nİlk etapta tüm süreci birlikte konuşup, neler yapmanız gerektiğini adım adım anlatacağız. 'Eğitimlerim' bölümündeki size tanımlanmış videoları izleyebilirsiniz. 'Eğitime Git' butonuna tıklayarak online oturumların saatini ve içeriğini görebilirsiniz. Online oturumlara saati geldiğinde ilgili yerden tıklayarak katılabilirsiniz. Ayrıca bir mail gönderilmeyecektir. Hoşgeldin Buluşması-5 etkinliğine katılımınızı bekliyoruz. Platformu takip etmek adayların sorumluluğundadır. \n\nNot: Eğer 'Eğitimlerim' bölümünde size atanmış Hoşgeldin Buluşması- 5 başlığını görmüyorsanız, 29 Ocak pazartesiye kadar beklemenizi rica ederiz. 29 Ocak günü hala göremiyorsanız istanbulkodluyor@tobeto.com adresine mail atabilirsiniz. \n\nSevgiler, \nTOBETO | İstanbulKodluyor";
+
+  static const String baslik3 = "Yeni Grupların Discord'a Katılımı";
+  static const String duyuru3 =
+      "Merhabalar, Herkes için Kodlama 4A grubunun discorda katılımı yarın gerçekleşecek olan Mentor oturumu sonrası yapılacaktır. Mentor oturumuna 'Eğitimlerim' bölümünden giriş yapabilirsiniz. \n\nTarih: 8.12.2023 \n\nMentor Oturum Saati: 14.00-15.00 \n\nSevgiler,";
+
+// Sınav
+  static const String examTitle1 = "Tobeto İşte Başarı Modeli";
+  static const String examTitle2 = "Front End";
+  static const String examTitle3 = "Full Stack";
+  static const String examTitle4 = "Back End";
+  static const String examTitle5 = "Microsoft SQL Server";
+  static const String examTitle6 = "Masaüstü Programlama";
+  static const String examMessage =
+      "Bu sınav 25 sorudan oluşmakta olup sınav süresi 30 dakikadır. Sınav çoktan seçmeli test şeklinde olup sınavı yarıda bıraktığınız taktirde çözdüğünüz kısım kadarıyla değerlendirileceksiniz. \n\nSınava Süresi: 30 Dakika  \n\nSoru Sayısı: 25 \n\n Soru Tipi: Çoktan Seçmeli";
+
+// Validasyon
+  static const String validation = "Bu alan boş bırakılamaz.";
+  static const String validationEmail = "Lütfen E-Posta adresinizi giriniz.";
+  static const String validatePassword = "Şifre boş bırakılamaz.";
+  static const String validatePassword2 = "Şifreniz 8 karakterli olmalıdır.";
+  static const String validatePhone = "Lütfen telefon numaranızı giriniz.";
+  static const String validatePhone2 =
+      "Telefon numarası 10 karakterli olmalıdır.";
+
+  // Helpers
+  static const String start = "Başla";
+  static const String startExam = "SINAVA BAŞLA";
+  static const String okey = "Tamam";
+  static const String dateFormat = "dd MMM yyyy";
+
+  // Quiz Screen
+  static const String question = "SORU";
+  static const String result = "Sonucu Göster";
+  static const String nextQuestion = "Sıradaki Soru";
+  static const String examResult = "Sınav Sonucunuz";
+  static const String exit = "ÇIKIŞ";
+
+  // Questions
+  static const String question1 =
+      "Aşağidakilerden hangisi Flutter'da bir widget türüdür?";
+  static const String answer1A = "Stateful";
+  static const String answer1B = "Constructor";
+  static const String answer1C = "Class";
+  static const String answer1D = "Const";
+
+  static const String question2 =
+      "Flutter hangi dil kullanılarak geliştirilmektedir?";
+  static const String answer2A = "Python";
+  static const String answer2B = "JavaScript";
+  static const String answer2C = "Dart";
+  static const String answer2D = "C++";
+
+  static const String question3 = "Flutter'da Widget nedir?";
+  static const String answer3A = "const değerler widget'dır.";
+  static const String answer3B = "class yapıları widget'dır.";
+  static const String answer3C = "Sadece text bir widget'dır.";
+  static const String answer3D = "Flutter'da herşey widget'dır.";
+
+  static const String question4 = "Tüm eklentileri güncelleme komutu nedir?";
+  static const String answer4A = "flutter pub upgrade";
+  static const String answer4B = "fstful";
+  static const String answer4C = "flutter create";
+  static const String answer4D = "flutter";
+
+  static const String question5 =
+      "Bir widget’ın boyutunu ekran boyutuna göre nasıl ayarlarsınız?";
+  static const String answer5A = "double.infinity";
+  static const String answer5B = "MediaQuery.of(context).size";
+  static const String answer5C = "EdgeInsets.symmetric";
+  static const String answer5D = "mainAxisAlignment: MainAxisAlignment.center";
+
+  static const String question6 =
+      "Döngü şartı geçerli olmasa bile en az bir kere çalışacak döngü türü hangisidir?";
+  static const String answer6A = "do-while";
+  static const String answer6B = "for";
+  static const String answer6C = "if";
+  static const String answer6D = "while";
+
+  static const String question7 =
+      "Aşağıdakilerden hangisi Column Widget tanımlama parametrelerinden biri değildir?";
+  static const String answer7A = "child";
+  static const String answer7B = "mainAxisAlignment";
+  static const String answer7C = "children";
+  static const String answer7D = "crossAxisAlignment";
+
+  static const String question8 =
+      "Bir önceki sayfaya geçmek için aşağıdaki Navigator fonksiyonlarından hangisi kullanılır?";
+  static const String answer8A = "push";
+  static const String answer8B = "goto";
+  static const String answer8C = "delete";
+  static const String answer8D = "pop";
+
+  static const String question9 =
+      "Aşağıdakilerden hangisi Scaffold Widget tanımlama özelliklerinden biri değildir?";
+  static const String answer9A = "floatingActionButton";
+  static const String answer9B = "body";
+  static const String answer9C = "animation";
+  static const String answer9D = "appBar";
+
+  static const String question10 =
+      "Bir Column içine beş adet Row bırakmak isteyen bir flutter geliştiricisi Column Widget'ının hangi özelliğini kullanmalıdır?";
+  static const String answer10A = "text";
+  static const String answer10B = "parent";
+  static const String answer10C = "child";
+  static const String answer10D = "children";
 }

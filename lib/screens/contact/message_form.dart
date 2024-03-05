@@ -8,28 +8,30 @@ class MessageForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Form(
-      child: Column(
-        children: [
-          TextFormField(
-            decoration: const InputDecoration(
-              labelText: TTexts.name,
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            TextFormField(
+              decoration: const InputDecoration(
+                labelText: TTexts.name,
+              ),
             ),
-          ),
-          const SizedBox(height: TSizes.spaceBtwInputFields),
-          TextFormField(
-            decoration: const InputDecoration(
-              labelText: TTexts.eMail,
+            const SizedBox(height: TSizes.spaceBtwInputFields),
+            TextFormField(
+              decoration: const InputDecoration(
+                labelText: TTexts.eMail,
+              ),
             ),
-          ),
-          const SizedBox(height: TSizes.spaceBtwInputFields),
-          TextFormField(
-            maxLines: 5,
-            decoration: const InputDecoration(
-              labelText: TTexts.message,
+            const SizedBox(height: TSizes.spaceBtwInputFields),
+            TextFormField(
+              maxLines: 5,
+              decoration: const InputDecoration(
+                labelText: TTexts.message,
+              ),
             ),
-          ),
-          const SizedBox(height: TSizes.spaceBtwInputFields),
-        ],
+            const SizedBox(height: TSizes.spaceBtwInputFields),
+          ],
+        ),
       ),
     );
   }

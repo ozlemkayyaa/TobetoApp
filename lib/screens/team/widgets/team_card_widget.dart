@@ -19,7 +19,7 @@ class TeamCardWidget extends StatelessWidget {
     final dark = THelperFunctions.isDarkMode(context);
 
     return SizedBox(
-      width: 180,
+      width: 150,
       height: 220,
       child: Card(
         elevation: 3,
